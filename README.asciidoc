@@ -2,18 +2,73 @@
 Dag Wieers <dag@wieers.com>
 
 The ODF backend for AsciiDoc enables AsciiDoc users to directly convert
-documents from AsciiDoc to ODT 1.1.
+documents from AsciiDoc to Open Document Format v1.1.
+
 
 == Benefits
 The ODF backend provides the following benefits:
 
- - styled and formatted using LibreOffice/OpenOffice
+ - GUI styling and formatting using LibreOffice
+   (no more need to modify pesky XSLT)
 
- - saving and re-applying styles during processing
+ - Saving and re-applying styles during processing
+   (simply modify styles in LibreOffice and save them to reapply)
 
- - converting to various formats supported by LibreOffice/OpenOffice
-   export plugins (incl. PDF, DOC, HTML, ...)
+ - Converting to various formats supported by LibreOffice
+   (export plugins include PDF, DOC, HTML, ...)
+
 
 == Limitations
 The current implementation is not feature complete. We are working on
 it and your help in testing and feedback is appreciated.
+
+ - Incomplete implementation lacks eg. table support
+
+ - Default style does not look very well
+
+ - Only outputs flat ODF file
+   (which is supported only by recent versions of LibreOffice)
+
+ - Only document (odt) files are currently supported
+
+We hope to address each of these limitations in the future, with your help.
+
+
+== Development
+You can find the latest version of this AsciiDoc backend at:
+
+    http://github.com/dagwieers/asciidoc-odf
+
+And issues and feedback can be communicated using the Github web interface.
+
+
+== Usage
+To use this backend, copy the file _odt11.conf_ into your AsciiDoc
+configuration directory _/etc/asciidoc/_. Then use:
+
+    asciidoc -b odt11 document.txt
+
+This will produce the file _document.odt_.
+
+
+=== Embeded Images
+If you use images in your document, they can be embedded in your ODF
+document. To do this use the following option on the command line:
+
+    -a data-uri
+
+or add the following option in your AsciiDoc file just below the
+document title:
+
+    :data-uri:
+
+
+=== Admonitions Icon Support
+If you use admonitions in your documents, please use the options:
+
+    -a icons -a iconsdir=/usr/share/asciidoc/images/icons
+
+or add the following options just below the document title:
+
+    :icons:
+    :iconsdir: /usr/share/asciidoc/images/icons
