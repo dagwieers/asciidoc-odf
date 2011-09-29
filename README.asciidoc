@@ -35,28 +35,24 @@ We hope to address each of these limitations in the future, with your help.
 
 
 == Development
-You can find the latest version of this AsciiDoc backend at:
+You can find the latest version of this AsciiDoc backend at
+http://github.com/dagwieers/asciidoc-odf[]
 
-    http://github.com/dagwieers/asciidoc-odf
-
-And issues and feedback can be communicated using the Github web interface.
+Any issues or feedback can be communicated using the Github web interface.
 
 
 == Usage
 To use this backend, copy the file _odt11.conf_ into your AsciiDoc
 configuration directory _/etc/asciidoc/_. Then use:
 
-    asciidoc -b odt11 document.txt
+    # asciidoc -b odt11 document.txt
 
 This will produce the file _document.odt_.
 
 
 === Embeded Images
 If you use images in your document, they can be embedded in your ODF
-document. To do this use the following option on the command line:
-
-    -a data-uri
-
+document. To do this use the option +-a data-uri+ on the command line
 or add the following option in your AsciiDoc file just below the
 document title:
 
@@ -64,11 +60,10 @@ document title:
 
 
 === Admonitions Icon Support
-If you use admonitions in your documents, please use the options:
-
-    -a icons -a iconsdir=/usr/share/asciidoc/images/icons
-
-or add the following options just below the document title:
+If you use admonitions in your documents, please use the options
++-a icons -a iconsdir=/usr/share/asciidoc/images/icons+ to the
+command line or add the following options just below the document
+title:
 
     :icons:
     :iconsdir: /usr/share/asciidoc/images/icons
