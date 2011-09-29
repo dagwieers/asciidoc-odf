@@ -1,0 +1,120 @@
+= This is a simple test document
+:author: Dag Wieërs
+:data-uri:
+:icons:
+:iconsdir: /usr/share/asciidoc/images/icons
+
+This document aims to show-case the various elements of AsciiDoc syntax.
+
+
+== Blocks
+
+=== Listing Block
+
+.Listing Title
+----
+Listing Block
+----
+
+=== Literal Block
+
+.Literal Title
+....
+Literal Block
+....
+
+=== Sidebar Block
+
+.Sidebar Title
+****
+Sidebar Block
+****
+
+=== Quote Block
+
+.Quote Title
+[quote, Dag Wieers, cite]
+----
+Quote Block
+----
+
+=== Example Block
+
+.Example Title
+[NOTE]
+====
+Example Block
+====
+
+=== Comment Block
+////
+Comment Block are not visible
+////
+
+=== Passthrough Block
+
+[pass]
+++++
+Passthrough Block
+++++
+
+=== Open Block
+
+[abstract]
+----
+Open Block
+----
+
+== Formatting
+A paragraph can have differently formatted text, like *strong* text,
+_emphasized_ text or +monospaced+ text. But also `quoted', ``double-quoted'',
+^superscript^ and ~subscript~ are possibilities.
+
+And a anchor:formatting[] referenced paragraph.
+
+== Admonitions
+
+[WARNING]
+This is a warning message. Be very afraid !
+
+[CAUTION]
+This is a warning message. Be very afraid !
+
+[NOTE]
+This is a warning message. Be very afraid !
+
+[TIP]
+This is a warning message. Be very afraid !
+
+== References
+It is not uncommon to create <<formatting,references>> to other parts of a
+document. Here are some <<tables,tests>>.
+
+== Footnotes
+This is a simple footnote
+footnote:[A footnote is a note in the footer]
+test. Obviously you can have more than one footnote
+footnote:[A second footnote is possible] in a document.
+
+You can also create footnote references
+footnoteref:[footnote,A footnote reference is just like a footnote, but
+with a reference ID in it].
+
+And then create a reference to an earlier footnote
+footnoteref:[footnote] somewhere else in your text.
+
+[[tables]]
+== Tables
+
+.Test table
+[width="0%",cols=",>",frame="topbot",options="header,footer"]
+|====
+|week                     |aantal
+|01-09-2011 tot 02-09-2011|    2d
+|05-09-2011 tot 09-09-2011|    5d
+|12-09-2011 tot 16-09-2011|    5d
+|19-09-2011 tot 23-09-2011|    5d
+|26-09-2011 tot 30-09-2011|    5d
+|Totaal aantal dagen      |   22d
+|====
+

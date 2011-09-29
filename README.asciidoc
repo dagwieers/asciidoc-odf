@@ -1,0 +1,19 @@
+= ODF backend for AsciiDoc
+Dag Wieers <dag@wieers.com>
+
+The ODF backend for AsciiDoc enables AsciiDoc users to directly convert
+documents from AsciiDoc to ODT 1.1.
+
+== Benefits
+The ODF backend provides the following benefits:
+
+ - styled and formatted using LibreOffice/OpenOffice
+
+ - saving and re-applying styles during processing
+
+ - converting to various formats supported by LibreOffice/OpenOffice
+   export plugins (incl. PDF, DOC, HTML, ...)
+
+== Limitations
+The current implementation is not feature complete. We are working on
+it and your help in testing and feedback is appreciated.

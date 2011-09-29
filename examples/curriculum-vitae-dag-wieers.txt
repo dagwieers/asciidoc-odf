@@ -1,0 +1,330 @@
+= Curriculum Vitae - Dag Wieërs
+:author: Dag Wieërs
+:email: dag@wieers.com
+:revdate: {localdate}
+:doctype: article
+:data-uri:
+:lang: en
+:encoding: utf8
+:quirks:
+:toclevels: 1
+:linux-experience: {sys:echo $(( $(date +%Y) - 1995))}
+
+:description: Dag Wieërs is an experienced Linux system engineer and +
+system architect, focusing on Red Hat Enterprise Linux and CentOS. Dag +
+is also a well known RPM packager due to his efforts in the RPMforge +
+and ELRepo repositories which is used by many Belgian and international +
+organizations using RHEL or CentOS.
+
+:keywords: Linux System Engineer, Linux System Administrator, Linux System +
+Architect, UNIX System Engineer, RPM Packager, Python developer, Red Hat +
+Enterprise Linux, RHEL, CentOS, Perl developer, Bash, KSH, Shell scripting, +
+UNIX System Engineer
+
+// FIXME: Using ë does not work with docbook2pdf
+// FIXME: Using {amp}euml; and {amp}rarr; does not work with docbook2odf yet
+
+.Availability and work interests
+****************************************************************************
+My technical experience and interests as a system engineer and system
+architect focus on Linux and Open Source software, preferably Red Hat
+Enterprise Linux (RHEL), CentOS and Scientific Linux. With more than
+{linux-experience} years of experience I am one of the Linux pioneers
+in Belgium and well-known within the specific Red Hat Linux community.
+
+Skills include deploying, migrating and managing Linux infrastructure
+(servers and desktops), packaging Unix software, designing and
+implementing system tools, improving hardware support and automating
+operational tasks using python, shell scripting and perl with attention
+to documentation, standardization, procedures and policies.
+
+I am available as a freelancer for contract work inside and outside of
+Europe, but not willing to relocate on a permanent basis.
+****************************************************************************
+
+== Personalia
+[width="3cm",height="3cm",align="right"]
+image::dag-professional-250.jpg[Photo of Dag Wieërs]
+
+Full name::
+    Dag Johan Maarten Wieërs
+
+Location::
+    Ghent, Belgium
+
+Phone::
+    +32 478 436 299
+
+Email::
+    dag@linux.com, dag@wieers.com
+
+Website::
+    http://dag.wieers.com/blog/[], http://be.linkedin.com/in/dagwieers[]
+
+== Work experience
+_References provided on request._
+
+////
+=== Dagit Linux solutions  //  may 2007 {amp}rarr; present
+Independent contractor::
+    Available for freelance work.
+////
+
+=== Belgian Federal Police  //  may 2010 -> jul 2011
+Linux system developer::
+    Implementing disaster recovery solution. Improvements to installation
+    scripts and webmin modules. Packaging improvements. Automation and
+    scripting. Design and implementation of a samba/anti-virus solution.
+    Documentation and troubleshooting.
+
+=== AXA-Tech Belgium  //  nov 2007 -> mar 2010
+Linux system engineer::
+    Linux migration of Belgian datacenter to Germany. Design and
+    implementation of modular framework and infrastructure for Linux
+    and VMware ESX, used for deploying, retrofitting and validating
+    Linux servers. 3rd level support, troubleshooting and design work.
+
+=== EMC Belgium Development Group  //  jul 2007 -> dec 2007
+Linux system engineer::
+    Implementation of infrastructure for Novell SLES Linux deployment for
+    technical development workstations. Integration with Active Directory,
+    NIS, Clearcase, VMware Server.
+
+=== Punch Telematix  //  jun 2007 -> sep 2007
+Linux system engineer::
+    Design and implementation of technical documentation system. Design and
+    implementation of subversion. Packaging for Novell SLES Linux.
+    Troubleshooting. Automation.
+
+=== Euroclear  //  dec 2005 -> may 2007
+Unix system engineer::
+    Deployment of Unix systems and services. Design and implementation of
+    management infrastructure (configuration and documentation management,
+    change management). Packaging for Solaris, AIX, Linux and VMware. Custom
+    software development. Troubleshooting. Automation.
+
+=== Mind Linux Solutions  //  oct 1999 -> apr 2001
+Founder / Business Unit Manager::
+    Taking care of various parts of the organization, including sales
+    and marketing. Experience with project-management and pre-sales for
+    a small (15 headcount) consultancy company.
+Consultant::
+    Linux and Open Source consultancy and training for several customers
+    in on-site projects varying between 1 and 3 weeks.
+
+=== IBM Belgium  //  sep 1999 -> dec 2005
+Unix system engineer::
+    On Unix and Linux systems. (eg. packaging on Linux/AIX, implementing
+    various system and network services, general troubleshooting),
+    implementing hosting infrastructure on Linux. (eg. resource and
+    availability monitoring, capacity planning, firewall framework)
+Consultant::
+    Designing and implementing solutions for automatic deployment of
+    Linux clients, Point-Of-Sale systems, network services, clusters
+    and big parallel storage systems for digital media projects.
+    _incl. Real Software, VRT, EVS, RVA, Callataÿ and Wouters, KBC_
+
+<<<<
+
+=== SISA Software/Winsome  // summer job 1996/1997  //  oct 1997 -> sep 1999
+Consultant::
+    Analysis and design of an off-line website generation program (further
+    developed as WebEngine) and web-scripting. Implementation of business
+    projects.
+System administration::
+    Installation and operational management of Linux infrastructure and
+    routers.
+
+=== Provinciale Bibliotheek Limburg  //  voluntary oct 1996 -> nov 1997
+Network administration::
+    Maintenance of 12 public Internet terminals (based on Windows 95) and
+    an ISDN Internet connection.
+Internet training::
+    Individual training and training in group regarding computer use,
+    the Internet, search-engines and popular websites.
+
+== Skills
+=== Overall
+  - Ability to learn quickly from self-study
+  - Thorough experience in Unix system administration and automation
+  - Thorough experience in configuring and deploying systems in a scalable and
+    coherent manner
+  - Owner of various best practices regarding Linux system and application
+    deployments, system maintenance and documentation, system security and
+    Enterprise Linux in general.
+  - Experience in developing and marketing products using the Internet and
+    Internet communities
+  - Experience in project-management and leading a technical team
+
+=== Operating systems / Software
+  - Excellent knowledge of Linux (since 1994) incl. Red Hat Enterprise Linux,
+    Scientific Linux, CentOS, Fedora (but also SLES, Ubuntu, Debian, ...)
+  - Experience with various Unix systems including AIX, HP/UX and Solaris,
+    mostly wrt. packaging, automation and troubleshooting.
+  - Experience with virtualization solutions incl. OpenVZ, RHEV/KVM and
+    VMware ESX
+  - Thorough experience in designing and implementing a multi-customer
+    monitoring and reporting infrastructure
+  - Experience with Red Hat kickstart, post-installation mechanisms for
+    mass deployment and building Red Hat RPM packages
+  - Experience with clustered web-servers for load-balancing and fail-over,
+    firewalling, virtual private networking (VPN), building high-capacity,
+    load-balancing and high-available systems (IPVS), disaster recovery
+    solutions and network intrusion detection systems (NIDS)
+  - Thorough experience in compiling, installing, and configuring of Unix
+    system software, e.g. NFS, Samba, lpd (and LPRng), Postfix, Amavisd,
+    Bind, DHCP, XFree86, Apache, ssh, ntpd, Snort, Dante, RRDtool, Nagios,
+    Webmin, rear, KVM, ...
+  - Experience with GPFS clustering and SAN environments for large digital
+    media environments
+  - Experience with building solutions using SugarCRM and Drupal
+  - Experience automating and integrating with Red Hat Network Satellite
+  - Experience in programming and scripting in various computer languages
+  - Experience with various markup languages (HTML, SGML, DocBook v3 and v4,
+    XML, CSS, AsciiDoc)
+  - CGI Programming (in Perl and C) and PHP3/4
+  - IP (TCP/UDP), ICMP, ARP and protocols like IRC, FTP, SMTP, HTTP, NNTP,
+    POP3, IMAP, DHCP, IPsec, ...
+  - SQL (MySQL, msql, PostgreSQL, DB2 and some Oracle)
+
+=== Programming languages
+Active::
+    Python (since 2002),
+    SQL (since 1997),
+    PHP (since 1996),
+    Javascript (since 1995),
+    Bash, AWK and Unix-shells (since 1994),
+    C (since 1994),
+    Perl 4 and 5 (since 1994)
+Passive::
+    C# and Mono (since 2003),
+    RPG on AS/400 (1997 - 1998),
+    Visual Basic (1997),
+    Java (since 1996),
+    Pascal (1991 - 1999),
+    Tcl/Tk,
+    x86 Assembler (1992 - 1996),
+    BASIC (1988 - 1990)
+
+<<<<
+
+=== Languages
+  - Dutch: native
+  - English: fluently spoken and written
+  - French: basic spoken and limited written
+  - Afrikaans: basic spoken
+  - German: notions
+
+== Education
+=== Presentations
+I have presented on various topics at various events and get-togethers,
+including the following conferences:
+
+ * Japan Linux Symposium, Tokyo, JP - 2009
+//    Dstat: pluggable real-time monitoring - 10/2009
+ * Jornadas Regionales de Software Libre, Buenos Aires, AR - 2008
+//    CentOS in an Enterprise environment - 08/2008
+//    Dstat: pluggable real-time monitoring - 08/2008
+//    Introduction to building RPM packages - 08/2008
+ * LinuxTag Berlin, DE - 2008
+//    CentOS: Filling the Enterprise community gap - 05/2008
+ * LinuxWorld Expo Brussels, BE - 2008
+//    CentOS: Filling the Enterprise community gap - 03/2008
+ * LinuxWorld Expo Utrecht, NL - 2007
+//    CentOS: Filling the Enterprise community gap - 11/2007
+ * T-DOSE, Eindhoven, NL - 2007, 2008, 2009, 2010
+//    Setting your Wii game console free - 11/2010
+//    Enterprise Linux going mainstream - 11/2010
+//    The year of the Wiimote - 11/2009
+//    mrepo: Managing software repositories - 11/2008
+//    CentOS and Enterprise Linux market overview - 11/2008
+//    Dstat: plugin-based real-time monitoring - 11/2007
+ * Linuxconf.eu, Cambridge, UK - 2007
+//    Dstat: plugin-based real-time monitoring - 08/2007
+ * FrOSCon, Bonn, DE - 2007, 2008, 2009
+//    Building custom initrd files - 08/2009
+//    Giving presentations with a Wii-remote - 08/2008
+//    Proxytunnel: Punching holes in the corporate firewall - 08/2008
+//    Dstat: plugin-based real-time monitoring - 08/2007
+ * FOSDEM, Brussels, BE - 2006, 2008
+//    Dstat: pluggable real-time monitoring - 02/2008
+//    RPMforge: Enterprise Linux packaging for RHEL and CentOS - 02/2006
+
+=== Technical writing
+IBM Redbook Residency, Poughkeepsie, NY (05/2005)::
+    Co-written a Redbook about the design and implementation of GPFS
+    (General Parallel File System) in a digital media (broadcasting)
+    environment. [SG246700]
+IBM Redbook Residency, Austin, TX (11/2002)::
+    Co-written a Redbook about the design and implementation of a
+    Linux-based deployment in a branch banking environment. [SG246813]
+
+=== Certification
+http://www.brainbench.com/transcript.jsp?pid=652882[Brainbench Certificates]
+
+  - Linux Administration (General):
+    4.71/5 (30 March 2005) #1 Belgium [> 99% of all participants]
+  - Linux Administration (Red Hat 9):
+    4.34/5 (30 March 2005) #2 Belgium [> 98% of all participants]
+  - Linux Administration (Red Hat):
+    3.93/5 (30 March 2005) #2 Belgium [> 96% of all participants]
+  - Linux Programming (General):
+    4.21/5 (30 March 2005) #1 Belgium [> 89% of all participants]
+  - Unix Administration (General):
+    4.53/5 (30 March 2005) #3 Belgium [> 94% of all participants]
+
+////
+// Linux Administration (General)::
+//     Master, 4.34/5 (23 May 2000), top 5 for Belgium [Scored higher than
+//     95% of all previous test takers]
+// Linux Administration (Red Hat)::
+//     Master, 4.25/5 (23 May 2000), top 3 for Belgium [Scored higher than
+//     98% of all previous test takers]
+
+////
+
+=== Education
+XIOS Hogeschool Limburg, Diepenbeek (1996 -> 1999)::
+    Applied Computer Science (~ Bachelor degree)
+Universiteit Hasselt, Diepenbeek (1994 -> 1996)::
+    Computer Science, 1st year
+Heilig Hartcollege, Heusden-Zolder (1988 -> 1994)::
+    Latin-Greek, Latin-Mathematics and Science-Mathematics
+
+////
+=== Congresses and workshops
+  - http://www.har2009.org/[Hacking at Random] in Vierhouten, NL; August 2009
+  - http://www.whatthehack.org/[What The Hack] in Boxtel, NL; July 2005
+  - http://www.fosdem.org/[FOSDEM] 2002, 2003, 2005, 2006, 2007, 2008, 2009
+    and 2010
+  - http://www.hal2001.nl/[Hacking At Large 2001] in Twente, NL; September 2001
+  - 7th and 8th http://www.linux-kongress.de/[International Linux Kongress]
+    August 2000 and November 2001
+  - http://www.linuxtag.org/[LinuxTag] 2000, 2001, 2002, 2006, 2007, 2008,
+    2009 and 2011.
+  - http://www.ccc.de/events/camp/[Chaos Communication Camp] in Berlin, DE;
+    August 1999 and August 2003
+  - http://www.hip97.nl/[Hacking In Progress '97] in Almere, Flevoland, NL;
+    August 1997
+////
+
+== Additional activities
+  - Maintainer of http://dag.wieers.com/apt/[RPMforge RPM Repository] with
+    more than 5000 Open Source software RPM packages for RHEL, SciLinux and
+    CentOS _used by many international companies and organisations._
+  - Member of the http://elrepo.org/[ELRepo initiative] providing kernel
+    module packages (hardware drivers) _used by many international
+    companies and organisations using RHEL, SciLinux or CentOS._
+  - Author of http://dag.wieers.com/home-made/[various Open Source
+    software projects] _incl. dstat, unoconv, mrepo, dconf, sarah, wiipresent_
+  - Contributor to various Open Source projects _incl. asciidoc, docbook2odf,
+    proxytunnel, Relax and Recover, scannedonly_
+  - Ex-member of the http://wiki.centos.org/[CentOS core team]
+  - Author of the FrOSCon LiveUSB used for informational displays and
+    conference room computers
+//  - Author of http://dag.wieers.com/howto/[various pieces of documentation]
+//  - Volunteer at http://www.fosdem.org/[FOSDEM] and other community events
+//  - Hobbyist programmer, audiophile, cinephile, squash player and likes playing
+//    Catan, Carcassonne, Chess
+
+// vim: set syntax=asciidoc:
