@@ -94,21 +94,21 @@
   <style:style style:name="text_body" style:display-name="Text body" style:family="paragraph" style:parent-style-name="standard" style:class="text">
     <style:paragraph-properties fo:margin-top="0mm" fo:margin-bottom="2.12mm"/>
   </style:style>
-  <style:style style:name="heading_1" style:display-name="Heading 1" style:family="paragraph" style:parent-style-name="heading_default" style:default-outline-level="1" style:class="text">
+  <style:style style:name="sect1" style:display-name="Heading 1" style:family="paragraph" style:parent-style-name="heading_default" style:default-outline-level="1" style:class="text">
     <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="4mm" fo:margin-bottom="0mm" fo:padding="0mm" fo:border-left="none" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.35mm solid #c0c0c0" style:shadow="none" text:number-lines="true" text:line-number="1"/>
     <style:text-properties fo:color="#666699" fo:font-size="120%" fo:font-weight="bold"/>
   </style:style>
-  <style:style style:name="heading_2" style:display-name="Heading 2" style:family="paragraph" style:parent-style-name="heading_default" style:auto-update="true" style:default-outline-level="2" style:class="text" style:master-page-name="">
+  <style:style style:name="sect2" style:display-name="Heading 2" style:family="paragraph" style:parent-style-name="heading_default" style:auto-update="true" style:default-outline-level="2" style:class="text" style:master-page-name="">
     <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="3mm" fo:margin-bottom="0mm" style:page-number="auto" text:number-lines="true" text:line-number="2">
       <style:tab-stops/>
     </style:paragraph-properties>
     <style:text-properties fo:color="#666699" fo:font-size="110%" fo:font-weight="bold" style:text-underline-style="none"/>
   </style:style>
-  <style:style style:name="heading_3" style:display-name="Heading 3" style:family="paragraph" style:parent-style-name="heading_default" style:default-outline-level="3" style:class="text">
+  <style:style style:name="sect3" style:display-name="Heading 3" style:family="paragraph" style:parent-style-name="heading_default" style:default-outline-level="3" style:class="text">
     <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="6mm" fo:margin-bottom="0mm" text:number-lines="true" text:line-number="3"/>
     <style:text-properties fo:font-size="110%" fo:font-weight="bold"/>
   </style:style>
-  <style:style style:name="heading_4" style:display-name="Heading 4" style:family="paragraph" style:parent-style-name="heading_default" style:default-outline-level="4" style:class="text">
+  <style:style style:name="sect4" style:display-name="Heading 4" style:family="paragraph" style:parent-style-name="heading_default" style:default-outline-level="4" style:class="text">
     <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="6mm" fo:margin-bottom="0mm" text:number-lines="true" text:line-number="4"/>
     <style:text-properties fo:font-size="11pt"/>
   </style:style>
@@ -124,7 +124,7 @@
     <style:paragraph-properties fo:margin-top="3.49mm" fo:margin-bottom="0mm"/>
     <style:text-properties fo:color="#323298" fo:font-size="11pt" fo:font-weight="bold"/>
   </style:style>
-  <style:style style:name="paragraph_title" style:display-name="Paragraph Title" style:family="paragraph" style:parent-style-name="paragraph_default" style:class="text">
+  <style:style style:name="title" style:display-name="Paragraph Title" style:family="paragraph" style:parent-style-name="paragraph_default" style:class="text">
     <style:paragraph-properties fo:keep-with-next="always"/>
     <style:text-properties fo:color="#323298" fo:font-size="9pt" fo:font-weight="bold"/>
   </style:style>
@@ -140,7 +140,7 @@
     <style:paragraph-properties fo:break-before="page" fo:padding-left="0mm" fo:padding-right="0mm" fo:padding-top="6mm" fo:padding-bottom="0mm" fo:border="none"/>
     <style:text-properties fo:font-size="300%"/>
   </style:style>
-  <style:style style:name="title_article" style:display-name="Title Article" style:family="paragraph" style:parent-style-name="title_default" style:next-style-name="paragraph_padding" style:master-page-name="">
+  <style:style style:name="sect0" style:display-name="Title Article" style:family="paragraph" style:parent-style-name="title_default" style:next-style-name="paragraph_padding" style:master-page-name="">
     <style:paragraph-properties style:page-number="auto" fo:padding="0mm" fo:border="none" style:shadow="none"/>
     <style:text-properties fo:color="#000000" style:text-outline="true" style:font-name="article-title" fo:font-size="200%" fo:text-shadow="1pt 1pt"/>
   </style:style>

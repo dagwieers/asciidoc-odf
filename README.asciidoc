@@ -61,12 +61,21 @@ document title:
 
 === Admonition Icon Support
 If you use admonitions in your documents, please use the options
-+-a icons -a iconsdir=/usr/share/asciidoc/images/icons+ to the
++-a icons -a iconsdir=/usr/share/asciidoc/images/icons+ on the
 command line or add the following options just below the document
 title:
 
     :icons:
     :iconsdir: /usr/share/asciidoc/images/icons
+
+
+=== Numbered titles
+If you like titles to be numbered, please use the option +- numbered+ on
+the command line or add the following option in your AsciiDoc file just
+below the document title:
+
+    :numbered:
+
 
 === Using themes (or custom stylesheets)
 The ODF backend can uses themes, which means that it can use alternative
@@ -84,3 +93,11 @@ future documents.
 
 We think this is easier for end-users than extracting the styles
 and putting it into themes, but both methods will be available.
+
+
+== Further Reading
+
+ - http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf[Open Document Format for Office Applications (OpenDocument) v1.0]]
+ - http://docs.oasis-open.org/office/v1.1/OS/OpenDocument-v1.1.pdf[Open Document Format for Office Applications (OpenDocument) v1.1]
+ - http://docs.oasis-open.org/office/v1.2/cs01/OpenDocument-v1.2-cs01.pdf[Open Document Format for Office Applications (OpenDocument) v1.2]
+ - http://en.wikipedia.org/wiki/OpenDocument_technical_specification[OpenDocument technical specification]
