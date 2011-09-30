@@ -22,12 +22,12 @@ The ODF backend provides the following benefits:
 The current implementation is not feature complete. We are working on
 it and your help in testing and feedback is appreciated.
 
- - Incomplete implementation lacks eg. table support
+ - Incomplete implementation lacks eg. tables, TOC, ...
 
  - Default style does not look very well
 
- - Only outputs flat ODF file
-   (which is supported only by recent versions of LibreOffice)
+ - Outputs flat ODF file, not a zipped ODF multi-file
+   (flat ODF file is only supported by a recent LibreOffice)
 
  - Only document (odt) files are currently supported
 
@@ -59,7 +59,7 @@ document title:
     :data-uri:
 
 
-=== Admonitions Icon Support
+=== Admonition Icon Support
 If you use admonitions in your documents, please use the options
 +-a icons -a iconsdir=/usr/share/asciidoc/images/icons+ to the
 command line or add the following options just below the document
@@ -67,3 +67,20 @@ title:
 
     :icons:
     :iconsdir: /usr/share/asciidoc/images/icons
+
+=== Using themes (or custom stylesheets)
+The ODF backend can uses themes, which means that it can use alternative
+stylesheets. Currently the curiculum-vitae example uses its own (basic)
+theme as an example of how this is supposed to work. To select a theme
+you can add the option +-a theme=cv+ on the command line or add the
+following option in your AsciiDoc file just below the document title:
+
+    :theme: cv
+
+We plan to adapt a2x to automatically merge the existing styles from
+an .odt or .ott file, so that one can save the modified work from
+LibreOffice and use the styles from that document as the input for
+future documents.
+
+We think this is easier for end-users than extracting the styles
+and putting it into themes, but both methods will be available.

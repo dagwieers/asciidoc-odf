@@ -3,6 +3,7 @@
 :data-uri:
 :icons:
 :iconsdir: /usr/share/asciidoc/images/icons
+:showcomments:
 
 This document aims to show-case the various elements of AsciiDoc syntax.
 
@@ -97,9 +98,9 @@ test. Obviously you can have more than one footnote
 footnote:[A second footnote is possible] in a document.
 
 You can also create footnote references
-footnoteref:[footnote,A footnote reference is just like a footnote, but
-with a reference ID in it].
+footnoteref:[footnote,A footnote reference is just like a footnote, but with a reference ID in it].
 
+// This fails to work
 And then create a reference to an earlier footnote
 footnoteref:[footnote] somewhere else in your text.
 
@@ -117,4 +118,11 @@ footnoteref:[footnote] somewhere else in your text.
 |26-09-2011 tot 30-09-2011|    5d
 |Totaal aantal dagen      |   22d
 |====
+
+== Variables
+Author variable: <text:initial-creator/>
+
+Title variable: <text:title>This is a simple test document</text:title>
+
+Subject variable: <text:variable-set text:name="Subject" office:value-type="string">Subject</text:variable-set>
 
