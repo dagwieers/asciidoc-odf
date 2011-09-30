@@ -3,6 +3,7 @@
 :email: dag@wieers.com
 :revdate: {localdate}
 :doctype: article
+:theme: cv
 :data-uri:
 :lang: en
 :encoding: utf8
