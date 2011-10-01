@@ -34,7 +34,7 @@ Sidebar Block
 === Quote Block
 
 .Quote Title
-[quote, Dag Wieers, cite]
+//[quote, Dag Wieers, cite]
 ----
 Quote Block
 ----
@@ -61,7 +61,7 @@ Passthrough Block
 
 === Open Block
 
-[abstract]
+//[abstract]
 ----
 Open Block
 ----

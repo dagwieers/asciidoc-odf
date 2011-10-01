@@ -4,12 +4,16 @@ Dag Wieers <dag@wieers.com>
 The ODF backend for AsciiDoc enables AsciiDoc users to directly convert
 documents from AsciiDoc to Open Document Format v1.1.
 
+AsciiDoc is a lightweight markup language that maps to DocBook semantics
+and makes writing (technical) documentation more enjoyable as it removes
+styling and formating from the creative process.
+
 
 == Benefits
 The ODF backend provides the following benefits:
 
- - GUI styling and formatting using LibreOffice
-   (no more need to modify pesky XSLT)
+ - Visual styling and formatting using LibreOffice
+   (no more need to modify pesky XSLT or XSL-FO)
 
  - Saving and re-applying styles during processing
    (simply modify styles in LibreOffice and save them to reapply)
@@ -22,7 +26,7 @@ The ODF backend provides the following benefits:
 The current implementation is not feature complete. We are working on
 it and your help in testing and feedback is appreciated.
 
- - Incomplete implementation lacks eg. tables, TOC, ...
+ - Incomplete implementation lacks eg. TOC support, ...
 
  - Default style does not look very well
 
@@ -34,18 +38,11 @@ it and your help in testing and feedback is appreciated.
 We hope to address each of these limitations in the future, with your help.
 
 
-== Development
-You can find the latest version of this AsciiDoc backend at
-http://github.com/dagwieers/asciidoc-odf[]
-
-Any issues or feedback can be communicated using the Github web interface.
-
-
 == Usage
-To use this backend, copy the file _odt11.conf_ into your AsciiDoc
+To use this backend, copy the file _odt12.conf_ into your AsciiDoc
 configuration directory _/etc/asciidoc/_. Then use:
 
-    # asciidoc -b odt11 document.txt
+    # asciidoc -b odt12 document.txt
 
 This will produce the file _document.odt_.
 
@@ -95,9 +92,26 @@ We think this is easier for end-users than extracting the styles
 and putting it into themes, but both methods will be available.
 
 
-== Further Reading
+== Development
+You can find the latest version of this AsciiDoc backend at
+http://github.com/dagwieers/asciidoc-odf[]
 
- - http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf[Open Document Format for Office Applications (OpenDocument) v1.0]
- - http://docs.oasis-open.org/office/v1.1/OS/OpenDocument-v1.1.pdf[Open Document Format for Office Applications (OpenDocument) v1.1]
- - http://docs.oasis-open.org/office/v1.2/cs01/OpenDocument-v1.2-cs01.pdf[Open Document Format for Office Applications (OpenDocument) v1.2]
+You can help improve the backend by looking for missing/non-working
+functionality and implemening/fixing it in the odt12.conf file.
+Using LibreOffice and saving your tests, and inspecting how LibreOffice
+does something helps to understand what is needed for the backend.
+
+If you start off using a flat ODF file, LibreOffice will use flat
+ODF files as well, so the turn-around time in debugging/development
+is quite fast.
+
+Any issues or feedback can be communicated using the Github web interface.
+
+
+== Further Reading
+Apart from the official specifications, little information is available.
+
+ - http://docs.oasis-open.org/office/v1.0/errata/os/OpenDocument-v1.0-errata-02-os.pdf[Open Document Format for Office Applications (OpenDocument) v1.0]
+ - http://docs.oasis-open.org/office/v1.1/OpenDocument-v1.1.pdf[Open Document Format for Office Applications (OpenDocument) v1.1]
+ - http://docs.oasis-open.org/office/v1.2/OpenDocument-v1.2-part1.pdf[Open Document Format for Office Applications (OpenDocument) v1.2]
  - http://en.wikipedia.org/wiki/OpenDocument_technical_specification[OpenDocument technical specification]

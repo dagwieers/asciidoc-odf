@@ -60,7 +60,7 @@ Email::
     dag@linux.com, dag@wieers.com
 
 Website::
-    http://dag.wieers.com/blog/[], http://be.linkedin.com/in/dagwieers[]
+    http://dag.wieers.com/blog/, http://be.linkedin.com/in/dagwieers
 
 == Work experience
 _References provided on request._
@@ -221,6 +221,10 @@ Passive::
 I have presented on various topics at various events and get-togethers,
 including the following conferences:
 
+ * LinuxCon Europe, Prague, CZ - 2011
+//    Rear: Disaster Recovery and System Migration tool - 10/2011
+ * LibreOffice Conference, Paris, FR - 2011
+//    Automated conversion and styling using unoconv - 10/2011
  * Japan Linux Symposium, Tokyo, JP - 2009
 //    Dstat: pluggable real-time monitoring - 10/2009
  * Jornadas Regionales de Software Libre, Buenos Aires, AR - 2008
