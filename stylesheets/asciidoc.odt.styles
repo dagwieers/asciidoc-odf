@@ -333,4 +333,30 @@
   <style:style style:name="image" style:family="graphic" style:parent-style-name="graphics">
    <style:graphic-properties style:wrap="left" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="from-top" style:vertical-rel="paragraph" style:horizontal-pos="right" style:horizontal-rel="paragraph" style:mirror="none" fo:clip="rect(0mm, 0mm, 0mm, 0mm)" draw:luminance="0%" draw:contrast="0%" draw:red="0%" draw:green="0%" draw:blue="0%" draw:gamma="100%" draw:color-inversion="false" draw:image-opacity="100%" draw:color-mode="standard"/>
   </style:style>
+  <style:style style:name="footer" style:display-name="Footer" style:family="paragraph" style:parent-style-name="Standard" style:class="extra">
+    <style:text-properties fo:font-size="8pt" style:font-size-asian="8pt" style:font-size-complex="8pt"/>
+    <style:paragraph-properties fo:padding="0mm" fo:border-left="none" fo:border-right="none" fo:border-top="0.02mm solid #000000" fo:border-bottom="none" style:shadow="none" text:number-lines="false" text:line-number="0" fo:text-align="start" style:justify-single-word="false">
+      <style:tab-stops>
+        <style:tab-stop style:position="0mm" style:type="left"/>
+        <style:tab-stop style:position="170.01mm" style:type="right"/>
+      </style:tab-stops>
+    </style:paragraph-properties>
+  </style:style>
+  <style:page-layout style:name="page-layout">
+    <style:page-layout-properties fo:page-width="210.01mm" fo:page-height="297mm" style:num-format="1" style:print-orientation="portrait" fo:margin-top="14.99mm" fo:margin-bottom="10mm" fo:margin-left="20mm" fo:margin-right="20mm" style:writing-mode="lr-tb" style:footnote-max-height="0mm">
+      <style:footnote-sep style:width="0.18mm" style:distance-before-sep="1.01mm" style:distance-after-sep="1.01mm" style:line-style="solid" style:adjustment="left" style:rel-width="25%" style:color="#000000"/>
+    </style:page-layout-properties>
+    <style:footer-style>
+      <style:header-footer-properties fo:min-height="0mm" fo:margin-left="0mm" fo:margin-right="0mm" fo:margin-top="0mm"/>
+    </style:footer-style>
+  </style:page-layout>
 </office:styles>
+
+<!-- master-styles -->
+<office:master-styles>
+  <style:master-page style:name="Standard" style:page-layout-name="page-layout" style:next-style-name="Standard">
+    <style:footer>
+      <text:p text:style-name="footer"><text:title/><text:tab/><text:page-number text:select-page="current">3</text:page-number> of <text:page-count>3</text:page-count></text:p>
+    </style:footer>
+  </style:master-page>
+</office:master-styles>

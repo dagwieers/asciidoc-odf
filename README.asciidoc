@@ -97,7 +97,7 @@ and putting it into themes, but both methods will be available.
 
 == Further Reading
 
- - http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf[Open Document Format for Office Applications (OpenDocument) v1.0]]
+ - http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf[Open Document Format for Office Applications (OpenDocument) v1.0]
  - http://docs.oasis-open.org/office/v1.1/OS/OpenDocument-v1.1.pdf[Open Document Format for Office Applications (OpenDocument) v1.1]
  - http://docs.oasis-open.org/office/v1.2/cs01/OpenDocument-v1.2-cs01.pdf[Open Document Format for Office Applications (OpenDocument) v1.2]
  - http://en.wikipedia.org/wiki/OpenDocument_technical_specification[OpenDocument technical specification]
