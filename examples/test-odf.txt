@@ -126,3 +126,12 @@ Title variable: <text:title>This is a simple test document</text:title>
 
 Subject variable: <text:variable-set text:name="Subject" office:value-type="string">Subject</text:variable-set>
 
+== Definition
+Definition lists should work:
+
+definition term 1::
+definition description 1
+definition term 2::
+definition description 2
+definition term 3::
+definition description 3

@@ -44,8 +44,8 @@ Europe, but not willing to relocate on a permanent basis.
 ****************************************************************************
 
 == Personalia
-[width="3cm",height="3cm",align="right"]
-image::dag-professional-250.jpg[Photo of Dag Wieërs]
+//[width="3cm",height="3cm",align="right"]
+//image::dag-professional-250.jpg[Photo of Dag Wieërs]
 
 Full name::
     Dag Johan Maarten Wieërs
@@ -66,7 +66,7 @@ Website::
 _References provided on request._
 
 ////
-=== Dagit Linux solutions  //  may 2007 {amp}rarr; present
+=== Dagit Linux solutions  //  may 2007 -> present
 Independent contractor::
     Available for freelance work.
 ////
@@ -119,13 +119,14 @@ Unix system engineer::
     various system and network services, general troubleshooting),
     implementing hosting infrastructure on Linux. (eg. resource and
     availability monitoring, capacity planning, firewall framework)
+
+<<<<
+
 Consultant::
     Designing and implementing solutions for automatic deployment of
     Linux clients, Point-Of-Sale systems, network services, clusters
     and big parallel storage systems for digital media projects.
     _incl. Real Software, VRT, EVS, RVA, Callataÿ and Wouters, KBC_
-
-<<<<
 
 === SISA Software/Winsome  // summer job 1996/1997  //  oct 1997 -> sep 1999
 Consultant::
@@ -188,6 +189,8 @@ Internet training::
     POP3, IMAP, DHCP, IPsec, ...
   - SQL (MySQL, msql, PostgreSQL, DB2 and some Oracle)
 
+<<<<
+
 === Programming languages
 Active::
     Python (since 2002),
@@ -207,13 +210,11 @@ Passive::
     x86 Assembler (1992 - 1996),
     BASIC (1988 - 1990)
 
-<<<<
-
 === Languages
   - Dutch: native
   - English: fluently spoken and written
   - French: basic spoken and limited written
-  - Afrikaans: basic spoken
+//  - Afrikaans: basic spoken
   - German: notions
 
 == Education
@@ -265,7 +266,17 @@ IBM Redbook Residency, Austin, TX (11/2002)::
     Linux-based deployment in a branch banking environment. [SG246813]
 
 === Certification
-http://www.brainbench.com/transcript.jsp?pid=652882[Brainbench Certificates]
+
+*http://www.redhat.com/certification/[Red Hat Certificates]*
+
+  - Red Hat Enterprise Linux Presales Foundations
+  - Red Hat Enterprise Virtualization Presales Foundations
+  - Red Hat Jboss Presales Foundations
+  - Red Hat Partner Platform Certified Salesperson (RHPPCS)
+  - Red Hat Partner Virtualization Certified Salesperson (RHPVCS)
+  - Red Hat Partner Middleware Certified Salesperson (RHPMCS)
+
+*http://www.brainbench.com/transcript.jsp?pid=652882[Brainbench Certificates]*
 
   - Linux Administration (General):
     4.71/5 (30 March 2005) #1 Belgium [> 99% of all participants]
@@ -288,7 +299,9 @@ http://www.brainbench.com/transcript.jsp?pid=652882[Brainbench Certificates]
 
 ////
 
-=== Education
+<<<<
+
+=== Formal education
 XIOS Hogeschool Limburg, Diepenbeek (1996 -> 1999)::
     Applied Computer Science (~ Bachelor degree)
 Universiteit Hasselt, Diepenbeek (1994 -> 1996)::
