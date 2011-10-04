@@ -107,14 +107,30 @@ is quite fast.
 
 Any issues or feedback can be communicated using the Github web interface.
 
-== Zipped ODT proof of concept
+== Zipped ODT from a2x
 
-The directory "zipped" contains a proof of concept a2odt program for the 
-creation of zipped ODT taking styles from templates.  As it is intended to 
-be included in a2x the test version uses hard coded filenames since that 
-functionality is in a2x.  It uses base.ott for the template, file.txt for the input 
-and file.odt for the zipped archive output.  The directory has an odt12.conf 
-file that doesn't include the styles.  Use this instead of the normal one.
+The directory "zipped" contains a proof of concept a2x which has been modified 
+to take backend extensions in an a2x.conf file in the backend directory.
+
+The new --backend option specifies a backend plugin name and the --backend_opts 
+specifies options for it (like --xslt_opts or --fop_opts).
+
+There is a proof of concept a2x.conf that performs creation of zipped ODT 
+taking styles from templates so the directory also has an odt12.conf file that 
+doesn't include the styles.  Use this instead of the normal one.  Both these files
+go in the normal backend location, eg $HOME/.asciidoc/backends/odt12
+
+Put the modified a2x in a test directory, don't install over the system a2x 
+or put it in your path yet.
+
+Usage:
+
+----
+./a2x -v --backend=odt12 --backend_opts="--base_doc=your_template.ott" your_file.txt
+----
+
+Later versions will have a default template document so the base_doc isn't 
+required by default.
 
 == Further Reading
 Apart from the official specifications, little information is available.
