@@ -107,6 +107,14 @@ is quite fast.
 
 Any issues or feedback can be communicated using the Github web interface.
 
+== Zipped ODT proof of concept
+
+The directory "zipped" contains a proof of concept a2odt program for the 
+creation of zipped ODT taking styles from templates.  As it is intended to 
+be included in a2x the test version uses hard coded filenames since that 
+functionality is in a2x.  It uses base.ott for the template, file.txt for the input 
+and file.odt for the zipped archive output.  The directory has an odt12.conf 
+file that doesn't include the styles.  Use this instead of the normal one.
 
 == Further Reading
 Apart from the official specifications, little information is available.
