@@ -63,6 +63,10 @@
     <style:text-properties fo:color="#0000ff" style:text-underline-style="solid"/>
   </style:style>
 
+  <style:style style:name="page-break" style:family="paragraph">
+    <style:paragraph-properties fo:break-after="page"/>
+  </style:style>
+
   <text:list-style style:name="dlist">
     <text:list-level-style-number text:level="1" text:style-name="numbering-symbols" style:num-format="">
       <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
@@ -81,16 +85,7 @@
   </style:style>
 
   <style:style style:name="sidebarblock" style:family="graphic">
-    <style:graphic-properties fo:margin-left="2mm" fo:margin-right="2mm" fo:margin-top="2mm" fo:margin-bottom="2mm" style:wrap="parallel" style:number-wrapped-paragraphs="no-limit" style:vertical-pos="top" style:vertical-rel="paragraph-content" style:horizontal-pos="right" style:horizontal-rel="paragraph" fo:background-color="#ffffcc" style:background-transparency="0%" fo:padding="1.99mm" fo:border="0.26pt solid #000000" svg:width="55%" style:rel-width="55%"/>
-  </style:style>
-
-  <style:style style:name="footer" style:family="paragraph" style:parent-style-name="standard" style:class="extra">
-    <style:paragraph-properties fo:padding="0mm" fo:border-left="none" fo:border-right="none" fo:border-top="0.02mm solid #000000" fo:border-bottom="none" style:shadow="none" text:number-lines="false" text:line-number="0">
-      <style:tab-stops>
-        <style:tab-stop style:position="0mm" style:type="right"/>
-        <style:tab-stop style:position="172.72mm" style:type="right"/>
-      </style:tab-stops>
-    </style:paragraph-properties>
+    <style:graphic-properties fo:margin-left="2mm" fo:margin-right="2mm" fo:margin-top="2mm" fo:margin-bottom="2mm" style:wrap="parallel" style:number-wrapped-paragraphs="no-limit" style:vertical-pos="top" style:vertical-rel="paragraph-content" style:horizontal-pos="right" style:horizontal-rel="paragraph" fo:background-color="#ffffcc" style:background-transparency="0%" fo:padding="1.99mm" fo:border="0.26pt solid #000000" svg:width="58%" style:rel-width="58%"/>
   </style:style>
 
   <style:style style:name="preamble" style:family="paragraph">
@@ -124,45 +119,50 @@
   <style:style style:name="subscript" style:family="text">
     <style:text-properties style:text-position="sub 58%"/>
   </style:style>
-  <style:style style:name="command" style:family="text">
+  <style:style style:name="Command" style:family="text">
     <style:text-properties style:font-name="monospace" fo:font-weight="bold" fo:background-color="#f0f0f0"/>
   </style:style>
-  <style:style style:name="numbering-symbols" style:family="text">
+  <style:style style:name="Numbering-symbols" style:family="text">
     <style:text-properties fo:color="#323298" fo:font-weight="bold"/>
   </style:style>
-  <style:style style:name="bullet-symbols" style:family="text">
+  <style:style style:name="Bullet-symbols" style:family="text">
     <style:text-properties fo:color="#323298" fo:font-weight="bold"/>
   </style:style>
-  <style:style style:name="graphics" style:family="graphic">
+  <style:style style:name="Graphics" style:family="graphic">
     <style:graphic-properties text:anchor-type="paragraph" svg:x="0mm" svg:y="0mm" style:wrap="dynamic" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="top" style:vertical-rel="paragraph" style:horizontal-pos="center" style:horizontal-rel="paragraph"/>
   </style:style>
   <style:style style:name="image" style:family="graphic" style:parent-style-name="graphics">
    <style:graphic-properties style:wrap="left" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="from-top" style:vertical-rel="paragraph" style:horizontal-pos="right" style:horizontal-rel="paragraph" style:mirror="none" fo:clip="rect(0mm, 0mm, 0mm, 0mm)" draw:luminance="0%" draw:contrast="0%" draw:red="0%" draw:green="0%" draw:blue="0%" draw:gamma="100%" draw:color-inversion="false" draw:image-opacity="100%" draw:color-mode="standard"/>
   </style:style>
-  <style:style style:name="footer" style:family="paragraph" style:parent-style-name="Standard" style:class="extra">
-    <style:text-properties fo:font-size="8pt" style:font-size-asian="8pt" style:font-size-complex="8pt"/>
-    <style:paragraph-properties fo:padding="0mm" fo:border-left="none" fo:border-right="none" fo:border-top="0.02mm solid #000000" fo:border-bottom="none" style:shadow="none" text:number-lines="false" text:line-number="0" fo:text-align="start" style:justify-single-word="false">
+
+  <style:style style:name="Footer" style:family="paragraph" style:parent-style-name="Standard" style:class="extra">
+    <style:text-properties fo:font-size="8pt"/>
+    <style:paragraph-properties fo:padding="0mm" fo:border-top="0.02mm solid #000000">
       <style:tab-stops>
-        <style:tab-stop style:position="0mm" style:type="left"/>
-       <style:tab-stop style:position="170.01mm" style:type="right"/>
+        <style:tab-stop style:position="0mm"/>
+        <style:tab-stop style:position="87mm" style:type="center"/>
+        <style:tab-stop style:position="170.01mm" style:type="right"/>
       </style:tab-stops>
     </style:paragraph-properties>
   </style:style>
-  <style:page-layout style:name="page">
-    <style:page-layout-properties fo:page-width="210.01mm" fo:page-height="297mm" style:num-format="1" style:print-orientation="portrait" fo:margin-top="15mm" fo:margin-bottom="15mm" fo:margin-left="20mm" fo:margin-right="20mm" style:writing-mode="lr-tb" style:footnote-max-height="0mm">
-      <style:footnote-sep style:width="0.18mm" style:distance-before-sep="1.01mm" style:distance-after-sep="1.01mm" style:line-style="solid" style:adjustment="left" style:rel-width="25%" style:color="#000000"/>
-    </style:page-layout-properties>
-    <style:footer-style>
-      <style:header-footer-properties fo:min-height="0mm" fo:margin-left="0mm" fo:margin-right="0mm" fo:margin-top="0mm"/>
-    </style:footer-style>
-  </style:page-layout>
 </office:styles>
+
+<!-- automatic-styles -->
+<office:automatic-styles>
+  <style:page-layout style:name="Page">
+    <style:page-layout-properties fo:page-width="210.01mm" fo:page-height="297mm" style:num-format="1" style:print-orientation="portrait" fo:margin-top="15mm" fo:margin-bottom="15mm" fo:margin-left="20mm" fo:margin-right="20mm" style:writing-mode="lr-tb" style:footnote-max-height="0mm">
+      <style:footnote-sep style:width="0.18mm" style:distance-before-sep="1.01mm" style:distance-after-sep="1.01mm" style:adjustment="left" style:rel-width="25%" style:color="#000000"/>
+    </style:page-layout-properties>
+    <style:header-style/>
+    <style:footer-style/>
+  </style:page-layout>
+</office:automatic-styles>
 
 <!-- master-styles -->
 <office:master-styles>
-  <style:master-page style:name="standard" style:page-layout-name="page" style:next-style-name="standard">
+  <style:master-page style:name="Standard" style:page-layout-name="Page">
     <style:footer>
-      <text:p text:style-name="footer"><text:title/><text:tab/><text:page-number text:select-page="current">3</text:page-number> of <text:page-count>3</text:page-count></text:p>
+      <text:p text:style-name="Footer"><text:title/><text:tab/>Oct 2011<text:tab/><text:page-number text:select-page="current">3</text:page-number> of <text:page-count>3</text:page-count></text:p>
     </style:footer>
   </style:master-page>
 </office:master-styles>
