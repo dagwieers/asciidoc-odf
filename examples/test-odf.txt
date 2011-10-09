@@ -44,12 +44,12 @@ Quote Block
 .Example Title
 [NOTE]
 ====
-Example Block
+Example Block content
 ====
 
 === Comment Block
 ////
-Comment Block are not visible
+Content inside a comment block is not visible, unless desired !
 ////
 
 === Passthrough Block
@@ -71,21 +71,24 @@ A paragraph can have differently formatted text, like *strong* text,
 _emphasized_ text or +monospaced+ text. But also `quoted', ``double-quoted'',
 ^superscript^ and ~subscript~ are possibilities.
 
-And a anchor:formatting[] referenced paragraph.
+And a anchor:formatting[referenced] paragraph.
 
 == Admonitions
 
 [WARNING]
-This is a warning message. Be very afraid !
+There is a dragon reading over your shoulder !
 
 [CAUTION]
-This is a warning message. Be very afraid !
+Reading beyond this line may breach your contract.
+
+[IMPORTANT]
+Don't forget to drink coffee on a *regular* basis.
 
 [NOTE]
-This is a warning message. Be very afraid !
+Do not believe everything that is written in this document.
 
 [TIP]
-This is a warning message. Be very afraid !
+Throw away everything you already now and think out of the box.
 
 == References
 It is not uncommon to create <<formatting,references>> to other parts of a
@@ -120,11 +123,11 @@ footnoteref:[footnote] somewhere else in your text.
 |====
 
 == Variables
-Author variable: <text:initial-creator/>
+Author variable: pass:[<text:initial-creator/>]
 
-Title variable: <text:title>This is a simple test document</text:title>
+Title variable: pass:[<text:title>This is a simple test document</text:title>]
 
-Subject variable: <text:variable-set text:name="Subject" office:value-type="string">Subject</text:variable-set>
+Subject variable: pass:[<text:variable-set text:name="Subject" office:value-type="string">Subject</text:variable-set>]
 
 == Definition
 Definition lists should work:
@@ -135,3 +138,11 @@ definition term 2::
 definition description 2
 definition term 3::
 definition description 3
+
+== Images
+
+[width="3cm",height="3cm",align="right"]
+image::dag-professional-250.jpg[Photo]
+
+[width="3cm",height="3cm",align="left"]
+image::inkscape.svg[Inkscape logo]
