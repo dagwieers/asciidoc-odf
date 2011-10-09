@@ -1,8 +1,8 @@
 <!-- font-face-decls -->
 <office:font-face-decls>
-<style:font-face style:name="serif" svg:font-family="'Luxi Serif'" style:font-family-generic="roman" style:font-pitch="variable"/>
-<style:font-face style:name="sans-serif" svg:font-family="'Luxi Sans'" style:font-family-generic="swiss" style:font-pitch="variable"/>
-<style:font-face style:name="article-title" svg:font-family="'Arial Black'" style:font-family-generic="swiss" style:font-pitch="variable"/>
+<style:font-face style:name="serif" svg:font-family="'Arial'" style:font-family-generic="roman" style:font-pitch="variable"/>
+<style:font-face style:name="sans-serif" svg:font-family="'Arial'" style:font-family-generic="swiss" style:font-pitch="variable"/>
+<style:font-face style:name="article-title" svg:font-family="'Luxi Sans'" style:font-family-generic="swiss" style:font-pitch="variable"/>
 <style:font-face style:name="monospace" svg:font-family="'Luxi Mono'" style:font-pitch="fixed"/>
 </office:font-face-decls>
 
@@ -41,17 +41,17 @@
 
   <style:style style:name="sect0" style:family="paragraph" style:parent-style-name="sect-default">
     <style:paragraph-properties fo:margin-top="0mm" fo:margin-bottom="0mm" fo:padding="0mm"/>
-    <style:text-properties fo:color="#000000" style:text-outline="true" style:font-name="article-title" fo:font-size="200%" fo:text-shadow="1pt 1pt"/>
+    <style:text-properties fo:color="#000000" style:text-outline="true" style:font-name="article-title" fo:font-size="22pt" fo:text-shadow="1pt 1pt"/>
   </style:style>
 
   <style:style style:name="sect1" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="1" style:class="text">
     <style:paragraph-properties fo:border-bottom="0.35mm solid #c0c0c0" fo:padding-top="1.8mm" text:number-lines="true" text:line-number="1"/>
-    <style:text-properties fo:font-size="120%"/>
+    <style:text-properties fo:font-size="13.1pt"/>
   </style:style>
 
   <style:style style:name="sect2" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="2">
     <style:paragraph-properties style:page-number="auto" text:number-lines="true" text:line-number="2"/>
-    <style:text-properties fo:font-size="110%" style:text-underline-style="solid" style:text-underline-color="#c0c0c0"/>
+    <style:text-properties fo:font-size="10.5pt" style:text-underline-style="solid" style:text-underline-color="#c0c0c0"/>
   </style:style>
 
   <style:style style:name="title" style:family="paragraph" style:class="text">
@@ -137,7 +137,7 @@
 
   <style:style style:name="Footer" style:family="paragraph" style:parent-style-name="Standard" style:class="extra">
     <style:text-properties fo:font-size="8pt"/>
-    <style:paragraph-properties fo:padding="0mm" fo:border-top="0.02mm solid #000000">
+    <style:paragraph-properties fo:padding="0mm" fo:border-top="0.25pt solid #000000">
       <style:tab-stops>
         <style:tab-stop style:position="0mm"/>
         <style:tab-stop style:position="87mm" style:type="center"/>
