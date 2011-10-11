@@ -63,7 +63,7 @@
     <style:text-properties fo:color="#0000ff" style:text-underline-style="solid"/>
   </style:style>
 
-  <style:style style:name="page-break" style:family="paragraph">
+  <style:style style:name="asciidoc-pagebreak" style:family="paragraph">
     <style:paragraph-properties fo:break-after="page"/>
   </style:style>
 
@@ -117,7 +117,7 @@
     <style:text-properties style:text-position="super 58%"/>
   </style:style>
   <style:style style:name="subscript" style:family="text">
-    <style:text-properties style:text-position="sub 58%"/>
+    <style:text-properties style:text-position="sub 75%"/>
   </style:style>
   <style:style style:name="Command" style:family="text">
     <style:text-properties style:font-name="monospace" fo:font-weight="bold" fo:background-color="#f0f0f0"/>

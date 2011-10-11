@@ -10,5 +10,6 @@ install:
 examples: examples/curriculum-vitae-dag-wieers.txt examples/test-odf.txt
 	asciidoc -b odt12 examples/curriculum-vitae-dag-wieers.txt
 	asciidoc -b odt12 examples/test-odf.txt
+	asciidoc -b odt12 -a icons -a iconsdir=/usr/share/asciidoc/images/icons examples/asciidoc.txt
 
 test: examples
