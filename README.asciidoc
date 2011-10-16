@@ -127,7 +127,7 @@ or put it in your path yet.
 Usage:
 
 ----
-./a2x -v --backend=odt12 --backend_opts="--base_doc=your_template.ott" your_file.txt
+./a2x.py -v --backend=odt12 --backend_opts="--base_doc=your_template.ott" your_file.txt
 ----
 
 Later versions will have a default template document so the base_doc isn't
