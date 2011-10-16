@@ -107,20 +107,21 @@ is quite fast.
 
 Any issues or feedback can be communicated using the Github web interface.
 
-== Zipped ODT from a2x
+== Packaged ODT from a2x
 
-The directory "zipped" contains a proof of concept a2x which has been modified 
-to take backend extensions in an a2x.conf file in the backend directory.
+The directory "packaged" contains a proof of concept a2x which has been
+modified to take backend extensions in an a2x.conf file in the backend
+directory.  This file goes in the normal backend location, eg
+$HOME/.asciidoc/backends/odt12
 
-The new --backend option specifies a backend plugin name and the --backend_opts 
+The new --backend option specifies a backend plugin name and the --backend_opts
 specifies options for it (like --xslt_opts or --fop_opts).
 
-There is a proof of concept a2x.conf that performs creation of zipped ODT 
-taking styles from templates so the directory also has an odt12.conf file that 
-doesn't include the styles.  Use this instead of the normal one.  Both these files
-go in the normal backend location, eg $HOME/.asciidoc/backends/odt12
+There is a proof of concept a2x.conf that performs creation of packaged ODT
+taking styles from ODF templates, which are just normal ODF documents.  This
+allows styling to be defined interactively using Libreoffice or Openoffice.
 
-Put the modified a2x in a test directory, don't install over the system a2x 
+Put the modified a2x in a test directory, don't install over the system a2x
 or put it in your path yet.
 
 Usage:
@@ -129,7 +130,7 @@ Usage:
 ./a2x -v --backend=odt12 --backend_opts="--base_doc=your_template.ott" your_file.txt
 ----
 
-Later versions will have a default template document so the base_doc isn't 
+Later versions will have a default template document so the base_doc isn't
 required by default.
 
 == Further Reading
