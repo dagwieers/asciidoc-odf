@@ -3,7 +3,7 @@
 :email: dag@wieers.com
 :revdate: {localdate}
 :doctype: article
-:theme: cv
+//:theme: cv
 :data-uri:
 :lang: en
 :encoding: UTF-8
@@ -21,9 +21,6 @@ organizations using RHEL or CentOS.
 Architect, UNIX System Engineer, RPM Packager, Python developer, Red Hat +
 Enterprise Linux, RHEL, CentOS, Perl developer, Bash, KSH, Shell scripting, +
 UNIX System Engineer
-
-// FIXME: Using ë does not work with docbook2pdf
-// FIXME: Using {amp}euml; and {amp}rarr; does not work with docbook2odf yet
 
 .Availability and work interests
 ****************************************************************************
@@ -241,7 +238,8 @@ including the following conferences:
 //    CentOS: Filling the Enterprise community gap - 03/2008
  * LinuxWorld Expo Utrecht, NL - 2007
 //    CentOS: Filling the Enterprise community gap - 11/2007
- * T-DOSE, Eindhoven, NL - 2007, 2008, 2009, 2010
+ * T-DOSE, Eindhoven, NL - 2007, 2008, 2009, 2010, 2011
+//    Technical documentation workflow using LibreOffice - 11/2011
 //    Setting your Wii game console free - 11/2010
 //    Enterprise Linux going mainstream - 11/2010
 //    The year of the Wiimote - 11/2009
@@ -293,12 +291,10 @@ IBM Redbook Residency, Austin, TX (11/2002)::
     4.53/5 (30 March 2005) #3 Belgium [> 94% of all participants]
 
 ////
-// Linux Administration (General)::
-//     Master, 4.34/5 (23 May 2000), top 5 for Belgium [Scored higher than
-//     95% of all previous test takers]
-// Linux Administration (Red Hat)::
-//     Master, 4.25/5 (23 May 2000), top 3 for Belgium [Scored higher than
-//     98% of all previous test takers]
+  - Linux Administration (General)::
+    Master, 4.34/5 (23 May 2000), top 5 for Belgium [> 95% of all participants]
+  - Linux Administration (Red Hat)::
+    Master, 4.25/5 (23 May 2000), top 3 for Belgium [> 98% of all participants]
 ////
 
 === Formal education
