@@ -1,11 +1,20 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import sys
+import sys, re
 
 def main():
-	l = sys.stdin.readlines()
-	sys.stdout.write('</text:p>\n<text:p  text:style-name="listingblock">'.join(l))
+	line1 = True
+	rs = re.compile('(  +)')
+	for l in sys.stdin:
+		if not line1:
+			sys.stdout.write('<text:line-break/>')
+		line1 = False
+		ls = rs.split(l); ls.append('')
+		for d,s in zip(*[iter(ls)]*2):
+			sys.stdout.write(d)
+			if len(s) > 0 :
+				sys.stdout.write(' <text:s text:c="%d"/>' % (len(s)-1,) )
 	return 0
 
 if __name__ == '__main__':
