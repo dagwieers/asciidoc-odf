@@ -2,7 +2,7 @@
 Dag Wieers <dag@wieers.com>
 
 The ODF backend for AsciiDoc enables AsciiDoc users to directly convert
-documents from AsciiDoc to Open Document Format v1.1.
+documents from AsciiDoc to Open Document Format v1.2.
 
 AsciiDoc is a lightweight markup language that maps to DocBook semantics
 and makes writing (technical) documentation more enjoyable as it removes
@@ -28,32 +28,36 @@ it and your help in testing and feedback is appreciated.
 
  - Incomplete implementation lacks eg. TOC support, ...
 
- - Default style does not look very well
+ - Default stylesheet needs improvements
 
- - Outputs flat ODF file, not a zipped ODF multi-file
-   (flat ODF file is only supported by a recent LibreOffice)
-
- - Only document (odt) files are currently supported
+ - Only document (odt) files are currently supported, presentations (odp)
+   support would be nice too
 
 We hope to address each of these limitations in the future, with your help.
 
 
 == Usage
-To use this backend, copy the file _odt12.conf_ into your AsciiDoc
+To use this backend, copy the file _odt.conf_ into your AsciiDoc
 configuration directory _/etc/asciidoc/_. Then use:
 
-    # asciidoc -b odt12 document.txt
+    # asciidoc -b odt document.txt
 
 This will produce the file _document.odt_.
 
 
-=== Embeded Images
+=== Embedded Images
 If you use images in your document, they can be embedded in your ODF
 document. To do this use the option +-a data-uri+ on the command line
 or add the following option in your AsciiDoc file just below the
 document title:
 
     :data-uri:
+
+[NOTE]
+Embedding SVG images does not work because LibreOffice expects them
+encapsulated inside SVM (StarView Metafile) files. SVM is undocumented
+and not a standard. We hope LibreOffice drops SVM encapsulation soon.
+Most formats however are supported, although ODF recommends PNG and SVG.
 
 
 === Admonition Icon Support
@@ -72,6 +76,11 @@ the command line or add the following option in your AsciiDoc file just
 below the document title:
 
     :numbered:
+
+[NOTE]
+The current implementation adds title numbers always. Since numbering
+chapters/section is part of the stylesheet in ODF, it is harder too make
+this configurable/optional.
 
 
 === Using themes (or custom stylesheets)
@@ -97,7 +106,7 @@ You can find the latest version of this AsciiDoc backend at
 http://github.com/dagwieers/asciidoc-odf[]
 
 You can help improve the backend by looking for missing/non-working
-functionality and implemening/fixing it in the odt12.conf file.
+functionality and implemening/fixing it in the odt.conf file.
 Using LibreOffice and saving your tests, and inspecting how LibreOffice
 does something helps to understand what is needed for the backend.
 
@@ -112,7 +121,7 @@ Any issues or feedback can be communicated using the Github web interface.
 The directory "packaged" contains a proof of concept a2x which has been
 modified to take backend extensions in an a2x.conf file in the backend
 directory.  This file goes in the normal backend location, eg
-$HOME/.asciidoc/backends/odt12
+$HOME/.asciidoc/backends/odt
 
 The new --backend option specifies a backend plugin name and the --backend_opts
 specifies options for it (like --xslt_opts or --fop_opts).
@@ -127,7 +136,7 @@ or put it in your path yet.
 Usage:
 
 ----
-./a2x.py -v --backend=odt12 --backend_opts="--base_doc=your_template.ott" your_file.txt
+./a2x.py -v --backend=odt --backend_opts="--base_doc=your_template.ott" your_file.txt
 ----
 
 Later versions will have a default template document so the base_doc isn't
