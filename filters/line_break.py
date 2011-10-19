@@ -13,8 +13,8 @@ def main():
 		ls = rs.split(l); ls.append('')
 		for d,s in zip(*[iter(ls)]*2):
 			sys.stdout.write(d)
-			if len(s) > 0 :
-				sys.stdout.write(' <text:s text:c="%d"/>' % (len(s)-1,) )
+			if len(s) > 1:
+				sys.stdout.write('<text:s text:c="%d"/>' % len(s) )
 	return 0
 
 if __name__ == '__main__':

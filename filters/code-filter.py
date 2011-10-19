@@ -141,7 +141,7 @@ def code_filter():
 	in_comment = 0  # True if we're inside a multi-line block comment.
 	tag_comment = 0 # True if we should tag the current line as a comment.
 	line = sys.stdin.readline()
-	line1 = False
+	line1 = True
 	space_regex = re.compile('(  +)')
 	while line:
 		line = string.rstrip(line)
@@ -179,14 +179,14 @@ def code_filter():
 			else:
 				line = re.sub(r'\b(?P<word>\w+)\b',sub_keyword,line)
 		if not line1:
-			sys.stdout.write(os.linesep)
 			sys.stdout.write('<text:line-break/>')
+			sys.stdout.write(os.linesep)
 		line1 = False
 		line_split = space_regex.split(line); line_split.append('')
 		for text, spaces in zip(*[iter(line_split)]*2):
 			sys.stdout.write(text)
-			if len(spaces) > 0 :
-				sys.stdout.write(' <text:s text:c="%d"/>' % (len(spaces)-1,) )
+			if len(spaces) > 1:
+				sys.stdout.write('<text:s text:c="%d"/>' % (len(spaces),) )
 		line = sys.stdin.readline()
 
 def usage(msg=''):

@@ -14,14 +14,25 @@ This document aims to show-case the various elements of AsciiDoc syntax.
 
 .Listing Title
 ----
-Listing Block
+[example]
+variable=value
+variable2=value2
+----
+
+.Code listing block
+[code,python]
+----
+def hello:
+    print 'Hello World!'
 ----
 
 === Literal Block
 
 .Literal Title
 ....
-Literal Block
+[example]
+variable=value
+variable2=value2
 ....
 
 === Sidebar Block
@@ -42,7 +53,7 @@ Quote Block
 === Example Block
 
 .Example Title
-[NOTE]
+// FIXME: Does not work yet
 ====
 Example Block content
 ====
@@ -88,7 +99,14 @@ Don't forget to drink coffee on a *regular* basis.
 Do not believe everything that is written in this document.
 
 [TIP]
+====
 Throw away everything you already now and think out of the box.
+
+.Bulleted lists are possible
+* As you can see
+* Bullets can be
+* Part of a block
+====
 
 == References
 It is not uncommon to create <<formatting,references>> to other parts of a
