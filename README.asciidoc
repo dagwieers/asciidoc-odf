@@ -156,6 +156,37 @@ Later versions will have a default template document so the +base_doc+ isn't
 required by default.
 
 
+== Debugging generated ODF
+Things can always be improved, if you are stuck with an issues or you just
+want to help out with this project, *rejoice* because below you will find
+some hints on how to debug and fix your issue !
+
+NOTE: Please contribute any improvements to the styles or ODT definition so
+that other people can enjoy your fixes !
+
+
+=== Missing text/section in LibreOffice
+If some text/section is missing in LibreOffice, you can debug the ODF file
+by generating a Flat ODF (.fodt) file and opening it with an editor. Look if
+the text is part of the file.
+
+
+=== Fails to open in LibreOffice
+If the ODF file fails to open in LibreOffice, you can perform a syntax-check
+ofthe generated Flat ODF (.fodt) using the following command:
+
+    # xmllint --format some-file.fodt
+
+If this outputs an error, it means the ODF file does not conform the schema.
+
+
+=== Styles look incorrect
+If the output looks different to what you expected, you can modify the styles
+inside LibreOffice, write it out to a Flat ODF file and compare the created
+style with the original. You can then change either the _odt.conf_ or the
+_asciidoc.odt.styles_ so that the output conforms to your desire.
+
+
 == Further Reading
 Apart from the official specifications, little information is available.
 
