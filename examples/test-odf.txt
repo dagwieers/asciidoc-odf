@@ -1,18 +1,17 @@
-= This is a simple test document
+= Simple test document for ODF backend
 :author: Dag Wieërs
 :data-uri:
 :icons:
 :iconsdir: /usr/share/asciidoc/images/icons
 :showcomments:
 
-This document aims to show-case the various elements of AsciiDoc syntax.
-
+This document is meant for testing the AsciiDoc ODF backend and highlighting
+known problems to developers. The output of this document, using the default
+ODF stylesheet should match the HTML output as close as possible.
 
 == Blocks
 
-=== Listing Block
-
-.Listing Title
+.Listing block
 ----
 [example]
 variable=value
@@ -22,56 +21,76 @@ variable2=value2
 .Code listing block
 [code,python]
 ----
-def hello:
-    print 'Hello World!'
+''' A multi-line
+    comment.'''
+def sub_word(mo):
+    ''' Single line comment.'''
+    word = mo.group('word')   # Inline comment
+    if word in keywords[language]:
+        return quote + word + quote
+    else:
+        return word
 ----
 
-=== Literal Block
-
-.Literal Title
+.Literal block
 ....
 [example]
 variable=value
 variable2=value2
 ....
 
-=== Sidebar Block
+But also inline literals are supported:
 
-.Sidebar Title
+  # pvcreate /dev/sda1
+  # vgcreate rootvg /dev/sda1
+  # lvcreate -L 500M -n rootlv rootvg
+
+.Sidebar block
 ****
-Sidebar Block
+This is Sidebar material, and sidebars can contain lists too:
+
+* Item 1
+* Item 2
 ****
 
-=== Quote Block
+.Quote block
+[quote, Dag Wieers, Emails since 1995]
+Any errors in spelling, tact or fact
+are transmission errors.
 
-.Quote Title
-//[quote, Dag Wieers, cite]
-----
-Quote Block
-----
+.Verse block
+[verse, William Blake, from Auguries of Innocence]
+To see a world in a grain of sand,
+And a heaven in a wild flower,
+Hold infinity in the palm of your hand,
+And eternity in an hour.
 
-=== Example Block
+.Example block
+======
+This is an example block
+with some content
+=======
 
-.Example Title
-// FIXME: Does not work yet
+.Nested example block
 ====
-Example Block content
+----
+Some demo commands
+----
 ====
 
-=== Comment Block
+.Comment block
+Comment blocks are never made visible, not even when the +showcomments+ attribute is set.
 ////
-Content inside a comment block is not visible, unless desired !
+Content inside a comment block is never visible.
 ////
 
-=== Passthrough Block
-
+.Passthrough block
 [pass]
 ++++
-Passthrough Block
+<text:p>Line1:<text:s text:c="4"/>Example pass-through content<text:s text:c="4"/><text:line-break/>Line2:<text:s text:c="4"/>Testing inline ODF syntax<text:s text:c="4"/><text:line-break/>Line3:<text:title/></text:p>
 ++++
 
-=== Open Block
-
+.Open block
 //[abstract]
 ----
 Open Block

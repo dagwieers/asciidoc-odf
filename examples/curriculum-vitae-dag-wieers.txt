@@ -1,6 +1,4 @@
 = Curriculum Vitae - Dag Wieërs
-:author: Dag Wieërs
-:email: dag@wieers.com
 :revdate: {localdate}
 :doctype: article
 //:theme: cv

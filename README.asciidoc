@@ -13,27 +13,31 @@ styling and formating from the creative process.
 The ODF backend provides the following benefits:
 
  - Visual styling and formatting using LibreOffice
-   (no more need to modify pesky XSLT or XSL-FO)
+   _(no more need to modify pesky XSLT or XSL-FO)_
 
  - Saving and re-applying styles during processing
-   (simply modify styles in LibreOffice and save them to reapply)
+   _(simply modify styles in LibreOffice and save them to reapply)_
 
  - Converting to various formats supported by LibreOffice
-   (export plugins include PDF, DOC, HTML, ...)
+   _(export plugins include PDF, DOC, HTML, ...)_
+
+ - Support for flat ODF (.fodt) files to help with experimenting
+   _(flat ODF files are useful for manual styling, debugging or learning ODF)_
 
 
 == Limitations
 The current implementation is not feature complete. We are working on
 it and your help in testing and feedback is appreciated.
 
- - Incomplete implementation lacks eg. TOC support, ...
+ - Incomplete implementation lacks eg. TOC support, complex table support, ...
 
  - Default stylesheet needs improvements
 
  - Only document (odt) files are currently supported, presentations (odp)
-   support would be nice too
+   support would be nice to have
 
-We hope to address each of these limitations in the future, with your help.
+We hope to address each of these limitations in the future, and your help
+is appreciated and welcomed.
 
 
 == Usage
@@ -42,14 +46,18 @@ configuration directory _/etc/asciidoc/_. Then use:
 
     # asciidoc -b odt document.txt
 
-This will produce the file _document.odt_.
+This will produce the file _document.fodt_ which is a 'flat ODF file', a
+single XML file that can be opened using any recent LibreOffice.
+
+[NOTE]
+If you want to use the more common 'packaged ODF file' that any LibreOffice
+or OpenOffice program can open, read the <<a2x,section about a2x>> below.
 
 
 === Embedded Images
-If you use images in your document, they can be embedded in your ODF
-document. To do this use the option +-a data-uri+ on the command line
-or add the following option in your AsciiDoc file just below the
-document title:
+Images can be embedded in your ODF document. To do this use the option
++-a data-uri+ on the command line or add the following attribute in your
+AsciiDoc file just below the document title:
 
     :data-uri:
 
@@ -59,11 +67,14 @@ encapsulated inside SVM (StarView Metafile) files. SVM is undocumented
 and not a standard. We hope LibreOffice drops SVM encapsulation soon.
 Most formats however are supported, although ODF recommends PNG and SVG.
 
+When using 'packaged ODF files', images will be added to the ODF file and
+not embedded, regardless of the +data-uri+ attribute.
+
 
 === Admonition Icon Support
 If you use admonitions in your documents, please use the options
 +-a icons -a iconsdir=/usr/share/asciidoc/images/icons+ on the
-command line or add the following options just below the document
+command line or add the following attributes just below the document
 title:
 
     :icons:
@@ -72,7 +83,7 @@ title:
 
 === Numbered titles
 If you like titles to be numbered, please use the option +- numbered+ on
-the command line or add the following option in your AsciiDoc file just
+the command line or add the following attribute in your AsciiDoc file just
 below the document title:
 
     :numbered:
@@ -92,13 +103,13 @@ following option in your AsciiDoc file just below the document title:
 
     :theme: cv
 
-We plan to adapt a2x to automatically merge the existing styles from
-an .odt or .ott file, so that one can save the modified work from
-LibreOffice and use the styles from that document as the input for
-future documents.
+This project also provides <<a2x,an adapted a2x>> to automatically merge
+the existing styles from an .odt or .ott file, so that one can save the
+modified work from LibreOffice and use the styles from that document
+as the input for future documents.
 
 We think this is easier for end-users than extracting the styles
-and putting it into themes, but both methods will be available.
+and putting it into themes, but both methods are available.
 
 
 == Development
@@ -116,17 +127,19 @@ is quite fast.
 
 Any issues or feedback can be communicated using the Github web interface.
 
-== Packaged ODT from a2x
 
+[[a2x]]
+== Packaged ODT from a2x
 The directory "packaged" contains a proof of concept a2x which has been
 modified to take backend extensions in an a2x.conf file in the backend
 directory.  This file goes in the normal backend location, eg
-$HOME/.asciidoc/backends/odt
+_$HOME/.asciidoc/backends/odt_
 
-The new --backend option specifies a backend plugin name and the --backend_opts
-specifies options for it (like --xslt_opts or --fop_opts).
+The new +--backend+ option specifies a backend plugin name and the
++--backend_opts+ specifies options for it (like +--xslt_opts+ or
++--fop_opts+).
 
-There is a proof of concept a2x.conf that performs creation of packaged ODT
+There is a proof of concept _a2x.conf_ that performs creation of packaged ODT
 taking styles from ODF templates, which are just normal ODF documents.  This
 allows styling to be defined interactively using Libreoffice or Openoffice.
 
@@ -139,8 +152,9 @@ Usage:
 ./a2x.py -v --backend=odt --backend_opts="--base_doc=your_template.ott" your_file.txt
 ----
 
-Later versions will have a default template document so the base_doc isn't
+Later versions will have a default template document so the +base_doc+ isn't
 required by default.
+
 
 == Further Reading
 Apart from the official specifications, little information is available.
@@ -148,4 +162,4 @@ Apart from the official specifications, little information is available.
  - http://docs.oasis-open.org/office/v1.0/errata/os/OpenDocument-v1.0-errata-02-os.pdf[Open Document Format for Office Applications (OpenDocument) v1.0]
  - http://docs.oasis-open.org/office/v1.1/OpenDocument-v1.1.pdf[Open Document Format for Office Applications (OpenDocument) v1.1]
  - http://docs.oasis-open.org/office/v1.2/OpenDocument-v1.2-part1.pdf[Open Document Format for Office Applications (OpenDocument) v1.2]
- - http://en.wikipedia.org/wiki/OpenDocument_technical_specification[OpenDocument technical specification]
+ - http://en.wikipedia.org/wiki/OpenDocument_technical_specification[Wikipedia: OpenDocument technical specification]

@@ -4,6 +4,9 @@ sysconfdir = /etc
 
 .PHONY: all examples install
 
+all:
+	@echo "Nothing to do."
+
 install:
 	install -Dp -m0644 odt.conf $(DESTDIR)$(sysconfdir)/asciidoc/odt.conf
 	install -Dp -m0644 stylesheets/asciidoc.odt.styles $(DESTDIR)$(sysconfdir)/asciidoc/stylesheets/asciidoc.odt.styles
