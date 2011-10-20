@@ -15,7 +15,7 @@
   </style:default-style>
 
   <style:default-style style:family="paragraph" style:auto-update="true">
-    <style:paragraph-properties fo:text-align="start" fo:margin-top="1.8mm" fo:margin-bottom="1.8mm" style:justify-single-word="false" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:writing-mode="page"/>
+    <style:paragraph-properties fo:text-align="start" fo:margin-bottom="1.8mm" style:justify-single-word="false" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:writing-mode="page"/>
     <style:text-properties fo:color="#000000" style:font-name="serif" fo:font-size="12pt"/>
   </style:default-style>
 
