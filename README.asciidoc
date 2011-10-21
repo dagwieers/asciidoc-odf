@@ -1,5 +1,9 @@
 = ODF backend for AsciiDoc
-Dag Wieers <dag@wieers.com>
+:author: Dag Wieers
+:email: dag@wieers.com
+:data-uri:
+:icons:
+:iconsdir: /usr/share/asciidoc/images/icons
 
 The ODF backend for AsciiDoc enables AsciiDoc users to directly convert
 documents from AsciiDoc to Open Document Format v1.2.
@@ -21,7 +25,7 @@ The ODF backend provides the following benefits:
  - Converting to various formats supported by LibreOffice
    _(export plugins include PDF, DOC, HTML, ...)_
 
- - Support for flat ODF (.fodt) files to help with experimenting
+ - Support for flat ODF (+.fodt+) files to help with experimenting
    _(flat ODF files are useful for manual styling, debugging or learning ODF)_
 
 
@@ -104,7 +108,7 @@ following option in your AsciiDoc file just below the document title:
     :theme: cv
 
 This project also provides <<a2x,an adapted a2x>> to automatically merge
-the existing styles from an .odt or .ott file, so that one can save the
+the existing styles from an +.odt+ or +.ott+ file, so that one can save the
 modified work from LibreOffice and use the styles from that document
 as the input for future documents.
 
@@ -112,27 +116,11 @@ We think this is easier for end-users than extracting the styles
 and putting it into themes, but both methods are available.
 
 
-== Development
-You can find the latest version of this AsciiDoc backend at
-http://github.com/dagwieers/asciidoc-odf[]
-
-You can help improve the backend by looking for missing/non-working
-functionality and implemening/fixing it in the odt.conf file.
-Using LibreOffice and saving your tests, and inspecting how LibreOffice
-does something helps to understand what is needed for the backend.
-
-If you start off using a flat ODF file, LibreOffice will use flat
-ODF files as well, so the turn-around time in debugging/development
-is quite fast.
-
-Any issues or feedback can be communicated using the Github web interface.
-
-
 [[a2x]]
 == Packaged ODT from a2x
-The directory "packaged" contains a proof of concept a2x which has been
-modified to take backend extensions in an a2x.conf file in the backend
-directory.  This file goes in the normal backend location, eg
+The directory _packaged/_ contains a proof of concept +a2x+ which has been
+modified to take backend extensions in an _a2x.conf_ file in the backend
+directory. This file goes in the normal backend location, eg
 _$HOME/.asciidoc/backends/odt_
 
 The new +--backend+ option specifies a backend plugin name and the
@@ -143,7 +131,7 @@ There is a proof of concept _a2x.conf_ that performs creation of packaged ODT
 taking styles from ODF templates, which are just normal ODF documents.  This
 allows styling to be defined interactively using Libreoffice or Openoffice.
 
-Put the modified a2x in a test directory, don't install over the system a2x
+Put the modified +a2x+ in a test directory, don't install over the system a2x
 or put it in your path yet.
 
 Usage:
@@ -156,8 +144,24 @@ Later versions will have a default template document so the +base_doc+ isn't
 required by default.
 
 
+== Development
+You can find the latest version of this AsciiDoc backend at
+http://github.com/dagwieers/asciidoc-odf[]
+
+You can help improve the backend by looking for missing/non-working
+functionality and implemening/fixing it in the _odt.conf_ file.
+Using LibreOffice and saving your tests, and inspecting how LibreOffice
+does something helps to understand what is needed for the backend.
+
+If you start off using a flat ODF file, LibreOffice will use flat
+ODF files as well, so the turn-around time in debugging/development
+is quite fast.
+
+Any issues or feedback can be communicated using the Github web interface.
+
+
 == Debugging generated ODF
-Things can always be improved, if you are stuck with an issues or you just
+Things can always be improved, if you are stuck with an issue or you just
 want to help out with this project, *rejoice* because below you will find
 some hints on how to debug and fix your issue !
 
@@ -167,13 +171,13 @@ that other people can enjoy your fixes !
 
 === Missing text/section in LibreOffice
 If some text/section is missing in LibreOffice, you can debug the ODF file
-by generating a Flat ODF (.fodt) file and opening it with an editor. Look if
+by generating a Flat ODF (+.fodt+) file and opening it with an editor. Look if
 the text is part of the file.
 
 
 === Fails to open in LibreOffice
 If the ODF file fails to open in LibreOffice, you can perform a syntax-check
-ofthe generated Flat ODF (.fodt) using the following command:
+ofthe generated Flat ODF (+.fodt+) using the following command:
 
     # xmllint --format some-file.fodt
 

@@ -17,6 +17,7 @@ install:
 	install -Dp -m0644 packaged/a2x.conf $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt/a2x.conf
 
 examples: examples/curriculum-vitae-dag-wieers.txt examples/test-odf.txt
+	asciidoc -b odt -a icons -a iconsdir=$(datadir)/asciidoc/images/icons -o examples/README.fodt README.asciidoc
 	asciidoc -b odt examples/test-odf.txt
 	asciidoc -b odt -a theme=cv examples/curriculum-vitae-dag-wieers.txt
 	asciidoc -b odt -a icons -a iconsdir=$(datadir)/asciidoc/images/icons examples/asciidoc.txt
