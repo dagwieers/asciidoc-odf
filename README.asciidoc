@@ -3,7 +3,6 @@
 :email: dag@wieers.com
 :data-uri:
 :icons:
-:iconsdir: /usr/share/asciidoc/images/icons
 
 The ODF backend for AsciiDoc enables AsciiDoc users to directly convert
 documents from AsciiDoc to Open Document Format v1.2.
