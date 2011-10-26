@@ -40,6 +40,9 @@ it and your help in testing and feedback is appreciated.
  - Only document (odt) files are currently supported, presentations (odp)
    support would be nice to have
 
+ - Flat ODF files (+.fodt+) are only supported by LibreOffice 3.3 and newer,
+   <<a2x,use a2x>> if you need the more common 'packaged' ODF support
+
 We hope to address each of these limitations in the future, and your help
 is appreciated and welcomed.
 
@@ -52,10 +55,6 @@ configuration directory _/etc/asciidoc/_. Then use:
 
 This will produce the file _document.fodt_ which is a 'flat ODF file', a
 single XML file that can be opened using any recent LibreOffice.
-
-[NOTE]
-If you want to use the more common 'packaged ODF file' that any LibreOffice
-or OpenOffice program can open, read the <<a2x,section about a2x>> below.
 
 
 === Embedded Images
@@ -94,8 +93,8 @@ below the document title:
 
 [NOTE]
 The current implementation adds title numbers always. Since numbering
-chapters/section is part of the stylesheet in ODF, it is harder too make
-this configurable/optional.
+chapters/section is part of the stylesheet in ODF, it is complex to make
+this configurable.
 
 
 === Using themes (or custom stylesheets)
