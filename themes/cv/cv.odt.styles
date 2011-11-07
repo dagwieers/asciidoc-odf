@@ -67,7 +67,26 @@
     <style:paragraph-properties fo:break-after="page"/>
   </style:style>
 
-  <text:list-style style:name="dlist">
+  <text:list-style style:name="list"/>
+
+  <style:style style:name="list-item" style:family="paragraph"/>
+
+  <text:list-style style:name="itemizedlist" style:parent-style-name="list">
+   <text:list-level-style-bullet text:level="1" text:style-name="bullet-symbols" text:bullet-char="⚫">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="12.7mm" fo:text-indent="-6.35mm" fo:margin-left="12.7mm"/>
+    </style:list-level-properties>
+    <style:text-properties fo:font-family="&apos;DejaVu Sans&apos;" style:font-style-name="Book" style:font-family-generic="swiss"/>
+   </text:list-level-style-bullet>
+  </text:list-style>
+
+  <style:style style:name="itemizedlist-item" style:family="paragraph" style:parent-style-name="list-item"/>
+
+  <text:list-style style:name="orderedlist" style:parent-style-name="list"/>
+
+  <style:style style:name="orderedlist-item" style:family="paragraph" style:parent-style-name="list-item"/>
+
+  <text:list-style style:name="variablelist" style:parent-style-name="list">
     <text:list-level-style-number text:level="1" text:style-name="numbering-symbols" style:num-format="">
       <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
         <style:list-level-label-alignment text:label-followed-by="listtab" fo:text-indent="-10mm" fo:margin-left="10mm"/>
@@ -75,12 +94,12 @@
     </text:list-level-style-number>
   </text:list-style>
 
-  <style:style style:name="dt-element" style:family="paragraph">
+  <style:style style:name="variablelist-term" style:family="paragraph" style:parent-style-name="list-item">
     <style:paragraph-properties fo:margin-top="0.99mm" fo:margin-bottom="0mm" fo:keep-with-next="always"/>
     <style:text-properties fo:font-weight="bold"/>
   </style:style>
 
-  <style:style style:name="dd-element" style:family="paragraph">
+  <style:style style:name="variablelist-item" style:family="paragraph" style:parent-style-name="list-item">
     <style:paragraph-properties fo:padding-left="6mm" fo:margin-top="0mm" fo:margin-bottom="0mm"/>
   </style:style>
 
@@ -125,8 +144,8 @@
   <style:style style:name="Numbering-symbols" style:family="text">
     <style:text-properties fo:color="#323298" fo:font-weight="bold"/>
   </style:style>
-  <style:style style:name="Bullet-symbols" style:family="text">
-    <style:text-properties fo:color="#323298" fo:font-weight="bold"/>
+  <style:style style:name="bullet-symbols" style:family="text">
+    <style:text-properties fo:color="#aaaaaa" fo:font-weight="bold"/>
   </style:style>
   <style:style style:name="Graphics" style:family="graphic">
     <style:graphic-properties text:anchor-type="paragraph" svg:x="0mm" svg:y="0mm" style:wrap="dynamic" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="top" style:vertical-rel="paragraph" style:horizontal-pos="center" style:horizontal-rel="paragraph"/>
