@@ -150,14 +150,18 @@ This is an example block
 with some content
 
 And some more content
-=======
+======
 
 .Nested example block
-====
+======
+This is a listing block inside an example block.
+
 ----
 Some demo commands
 ----
-====
+
+And some more text below the listing block.
+======
 
 .Comment block
 Comment blocks are never made visible, not even when the +showcomments+ attribute is set.

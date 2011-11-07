@@ -2,6 +2,9 @@ bindir = /usr/bin
 datadir = /usr/share
 sysconfdir = /etc
 
+txttargets = $(shell echo examples/*.txt)
+fodttargets = $(patsubst %.txt, %.fodt, $(txttargets))
+
 .PHONY: all examples install
 
 all:
@@ -19,10 +22,18 @@ install:
 	install -Dp -m0755 packaged/a2x.py $(DESTDIR)$(bindir)/a2x.py
 	install -Dp -m0644 packaged/a2x.conf $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt/a2x.conf
 
-examples: examples/curriculum-vitae-dag-wieers.txt examples/test-odf.txt
-	asciidoc -b odt -a iconsdir=$(datadir)/asciidoc/images/icons -o examples/README.fodt README.asciidoc
-	asciidoc -b odt -a iconsdir=$(datadir)/asciidoc/images/icons examples/test-odf.txt
-	asciidoc -b odt -a theme=cv examples/curriculum-vitae-dag-wieers.txt
-	asciidoc -b odt -a iconsdir=$(datadir)/asciidoc/images/icons examples/asciidoc.txt
+examples: odt.conf $(fodttargets)
+	asciidoc -b odt -a newline=\\n -a iconsdir=$(datadir)/asciidoc/images/icons -o examples/README.fodt README.asciidoc
+	-xmllint --noout --relaxng xmllint/OpenDocument-v1.2-cs01-schema.rng examples/README.fodt
+	asciidoc -b odt -a theme=cv -a newline=\\n examples/curriculum-vitae-dag-wieers.txt
+	-xmllint --noout --relaxng xmllint/OpenDocument-v1.2-cs01-schema.rng examples/curriculum-vitae-dag-wieers.fodt
+
+%.fodt: %.txt
+	asciidoc -b xhtml11 -a iconsdir=$(datadir)/asciidoc/images/icons -o $(patsubst %.fodt, %.html, $@) $<
+	asciidoc -b odt -a newline=\\n -a iconsdir=$(datadir)/asciidoc/images/icons -o $@ $<
+	-xmllint --noout --relaxng xmllint/OpenDocument-v1.2-cs01-schema.rng $@
 
 test: examples
+
+clean:
+	rm -f examples/*.fodt examples/*.html

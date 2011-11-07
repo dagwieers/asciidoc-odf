@@ -5,6 +5,7 @@ extension "odt"
 
 bold "<text:span text:style-name=\"strong\">$text</text:span>"
 italics "<text:span text:style-name=\"emphasis\">$text</text:span>"
+underline "<text:span text:style-name=\"underline\">$text</text:span>"
 
 #anchor "<anchor id=\"line$linenum\"/>$text"
 #postline_reference "<link linkend='line$linenum'>$text -> $linenum</link>"
