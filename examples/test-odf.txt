@@ -9,6 +9,85 @@ This document is meant for testing the AsciiDoc ODF backend and highlighting
 known problems to developers. The output of this document, using the default
 ODF stylesheet should match the HTML output as close as possible.
 
+== Paragraph
+First paragraph is here.
+
+And this is the second paragraph.
+
+== Formatting
+A paragraph can have differently formatted text, like *strong* text,
+_emphasized_ text or +monospaced+ text. But also `quoted', ``double-quoted'',
+^superscript^ and ~subscript~ are possibilities.
+
+And a anchor:formatting[referenced] paragraph.
+
+== Lists
+.Numbered list
+1. Lift left foot
+2. Put left foot forward
+3. Put left foot down
+4. Lift right foot
+5. Put right foot forward
+6. Put right foot down
+
+.Bulleted list
+- Clean room
+  * Look for garbage
+  * Throw garbage away
+    ** Look for trashbin
+    ** Throw garbage in trashbin
+       *** Estimate distance
+       *** Estimate gravity
+       *** Estimate resistance
+       *** Estimate force
+       *** Throw precisely
+- Eat
+- Read book
+- Socialize
+
+.Labeled list
+one::
+    Open box
+two::
+    Take candy
+three::
+    Close box
+
+[horizontal]
+.Horizontal list
+alpha::	First Greek letter
++
+  Test
+
+beta::	Second Greek letter
+
+gamma::	Third Greek letter
++
+  * List item 1
+  * List item 2
+
+.Nested list
+1. Eat candy
++
+====
+one::
+    Open box
+two::
+    Take candy
+three::
+    Close box
+====
+
+2. Be happy
++
+====
+ - Enjoy what you have
+ - Share
+ - Don't think to deeply
+ - Sleep regularly
+ - Eat candy
+====
+
 == Blocks
 
 .Listing block
@@ -69,6 +148,8 @@ And eternity in an hour.
 ======
 This is an example block
 with some content
+
+And some more content
 =======
 
 .Nested example block
@@ -95,13 +176,6 @@ Content inside a comment block is never visible.
 ----
 Open Block
 ----
-
-== Formatting
-A paragraph can have differently formatted text, like *strong* text,
-_emphasized_ text or +monospaced+ text. But also `quoted', ``double-quoted'',
-^superscript^ and ~subscript~ are possibilities.
-
-And a anchor:formatting[referenced] paragraph.
 
 == Admonitions
 
@@ -167,12 +241,22 @@ Title variable: pass:[<text:title>This is a simple test document</text:title>]
 Subject variable: pass:[<text:variable-set text:name="Subject" office:value-type="string">Subject</text:variable-set>]
 
 == Definition
-Definition lists should work:
+Nested definition lists should work:
 
 definition term 1::
 definition description 1
+
+====
+definition list 2 term 1::
+definition list 2 description 1
+
+definition list 2 term 2::
+definition list 2 description 2
+====
+
 definition term 2::
 definition description 2
+
 definition term 3::
 definition description 3
 
