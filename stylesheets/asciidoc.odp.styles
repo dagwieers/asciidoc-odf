@@ -474,21 +474,14 @@
 </office:styles>
 
 <!-- automatic-styles -->
-<office:automatic-styles>
-  <style:page-layout style:name="Page">
-    <style:page-layout-properties fo:page-width="210.01mm" fo:page-height="297mm" style:num-format="1" style:print-orientation="portrait" fo:margin-top="15mm" fo:margin-bottom="15mm" fo:margin-left="20mm" fo:margin-right="20mm" style:writing-mode="lr-tb" style:footnote-max-height="0mm">
-      <style:footnote-sep style:width="0.18mm" style:distance-before-sep="1.01mm" style:distance-after-sep="1.01mm" style:adjustment="left" style:rel-width="25%" style:color="#000000"/>
-    </style:page-layout-properties>
-    <style:header-style/>
-    <style:footer-style/>
-  </style:page-layout>
-</office:automatic-styles>
+<office:automatic-styles/>
 
 <!-- master-styles -->
 <office:master-styles>
-  <style:master-page style:name="Standard" style:page-layout-name="Page">
-    <style:footer>
-      <text:p text:style-name="Footer"><text:title/><text:tab/><text:chapter text:display="number-and-name" text:outline-level="1"/><text:tab/><text:page-number text:select-page="current">3</text:page-number> of <text:page-count>3</text:page-count></text:p>
-    </style:footer>
-  </style:master-page>
+ <style:master-page style:name="Standard" style:page-layout-name="Slide">
+  <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
+   <style:footer>
+    <text:p text:style-name="Footer"><text:title/><text:tab/><text:chapter text:display="number-and-name" text:outline-level="1"/><text:tab/><text:page-number text:select-page="current">3</text:page-number> of <text:page-count>3</text:page-count></text:p>
+   </style:footer>
+ </style:master-page>
 </office:master-styles>

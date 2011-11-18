@@ -21,7 +21,7 @@ OPTIONS
 		Print this documentation.
 
 	-b
-		Backend output file format: 'docbook', 'linuxdoc', 'html', 'css', 'odt'.
+		Backend output file format: 'docbook', 'linuxdoc', 'html', 'css', 'odf'.
 
 	-l
 		The name of the source code language: 'python', 'ruby', 'c++', 'c'.
@@ -67,7 +67,7 @@ keywordtags = {
 		('<emphasis role="strong">','</emphasis>'),
 	'linuxdoc':
 		('',''),
-	'odt':
+	'odf':
 		('<text:span text:style-name="strong">','</text:span>'),
 }
 commenttags = {
@@ -79,7 +79,7 @@ commenttags = {
 		('<emphasis>','</emphasis>'),
 	'linuxdoc':
 		('',''),
-	'odt':
+	'odf':
 		('<text:span text:style-name="emphasis">','</text:span>')
 }
 keywords = {

@@ -8,8 +8,8 @@ The ODF backend for AsciiDoc enables AsciiDoc users to directly convert
 documents from AsciiDoc to Open Document Format v1.2.
 
 AsciiDoc is a lightweight markup language that maps to DocBook semantics
-and makes writing (technical) documentation more enjoyable as it removes
-styling and formating from the creative process.
+and makes writing (technical) documentation and presentations more
+enjoyable as it removes styling and formating from the creative process.
 
 
 == Benefits
@@ -24,7 +24,7 @@ The ODF backend provides the following benefits:
  - Converting to various formats supported by LibreOffice
    _(export plugins include PDF, DOC, HTML, ...)_
 
- - Support for flat ODF (+.fodt+) files to help with experimenting
+ - Support for flat ODF (+.fodt+ and +.fodp+) files to help with experimenting
    _(flat ODF files are useful for manual styling, debugging or learning ODF)_
 
 
@@ -36,26 +36,35 @@ it and your help in testing and feedback is appreciated.
 
  - Default stylesheet needs improvements
 
- - Only document (odt) files are currently supported, presentations (odp)
-   support would be nice to have
-
- - Flat ODF files (+.fodt+) are only supported by LibreOffice 3.3 and newer,
-   <<a2x,use a2x>> if you need the more common 'packaged' ODF support
+ - Flat ODF files (+.fodt+ and +.fodp+) are only supported by LibreOffice 3.3
+   and newer, <<a2x,use a2x>> if you need the more common 'packaged' ODF support
 
 We hope to address each of these limitations in the future, and your help
 is appreciated and welcomed.
 
 
-== Usage
-To use this backend, copy the file _odt.conf_ into your AsciiDoc
-configuration directory _/etc/asciidoc/_. Then use:
+== Using the ODF backend
+=== Usage for text documents
+To use this backend for text documents, copy the file _odt.conf_ into your
+AsciiDoc configuration directory _/etc/asciidoc/_. Then use:
 
     # asciidoc -b odt document.txt
 
-This will produce the file _document.fodt_ which is a 'flat ODF file', a
-single XML file that can be opened using any recent LibreOffice.
+This will produce the file _document.fodt_ which is a 'flat ODT file',
+a single XML file that can be opened using any recent LibreOffice.
 
 
+=== Usage for presentations
+To use this backend for presentations, copy the file _odp.conf_ into your
+AsciiDoc configuration directory _/etc/asciidoc/_. Then use:
+
+    # asciidoc -b odp presentation.txt
+
+This will produce the file _presentation.fodp_ which is a 'flat ODP file',
+a single XML file that can be opened using any recent LibreOffice.
+
+
+== Additional functionality
 === Embedded Images
 Images can be embedded in your ODF document. To do this use the option
 +-a data-uri+ on the command line or add the following attribute in your

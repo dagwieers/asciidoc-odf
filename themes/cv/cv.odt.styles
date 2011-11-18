@@ -9,12 +9,12 @@
 <!-- styles -->
 <office:styles>
   <!-- Default styles -->
-  <style:default-style style:family="text" style:auto-update="true">
+  <style:default-style style:family="text">
     <style:text-properties fo:color="#000000" style:font-name="sans-serif" fo:font-size="9pt"/>
   </style:default-style>
 
-  <style:default-style style:family="paragraph" style:auto-update="true">
-    <style:paragraph-properties fo:text-align="start" fo:margin-top="0.0mm" fo:margin-bottom="0mm" style:justify-single-word="false" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:writing-mode="page" fo:keep-together="always"/>
+  <style:default-style style:family="paragraph">
+    <style:paragraph-properties fo:text-align="start" fo:margin-top="0mm" fo:margin-bottom="0mm" style:justify-single-word="false" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:writing-mode="page" fo:keep-together="always"/>
     <style:text-properties fo:color="#000000" style:font-name="sans-serif" fo:font-size="9pt"/>
   </style:default-style>
 
@@ -55,7 +55,7 @@
   </style:style>
 
   <style:style style:name="title" style:family="paragraph" style:class="text">
-    <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="0" fo:margin-bottom="0.8mm"/>
+    <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="0mm" fo:margin-bottom="0.8mm"/>
     <style:text-properties style:font-name="sans-serif" fo:color="#666699" fo:font-weight="bold" fo:font-size="110%"/>
   </style:style>
 
@@ -71,7 +71,7 @@
 
   <style:style style:name="list-item" style:family="paragraph"/>
 
-  <text:list-style style:name="itemizedlist" style:parent-style-name="list">
+  <text:list-style style:name="itemizedlist">
    <text:list-level-style-bullet text:level="1" text:style-name="bullet-symbols" text:bullet-char="⚫">
     <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
      <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="12.7mm" fo:text-indent="-6.35mm" fo:margin-left="12.7mm"/>
@@ -82,11 +82,11 @@
 
   <style:style style:name="itemizedlist-item" style:family="paragraph" style:parent-style-name="list-item"/>
 
-  <text:list-style style:name="orderedlist" style:parent-style-name="list"/>
+  <text:list-style style:name="orderedlist"/>
 
   <style:style style:name="orderedlist-item" style:family="paragraph" style:parent-style-name="list-item"/>
 
-  <text:list-style style:name="variablelist" style:parent-style-name="list">
+  <text:list-style style:name="variablelist">
     <text:list-level-style-number text:level="1" text:style-name="numbering-symbols" style:num-format="">
       <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
         <style:list-level-label-alignment text:label-followed-by="listtab" fo:text-indent="-10mm" fo:margin-left="10mm"/>
@@ -181,7 +181,7 @@
 <office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="Page">
     <style:footer>
-      <text:p text:style-name="Footer"><text:title/><text:tab/>Oct 2011<text:tab/><text:page-number text:select-page="current">3</text:page-number> of <text:page-count>3</text:page-count></text:p>
+      <text:p text:style-name="Footer"><text:title/><text:tab/>Nov 2011<text:tab/><text:page-number text:select-page="current">3</text:page-number> of <text:page-count>3</text:page-count></text:p>
     </style:footer>
   </style:master-page>
 </office:master-styles>

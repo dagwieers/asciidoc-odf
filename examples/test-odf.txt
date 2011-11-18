@@ -88,6 +88,17 @@ three::
  - Eat candy
 ====
 
+3. Try something
++
+====
+
+[horizontal]
+uno:: Een
+due:: Twee
+tre:: Drie
+
+====
+
 == Blocks
 
 .Listing block
@@ -266,8 +277,8 @@ definition description 3
 
 == Images
 
-[width="3cm",height="3cm",align="right"]
+[width="50%",height="50%",align="right",caption="Dag gesticulating"]
 image::dag-professional-250.jpg[Photo]
 
-[width="3cm",height="3cm",align="left"]
+[width="50%",height="50%",align="left"]
 image::inkscape.svg[Inkscape logo]

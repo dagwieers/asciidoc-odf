@@ -1,7 +1,7 @@
 # by Dag Wieërs
 # http://github.com/dagwieers/asciidoc-odf
 
-extension "odt"
+extension "odf"
 
 bold "<text:span text:style-name=\"strong\">$text</text:span>"
 italics "<text:span text:style-name=\"emphasis\">$text</text:span>"

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<office:document
+ xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"
+ xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0"
+ office:version="1.2"
+ office:mimetype="application/vnd.oasis.opendocument.text">
+<office:body>
+<office:text>
+<text:p>This is a simple footnote<text:note text:note-class="footnote"><text:note-citation><text:label>1</text:label></text:note-citation><text:note-body><text:p text:style-name="footnote">A footnote is a note in the footer</text:p></text:note-body></text:note> test.</text:p>
+</office:text>
+</office:body>
+</office:document>
