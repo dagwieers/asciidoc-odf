@@ -24,7 +24,7 @@ OPTIONS
 		Backend output file format: 'docbook', 'linuxdoc', 'html', 'css', 'odf'.
 
 	-l
-		The name of the source code language: 'python', 'ruby', 'c++', 'c'.
+		The name of the source code language: 'python', 'ruby', 'c', 'c++', 'bash', 'ksh'.
 
 	-t tabsize
 		Expand source tabs to tabsize spaces.
@@ -70,6 +70,12 @@ keywordtags = {
 	'odf':
 		('<text:span text:style-name="strong">','</text:span>'),
 }
+whitespace = {
+	'odf': '<text:s text:c="%d"/>',
+}
+newline = {
+	'odf': ' <text:line-break/>',
+}
 commenttags = {
 	'html':
 		('<i>','</i>'),
@@ -80,7 +86,7 @@ commenttags = {
 	'linuxdoc':
 		('',''),
 	'odf':
-		('<text:span text:style-name="emphasis">','</text:span>')
+		('<text:span text:style-name="emphasis">','</text:span>'),
 }
 keywords = {
 	'python':
@@ -104,17 +110,43 @@ keywords = {
 		'short', 'signed', 'sizeof', 'static', 'static_cast', 'struct',
 		'switch', 'template', 'this', 'throw', 'true', 'try', 'typedef',
 		'typeid', 'typename', 'union', 'unsigned', 'using', 'virtual', 'void',
-		'volatile', 'wchar_t', 'while')
+		'volatile', 'wchar_t', 'while'),
+	'bash':
+		('alias', 'bg', 'bind', 'break', 'builtin', 'caller', 'case', 'cd',
+		'chdir', 'command', 'compgen', 'complete', 'compopt', 'continue',
+		'coproc', 'declare', 'dirs', 'disown', 'do', 'done', 'echo', 'elif',
+		'else', 'enable', 'esac', 'eval', 'exec', 'exit', 'export', 'fc', 'fg',
+		'fi', 'for', 'function', 'getopts', 'hash', 'help', 'history', 'if',
+		'in', 'jobs', 'kill', 'let', 'local', 'logout', 'mapfile', 'popd',
+		'printf', 'pushd', 'pwd', 'read', 'readarray', 'readonly', 'return',
+		'select', 'set', 'shift', 'shopt', 'source', 'suspend', 'test', 'then',
+		'time', 'times', 'trap', 'type', 'typeset', 'ulimit', 'umask',
+		'unalias', 'unset', 'until', 'wait', 'while', '!', '[[', ']]',
+		'(', ')', '((', '))', '{', '}'),
+	'ksh':
+		('alias', 'bg', 'break', 'builtin', 'case', 'cd', 'command',
+		'continue', 'disown', 'do', 'done', 'echo', 'else', 'enum', 'esac',
+		'eval', 'exec', 'exit', 'export', 'false', 'fg', 'fi', 'for',
+		'function', 'getconf', 'getopts', 'hist', 'if', 'in', 'jobs', 'kill',
+		'let', 'newgrp', 'print', 'printf', 'pwd', 'read', 'readonly',
+		'return', 'select', 'set', 'shift', 'sleep', 'then', 'time', 'trap',
+		'true', 'typeset', 'ulimit', 'umask', 'unalias', 'unset', 'until',
+		'wait', 'while', 'whence', '!', '[[', ']]', '(', ')', '((', '))',
+		'{', '}'),
 }
 block_comments = {
 	'python': ("'''","'''"),
 	'ruby': None,
-	'c++': ('/*','*/')
+	'c++': ('/*','*/'),
+	'bash': None,
+	'ksh': None,
 }
 inline_comments = {
 	'python': '#',
 	'ruby': '#',
-	'c++': '//'
+	'c++': '//',
+	'bash': '#',
+	'ksh': '#',
 }
 
 def print_stderr(line):
@@ -179,14 +211,19 @@ def code_filter():
 			else:
 				line = re.sub(r'\b(?P<word>\w+)\b',sub_keyword,line)
 		if not line1:
-#			sys.stdout.write(os.linesep)
-			sys.stdout.write('<text:line-break/>')
+			if backend in whitespace.keys():
+				sys.stdout.write(newline[backend])
+			else:
+				sys.stdout.write(os.linesep)
 		line1 = False
 		line_split = space_regex.split(line); line_split.append('')
 		for text, spaces in zip(*[iter(line_split)]*2):
 			sys.stdout.write(text)
 			if len(spaces) > 0:
-				sys.stdout.write(' <text:s text:c="%d"/>' %(len(spaces)-1,) )
+				if backend in whitespace.keys():
+					sys.stdout.write(whitespace(backend) % (len(spaces)-1,) )
+				else:
+					sys.stdout.write(spaces)
 		line = sys.stdin.readline()
 
 def usage(msg=''):
