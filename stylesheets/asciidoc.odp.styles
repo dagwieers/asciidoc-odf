@@ -8,15 +8,19 @@
 
 <!-- styles -->
 <office:styles>
+</office:styles>
+
+<!-- automatic-styles -->
+<office:automatic-styles>
 
  <!-- Default styles -->
  <style:default-style style:family="text">
-  <style:text-properties fo:color="#000000" style:font-name="serif" fo:font-size="12pt"/>
+  <style:text-properties fo:color="#000000" style:font-name="serif"/>
  </style:default-style>
 
  <style:default-style style:family="paragraph">
   <style:paragraph-properties fo:text-align="start" fo:margin-top="1.8mm" fo:margin-bottom="1.8mm" style:justify-single-word="false" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:writing-mode="page"/>
-  <style:text-properties fo:color="#000000" style:font-name="serif" fo:font-size="12pt"/>
+  <style:text-properties fo:color="#000000" style:font-name="serif"/>
  </style:default-style>
 
  <style:default-style style:family="graphic">
@@ -319,12 +323,12 @@
 
   <style:style style:name="listingblock" style:family="paragraph">
    <style:paragraph-properties fo:background-color="#f8f8f8" fo:padding-left="2mm" fo:padding-right="2mm" fo:padding-top="3mm" fo:padding-bottom="3mm" fo:border-left="1.5mm solid #f0f0f0" fo:border="0.1mm solid #dddddd" style:shadow="none" style:line-break="normal" fo:keep-together="always"/>
-   <style:text-properties style:font-name="monospace" fo:font-size="10pt" fo:color="#000080"/>
+   <style:text-properties style:font-name="monospace" fo:color="#000080" fo:font-size="80%"/>
   </style:style>
 
   <style:style style:name="literalblock" style:family="paragraph">
     <style:paragraph-properties fo:padding-left="0mm" fo:padding-right="0mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="0.02mm solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="none"/>
-    <style:text-properties style:font-name="monospace" fo:font-size="10pt" fo:color="#000080"/>
+    <style:text-properties style:font-name="monospace" fo:color="#000080" fo:font-size="80%"/>
   </style:style>
 
   <style:style style:name="exampleblock" style:family="paragraph"/>
@@ -333,7 +337,7 @@
 
   <style:style style:name="quoteblock" style:family="paragraph">
     <style:paragraph-properties fo:background-color="#f8f8f8" fo:margin-left="11.99mm" fo:margin-right="0mm" fo:margin-top="0mm" fo:margin-bottom="3mm" fo:text-indent="0mm" style:auto-text-indent="false" fo:padding-left="1.5mm" fo:padding-right="0.49mm" fo:padding-top="0.49mm" fo:padding-bottom="0.49mm" fo:border-left="2mm solid #f0f0f0" fo:border-right="0.4mm solid #dddddd" fo:border-top="0.4mm solid #dddddd" fo:border-bottom="0.4mm solid #dddddd" style:shadow="none"/>
-    <style:text-properties style:font-name="monospace" fo:font-size="10pt" fo:color="#000080"/>
+    <style:text-properties style:font-name="monospace" fo:color="#000080"/>
   </style:style>
   <style:style style:name="preamble" style:family="paragraph">
     <style:text-properties fo:font-style="italic"/>
@@ -373,7 +377,7 @@
     <style:text-properties fo:background-color="#ffff00"/>
   </style:style>
   <style:style style:name="monospaced" style:family="text">
-    <style:text-properties style:font-name="monospace" fo:font-size="10pt" fo:color="#000080"/>
+    <style:text-properties style:font-name="monospace" fo:color="#000080" fo:font-size="80%"/>
   </style:style>
   <style:style style:name="superscript" style:family="text">
     <style:text-properties style:text-position="super 80%"/>
@@ -382,7 +386,7 @@
     <style:text-properties style:text-position="sub 80%"/>
   </style:style>
   <style:style style:name="command" style:family="text">
-    <style:text-properties style:font-name="monospace" fo:font-size="10pt" fo:font-weight="bold" fo:background-color="#f0f0f0"/>
+    <style:text-properties style:font-name="monospace" fo:font-weight="bold" fo:background-color="#f0f0f0" fo:font-size="80%"/>
   </style:style>
   <style:style style:name="numbering-symbols" style:family="text">
     <style:text-properties fo:color="#aaaaaa" fo:font-weight="bold"/>
@@ -471,10 +475,7 @@
       </style:list-level-properties>
     </text:outline-level-style>
   </text:outline-style>
-</office:styles>
-
-<!-- automatic-styles -->
-<office:automatic-styles/>
+</office:automatic-styles>
 
 <!-- master-styles -->
 <office:master-styles>
