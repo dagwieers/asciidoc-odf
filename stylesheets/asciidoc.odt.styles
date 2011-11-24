@@ -56,9 +56,9 @@
    </style:list-level-properties>
   </text:outline-level-style>
   <text:outline-level-style text:level="4" text:style-name="numbering" style:num-suffix="." style:num-format="1" text:display-levels="4">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="15.24mm" fo:text-indent="-15.24mm" fo:margin-left="15.24mm"/>
-    </style:list-level-properties>
+   <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+    <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="15.24mm" fo:text-indent="-15.24mm" fo:margin-left="15.24mm"/>
+   </style:list-level-properties>
   </text:outline-level-style>
  </text:outline-style>
 
@@ -397,7 +397,7 @@
  </style:style>
 
  <style:style style:name="horizontallist-term" style:family="paragraph" style:parent-style-name="list-item">
-   <style:text-properties fo:color="#000080"/>
+  <style:text-properties fo:color="#000080"/>
  </style:style>
 
  <style:style style:name="horizontallist-item" style:family="paragraph" style:parent-style-name="list-item"/>
@@ -593,7 +593,6 @@
  </style:style>
 
  <style:style style:name="numbering" style:display-name="Numbering Symbols" style:family="text"/>
-
 </office:automatic-styles>
 
 <!-- master-styles -->
