@@ -1,45 +1,93 @@
 = Rear: Disaster Recovery and System Migration solution
 Dag Wieërs <dag@wieers.com>
 
+_This presentation is written in AsciiDoc and can be converted to
+a LibreOffice/OpenOffice presentation using
+http://github.com/dagwieers/asciidoc-odf[asciidoc-odf]._
+
+
 ////
 == Who is Dag Wieërs ?
 * Linux and Open Source consultant
   - Worked at IBM Belgium, now self-employed to provide advice, design, automation, maintenance
 
 * Involved in various Open Source communities
-  - RPMforge, ELRepo, CentOS, syslinux, AsciiDoc, LibreOffice, docbook2odf, Rear, …
+  - incl. RPMforge, ELRepo, CentOS, syslinux, AsciiDoc, LibreOffice, docbook2odf, Rear
 
 * Author of various tools
-  - dstat, unoconv, mrepo, proxytunnel, wiipresent, dconf, asciidoc-odf, …
+  - incl. dstat, unoconv, mrepo, proxytunnel, wiipresent, dconf, asciidoc-odf
 ////
 
 
 == What is Relax and Recover ?
 _Tool that implements a DR workflow for Linux_
 
-* Which basically means ?
-  - Modular framework written in Bash
-  - Easy to extend to own needs
+Which basically means ?
+
   - Easy to deploy (set up and forget)
+  - Makes recovery as easy as possible
+  - Complete bare-metal disaster recovery
   - Integration for various Linux technologies
   - Integration with various back-up solutions
-  - Attempts to make recovery as easy as possible
+  - Modular framework written in Bash
+  - Easy to extend to own needs
+
+
+== How does Rear work ?
+Rear builds a rescue image from the existing installation
+
+  - Restored system is an accurate copy
+  - Restored system supports the hardware
+  - Exotic setups (kernel, hardware) guaranteed to work
+  - What worked before keeps on working
+  - Recovery is fully automated
+
+Backup software is integrated into rescue image
+
+  - With a working configuration
+
+
+== Why is a backup not sufficient ?
+Backup only covers storing data safely/securely
+
+  - Often only the data is available
+  - DR is a manual and time-consuming process
+
+So manual disaster recovery risks:
+
+  - unknown system storage and network configuration
+  - incompatibilities between firmware/software/hardware
+    * using newer tools with older data (or vice versa)
+    * hardware is not supported
+  - making manual mistakes (again and again)
+  - working against the clock amidst chaos
+  - frustration
+
+
+== What does Rear bring to the table ?
+But the Rear rescue image takes care of the complete
+recovery process until the system runs:
+
+  - enabling the network and remote access
+  - using tools to recreate an accurate/working copy
+  - recreating hardware and software RAID
+  - partitioning and creating file systems
+  - starting the backup restore process
+  - restoring the bootloader
 
 
 == Rear functionality
 * Supported storage technologies
   - HP SmartArray, SW RAID, DRBD, LVM, multipath
-  - ext2/ext3/ext4, xfs, jfs, vfat, LUKS
+  - ext2/ext3/ext4, xfs, jfs, vfat, btrfs, LUKS
 
 * Boot media or remote storage
-  - Tape, ISO, USB, eSATA, …
+  - OBDR tape, ISO, USB, eSATA, network booting
   - NFS, CIFS, rsync, HTTP, FTP, SFTP, ...
 
 * Back-up backends
-  - TSM, HP DP, Symantec NetBackup, Bacula
-
-* Integrated back-up
-  - tar, rsync
+  - IBM TSM, HP DataProtector, Symantec NetBackup,
+    Bacula, tar, rsync
 
 
 == How is Rear used ?
@@ -76,7 +124,7 @@ _Tool that implements a DR workflow for Linux_
 * Log-file on recovery media
 
 
-== Use case: Belgian Federal Police
+== Use case: Belgian Federal Police /1
 * Requirements:
   - About 200 sites with each a set of Linux servers
   - Each server comes with a tape-drive
@@ -90,7 +138,7 @@ _Tool that implements a DR workflow for Linux_
   - End-user documentation in 3 languages
 
 
-== Use case: Belgian Federal Police (2)
+== Use case: Belgian Federal Police /2
 * Solution:
   - All requirements implement but...
   - New systems didn't support bootable tape (OBDR)
@@ -104,8 +152,10 @@ _Tool that implements a DR workflow for Linux_
   - Support migration scenarios
 
 
-== Use case: Belgian Federal Police (3)
+== Use case: Belgian Federal Police /3
 * Rear config for USB rescue media:
+
+[source,bash]
 ----
 BACKUP=BACULA
 OUTPUT=USB
@@ -113,6 +163,8 @@ USB_DEVICE=/dev/disk/by-label/REAR-000
 ----
 
 * Rear config for USB backup media:
+
+[source,bash]
 ----
 BACKUP=NETFS
 OUTPUT=USB
@@ -122,8 +174,10 @@ EXCLUDE_MOUNTPOINTS=( /data )
 ----
 
 
-== Use case: Belgian Federal Police (4)
+== Use case: Belgian Federal Police /4
 * Rear config for OBDR rescue tapes:
+
+[source,bash]
 ----
 BACKUP=BACULA
 OUTPUT=OBDR
@@ -132,13 +186,15 @@ BEXTRACT_VOLUME=VOL-*
 ----
 
 * Rear config for OBDR backup tapes:
+
+[source,bash]
 ----
 BACKUP=NETFS
 OUTPUT=OBDR
 TAPE_DEVICE=/dev/nst0
 ----
 
-== Use case: Centralize images
+== Use case: Centralized images /1
 * Requirements:
   - Remote rescue images
   - Removable media for off-site storage
@@ -150,12 +206,14 @@ TAPE_DEVICE=/dev/nst0
   - Stored on USB disks, rotated every week
 
 
-== Use case: Centralize images (2)
+== Use case: Centralized images /2
 * Label USB disk(s) and mount
 
 * Configure Apache to allow HTTP PUT to USB disk
 
 * Rear config in _/etc/rear/local.conf_:
+
+[source,bash]
 ----
 BACKUP=BACULA
 OUTPUT=ISO
@@ -168,7 +226,7 @@ ISO_URL=http://server:port/path/
 30 1 * * * root /usr/sbin/rear checklayout || /usr/sbin/rear mkrescue
 ----
 
-== Rear command line
+== Rear command line /1
 
 ----
 [root@moria rear]# rear help
@@ -187,7 +245,7 @@ List of commands:
 Use 'rear -v help' for more advanced commands.
 ----
 
-== Rear command line (2)
+== Rear command line /2
 
 ----
 [root@moria rear]# rear help
@@ -232,15 +290,21 @@ Available options:
   - Re-organize code base
   - Release management needs a process
   - Website and documentation not up-to-date
-  - Change development tools ?
-  - Rear Development
+  - Change of development tools ?
 
 
 == Development team
-* Schlomo Schapiro and Gratien D'haese (authors)
-* Jeroen Hoekx and Dag Wieërs (new contributors)
+Consists of:
 
-* Development at Sourceforge
+  - Schlomo Schapiro (original author)
+  - Gratien D'haese (original author)
+  - Jeroen Hoekx (new contributor)
+  - Dag Wieërs (new contributor)
+
+and various other contributors
+
+Development at Sourceforge
+
   - http://rear.sourceforge.net/
   - rear-users@lists.sourceforge.net
 
