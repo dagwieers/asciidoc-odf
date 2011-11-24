@@ -1,8 +1,6 @@
 = ODF backend for AsciiDoc
 :author: Dag Wieers
 :email: dag@wieers.com
-:data-uri:
-:icons:
 
 The ODF backend for AsciiDoc enables AsciiDoc users to directly convert
 documents from AsciiDoc to Open Document Format v1.2.
@@ -32,7 +30,7 @@ The ODF backend provides the following benefits:
 The current implementation is not feature complete. We are working on
 it and your help in testing and feedback is appreciated.
 
- - Incomplete implementation lacks eg. TOC support, complex table support, ...
+ - Incomplete implementation lacks eg. complex table support, ...
 
  - Default stylesheet needs improvements
 
@@ -186,7 +184,7 @@ the text is part of the file.
 If the ODF file fails to open in LibreOffice, you can perform a syntax-check
 ofthe generated Flat ODF (+.fodt+) using the following command:
 
-    # xmllint --format some-file.fodt
+    # xmllint --noout --relaxng OpenDocument-v1.2-cs01-schema.rng some-file.fodt
 
 If this outputs an error, it means the ODF file does not conform the schema.
 
