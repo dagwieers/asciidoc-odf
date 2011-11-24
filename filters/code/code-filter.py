@@ -174,7 +174,7 @@ def code_filter():
 	tag_comment = 0 # True if we should tag the current line as a comment.
 	line = sys.stdin.readline()
 	line1 = True
-	space_regex = re.compile('(  +)')
+	space_regex = re.compile('( +)')
 	while line:
 		line = string.rstrip(line)
 		line = string.expandtabs(line,tabsize)
@@ -221,7 +221,7 @@ def code_filter():
 			sys.stdout.write(text)
 			if len(spaces) > 0:
 				if backend in whitespace.keys():
-					sys.stdout.write(whitespace(backend) % (len(spaces)-1,) )
+					sys.stdout.write(whitespace(backend) % len(spaces) )
 				else:
 					sys.stdout.write(spaces)
 		line = sys.stdin.readline()
