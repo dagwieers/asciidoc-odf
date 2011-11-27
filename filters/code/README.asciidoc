@@ -1,0 +1,38 @@
+= ODF output support for AsciiDoc code-filter
+:author: Dag Wieers
+:email: dag@wieers.com
+
+AsciiDoc's code-filter does not have support for ODF output.
+
+This improved code-filter not only adds ODF output support, but also adds
+ksh and bash language support.
+
+
+== Installation
+*TBD*
+
+_Describe the installation_
+
+
+== Usage
+*TBD*
+
+_Describe the command line syntax_
+
+
+== Using output in Libreoffice
+*TBD*
+
+_Describe how one can generate an .fodt file and copy it to their own document_
+
+
+== Stylesheet colors
+*TBD*
+
+_Describe what styles to use when generating ODF snippets_
+
+
+== Links
+More information about AsciiDoc's code-filter is available from their website at:
+
+* *TBD*

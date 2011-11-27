@@ -1,0 +1,46 @@
+= ODF output support for GNU source-highlight
+:author: Dag Wieers
+:email: dag@wieers.com
+
+The ODF language output for GNU source-highlight enables the user to generate
+color-highlighted ODF output of source code files. Or to generate ODF
+color-highlighted snippets to be used by ODF back-ends (like asciidoc-odf).
+
+Source-highlight reads reads output format specifications dynamically, and thus
+it can be easily extended (without recompiling the sources) for handling
+new output formats. And that is exactly what odf.outlang does.
+
+
+== Installation
+To install the ODF language output configuration so GNU source-highlight
+can use it, perform the following step:
+
+    # install -Dp -m0644 odf.outlang /usr/share/source-highlight/odf.outlang
+
+Then add the ODF language support to the _outlang.map_ index located at:
+
+    # echo "odf = odf.outlang" >> /usr/share/source-highlight/outlang.map
+
+
+== Usage
+*TBD*
+
+_Describe the command line syntax_
+
+
+== Using output in Libreoffice
+*TBD*
+
+_Describe how one can generate an .fodt file and copy it to their own document_
+
+
+== Stylesheet colors
+*TBD*
+
+_Describe what styles to use when generating ODF snippets_
+
+
+== Links
+More information about source-highlight is available from their website at:
+
+* http://www.gnu.org/s/src-highlite/[]
