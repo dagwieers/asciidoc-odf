@@ -65,8 +65,8 @@ a single XML file that can be opened using any recent LibreOffice.
 == Additional functionality
 === Embedded Images
 Images can be embedded in your ODF document. To do this use the option
-+-a data-uri+ on the command line or add the following attribute in your
-AsciiDoc file just below the document title:
++-a data-uri+ on the command line or add the +data-uri+ attribute in your
+AsciiDoc file:
 
     :data-uri:
 
@@ -83,17 +83,15 @@ not embedded, regardless of the +data-uri+ attribute.
 === Admonition Icon Support
 If you use admonitions in your documents, please use the options
 +-a icons -a iconsdir=/usr/share/asciidoc/images/icons+ on the
-command line or add the following attributes just below the document
-title:
+command line or add those attributes in your AsciiDoc file:
 
     :icons:
     :iconsdir: /usr/share/asciidoc/images/icons
 
 
 === Numbered titles
-If you like titles to be numbered, please use the option +- numbered+ on
-the command line or add the following attribute in your AsciiDoc file just
-below the document title:
+If you like titles to be numbered, please use the option +-a numbered+ on
+the command line or add the +numbered+ attribute in your AsciiDoc file:
 
     :numbered:
 
@@ -101,6 +99,27 @@ below the document title:
 The current implementation adds title numbers always. Since numbering
 chapters/section is part of the stylesheet in ODF, it is complex to make
 this configurable.
+
+
+=== Table-of-Contents support
+The ODF backend has Table-of-Contents support if you use the option
++-a toc+ on the command line or add the +toc+ attribute in your AsciiDoc
+file:
+
+    :toc:
+
+The TOC depth can be specified using the option +-a toclevels=2+ on the
+command line or add the +toclevels+ attribute in your AsciiDoc file:
+
+    :toclevels: 2
+
+[IMPORTANT]
+The Table-of-Contents in the ODF file does not include the actual index content.
+The exact content needs to be updated by the ODF consumer (e.g. LibreOffice) in
+order to generate a real Table-of-Contents. If you use
+http://dag.wieers.com/home-made/unoconv/[unoconv] for doing automatic
+conversions to e.g. PDF or DOC, unoconv will update all indexes, including
+the Table-of-Contents.
 
 
 === Using themes (or custom stylesheets)
@@ -199,7 +218,5 @@ _asciidoc.odt.styles_ so that the output conforms to your desire.
 == Further Reading
 Apart from the official specifications, little information is available.
 
- - http://docs.oasis-open.org/office/v1.0/errata/os/OpenDocument-v1.0-errata-02-os.pdf[Open Document Format for Office Applications (OpenDocument) v1.0]
- - http://docs.oasis-open.org/office/v1.1/OpenDocument-v1.1.pdf[Open Document Format for Office Applications (OpenDocument) v1.1]
  - http://docs.oasis-open.org/office/v1.2/OpenDocument-v1.2-part1.pdf[Open Document Format for Office Applications (OpenDocument) v1.2]
  - http://en.wikipedia.org/wiki/OpenDocument_technical_specification[Wikipedia: OpenDocument technical specification]
