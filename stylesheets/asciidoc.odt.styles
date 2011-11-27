@@ -14,7 +14,7 @@
  </style:default-style>
 
  <style:default-style style:family="paragraph">
-  <style:paragraph-properties fo:text-align="start" fo:margin-top="1.8mm" fo:margin-bottom="1.8mm" style:justify-single-word="false" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:writing-mode="page"/>
+  <style:paragraph-properties fo:text-align="start" fo:margin-top="0.5mm" fo:margin-bottom="2.3mm" style:justify-single-word="false" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:writing-mode="page"/>
   <style:text-properties fo:color="#000000" style:font-name="serif" fo:font-size="12pt"/>
  </style:default-style>
 
@@ -63,7 +63,7 @@
  </text:outline-style>
 
  <style:style style:name="sect-default" style:family="paragraph" style:class="text">
-  <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="4.4mm" fo:margin-bottom="1.8mm"/>
+  <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="1.8mm" fo:margin-bottom="0.5mm"/>
   <style:text-properties style:font-name="sans-serif" fo:color="#527bbd" fo:font-weight="bold"/>
  </style:style>
 
@@ -110,7 +110,7 @@
  </style:style>
 
  <style:style style:name="title" style:family="paragraph" style:class="text">
-  <style:paragraph-properties fo:margin-top="0mm" fo:margin-bottom="1.8mm" fo:keep-with-next="always"/>
+  <style:paragraph-properties fo:margin-top="1.8mm" fo:margin-bottom="0.3mm" fo:keep-with-next="always"/>
   <style:text-properties style:font-name="sans-serif" fo:color="#527bbd" fo:font-weight="bold"/>
  </style:style>
 

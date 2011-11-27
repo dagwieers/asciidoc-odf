@@ -8,180 +8,195 @@
 
 <!-- styles -->
 <office:styles>
-  <!-- Default styles -->
-  <style:default-style style:family="text">
-    <style:text-properties fo:color="#000000" style:font-name="sans-serif" fo:font-size="9pt"/>
-  </style:default-style>
 
-  <style:default-style style:family="paragraph">
-    <style:paragraph-properties fo:text-align="start" fo:margin-top="0mm" fo:margin-bottom="0mm" style:justify-single-word="false" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:writing-mode="page" fo:keep-together="always"/>
-    <style:text-properties fo:color="#000000" style:font-name="sans-serif" fo:font-size="9pt"/>
-  </style:default-style>
+ <!-- Default styles -->
+ <style:default-style style:family="text">
+  <style:text-properties fo:color="#000000" style:font-name="sans-serif" fo:font-size="9pt"/>
+ </style:default-style>
 
-  <!-- 
-  <style:default-style style:family="graphic">
-    <style:graphic-properties draw:shadow-offset-x="3mm" draw:shadow-offset-y="3mm" draw:start-line-spacing-horizontal="2.83mm" draw:start-line-spacing-vertical="2.83mm" draw:end-line-spacing-horizontal="2.83mm" draw:end-line-spacing-vertical="2.83mm" style:flow-with-text="true"/>
-    <style:paragraph-properties fo:text-align="start" style:text-autospace="ideograph-alpha" style:line-break="strict" style:writing-mode="lr-tb" style:font-independent-line-spacing="false"/>
-  </style:default-style>
+ <style:default-style style:family="paragraph">
+  <style:paragraph-properties fo:text-align="start" fo:margin-top="0.2mm" fo:margin-bottom="0.2mm" style:justify-single-word="false" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:writing-mode="page" fo:keep-together="always"/>
+  <style:text-properties fo:color="#000000" style:font-name="sans-serif" fo:font-size="9pt"/>
+ </style:default-style>
+
+ <!-- 
+ <style:default-style style:family="graphic">
+  <style:graphic-properties draw:shadow-offset-x="3mm" draw:shadow-offset-y="3mm" draw:start-line-spacing-horizontal="2.83mm" draw:start-line-spacing-vertical="2.83mm" draw:end-line-spacing-horizontal="2.83mm" draw:end-line-spacing-vertical="2.83mm" style:flow-with-text="true"/>
+  <style:paragraph-properties fo:text-align="start" style:text-autospace="ideograph-alpha" style:line-break="strict" style:writing-mode="lr-tb" style:font-independent-line-spacing="false"/>
+ </style:default-style>
   -->
 
-  <style:default-style style:family="table">
-    <style:table-properties table:border-model="separating"/>
-  </style:default-style>
+ <style:default-style style:family="table">
+  <style:table-properties table:border-model="separating"/>
+ </style:default-style>
 
-  <style:default-style style:family="table-row">
-    <style:table-row-properties fo:keep-together="auto"/>
-  </style:default-style>
+ <style:default-style style:family="table-row">
+  <style:table-row-properties fo:keep-together="auto"/>
+ </style:default-style>
 
-  <!-- Modified from default stylesheet -->
-  <style:style style:name="sect-default" style:family="paragraph" style:class="text">
-    <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="2.5mm" fo:margin-bottom="0mm"/>
-    <style:text-properties style:font-name="sans-serif" fo:color="#666699" fo:font-weight="bold"/>
-  </style:style>
+ <!-- Modified from default stylesheet -->
+ <style:style style:name="sect-default" style:family="paragraph" style:class="text">
+  <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="2.5mm" fo:margin-bottom="0mm"/>
+  <style:text-properties style:font-name="sans-serif" fo:color="#666699" fo:font-weight="bold"/>
+ </style:style>
 
-  <style:style style:name="sect0" style:family="paragraph" style:parent-style-name="sect-default">
-    <style:paragraph-properties fo:margin-top="0mm" fo:margin-bottom="0mm" fo:padding="0mm"/>
-    <style:text-properties fo:color="#000000" style:text-outline="true" style:font-name="article-title" fo:font-size="22pt" fo:text-shadow="1pt 1pt"/>
-  </style:style>
+ <style:style style:name="sect0" style:family="paragraph" style:parent-style-name="sect-default">
+  <style:paragraph-properties fo:margin-top="0mm" fo:margin-bottom="0mm" fo:padding="0mm"/>
+  <style:text-properties fo:color="#000000" style:text-outline="true" style:font-name="article-title" fo:font-size="22pt" fo:text-shadow="1pt 1pt"/>
+ </style:style>
 
-  <style:style style:name="sect1" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="1" style:class="text">
-    <style:paragraph-properties fo:border-bottom="0.35mm solid #c0c0c0" fo:padding-top="1.8mm" text:number-lines="true" text:line-number="1"/>
-    <style:text-properties fo:font-size="13.1pt"/>
-  </style:style>
+ <style:style style:name="sect1" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="1" style:class="text">
+  <style:paragraph-properties fo:border-bottom="0.35mm solid #c0c0c0" fo:padding-top="1.8mm" text:number-lines="true" text:line-number="1"/>
+  <style:text-properties fo:font-size="13.1pt"/>
+ </style:style>
 
-  <style:style style:name="sect2" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="2">
-    <style:paragraph-properties style:page-number="auto" text:number-lines="true" text:line-number="2"/>
-    <style:text-properties fo:font-size="10.5pt" style:text-underline-style="solid" style:text-underline-color="#c0c0c0"/>
-  </style:style>
+ <style:style style:name="sect2" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="2">
+  <style:paragraph-properties style:page-number="auto" text:number-lines="true" text:line-number="2"/>
+  <style:text-properties fo:font-size="10.5pt" style:text-underline-style="solid" style:text-underline-color="#c0c0c0"/>
+ </style:style>
 
-  <style:style style:name="title" style:family="paragraph" style:class="text">
-    <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="0mm" fo:margin-bottom="0.8mm"/>
-    <style:text-properties style:font-name="sans-serif" fo:color="#666699" fo:font-weight="bold" fo:font-size="110%"/>
-  </style:style>
+ <style:style style:name="title" style:family="paragraph" style:class="text">
+  <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="0mm" fo:margin-bottom="0.8mm"/>
+  <style:text-properties style:font-name="sans-serif" fo:color="#666699" fo:font-weight="bold" fo:font-size="110%"/>
+ </style:style>
 
-  <style:style style:name="a-element" style:family="text">
-    <style:text-properties fo:color="#0000ff" style:text-underline-style="solid"/>
-  </style:style>
+ <style:style style:name="asciidoc-pagebreak" style:family="paragraph">
+  <style:paragraph-properties fo:break-after="page"/>
+ </style:style>
 
-  <style:style style:name="asciidoc-pagebreak" style:family="paragraph">
-    <style:paragraph-properties fo:break-after="page"/>
-  </style:style>
+ <style:style style:name="sidebarblock" style:family="graphic">
+  <style:graphic-properties fo:margin-left="2mm" fo:margin-right="2mm" fo:margin-top="2mm" fo:margin-bottom="2mm" style:wrap="parallel" style:number-wrapped-paragraphs="no-limit" style:vertical-pos="top" style:vertical-rel="paragraph-content" style:horizontal-pos="right" style:horizontal-rel="paragraph" fo:background-color="#ffffcc" style:background-transparency="0%" fo:padding="1.99mm" fo:border="0.26pt solid #000000" svg:width="58%" style:rel-width="58%"/>
+ </style:style>
 
-  <text:list-style style:name="list"/>
+ <style:style style:name="preamble" style:family="paragraph">
+  <style:text-properties fo:font-size="1pt"/>
+ </style:style>
 
-  <style:style style:name="list-item" style:family="paragraph"/>
+ <style:style style:name="Graphics" style:family="graphic">
+  <style:graphic-properties text:anchor-type="paragraph" svg:x="0mm" svg:y="0mm" style:wrap="dynamic" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="top" style:vertical-rel="paragraph" style:horizontal-pos="center" style:horizontal-rel="paragraph"/>
+ </style:style>
 
-  <text:list-style style:name="itemizedlist">
-   <text:list-level-style-bullet text:level="1" text:style-name="bullet-symbols" text:bullet-char="⚫">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="12.7mm" fo:text-indent="-6.35mm" fo:margin-left="12.7mm"/>
-    </style:list-level-properties>
-    <style:text-properties fo:font-family="&apos;DejaVu Sans&apos;" style:font-style-name="Book" style:font-family-generic="swiss"/>
-   </text:list-level-style-bullet>
-  </text:list-style>
+ <style:style style:name="image" style:family="graphic" style:parent-style-name="graphics">
+  <style:graphic-properties style:wrap="left" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="from-top" style:vertical-rel="paragraph" style:horizontal-pos="right" style:horizontal-rel="paragraph" style:mirror="none" fo:clip="rect(0mm, 0mm, 0mm, 0mm)" draw:luminance="0%" draw:contrast="0%" draw:red="0%" draw:green="0%" draw:blue="0%" draw:gamma="100%" draw:color-inversion="false" draw:image-opacity="100%" draw:color-mode="standard"/>
+ </style:style>
 
-  <style:style style:name="itemizedlist-item" style:family="paragraph" style:parent-style-name="list-item"/>
+ <style:style style:name="Footer" style:family="paragraph" style:parent-style-name="Standard" style:class="extra">
+  <style:text-properties fo:font-size="8pt"/>
+  <style:paragraph-properties fo:padding="0mm" fo:border-top="0.25pt solid #000000">
+   <style:tab-stops>
+    <style:tab-stop style:position="0mm"/>
+    <style:tab-stop style:position="87mm" style:type="center"/>
+    <style:tab-stop style:position="170.01mm" style:type="right"/>
+   </style:tab-stops>
+  </style:paragraph-properties>
+ </style:style>
 
-  <text:list-style style:name="orderedlist"/>
-
-  <style:style style:name="orderedlist-item" style:family="paragraph" style:parent-style-name="list-item"/>
-
-  <text:list-style style:name="variablelist">
-    <text:list-level-style-number text:level="1" text:style-name="numbering-symbols" style:num-format="">
-      <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-        <style:list-level-label-alignment text:label-followed-by="listtab" fo:text-indent="-10mm" fo:margin-left="10mm"/>
-      </style:list-level-properties>
-    </text:list-level-style-number>
-  </text:list-style>
-
-  <style:style style:name="variablelist-term" style:family="paragraph" style:parent-style-name="list-item">
-    <style:paragraph-properties fo:margin-top="0.99mm" fo:margin-bottom="0mm" fo:keep-with-next="always"/>
-    <style:text-properties fo:font-weight="bold"/>
-  </style:style>
-
-  <style:style style:name="variablelist-item" style:family="paragraph" style:parent-style-name="list-item">
-    <style:paragraph-properties fo:padding-left="6mm" fo:margin-top="0mm" fo:margin-bottom="0mm"/>
-  </style:style>
-
-  <style:style style:name="sidebarblock" style:family="graphic">
-    <style:graphic-properties fo:margin-left="2mm" fo:margin-right="2mm" fo:margin-top="2mm" fo:margin-bottom="2mm" style:wrap="parallel" style:number-wrapped-paragraphs="no-limit" style:vertical-pos="top" style:vertical-rel="paragraph-content" style:horizontal-pos="right" style:horizontal-rel="paragraph" fo:background-color="#ffffcc" style:background-transparency="0%" fo:padding="1.99mm" fo:border="0.26pt solid #000000" svg:width="58%" style:rel-width="58%"/>
-  </style:style>
-
-  <style:style style:name="preamble" style:family="paragraph">
-    <style:text-properties fo:font-size="1pt"/>
-  </style:style>
-
-  <style:style style:name="strong" style:family="text">
-    <style:text-properties fo:font-weight="bold"/>
-  </style:style>
-  <style:style style:name="emphasis" style:family="text">
-    <style:text-properties fo:font-style="italic"/>
-  </style:style>
-  <style:style style:name="underline" style:family="text">
-    <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="#000000" style:text-underline-mode="continuous" style:text-overline-mode="continuous" style:text-line-through-mode="continuous"/>
-  </style:style>
-  <style:style style:name="strikethrough" style:family="text">
-    <style:text-properties style:text-line-through-style="solid"/>
-  </style:style>
-  <style:style style:name="comment" style:family="text">
-    <style:text-properties fo:background-color="#ffff00"/>
-  </style:style>
-  <style:style style:name="comment" style:family="paragraph">
-    <style:text-properties fo:background-color="#ffff00"/>
-  </style:style>
-  <style:style style:name="monospaced" style:family="text">
-    <style:text-properties style:font-name="monospace"/>
-  </style:style>
-  <style:style style:name="superscript" style:family="text">
-    <style:text-properties style:text-position="super 58%"/>
-  </style:style>
-  <style:style style:name="subscript" style:family="text">
-    <style:text-properties style:text-position="sub 75%"/>
-  </style:style>
-  <style:style style:name="Command" style:family="text">
-    <style:text-properties style:font-name="monospace" fo:font-weight="bold" fo:background-color="#f0f0f0"/>
-  </style:style>
-  <style:style style:name="Numbering-symbols" style:family="text">
-    <style:text-properties fo:color="#323298" fo:font-weight="bold"/>
-  </style:style>
-  <style:style style:name="bullet-symbols" style:family="text">
-    <style:text-properties fo:color="#aaaaaa" fo:font-weight="bold"/>
-  </style:style>
-  <style:style style:name="Graphics" style:family="graphic">
-    <style:graphic-properties text:anchor-type="paragraph" svg:x="0mm" svg:y="0mm" style:wrap="dynamic" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="top" style:vertical-rel="paragraph" style:horizontal-pos="center" style:horizontal-rel="paragraph"/>
-  </style:style>
-  <style:style style:name="image" style:family="graphic" style:parent-style-name="graphics">
-   <style:graphic-properties style:wrap="left" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="from-top" style:vertical-rel="paragraph" style:horizontal-pos="right" style:horizontal-rel="paragraph" style:mirror="none" fo:clip="rect(0mm, 0mm, 0mm, 0mm)" draw:luminance="0%" draw:contrast="0%" draw:red="0%" draw:green="0%" draw:blue="0%" draw:gamma="100%" draw:color-inversion="false" draw:image-opacity="100%" draw:color-mode="standard"/>
-  </style:style>
-
-  <style:style style:name="Footer" style:family="paragraph" style:parent-style-name="Standard" style:class="extra">
-    <style:text-properties fo:font-size="8pt"/>
-    <style:paragraph-properties fo:padding="0mm" fo:border-top="0.25pt solid #000000">
-      <style:tab-stops>
-        <style:tab-stop style:position="0mm"/>
-        <style:tab-stop style:position="87mm" style:type="center"/>
-        <style:tab-stop style:position="170.01mm" style:type="right"/>
-      </style:tab-stops>
-    </style:paragraph-properties>
-  </style:style>
 </office:styles>
 
 <!-- automatic-styles -->
 <office:automatic-styles>
-  <style:page-layout style:name="Page">
-    <style:page-layout-properties fo:page-width="210.01mm" fo:page-height="297mm" style:num-format="1" style:print-orientation="portrait" fo:margin-top="15mm" fo:margin-bottom="15mm" fo:margin-left="20mm" fo:margin-right="20mm" style:writing-mode="lr-tb" style:footnote-max-height="0mm">
-      <style:footnote-sep style:width="0.18mm" style:distance-before-sep="1.01mm" style:distance-after-sep="1.01mm" style:adjustment="left" style:rel-width="25%" style:color="#000000"/>
-    </style:page-layout-properties>
-    <style:header-style/>
-    <style:footer-style/>
-  </style:page-layout>
+ <style:page-layout style:name="Page">
+  <style:page-layout-properties fo:page-width="210.01mm" fo:page-height="297mm" style:num-format="1" style:print-orientation="portrait" fo:margin-top="15mm" fo:margin-bottom="15mm" fo:margin-left="20mm" fo:margin-right="20mm" style:writing-mode="lr-tb" style:footnote-max-height="0mm">
+   <style:footnote-sep style:width="0.18mm" style:distance-before-sep="1.01mm" style:distance-after-sep="1.01mm" style:adjustment="left" style:rel-width="25%" style:color="#000000"/>
+  </style:page-layout-properties>
+  <style:header-style/>
+  <style:footer-style/>
+ </style:page-layout>
+
+ <style:style style:name="a-element" style:family="text">
+  <style:text-properties fo:color="#0000ff" style:text-underline-style="solid"/>
+ </style:style>
+
+ <text:list-style style:name="list"/>
+
+ <style:style style:name="list-item" style:family="paragraph"/>
+
+ <text:list-style style:name="itemizedlist">
+  <text:list-level-style-bullet text:level="1" text:style-name="bullet-symbols" text:bullet-char="⚫">
+   <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+    <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="12.7mm" fo:text-indent="-6.35mm" fo:margin-left="12.7mm"/>
+   </style:list-level-properties>
+   <style:text-properties fo:font-family="&apos;DejaVu Sans&apos;" style:font-style-name="Book" style:font-family-generic="swiss"/>
+  </text:list-level-style-bullet>
+ </text:list-style>
+
+ <style:style style:name="itemizedlist-item" style:family="paragraph" style:parent-style-name="list-item"/>
+
+ <text:list-style style:name="orderedlist"/>
+
+ <style:style style:name="orderedlist-item" style:family="paragraph" style:parent-style-name="list-item"/>
+
+ <text:list-style style:name="variablelist">
+  <text:list-level-style-number text:level="1" text:style-name="numbering-symbols" style:num-format="">
+   <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+    <style:list-level-label-alignment text:label-followed-by="listtab" fo:text-indent="-10mm" fo:margin-left="10mm"/>
+   </style:list-level-properties>
+  </text:list-level-style-number>
+ </text:list-style>
+
+ <style:style style:name="variablelist-term" style:family="paragraph" style:parent-style-name="list-item">
+  <style:paragraph-properties fo:margin-top="0.99mm" fo:margin-bottom="0mm" fo:keep-with-next="always"/>
+  <style:text-properties fo:font-weight="bold"/>
+ </style:style>
+
+ <style:style style:name="variablelist-item" style:family="paragraph" style:parent-style-name="list-item">
+  <style:paragraph-properties fo:padding-left="6mm" fo:margin-top="0mm" fo:margin-bottom="0mm"/>
+ </style:style>
+
+ <style:style style:name="strong" style:family="text">
+  <style:text-properties fo:font-weight="bold"/>
+ </style:style>
+
+ <style:style style:name="emphasis" style:family="text">
+  <style:text-properties fo:font-style="italic"/>
+ </style:style>
+
+ <style:style style:name="underline" style:family="text">
+  <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="#000000" style:text-underline-mode="continuous" style:text-overline-mode="continuous" style:text-line-through-mode="continuous"/>
+ </style:style>
+
+ <style:style style:name="strikethrough" style:family="text">
+  <style:text-properties style:text-line-through-style="solid"/>
+ </style:style>
+
+ <style:style style:name="comment" style:family="text">
+  <style:text-properties fo:background-color="#ffff00"/>
+ </style:style>
+
+ <style:style style:name="comment" style:family="paragraph">
+  <style:text-properties fo:background-color="#ffff00"/>
+ </style:style>
+
+ <style:style style:name="monospaced" style:family="text">
+  <style:text-properties style:font-name="monospace"/>
+ </style:style>
+
+ <style:style style:name="superscript" style:family="text">
+  <style:text-properties style:text-position="super 58%"/>
+ </style:style>
+
+ <style:style style:name="subscript" style:family="text">
+  <style:text-properties style:text-position="sub 75%"/>
+ </style:style>
+
+ <style:style style:name="Command" style:family="text">
+  <style:text-properties style:font-name="monospace" fo:font-weight="bold" fo:background-color="#f0f0f0"/>
+ </style:style>
+
+ <style:style style:name="Numbering-symbols" style:family="text">
+  <style:text-properties fo:color="#323298" fo:font-weight="bold"/>
+ </style:style>
+
+ <style:style style:name="bullet-symbols" style:family="text">
+  <style:text-properties fo:color="#aaaaaa" fo:font-weight="bold"/>
+ </style:style>
 </office:automatic-styles>
 
 <!-- master-styles -->
 <office:master-styles>
-  <style:master-page style:name="Standard" style:page-layout-name="Page">
-    <style:footer>
-      <text:p text:style-name="Footer"><text:title/><text:tab/>Nov 2011<text:tab/><text:page-number text:select-page="current">3</text:page-number> of <text:page-count>3</text:page-count></text:p>
-    </style:footer>
-  </style:master-page>
+ <style:master-page style:name="Standard" style:page-layout-name="Page">
+  <style:footer>
+   <text:p text:style-name="Footer"><text:title/><text:tab/>Nov 2011<text:tab/><text:page-number text:select-page="current">3</text:page-number> of <text:page-count>3</text:page-count></text:p>
+  </style:footer>
+ </style:master-page>
 </office:master-styles>
