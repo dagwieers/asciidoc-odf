@@ -1,6 +1,8 @@
 = ODF backend for AsciiDoc
 :author: Dag Wieers
 :email: dag@wieers.com
+:toc:
+:toclevels: 1
 
 The ODF backend for AsciiDoc enables AsciiDoc users to directly convert
 documents from AsciiDoc to Open Document Format v1.2.
