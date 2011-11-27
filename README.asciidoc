@@ -13,16 +13,16 @@ enjoyable as it removes styling and formating from the creative process.
 == Benefits
 The ODF backend provides the following benefits:
 
- - Visual styling and formatting using LibreOffice
+ - Visual styling and formatting using LibreOffice +
    _(no more need to modify pesky XSLT or XSL-FO)_
 
- - Saving and re-applying styles during processing
+ - Saving and re-applying styles during processing +
    _(simply modify styles in LibreOffice and save them to reapply)_
 
- - Converting to various formats supported by LibreOffice
+ - Converting to various formats supported by LibreOffice +
    _(export plugins include PDF, DOC, HTML, ...)_
 
- - Support for flat ODF (+.fodt+ and +.fodp+) files to help with experimenting
+ - Support for flat ODF (+.fodt+ and +.fodp+) files to help with experimenting +
    _(flat ODF files are useful for manual styling, debugging or learning ODF)_
 
 
@@ -38,7 +38,8 @@ it and your help in testing and feedback is appreciated.
    and newer, <<a2x,use a2x>> if you need the more common 'packaged' ODF support
 
 We hope to address each of these limitations in the future, and your help
-is appreciated and welcomed.
+and feedback is welcome and appreciated. There is a
+https://github.com/dagwieers/asciidoc-odf/issues[list of known issues and requested features].
 
 
 == Using the ODF backend
@@ -63,7 +64,7 @@ a single XML file that can be opened using any recent LibreOffice.
 
 
 == Additional functionality
-=== Embedded Images
+=== Embedded images
 Images can be embedded in your ODF document. To do this use the option
 +-a data-uri+ on the command line or add the +data-uri+ attribute in your
 AsciiDoc file:
@@ -80,7 +81,7 @@ When using 'packaged ODF files', images will be added to the ODF file and
 not embedded, regardless of the +data-uri+ attribute.
 
 
-=== Admonition Icon Support
+=== Admonition icon support
 If you use admonitions in your documents, please use the options
 +-a icons -a iconsdir=/usr/share/asciidoc/images/icons+ on the
 command line or add those attributes in your AsciiDoc file:
