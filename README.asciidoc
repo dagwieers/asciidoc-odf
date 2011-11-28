@@ -1,8 +1,6 @@
 = ODF backend for AsciiDoc
 :author: Dag Wieers
 :email: dag@wieers.com
-:toc:
-:toclevels: 1
 
 The ODF backend for AsciiDoc enables AsciiDoc users to directly convert
 documents from AsciiDoc to Open Document Format v1.2.
@@ -100,7 +98,7 @@ the command line or add the +numbered+ attribute in your AsciiDoc file:
 
 [NOTE]
 The current implementation adds title numbers always. Since numbering
-chapters/section is part of the stylesheet in ODF, it is complex to make
+chapters/sections is part of the stylesheet in ODF, it is complex to make
 this configurable.
 
 
@@ -158,7 +156,7 @@ There is a proof of concept _a2x.conf_ that performs creation of packaged ODT
 taking styles from ODF templates, which are just normal ODF documents.  This
 allows styling to be defined interactively using Libreoffice or Openoffice.
 
-Put the modified +a2x+ in a test directory, don't install over the system a2x
+Put the modified +a2x+ in a test directory, do not install over the system a2x
 or put it in your path yet.
 
 Usage:
@@ -167,7 +165,8 @@ Usage:
 ./a2x.py -v --backend=odt --backend_opts="--base_doc=your_template.ott" your_file.txt
 ----
 
-Later versions will have a default template document so the +base_doc+ isn't
+[NOTE]
+Later versions will have a default template document so the +base_doc+ is not
 required by default.
 
 
@@ -186,6 +185,11 @@ is quite fast.
 
 Any issues or feedback can be communicated using the Github web interface.
 
+The asciidoc-odf project is located at:
+https://github.com/dagwieers/asciidoc-odf[]
+
+Known issues and requested features are listed at:
+https://github.com/dagwieers/asciidoc-odf/issues[]
 
 == Debugging generated ODF
 Things can always be improved, if you are stuck with an issue or you just
@@ -221,5 +225,5 @@ _asciidoc.odt.styles_ so that the output conforms to your desire.
 == Further Reading
 Apart from the official specifications, little information is available.
 
- - http://docs.oasis-open.org/office/v1.2/OpenDocument-v1.2-part1.pdf[Open Document Format for Office Applications (OpenDocument) v1.2]
+ - http://docs.oasis-open.org/office/v1.2/OpenDocument-v1.2-part1.pdf[Open Document Format v1.2 schema]
  - http://en.wikipedia.org/wiki/OpenDocument_technical_specification[Wikipedia: OpenDocument technical specification]
