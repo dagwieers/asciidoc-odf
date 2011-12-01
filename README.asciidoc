@@ -184,12 +184,9 @@ ODF files as well, so the turn-around time in debugging/development
 is quite fast.
 
 Any issues or feedback can be communicated using the Github web interface.
-
-The asciidoc-odf project is located at:
-https://github.com/dagwieers/asciidoc-odf[]
-
-Known issues and requested features are listed at:
+A list of known issues and requested features are available from:
 https://github.com/dagwieers/asciidoc-odf/issues[]
+
 
 == Debugging generated ODF
 Things can always be improved, if you are stuck with an issue or you just
@@ -213,6 +210,11 @@ ofthe generated Flat ODF (+.fodt+) using the following command:
     # xmllint --noout --relaxng OpenDocument-v1.2-cs01-schema.rng some-file.fodt
 
 If this outputs an error, it means the ODF file does not conform the schema.
+
+[IMPORTANT]
+A bug in xmllint that was recently fixed may cause errors not related to ODF
+output. Make sure that your xmllint ships with the following fix:
+https://bugzilla.redhat.com/show_bug.cgi?id=752393[Bug 752393 - Unimplemented block at relaxng.c:8948]
 
 
 === Styles look incorrect
