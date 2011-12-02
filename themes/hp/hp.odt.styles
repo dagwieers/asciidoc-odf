@@ -39,8 +39,8 @@
   <style:text-properties fo:font-size="14pt"/>
  </style:style> 
 
- <style:style style:name="cover-image" style:family="graphic" style:parent-style-name="graphics">
-  <style:graphic-properties style:wrap="dynamic" style:number-wrapped-paragraphs="1" style:vertical-pos="bottom" style:vertical-rel="page-content" style:horizontal-pos="center" style:horizontal-rel="page-content" fo:margin-bottom="25mm" fo:width="100%"/>
+ <style:style style:name="cover-image" style:family="graphic">
+  <style:graphic-properties style:wrap="dynamic" style:number-wrapped-paragraphs="1" style:vertical-pos="bottom" style:vertical-rel="page-content" style:horizontal-pos="center" style:horizontal-rel="page-content" fo:margin-bottom="25mm" svg:width="170mm" style:rel-width="100%" svg:height="22.91mm" style:rel-height="scale" draw:z-index="0"/>
  </style:style>
 
  <style:style style:name="cover-bottom" style:family="graphic">
@@ -89,6 +89,8 @@
 
  <style:style style:name="sect-toc" style:family="paragraph" style:parent-style-name="sect1" style:default-outline-level="" style:class="text"/>
 
+ <style:style style:name="toc-link" style:family="text" style:parent-style-name="standard"/>
+
  <style:style style:name="toc-level-1" style:family="paragraph" style:parent-style-name="index" style:class="index">
   <style:paragraph-properties fo:margin-left="0mm" fo:margin-right="0mm" fo:margin-top="6pt" fo:margin-bottom="0pt" fo:text-indent="0mm" style:auto-text-indent="false">
    <style:tab-stops>
@@ -106,9 +108,17 @@
   </style:paragraph-properties>
  </style:style>
 
+ <style:style style:name="admonitionblock" style:family="paragraph">
+  <style:paragraph-properties fo:line-height="0"/>
+ </style:style>
+
  <style:style style:name="admonitionframe" style:family="graphic">
-  <style:graphic-properties fo:margin-left="2mm" fo:margin-right="2mm" fo:margin-top="0.2mm" fo:margin-bottom="6pt" style:wrap="none" style:vertical-pos="top" style:vertical-rel="paragraph-content" style:horizontal-pos="center" style:horizontal-rel="char" fo:background-color="transparent" style:background-transparency="100%" fo:padding="5pt" fo:border="0.02mm solid #000000">
+  <style:graphic-properties fo:margin-left="2mm" fo:margin-right="2mm" fo:margin-top="2mm" fo:margin-bottom="5mm" style:wrap="none" style:vertical-pos="top" style:vertical-rel="paragraph-content" style:horizontal-pos="center" style:horizontal-rel="char" fo:background-color="transparent" style:background-transparency="100%" fo:padding="5pt" fo:border="0.02mm solid #000000">
   </style:graphic-properties>
+ </style:style>
+
+ <style:style style:name="admonitionname" style:family="text">
+  <style:text-properties fo:font-weight="bold"/>
  </style:style>
 
  <style:style style:name="title" style:family="paragraph" style:class="text">
@@ -347,7 +357,7 @@
  </text:list-style>
 
  <style:style style:name="variablelist-term" style:family="paragraph" style:parent-style-name="list-item">
-  <style:paragraph-properties fo:keep-with-next="always"/>
+  <style:paragraph-properties fo:keep-with-next="always" fo:margin-bottom="0pt"/>
   <style:text-properties fo:color="#0065ff" fo:font-weight="bold"/>
  </style:style>
 

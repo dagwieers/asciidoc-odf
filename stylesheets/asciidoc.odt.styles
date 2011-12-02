@@ -138,6 +138,10 @@
   <style:graphic-properties style:wrap="none" style:horizontal-pos="center" style:horizontal-rel="char" fo:width="80%"/>
  </style:style>
 
+ <style:style style:name="admonitionname" style:family="text">
+  <style:text-properties fo:font-weight="bold"/>
+ </style:style>
+
  <style:style style:name="admonitiontext" style:family="paragraph">
   <style:text-properties fo:color="#606060"/>
  </style:style>
