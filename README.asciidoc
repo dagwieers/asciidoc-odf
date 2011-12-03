@@ -66,7 +66,7 @@ a single XML file that can be opened using any recent LibreOffice.
 == Additional functionality
 === Embedded images
 Images can be embedded in your ODF document. To do this use the option
-+-a data-uri+ on the command line or add the +data-uri+ attribute in your
++-a data-uri+ on the command line or add the +data-uri+ attribute to your
 AsciiDoc file:
 
     :data-uri:
@@ -92,7 +92,7 @@ command line or add those attributes in your AsciiDoc file:
 
 === Numbered titles
 If you like titles to be numbered, please use the option +-a numbered+ on
-the command line or add the +numbered+ attribute in your AsciiDoc file:
+the command line or add the +numbered+ attribute to your AsciiDoc file:
 
     :numbered:
 
@@ -104,31 +104,30 @@ this configurable.
 
 === Table-of-Contents support
 The ODF backend has Table-of-Contents support if you use the option
-+-a toc+ on the command line or add the +toc+ attribute in your AsciiDoc
++-a toc+ on the command line or add the +toc+ attribute to your AsciiDoc
 file:
 
     :toc:
 
 The TOC depth can be specified using the option +-a toclevels=2+ on the
-command line or add the +toclevels+ attribute in your AsciiDoc file:
+command line or add the +toclevels+ attribute to your AsciiDoc file:
 
     :toclevels: 2
 
-[IMPORTANT]
-The Table-of-Contents in the ODF file does not include the actual index content.
-The exact content needs to be updated by the ODF consumer (e.g. LibreOffice) in
-order to generate a real Table-of-Contents. If you use
-http://dag.wieers.com/home-made/unoconv/[unoconv] for doing automatic
-conversions to e.g. PDF or DOC, unoconv will update all indexes, including
-the Table-of-Contents.
+[NOTE]
+The ODF backend does not stuff the Table of Contents, but only adds the
+necessary pieces to the ODF file so that LibreOffice can update it. We also
+include an event-handler so that on opening the file the Table-of-Contents
+will automatically be updated. This means that on opening the file it will
+automatically be flagged as modified.
 
 
 === Using themes (or custom stylesheets)
 The ODF backend can uses themes, which means that it can use alternative
 stylesheets. Currently the curiculum-vitae example uses its own (basic)
 theme as an example of how this is supposed to work. To select a theme
-you can add the option +-a theme=cv+ on the command line or add the
-following option in your AsciiDoc file just below the document title:
+you can use the option +-a theme=cv+ on the command line or add the
++theme+ attribute to your AsciiDoc file:
 
     :theme: cv
 
@@ -139,6 +138,54 @@ as the input for future documents.
 
 We think this is easier for end-users than extracting the styles
 and putting it into themes, but both methods are available.
+
+
+=== Annotation support
+AsciiDoc has the functionality to make (inline) comments show in the output,
+the ODF backend also provides this functionality. When you use the
++-a showcomments+ option on the command line or add the +showcomments+
+attribute to your AsciiDoc file, like:
+
+    :showcomments:
+
+the ODF backend will add the comments to the output _marked in yellow_.
+
+However if you prefer annotations inside the ODF file, you can use the
++-a annotations+ option on the command line or add the +annotations+
+attribute yo your AsciiDoc file:
+
+    :annotations:
+
+[NOTE]
+Beware that annotations are only added to the ODF output and will not be
+printed, or might be removed depending on the conversion (e.g. to PDF).
++
+If you insist on having comments forced in the output (e.g. for
+collaborating on a draft document) then use the +showcomments+ attribute.
+
+
+=== Generating books with covers
+If you want to generate a book, use the option +-d book+ or add the
++doctype+ attribute to your AsciiDoc file:
+
+    :doctype: book
+
+The +book+ doctype will create a cover with title, author and date/version
+information. Depending on the theme this can be influenced and adapted to
+your needs. The Table-of-Contents and Preamble are put on dedicated pages
+as well.
+
+The attributes used on the cover page are: +author+, +date+ and +version+
+
+By default if you generate a cover, AsciiDoc will look for the file
++<theme>-cover.png+ in your +<theme>+ theme directory and add it to
+the cover. The stylesheet defines the dimensions and where the cover
+image is placed.
+
+[TIP]
+It is also possible to change the stylesheet to have chapters starting on
+new pages, make it start on even pages, have different headers and footers
+on odd/even pages and more...
 
 
 [[a2x]]

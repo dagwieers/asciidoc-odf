@@ -161,6 +161,10 @@
   <style:text-properties style:font-name="monospace" fo:font-size="10pt" fo:color="#000080"/>
  </style:style>
 
+ <style:style style:name="empty" style:family="paragraph">
+  <style:paragraph-properties fo:line-height="0mm" fo:margin="0mm" fo:padding="0mm"/>
+ </style:style>
+
  <style:style style:name="sidebarblock" style:family="paragraph">
   <style:paragraph-properties fo:line-height="0mm"/>
  </style:style>
@@ -553,6 +557,13 @@
   <style:text-properties fo:font-size="9pt"/>
  </style:style>
 
+ <number:date-style style:name="date-format">
+  <number:year number:style="long"/>
+  <number:text>-</number:text>
+  <number:month number:style="long"/>
+  <number:text>-</number:text>
+  <number:day number:style="long"/>
+ </number:date-style>
 </office:automatic-styles>
 
 <!-- master-styles -->
