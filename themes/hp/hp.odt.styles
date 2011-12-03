@@ -35,12 +35,11 @@
  </style:default-style>
 
  <style:style style:name="cover-text" style:family="paragraph">
-  <style:paragraph-properties fo:margin-top="144pt"/>
   <style:text-properties fo:font-size="14pt"/>
  </style:style> 
 
  <style:style style:name="cover-image" style:family="graphic">
-  <style:graphic-properties style:wrap="dynamic" style:number-wrapped-paragraphs="1" style:vertical-pos="bottom" style:vertical-rel="page-content" style:horizontal-pos="center" style:horizontal-rel="page-content" fo:margin-bottom="25mm" svg:width="170mm" style:rel-width="100%" svg:height="22.91mm" style:rel-height="scale" draw:z-index="0"/>
+  <style:graphic-properties style:wrap="dynamic" style:number-wrapped-paragraphs="1" style:vertical-pos="bottom" style:vertical-rel="page-content" style:horizontal-pos="center" style:horizontal-rel="page-content" fo:margin-bottom="25mm" svg:width="170mm" style:rel-width="100%" svg:height="22.91mm" style:rel-height="scale"/>
  </style:style>
 
  <style:style style:name="cover-bottom" style:family="graphic">
@@ -48,7 +47,7 @@
  </style:style>
 
  <style:style style:name="cover-bottom" style:family="paragraph">
-  <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="2.5mm" fo:margin-bottom="6pt"/>
+  <style:paragraph-properties fo:margin-top="2.5mm" fo:margin-bottom="6pt"/>
   <style:text-properties fo:font-size="11pt"/>
  </style:style>
 
@@ -87,6 +86,8 @@
   <style:paragraph-properties text:number-lines="false" text:line-number="0"/>
  </style:style>
 
+ <style:style style:name="toc" style:family="section"/>
+
  <style:style style:name="sect-toc" style:family="paragraph" style:parent-style-name="sect1" style:default-outline-level="" style:class="text"/>
 
  <style:style style:name="toc-link" style:family="text" style:parent-style-name="standard"/>
@@ -109,7 +110,7 @@
  </style:style>
 
  <style:style style:name="admonitionblock" style:family="paragraph">
-  <style:paragraph-properties fo:line-height="0"/>
+  <style:paragraph-properties fo:line-height="0mm"/>
  </style:style>
 
  <style:style style:name="admonitionframe" style:family="graphic">
@@ -132,7 +133,7 @@
  </style:style>
 
  <style:style style:name="asciidoc-pagebreak" style:family="paragraph">
-  <style:paragraph-properties fo:break-after="page"/>
+  <style:paragraph-properties fo:line-height="0mm" fo:break-after="page"/>
  </style:style>
 
  <style:style style:name="paragraph" style:family="paragraph">
@@ -160,7 +161,11 @@
   <style:text-properties style:font-name="monospace" fo:font-size="10pt" fo:color="#000080"/>
  </style:style>
 
- <style:style style:name="sidebarblock" style:family="graphic">
+ <style:style style:name="sidebarblock" style:family="paragraph">
+  <style:paragraph-properties fo:line-height="0mm"/>
+ </style:style>
+
+ <style:style style:name="sidebarframe" style:family="graphic">
   <style:graphic-properties fo:margin-left="2mm" fo:margin-right="2mm" fo:margin-top="2mm" fo:margin-bottom="2mm" style:wrap="parallel" style:number-wrapped-paragraphs="no-limit" style:vertical-pos="top" style:vertical-rel="paragraph-content" style:horizontal-pos="right" style:horizontal-rel="paragraph" fo:background-color="#ffffcc" style:background-transparency="0%" fo:padding="6pt" fo:border="0.26pt solid #000000" style:rel-width="58%"/>
  </style:style>
 
@@ -209,7 +214,6 @@
    <style:tab-stops/>
   </style:paragraph-properties>
  </style:style>
-
 </office:styles>
 
 <!-- automatic-styles -->
@@ -358,7 +362,7 @@
 
  <style:style style:name="variablelist-term" style:family="paragraph" style:parent-style-name="list-item">
   <style:paragraph-properties fo:keep-with-next="always" fo:margin-bottom="0pt"/>
-  <style:text-properties fo:color="#0065ff" fo:font-weight="bold"/>
+  <style:text-properties fo:font-weight="bold"/>
  </style:style>
 
  <style:style style:name="variablelist-item" style:family="paragraph" style:parent-style-name="list-item">
@@ -528,25 +532,25 @@
  </style:style>
 
  <style:style style:name="header" style:family="paragraph">
-  <style:text-properties fo:font-size="9pt" fo:font-weight="bold"/>
-  <style:paragraph-properties fo:padding="0mm">
+  <style:paragraph-properties fo:padding="0mm" fo:border="none">
    <style:tab-stops>
     <style:tab-stop style:position="0mm"/>
     <style:tab-stop style:position="87mm" style:type="center"/>
     <style:tab-stop style:position="170.01mm" style:type="right"/>
    </style:tab-stops>
   </style:paragraph-properties>
+  <style:text-properties fo:font-size="9pt" fo:font-weight="bold"/>
  </style:style>
 
  <style:style style:name="footer" style:family="paragraph">
-  <style:text-properties fo:font-size="9pt"/>
-  <style:paragraph-properties fo:padding="0mm">
+  <style:paragraph-properties fo:padding="0mm" fo:border="none">
    <style:tab-stops>
     <style:tab-stop style:position="0mm"/>
     <style:tab-stop style:position="87mm" style:type="center"/>
     <style:tab-stop style:position="170.01mm" style:type="right"/>
    </style:tab-stops>
   </style:paragraph-properties>
+  <style:text-properties fo:font-size="9pt"/>
  </style:style>
 
 </office:automatic-styles>

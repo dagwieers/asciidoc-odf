@@ -77,8 +77,6 @@
   <style:text-properties fo:font-size="150%"/>
  </style:style>
 
- <style:style style:name="sect-toc" style:family="paragraph" style:parent-style-name="sect1" style:default-outline-level="" style:class="text"/>
-
  <style:style style:name="sect-appendix" style:family="paragraph" style:parent-style-name="sect1" style:default-outline-level="A" style:class="text"/>
 
  <style:style style:name="sect2" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="2">
@@ -94,8 +92,20 @@
   <style:paragraph-properties style:page-number="auto" text:number-lines="true" text:line-number="4"/>
  </style:style>
 
- <style:style style:name="sidebarblock" style:family="graphic">
+ <style:style style:name="sect-toc" style:family="paragraph" style:parent-style-name="sect1" style:default-outline-level="" style:class="text"/>
+
+ <style:style style:name="toc-link" style:family="text" style:parent-style-name="standard"/>
+
+ <style:style style:name="sidebarblock" style:family="paragraph">
+  <style:paragraph-properties fo:line-height="0mm"/>
+ </style:style>
+
+ <style:style style:name="sidebarframe" style:family="graphic">
   <style:graphic-properties svg:width="0mm" style:rel-width="100%" text:anchor-type="paragraph" style:vertical-pos="top" style:vertical-rel="paragraph" style:horizontal-pos="right" style:horizontal-rel="paragraph" fo:background-color="#ffffee" fo:padding="1.8mm" fo:border="0.1mm solid #dddddd" fo:border-left="4.25pt solid #f0f0f0"/>
+ </style:style>
+
+ <style:style style:name="admonitionblock" style:family="paragraph">
+  <style:paragraph-properties fo:line-height="0mm"/>
  </style:style>
 
  <style:style style:name="admonitionframe" style:family="graphic">
@@ -107,6 +117,22 @@
     <style:column style:rel-width="8529*" fo:start-indent="2.54mm" fo:end-indent="0mm"/>
    </style:columns>
   </style:graphic-properties>
+ </style:style>
+
+ <style:style style:name="admonitionname" style:family="text">
+  <style:text-properties fo:font-weight="bold"/>
+ </style:style>
+
+ <style:style style:name="admonitiontext" style:family="paragraph">
+  <style:text-properties fo:color="#606060"/>
+ </style:style>
+
+ <style:style style:name="admonitionimage" style:family="graphic">
+  <style:graphic-properties svg:x="0mm" svg:y="0mm" fo:margin-top="0mm" fo:margin-bottom="0mm" style:wrap="parallel" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="top" style:vertical-rel="baseline" style:horizontal-pos="from-left" style:horizontal-rel="paragraph-content" draw:color-mode="standard"/>
+ </style:style>
+
+ <style:style style:name="admonitionicon" style:family="paragraph">
+  <style:paragraph-properties fo:break-after="column"/>
  </style:style>
 
  <style:style style:name="title" style:family="paragraph" style:class="text">
@@ -138,26 +164,10 @@
   <style:graphic-properties style:wrap="none" style:horizontal-pos="center" style:horizontal-rel="char" fo:width="80%"/>
  </style:style>
 
- <style:style style:name="admonitionname" style:family="text">
-  <style:text-properties fo:font-weight="bold"/>
- </style:style>
-
- <style:style style:name="admonitiontext" style:family="paragraph">
-  <style:text-properties fo:color="#606060"/>
- </style:style>
-
- <style:style style:name="admonitionimage" style:family="graphic">
-  <style:graphic-properties svg:x="0mm" svg:y="0mm" fo:margin-top="0mm" fo:margin-bottom="0mm" style:wrap="parallel" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="top" style:vertical-rel="baseline" style:horizontal-pos="from-left" style:horizontal-rel="paragraph-content" draw:color-mode="standard"/>
- </style:style>
-
- <style:style style:name="admonitionicon" style:family="paragraph">
-  <style:paragraph-properties fo:break-after="column"/>
- </style:style>
-
  <style:style style:name="asciidoc-hr" style:family="paragraph" style:next-style-name="text-body" style:class="html"/>
 
  <style:style style:name="asciidoc-pagebreak" style:family="paragraph">
-  <style:paragraph-properties fo:break-after="page"/>
+  <style:paragraph-properties fo:line-height="0mm" fo:break-after="page"/>
  </style:style>
 
  <style:style style:name="paragraph" style:family="paragraph">
