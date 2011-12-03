@@ -34,8 +34,8 @@ it and your help in testing and feedback is appreciated.
 
  - Default stylesheet needs improvements
 
- - Flat ODF files (+.fodt+ and +.fodp+) are only supported by LibreOffice 3.3
-   and newer, <<a2x,use a2x>> if you need the more common 'packaged' ODF support
+ - Flat ODF files (+.fodt+ and +.fodp+) are supported by LibreOffice 3.3 and newer
+   _(<<a2x,use a2x>> if you need the more common 'packaged' ODF support)_
 
 We hope to address each of these limitations in the future, and your help
 and feedback is welcome and appreciated. There is a
@@ -157,11 +157,13 @@ attribute yo your AsciiDoc file:
     :annotations:
 
 [NOTE]
+====
 Beware that annotations are only added to the ODF output and will not be
 printed, or might be removed depending on the conversion (e.g. to PDF).
-+
+
 If you insist on having comments forced in the output (e.g. for
 collaborating on a draft document) then use the +showcomments+ attribute.
+====
 
 
 === Generating books with covers
