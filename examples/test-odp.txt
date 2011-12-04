@@ -1,0 +1,42 @@
+= Demo presentation
+Dag Wieërs <dag@wieers.com>
+
+== Slide 1 title
+
+Slide 1 is arguably the most important slide of your deck.
+
+Therefor it is important to grab the attention of the audience, by:
+
+- using blink in your slides
+- adding a funny animation
+- adding a fart sound
+- shouting really loud
+- playing dead
+
+
+== Slide 2 title
+
+The second slide is less important, and therefor can be removed.
+
+But in case you want to keep it, add some silly enumerations:
+
+1. Look funny
+2. Mumble something
+3. Do a silly walk
+4. Undress
+5. Dance the lambada for 10 seconds
+6. Leave the building
+
+
+== Slide 3 title
+
+Slide 3 usually adds a graph, chart or some source code:
+
+[code,bash]
+----
+#!/bin/bash
+
+for file in *.txt; do
+    stat --printf="%s %n" $file
+done | sort -d
+----

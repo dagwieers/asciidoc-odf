@@ -109,7 +109,7 @@ variable2=value2
 ----
 
 .Code listing block
-[code,python]
+[source,python]
 ----
 ''' A multi-line
     comment.'''
