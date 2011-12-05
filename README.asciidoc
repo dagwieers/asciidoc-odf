@@ -7,7 +7,7 @@ documents from AsciiDoc to Open Document Format v1.2.
 
 AsciiDoc is a lightweight markup language that maps to DocBook semantics
 and makes writing (technical) documentation and presentations more
-enjoyable as it removes styling and formating from the creative process.
+enjoyable as it removes styling and formatting from the creative process.
 
 
 == Benefits
@@ -34,7 +34,7 @@ it and your help in testing and feedback is appreciated.
 
  - Default stylesheet needs improvements
 
- - Flat ODF files (+.fodt+ and +.fodp+) are supported by LibreOffice 3.3 and newer
+ - Flat ODF files (+.fodt+ and +.fodp+) are supported by LibreOffice 3.3 and newer +
    _(<<a2x,use a2x>> if you need the more common 'packaged' ODF support)_
 
 We hope to address each of these limitations in the future, and your help
@@ -124,7 +124,7 @@ automatically be flagged as modified.
 
 === Using themes (or custom stylesheets)
 The ODF backend can uses themes, which means that it can use alternative
-stylesheets. Currently the curiculum-vitae example uses its own (basic)
+stylesheets. Currently the curriculum-vitae example uses its own (basic)
 theme as an example of how this is supposed to work. To select a theme
 you can use the option +-a theme=cv+ on the command line or add the
 +theme+ attribute to your AsciiDoc file:
@@ -140,7 +140,7 @@ We think this is easier for end-users than extracting the styles
 and putting it into themes, but both methods are available.
 
 
-=== Annotation support
+=== Comment support
 AsciiDoc has the functionality to make (inline) comments show in the output,
 the ODF backend also provides this functionality. When you use the
 +-a showcomments+ option on the command line or add the +showcomments+
@@ -150,19 +150,29 @@ attribute to your AsciiDoc file, like:
 
 the ODF backend will add the comments to the output _marked in yellow_.
 
-However if you prefer annotations inside the ODF file, you can use the
-+-a annotations+ option on the command line or add the +annotations+
-attribute yo your AsciiDoc file:
 
-    :annotations:
+=== Annotation support
+The ODF backend has support for 'annotation' style listing blocks, these
+special blocks will result in proper ODF annotations, including owner
+and timestamp if provided.
+
+Adding an annotation block is done using the following syntax:
+
+[listing]
+....
+[comment,dag,2011-12-03]
+---------------------------------------------------------
+FIXME: Insert the various features from the Release Notes
+       include the information from the presentations
+---------------------------------------------------------
+....
 
 [NOTE]
 ====
-Beware that annotations are only added to the ODF output and will not be
-printed, or might be removed depending on the conversion (e.g. to PDF).
-
-If you insist on having comments forced in the output (e.g. for
-collaborating on a draft document) then use the +showcomments+ attribute.
+Annotations are always added to the ODF output but will not be
+printed, and might be removed depending on the converted document
+format (e.g. to PDF). If you don't want annotations in your
+ODF output, use the +hideannotations+ attribute.
 ====
 
 
@@ -203,7 +213,7 @@ The new +--backend+ option specifies a backend plugin name and the
 
 There is a proof of concept _a2x.conf_ that performs creation of packaged ODT
 taking styles from ODF templates, which are just normal ODF documents.  This
-allows styling to be defined interactively using Libreoffice or Openoffice.
+allows styling to be defined interactively using LibreOffice or OpenOffice.
 
 Put the modified +a2x+ in a test directory, do not install over the system a2x
 or put it in your path yet.
@@ -224,7 +234,7 @@ You can find the latest version of this AsciiDoc backend at
 http://github.com/dagwieers/asciidoc-odf[]
 
 You can help improve the backend by looking for missing/non-working
-functionality and implemening/fixing it in the _odt.conf_ file.
+functionality and implementing/fixing it in the _odt.conf_ file.
 Using LibreOffice and saving your tests, and inspecting how LibreOffice
 does something helps to understand what is needed for the backend.
 
@@ -254,9 +264,10 @@ the text is part of the file.
 
 === Fails to open in LibreOffice
 If the ODF file fails to open in LibreOffice, you can perform a syntax-check
-ofthe generated Flat ODF (+.fodt+) using the following command:
+ofthe generated Flat ODF (+.fodt+) using one of the following command:
 
-    # xmllint --noout --relaxng OpenDocument-v1.2-cs01-schema.rng some-file.fodt
+    # xmllint --noout --relaxng OpenDocument-v1.2-cs01-schema.rng document.fodt
+    # jing -i OpenDocument-v1.2-cs01-schema.rng document.fodt
 
 If this outputs an error, it means the ODF file does not conform the schema.
 

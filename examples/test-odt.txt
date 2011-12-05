@@ -233,6 +233,20 @@ footnoteref:[footnote,A footnote reference is just like a footnote, but with a r
 And then create a reference to an earlier footnote
 footnoteref:[footnote] somewhere else in your text.
 
+== Comments and annotations
+// This is a comment
+
+[annotation,dag,2011-12-03]
+-------------------------------------------------------------------------------
+This is an example annotation that should be a proper annotation in
+LibreOffice or OpenOffice.
+-------------------------------------------------------------------------------
+
+[annotation]
+-------------------------------------------------------------------------------
+This is an anonymous annotation.
+-------------------------------------------------------------------------------
+
 [[tables]]
 == Tables
 

@@ -103,6 +103,27 @@ recovery process until the system runs:
   - Rear parses layout then creates diskrestore script
   - Rear initiates restore or prompts for restore
 
+== Rear on a running system
+
+[ditaa]
+----
+/-------------+       /-----------+       /-----------+
+| Storage     |       | Collect   |       | Integrate |
+| layout      | ----> | new       | ----> | required  |
+| change      |       | storage   |       | backup    |
+| detected    |       | layout    |       | strategy  |
++-------------/       +-----------/       +-----------/
+
+                                                |
+                                                V
+
+/-------------+       /-----------+       /-----------+
+| Off-site    |       | Push      |       | Create    |
+| storage     | <---- | recovery  | <---- | new       |
+| together    |       | image     |       | recovery  |
+| with backup |       | centrally |       | image     |
++-------------/       +-----------/       +-----------/
+----
 
 == Nifty features to help relax
 * Local GRUB integration (password protected)

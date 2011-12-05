@@ -61,11 +61,19 @@
  </style:style>
 
  <style:style style:name="asciidoc-pagebreak" style:family="paragraph">
-  <style:paragraph-properties fo:break-after="page"/>
+  <style:paragraph-properties fo:line-height="0mm" fo:break-after="page"/>
  </style:style>
 
- <style:style style:name="sidebarblock" style:family="graphic">
-  <style:graphic-properties fo:margin-left="2mm" fo:margin-right="2mm" fo:margin-top="2mm" fo:margin-bottom="2mm" style:wrap="parallel" style:number-wrapped-paragraphs="no-limit" style:vertical-pos="top" style:vertical-rel="paragraph-content" style:horizontal-pos="right" style:horizontal-rel="paragraph" fo:background-color="#ffffcc" style:background-transparency="0%" fo:padding="1.99mm" fo:border="0.26pt solid #000000" svg:width="58%" style:rel-width="58%"/>
+ <style:style style:name="cover-text" style:family="paragraph">
+  <style:paragraph-properties fo:line-height="0mm" fo:margin-top="0mm" fo:margin-bottom="0mm"/>
+ </style:style>
+
+ <style:style style:name="sidebarblock" style:family="paragraph">
+  <style:paragraph-properties fo:line-height="0mm" fo:margin-top="0mm" fo:margin-bottom="0mm"/>
+ </style:style>
+
+ <style:style style:name="sidebarframe" style:family="graphic">
+  <style:graphic-properties fo:margin-left="2mm" fo:margin-right="2mm" fo:margin-top="2mm" fo:margin-bottom="2mm" style:wrap="parallel" style:number-wrapped-paragraphs="no-limit" style:vertical-pos="top" style:vertical-rel="paragraph-content" style:horizontal-pos="right" style:horizontal-rel="paragraph" fo:background-color="#ffffcc" style:background-transparency="0%" fo:padding="1.99mm" fo:border="0.26pt solid #000000" svg:width="61%" style:rel-width="61%"/>
  </style:style>
 
  <style:style style:name="preamble" style:family="paragraph">
@@ -190,13 +198,19 @@
  <style:style style:name="bullet-symbols" style:family="text">
   <style:text-properties fo:color="#aaaaaa" fo:font-weight="bold"/>
  </style:style>
+
+ <number:date-style style:name="date-format">
+  <number:month number:style="long" number:textual="true"/>
+  <number:text> </number:text>
+  <number:year number:style="long"/>
+ </number:date-style>
 </office:automatic-styles>
 
 <!-- master-styles -->
 <office:master-styles>
  <style:master-page style:name="Standard" style:page-layout-name="Page">
   <style:footer>
-   <text:p text:style-name="Footer"><text:title/><text:tab/>Nov 2011<text:tab/><text:page-number text:select-page="current">3</text:page-number> of <text:page-count>3</text:page-count></text:p>
+   <text:p text:style-name="Footer"><text:title/><text:tab/><text:modification-date style:data-style-name="date-format"/><text:tab/><text:page-number text:select-page="current">3</text:page-number> of <text:page-count>3</text:page-count></text:p>
   </style:footer>
  </style:master-page>
 </office:master-styles>
