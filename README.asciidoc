@@ -5,7 +5,7 @@
 The ODF backend for AsciiDoc enables AsciiDoc users to directly convert
 documents from AsciiDoc to Open Document Format v1.2.
 
-AsciiDoc is a lightweight markup language that maps to DocBook semantics
+AsciiDoc is a light-weight markup language that maps to DocBook semantics
 and makes writing (technical) documentation and presentations more
 enjoyable as it removes styling and formatting from the creative process.
 
@@ -27,8 +27,9 @@ The ODF backend provides the following benefits:
 
 
 == Limitations
-The current implementation is not feature complete. We are working on
-it and your help in testing and feedback is appreciated.
+Although the current implementation is already quite useful, it is not
+100% feature complete. We are working on it and your help in testing and
+feedback is appreciated.
 
  - Incomplete implementation lacks eg. complex table support, ...
 
@@ -99,11 +100,12 @@ the command line or add the +numbered+ attribute to your AsciiDoc file:
 [NOTE]
 The current implementation adds title numbers always. Since numbering
 chapters/sections is part of the stylesheet in ODF, it is complex to make
-this configurable.
+this a configurable option. Modify the stylesheet if you like to customize
+it.
 
 
-=== Table-of-Contents support
-The ODF backend has Table-of-Contents support if you use the option
+=== Table of Contents support
+The ODF backend has Table of Contents support if you use the option
 +-a toc+ on the command line or add the +toc+ attribute to your AsciiDoc
 file:
 
@@ -116,10 +118,10 @@ command line or add the +toclevels+ attribute to your AsciiDoc file:
 
 [NOTE]
 The ODF backend does not stuff the Table of Contents, but only adds the
-necessary pieces to the ODF file so that LibreOffice can update it. We also
-include an event-handler so that on opening the file the Table-of-Contents
-will automatically be updated. This means that on opening the file it will
-automatically be flagged as modified.
+necessary pieces to the ODF file so that LibreOffice can update it. However
+we also included an event-handler so that when opened the Table of Contents
+will automatically be updated. This also means that on opening the file
+the first time, it will automatically be flagged as modified.
 
 
 === Using themes (or custom stylesheets)
@@ -160,10 +162,11 @@ Adding an annotation block is done using the following syntax:
 
 [listing]
 ....
-[comment,dag,2011-12-03]
+[annotation,dag,2011-12-03]
 ---------------------------------------------------------
-FIXME: Insert the various features from the Release Notes
-       include the information from the presentations
+FIXME:
+Insert the various features from the Release Notes
+include the information from the presentations
 ---------------------------------------------------------
 ....
 
@@ -264,7 +267,7 @@ the text is part of the file.
 
 === Fails to open in LibreOffice
 If the ODF file fails to open in LibreOffice, you can perform a syntax-check
-ofthe generated Flat ODF (+.fodt+) using one of the following command:
+of the generated Flat ODF (+.fodt+) using one of the following command:
 
     # xmllint --noout --relaxng OpenDocument-v1.2-cs01-schema.rng document.fodt
     # jing -i OpenDocument-v1.2-cs01-schema.rng document.fodt
@@ -289,3 +292,5 @@ Apart from the official specifications, little information is available.
 
  - http://docs.oasis-open.org/office/v1.2/OpenDocument-v1.2-part1.pdf[Open Document Format v1.2 schema]
  - http://en.wikipedia.org/wiki/OpenDocument_technical_specification[Wikipedia: OpenDocument technical specification]
+
+// vim: set syntax=asciidoc:
