@@ -57,32 +57,64 @@
   <style:text-properties style:font-name="sans-serif" fo:color="#0065ff"/>
  </style:style>
 
- <style:style style:name="sect0" style:family="paragraph" style:parent-style-name="sect-default" style:next-style-name="standard">
+ <style:style style:name="sect0" style:family="paragraph" style:parent-style-name="sect-default" style:next-style-name="text-body">
   <style:paragraph-properties fo:margin-top="0pt" fo:margin-bottom="0pt" fo:padding="0mm"/>
   <style:text-properties fo:color="#000000" fo:font-size="24pt"/>
  </style:style>
 
- <style:style style:name="sect1" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="1" style:class="text" style:next-style-name="standard">
-  <style:paragraph-properties fo:border-top="1mm solid #0065ff" fo:padding-top="1.8mm" text:number-lines="true" text:line-number="1" fo:break-before="page" fo:margin-bottom="36pt"/>
+ <style:style style:name="sect1" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="1" style:next-style-name="text-body">
+  <style:paragraph-properties fo:border-top="1mm solid #0065ff" fo:padding-top="1.8mm" style:page-number="auto" text:number-lines="true" text:line-number="1" fo:break-before="page" fo:margin-bottom="36pt"/>
   <style:text-properties fo:font-size="24pt" />
  </style:style>
 
- <style:style style:name="sect2" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="2" style:next-style-name="standard">
+ <style:style style:name="sect2" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="2" style:next-style-name="text-body">
   <style:paragraph-properties style:page-number="auto" text:number-lines="true" text:line-number="2"/>
   <style:text-properties fo:font-size="22pt"/>
  </style:style>
 
- <style:style style:name="sect3" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="2" style:next-style-name="standard">
-  <style:paragraph-properties style:page-number="auto" text:number-lines="true" text:line-number="2"/>
+ <style:style style:name="sect3" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="3" style:next-style-name="text-body">
+  <style:paragraph-properties style:page-number="auto" text:number-lines="true" text:line-number="3"/>
   <style:text-properties fo:font-size="20pt"/>
  </style:style>
 
- <style:style style:name="sect4" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="2" style:next-style-name="standard">
-  <style:paragraph-properties style:page-number="auto" text:number-lines="true" text:line-number="2"/>
+ <style:style style:name="sect4" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="4" style:next-style-name="text-body">
+  <style:paragraph-properties style:page-number="auto" text:number-lines="true" text:line-number="4"/>
   <style:text-properties fo:font-size="18pt"/>
  </style:style>
 
- <style:style style:name="index" style:family="paragraph" style:parent-style-name="standard" style:class="index">
+ <style:style style:name="title" style:family="paragraph" style:class="text">
+  <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="0mm" fo:margin-bottom="0.8mm"/>
+  <style:text-properties fo:color="#666699" fo:font-weight="bold" fo:font-size="110%"/>
+ </style:style>
+
+ <style:style style:name="caption" style:family="paragraph" style:class="text">
+  <style:paragraph-properties fo:margin-top="0mm" fo:margin-bottom="2pt" fo:keep-with-next="always"/>
+  <style:text-properties fo:font-weight="bold"/>
+ </style:style>
+
+ <style:style style:name="asciidoc-pagebreak" style:family="paragraph">
+  <style:paragraph-properties fo:line-height="0mm" fo:break-after="page"/>
+ </style:style>
+
+ <style:style style:name="paragraph" style:family="paragraph">
+  <style:paragraph-properties fo:margin-top="1.52mm"/>
+ </style:style>
+
+ <style:style style:name="text-body" style:family="paragraph" style:class="text"/>
+
+ <style:style style:name="empty" style:family="paragraph">
+  <style:paragraph-properties fo:line-height="0mm" fo:margin="0mm" fo:padding="0mm"/>
+ </style:style>
+
+ <style:style style:name="comment" style:family="paragraph">
+  <style:text-properties fo:background-color="#ffff00"/>
+ </style:style>
+
+ <style:style style:name="comment" style:family="text">
+  <style:text-properties fo:background-color="#ffff00"/>
+ </style:style>
+
+ <style:style style:name="index" style:family="paragraph" style:parent-style-name="text-body" style:class="index">
   <style:paragraph-properties text:number-lines="false" text:line-number="0"/>
  </style:style>
 
@@ -90,7 +122,7 @@
 
  <style:style style:name="sect-toc" style:family="paragraph" style:parent-style-name="sect1" style:default-outline-level="" style:class="text"/>
 
- <style:style style:name="toc-link" style:family="text" style:parent-style-name="standard"/>
+ <style:style style:name="toc-link" style:family="text" style:parent-style-name="text-body"/>
 
  <style:style style:name="toc-level-1" style:family="paragraph" style:parent-style-name="index" style:class="index">
   <style:paragraph-properties fo:margin-left="0mm" fo:margin-right="0mm" fo:margin-top="6pt" fo:margin-bottom="0pt" fo:text-indent="0mm" style:auto-text-indent="false">
@@ -122,26 +154,6 @@
   <style:text-properties fo:font-weight="bold"/>
  </style:style>
 
- <style:style style:name="title" style:family="paragraph" style:class="text">
-  <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="0mm" fo:margin-bottom="0.8mm"/>
-  <style:text-properties fo:color="#666699" fo:font-weight="bold" fo:font-size="110%"/>
- </style:style>
-
- <style:style style:name="caption" style:family="paragraph" style:class="text">
-  <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="0mm" fo:margin-bottom="2pt"/>
-  <style:text-properties fo:font-weight="bold"/>
- </style:style>
-
- <style:style style:name="asciidoc-pagebreak" style:family="paragraph">
-  <style:paragraph-properties fo:line-height="0mm" fo:break-after="page"/>
- </style:style>
-
- <style:style style:name="paragraph" style:family="paragraph">
-  <style:paragraph-properties fo:margin-top="1.52mm"/>
- </style:style>
-
- <style:style style:name="standard" style:family="paragraph" style:class="text"/>
-
  <style:style style:name="listingblock" style:family="paragraph">
   <style:paragraph-properties fo:background-color="#f8f8f8" fo:padding-left="2mm" fo:padding-right="2mm" fo:padding-top="3mm" fo:padding-bottom="3mm" fo:border-left="1.5mm solid #f0f0f0" fo:border="0.1mm solid #dddddd" style:shadow="none" style:line-break="normal" fo:keep-together="auto"/>
   <style:text-properties style:font-name="monospace" fo:font-size="10pt" fo:color="#000080"/>
@@ -159,10 +171,6 @@
  <style:style style:name="quoteblock" style:family="paragraph">
   <style:paragraph-properties fo:background-color="#f8f8f8" fo:margin-left="11.99mm" fo:margin-right="0mm" fo:margin-top="0mm" fo:margin-bottom="3mm" fo:text-indent="0mm" style:auto-text-indent="false" fo:padding-left="1.5mm" fo:padding-right="0.49mm" fo:padding-top="0.49mm" fo:padding-bottom="0.49mm" fo:border-left="2mm solid #f0f0f0" fo:border-right="0.4mm solid #dddddd" fo:border-top="0.4mm solid #dddddd" fo:border-bottom="0.4mm solid #dddddd" style:shadow="none"/>
   <style:text-properties style:font-name="monospace" fo:font-size="10pt" fo:color="#000080"/>
- </style:style>
-
- <style:style style:name="empty" style:family="paragraph">
-  <style:paragraph-properties fo:line-height="0mm" fo:margin="0mm" fo:padding="0mm"/>
  </style:style>
 
  <style:style style:name="sidebarblock" style:family="paragraph">
@@ -213,7 +221,7 @@
   <style:graphic-properties style:wrap="dynamic" style:number-wrapped-paragraphs="1" style:vertical-rel="paragraph" style:horizontal-pos="center" style:horizontal-rel="paragraph"/>
  </style:style>
 
- <style:style style:name="table-of-contents" style:family="paragraph" style:class="extra" style:parent-style-name="standard">
+ <style:style style:name="table-of-contents" style:family="paragraph" style:class="extra" style:parent-style-name="text-body">
   <style:paragraph-properties style:page-number="auto" style:shadow="none" text:number-lines="false" text:line-number="0">
    <style:tab-stops/>
   </style:paragraph-properties>
@@ -429,14 +437,6 @@
 
  <style:style style:name="strikethrough" style:family="text">
   <style:text-properties style:text-line-through-style="solid"/>
- </style:style>
-
- <style:style style:name="comment" style:family="text">
-  <style:text-properties fo:background-color="#ffff00"/>
- </style:style>
-
- <style:style style:name="comment" style:family="paragraph">
-  <style:text-properties fo:background-color="#ffff00"/>
  </style:style>
 
  <style:style style:name="monospaced" style:family="text">

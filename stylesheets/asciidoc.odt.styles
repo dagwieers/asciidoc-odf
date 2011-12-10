@@ -39,6 +39,23 @@
   <style:table-cell-properties fo:background-color="transparent" fo:padding="0mm" fo:border-left="0.5pt solid #000080" fo:border-right="none" fo:border-top="2pt solid #000080" fo:border-bottom="0.5pt solid #000080"/>
  </style:default-style>
 
+ <style:style style:name="cover-text" style:family="paragraph">
+  <style:text-properties fo:font-size="14pt"/>
+ </style:style>
+
+ <style:style style:name="cover-image" style:family="graphic">
+  <style:graphic-properties style:wrap="dynamic" style:number-wrapped-paragraphs="1" style:vertical-pos="bottom" style:vertical-rel="page-content" style:horizontal-pos="center" style:horizontal-rel="page-content" fo:margin-bottom="25mm" svg:width="170mm" style:rel-width="100%" svg:height="22.91mm" style:rel-height="scale"/>
+ </style:style>
+
+ <style:style style:name="cover-bottom" style:family="graphic">
+  <style:graphic-properties style:vertical-pos="bottom" style:vertical-rel="page-content" style:horizontal-pos="from-left" style:horizontal-rel="page-content" fo:padding="0mm" fo:border="none" style:shadow="none" fo:min-height="12pt" fo:min-width="100%"/>
+ </style:style>
+
+ <style:style style:name="cover-bottom" style:family="paragraph">
+  <style:paragraph-properties fo:margin-top="2.5mm" fo:margin-bottom="6pt"/>
+  <style:text-properties fo:font-size="11pt"/>
+ </style:style>
+
  <text:outline-style style:name="Outline">
   <text:outline-level-style text:level="1" text:style-name="numbering" style:num-suffix="." style:num-format="1">
    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
@@ -62,7 +79,7 @@
   </text:outline-level-style>
  </text:outline-style>
 
- <style:style style:name="sect-default" style:family="paragraph" style:class="text">
+ <style:style style:name="sect-default" style:family="paragraph" style:class="text" style:next-style-name="standard">
   <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="1.8mm" fo:margin-bottom="0.5mm"/>
   <style:text-properties style:font-name="sans-serif" fo:color="#527bbd" fo:font-weight="bold"/>
  </style:style>
@@ -72,12 +89,12 @@
   <style:text-properties fo:font-size="200%"/>
  </style:style>
 
- <style:style style:name="sect1" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="1" style:class="text">
+ <style:style style:name="sect1" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="1">
   <style:paragraph-properties style:page-number="auto" text:number-lines="true" text:line-number="1" fo:border-bottom="0.35mm solid #c0c0c0" fo:padding-top="1.8mm"/>
   <style:text-properties fo:font-size="150%"/>
  </style:style>
 
- <style:style style:name="sect-appendix" style:family="paragraph" style:parent-style-name="sect1" style:default-outline-level="1" style:class="text"/>
+ <style:style style:name="sect-appendix" style:family="paragraph" style:parent-style-name="sect1" style:default-outline-level="1"/>
 
  <style:style style:name="sect2" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="2">
   <style:paragraph-properties style:page-number="auto" text:number-lines="true" text:line-number="2"/>
@@ -92,35 +109,65 @@
   <style:paragraph-properties style:page-number="auto" text:number-lines="true" text:line-number="4"/>
  </style:style>
 
- <style:style style:name="sect-toc" style:family="paragraph" style:parent-style-name="sect1" style:default-outline-level="" style:class="text"/>
+ <style:style style:name="title" style:family="paragraph" style:class="text">
+  <style:paragraph-properties fo:margin-top="1.8mm" fo:margin-bottom="0.3mm" fo:keep-with-next="always"/>
+  <style:text-properties style:font-name="sans-serif" fo:color="#527bbd" fo:font-weight="bold"/>
+ </style:style>
 
- <style:style style:name="toc-link" style:family="text" style:parent-style-name="standard"/>
+ <style:style style:name="caption" style:family="paragraph" style:class="text">
+  <style:paragraph-properties fo:margin-top="0mm" fo:margin-bottom="2pt" fo:keep-with-next="always"/>
+  <style:text-properties fo:font-weight="bold"/>
+ </style:style>
+
+ <style:style style:name="asciidoc-pagebreak" style:family="paragraph">
+  <style:paragraph-properties fo:line-height="0mm" fo:break-after="page"/>
+ </style:style>
+
+ <style:style style:name="paragraph" style:family="paragraph">
+  <style:paragraph-properties fo:margin-top="1.52mm"/>
+ </style:style>
 
  <style:style style:name="empty" style:family="paragraph">
   <style:paragraph-properties fo:line-height="0mm" fo:margin="0mm" fo:padding="0mm"/>
  </style:style>
 
- <style:style style:name="sidebarblock" style:family="paragraph">
-  <style:paragraph-properties fo:line-height="0mm"/>
+ <style:style style:name="comment" style:family="paragraph">
+  <style:text-properties fo:background-color="#ffff00"/>
  </style:style>
 
- <style:style style:name="sidebarframe" style:family="graphic">
-  <style:graphic-properties svg:width="0mm" style:rel-width="100%" text:anchor-type="paragraph" style:vertical-pos="top" style:vertical-rel="paragraph" style:horizontal-pos="right" style:horizontal-rel="paragraph" fo:background-color="#ffffee" fo:padding="1.8mm" fo:border="0.1mm solid #dddddd" fo:border-left="4.25pt solid #f0f0f0"/>
+ <style:style style:name="comment" style:family="text">
+  <style:text-properties fo:background-color="#ffff00"/>
  </style:style>
 
- <style:style style:name="admonitionblock" style:family="paragraph">
-  <style:paragraph-properties fo:line-height="0mm"/>
+ <style:style style:name="index" style:family="paragraph" style:parent-style-name="standard" style:class="index">
+  <style:paragraph-properties text:number-lines="false" text:line-number="0"/>
  </style:style>
 
- <style:style style:name="admonitionframe" style:family="graphic">
-  <style:graphic-properties fo:margin-left="2mm" fo:margin-right="2mm" fo:margin-top="0mm" fo:margin-bottom="0mm" style:wrap="none" style:vertical-pos="top" style:vertical-rel="paragraph-content" style:horizontal-pos="center" style:horizontal-rel="char" fo:background-color="transparent" style:background-transparency="100%" fo:padding="0mm" fo:border="none" style:shadow="none">
-   <style:background-image/>
-   <style:columns fo:column-count="2">
-    <style:column-sep style:width="0.71mm" style:color="#dddddd" style:height="100%" style:style="solid"/>
-    <style:column style:rel-width="1108*" fo:start-indent="0mm" fo:end-indent="2.54mm"/>
-    <style:column style:rel-width="8529*" fo:start-indent="2.54mm" fo:end-indent="0mm"/>
-   </style:columns>
-  </style:graphic-properties>
+ <style:style style:name="toc" style:family="section"/>
+
+ <style:style style:name="sect-toc" style:family="paragraph" style:parent-style-name="sect1" style:default-outline-level="" style:class="text"/>
+
+ <style:style style:name="toc-link" style:family="text" style:parent-style-name="standard"/>
+
+ <style:style style:name="toc-level-1" style:family="paragraph" style:parent-style-name="index" style:class="index">
+  <style:paragraph-properties fo:margin-left="0mm" fo:margin-right="0mm" fo:margin-top="6pt" fo:margin-bottom="0pt" fo:text-indent="0mm" style:auto-text-indent="false">
+   <style:tab-stops>
+    <style:tab-stop style:position="170mm" style:type="right" style:leader-style="dotted" style:leader-text="."/>
+   </style:tab-stops>
+  </style:paragraph-properties>
+  <style:text-properties fo:font-size="11pt" fo:color="#0065ff"/>
+ </style:style>
+
+ <style:style style:name="toc-level-2" style:family="paragraph" style:parent-style-name="index" style:class="index">
+  <style:paragraph-properties fo:margin-left="4.99mm" fo:margin-right="0mm" fo:margin-top="0.5pt" fo:margin-bottom="0pt" fo:text-indent="0mm" style:auto-text-indent="false">
+   <style:tab-stops>
+    <style:tab-stop style:position="165.01mm" style:type="right" style:leader-style="dotted" style:leader-text="."/>
+   </style:tab-stops>
+  </style:paragraph-properties>
+ </style:style>
+
+ <style:style style:name="admonitionicon" style:family="paragraph">
+  <style:paragraph-properties fo:break-after="column"/>
  </style:style>
 
  <style:style style:name="admonitionname" style:family="text">
@@ -131,25 +178,16 @@
   <style:text-properties fo:color="#606060"/>
  </style:style>
 
- <style:style style:name="admonitionimage" style:family="graphic">
-  <style:graphic-properties svg:x="0mm" svg:y="0mm" fo:margin-top="0mm" fo:margin-bottom="0mm" style:wrap="parallel" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="top" style:vertical-rel="baseline" style:horizontal-pos="from-left" style:horizontal-rel="paragraph-content" draw:color-mode="standard"/>
+ <style:style style:name="sidebarblock" style:family="paragraph">
+  <style:paragraph-properties fo:line-height="0mm"/>
  </style:style>
 
- <style:style style:name="admonitionicon" style:family="paragraph">
-  <style:paragraph-properties fo:break-after="column"/>
- </style:style>
-
- <style:style style:name="title" style:family="paragraph" style:class="text">
-  <style:paragraph-properties fo:margin-top="1.8mm" fo:margin-bottom="0.3mm" fo:keep-with-next="always"/>
-  <style:text-properties style:font-name="sans-serif" fo:color="#527bbd" fo:font-weight="bold"/>
+ <style:style style:name="sidebarframe" style:family="graphic">
+  <style:graphic-properties svg:width="0mm" style:rel-width="100%" text:anchor-type="paragraph" style:vertical-pos="top" style:vertical-rel="paragraph" style:horizontal-pos="right" style:horizontal-rel="paragraph" fo:background-color="#ffffee" fo:padding="1.8mm" fo:border="0.1mm solid #dddddd" fo:border-left="4.25pt solid #f0f0f0"/>
  </style:style>
 
  <style:style style:name="list-item" style:family="paragraph">
   <style:paragraph-properties fo:margin-top="1.01mm" fo:margin-bottom="1.01mm"/>
- </style:style>
-
- <style:style style:name="comment" style:family="paragraph">
-  <style:text-properties fo:background-color="#ffff00"/>
  </style:style>
 
  <style:style style:name="imageblock" style:family="graphic">
@@ -169,14 +207,6 @@
  </style:style>
 
  <style:style style:name="asciidoc-hr" style:family="paragraph" style:next-style-name="text-body" style:class="html"/>
-
- <style:style style:name="asciidoc-pagebreak" style:family="paragraph">
-  <style:paragraph-properties fo:line-height="0mm" fo:break-after="page"/>
- </style:style>
-
- <style:style style:name="paragraph" style:family="paragraph">
-  <style:paragraph-properties fo:margin-top="1.52mm"/>
- </style:style>
 
  <style:style style:name="listingblock" style:family="paragraph">
   <style:paragraph-properties fo:background-color="#f8f8f8" fo:padding-left="2mm" fo:padding-right="2mm" fo:padding-top="3mm" fo:padding-bottom="3mm" fo:border-left="1.5mm solid #f0f0f0" fo:border="0.1mm solid #dddddd" style:shadow="none" style:line-break="normal" fo:keep-together="auto"/>
@@ -608,6 +638,36 @@
     <style:tab-stop style:position="170.01mm" style:type="right"/>
    </style:tab-stops>
   </style:paragraph-properties>
+ </style:style>
+
+ <style:style style:name="admonitionblock" style:family="section">
+  <style:section-properties fo:background-color="transparent" text:dont-balance-text-columns="false" style:editable="false">
+   <style:columns fo:column-count="2">
+    <style:column-sep style:width="0.71mm" style:color="#dddddd" style:height="100%" style:style="solid"/>
+    <style:column style:rel-width="1000*" fo:start-indent="0mm" fo:end-indent="2.54mm"/>
+    <style:column style:rel-width="8737*" fo:start-indent="2.54mm" fo:end-indent="0mm"/>
+   </style:columns>
+   <style:background-image/>
+  </style:section-properties>
+ </style:style>
+
+ <style:style style:name="columns-2" style:family="section">
+  <style:section-properties fo:background-color="transparent" text:dont-balance-text-columns="false" style:editable="false">
+   <style:columns fo:column-count="2" fo:column-gap="4.97mm"/>
+   <style:background-image/>
+  </style:section-properties>
+ </style:style>
+
+ <style:style style:name="columns-3" style:family="section">
+  <style:section-properties fo:background-color="transparent" text:dont-balance-text-columns="false" style:editable="false">
+   <style:columns fo:column-count="3" fo:column-gap="4.97mm"/>
+  </style:section-properties>
+ </style:style>
+
+ <style:style style:name="columns-4" style:family="section">
+  <style:section-properties fo:background-color="transparent" text:dont-balance-text-columns="false" style:editable="false">
+   <style:columns fo:column-count="4" fo:column-gap="4.97mm"/>
+  </style:section-properties>
  </style:style>
 
  <style:style style:name="numbering" style:display-name="Numbering Symbols" style:family="text"/>

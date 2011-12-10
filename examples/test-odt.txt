@@ -4,6 +4,7 @@
 :icons:
 :iconsdir: /usr/share/asciidoc/images/icons
 :showcomments:
+:toc:
 
 This document is meant for testing the AsciiDoc ODF backend and highlighting
 known problems to developers. The output of this document, using the default
@@ -237,15 +238,20 @@ footnoteref:[footnote] somewhere else in your text.
 // This is a comment
 
 [annotation,dag,2011-12-03]
--------------------------------------------------------------------------------
+////
 This is an example annotation that should be a proper annotation in
 LibreOffice or OpenOffice.
--------------------------------------------------------------------------------
+////
 
 [annotation]
--------------------------------------------------------------------------------
+////
 This is an anonymous annotation.
--------------------------------------------------------------------------------
+////
+
+[comment]
+////
+This is a block comment.
+////
 
 [[tables]]
 == Tables
@@ -261,6 +267,49 @@ This is an anonymous annotation.
 |26-09-2011 tot 30-09-2011|    5d
 |Totaal aantal dagen      |   22d
 |====
+
+
+== Columns
+[columns,4]
+====
+- This
+- Is
+- A
+- Long
+- List
+- Of
+- Items
+- That
+- Would
+- Normally
+- Stretch
+- Multiple
+- Pages
+- But
+- In
+- This
+- Case
+- Thanks
+- To
+- A
+- Section
+- With
+- Four
+- Columns
+- Only
+- Takes
+- Up
+- Part
+- Of
+- A
+- Page
+- How
+- Cool
+- Is
+- That
+- ?
+====
+
 
 == Variables
 Author variable: pass:[<text:initial-creator/>]

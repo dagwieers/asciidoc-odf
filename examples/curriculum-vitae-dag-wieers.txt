@@ -1,20 +1,17 @@
 = Curriculum Vitae - Dag Wieërs
-:revdate: {localdate}
-:doctype: article
-//:theme: cv
 :data-uri:
-:lang: en
+:doctype: article
 :encoding: UTF-8
+:lang: en
 :quirks:
-:toclevels: 1
+:theme: cv
+:toclevels: 2
 :linux-experience: {sys:echo $(( $(date +%Y) - 1995))}
-
 :description: Dag Wieërs is an experienced Linux system engineer and +
 system architect, focusing on Red Hat Enterprise Linux and CentOS. Dag +
 is also a well known RPM packager due to his efforts in the RPMforge +
 and ELRepo repositories which is used by many Belgian and international +
 organizations using RHEL or CentOS.
-
 :keywords: Linux System Engineer, Linux System Administrator, Linux System +
 Architect, UNIX System Engineer, RPM Packager, Python developer, Red Hat +
 Enterprise Linux, RHEL, CentOS, Perl developer, Bash, KSH, Shell scripting, +
@@ -41,7 +38,6 @@ Europe, but not willing to relocate on a permanent basis.
 == Personalia
 //[width="3cm",height="3cm",align="right"]
 //image::dag-professional-250.jpg[Photo of Dag Wieërs]
-
 Full name::
     Dag Johan Maarten Wieërs
 
@@ -66,19 +62,19 @@ Independent contractor::
     Available for freelance work.
 ////
 
-=== Hewlett-Packard Belgium  //  may 2011 -> present
-Linux system architect::
+=== Hewlett-Packard Belgium  //  may 2010 -> present
+Linux system engineer::
     Analysis of Linux SAN incompatibilities, and monitoring of SAN equipment
     to troubleshoot. Best practices for Linux multipathing and SAN performance.
     Design of customer Linux reference architecture (incl. consolidation and
     migration using RHEL and RHEV).
-//  _Incl. Atos Worldline, Dexia Technology Services_
+//    _Incl. Atos Worldline, Dexia Technology Services, SWIFT_
 
 Linux system developer::
     Implementing disaster recovery solution. Improvements to installation
     scripts and webmin modules. Packaging improvements. Automation and
     scripting. Design and implementation of a samba/anti-virus solution.
-    Documentation and troubleshooting, _incl. Belgian Federal Police_.
+    Documentation and troubleshooting, _at Belgian Federal Police_.
 
 === AXA-Tech Belgium  //  nov 2007 -> mar 2010
 Linux system engineer::
@@ -109,7 +105,7 @@ Unix system engineer::
 === Mind Linux Solutions  //  oct 1999 -> apr 2001
 Founder / Business Unit Manager::
     Taking care of various parts of the organization, including sales
-    and marketing. Experience with project-management and pre-sales for
+    and marketing. Experience with project-management and presales for
     a small (15 headcount) consultancy company.
 Consultant::
     Linux and Open Source consultancy and training for several customers
@@ -117,9 +113,9 @@ Consultant::
 
 === IBM Belgium  //  sep 1999 -> dec 2005
 Unix system engineer::
-    On Unix and Linux systems. (eg. packaging on Linux/AIX, implementing
+    On Unix and Linux systems. (e.g. packaging on Linux/AIX, implementing
     various system and network services, general troubleshooting),
-    implementing hosting infrastructure on Linux. (eg. resource and
+    implementing hosting infrastructure on Linux. (e.g. resource and
     availability monitoring, capacity planning, firewall framework)
 
 Consultant::
@@ -251,7 +247,8 @@ including the following conferences:
 //    Giving presentations with a Wii-remote - 08/2008
 //    Proxytunnel: Punching holes in the corporate firewall - 08/2008
 //    Dstat: plugin-based real-time monitoring - 08/2007
- * FOSDEM, Brussels, BE - 2006, 2008
+ * FOSDEM, Brussels, BE - 2006, 2008, 2009
+//    Enterprise Linux Competitive Landscape - 02/2008
 //    Dstat: pluggable real-time monitoring - 02/2008
 //    RPMforge: Enterprise Linux packaging for RHEL and CentOS - 02/2006
 
@@ -270,7 +267,7 @@ IBM Redbook Residency, Austin, TX (11/2002)::
 
   - Red Hat Enterprise Linux Presales Foundations
   - Red Hat Enterprise Virtualization Presales Foundations
-  - Red Hat Jboss Presales Foundations
+  - Red Hat JBoss Presales Foundations
   - Red Hat Partner Platform Certified Salesperson (RHPPCS)
   - Red Hat Partner Virtualization Certified Salesperson (RHPVCS)
   - Red Hat Partner Middleware Certified Salesperson (RHPMCS)
@@ -323,14 +320,15 @@ Heilig Hartcollege, Heusden-Zolder (1988 -> 1994)::
 == Additional activities
   - Maintainer of http://repoforge.org/[RPMforge RPM Repository] with
     more than 5000 Open Source software RPM packages for RHEL, SciLinux and
-    CentOS _used by many international companies and organisations._
+    CentOS _used by many international companies and organizations._
   - Member of the http://elrepo.org/[ELRepo initiative] providing kernel
     module packages (hardware drivers) _used by many international
-    companies and organisations using RHEL, SciLinux or CentOS._
+    companies and organizations using RHEL, SciLinux or CentOS._
   - Author of http://dag.wieers.com/home-made/[various Open Source
-    software projects] _incl. dstat, unoconv, mrepo, dconf, sarah, wiipresent_
-  - Contributor to various Open Source projects _incl. asciidoc, docbook2odf,
-    proxytunnel, Relax and Recover, scannedonly_
+    software projects] _incl. dstat, asciidoc-odf, unoconv, mrepo, dconf,
+    sarah, wiipresent_
+  - Contributor to various Open Source projects _incl. Relax and Recover,
+    asciidoc, docbook2odf, proxytunnel, scannedonly_
   - Ex-member of the http://wiki.centos.org/[CentOS core team]
   - Author of the FrOSCon LiveUSB used for informational displays and
     conference room computers

@@ -5,7 +5,7 @@
 The ODF backend for AsciiDoc enables AsciiDoc users to directly convert
 documents from AsciiDoc to Open Document Format v1.2.
 
-AsciiDoc is a light-weight markup language that maps to DocBook semantics
+AsciiDoc is a lightweight markup language that maps to DocBook semantics
 and makes writing (technical) documentation and presentations more
 enjoyable as it removes styling and formatting from the creative process.
 
