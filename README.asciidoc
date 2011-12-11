@@ -152,9 +152,21 @@ attribute to your AsciiDoc file, like:
 
 the ODF backend will add the comments to the output _marked in yellow_.
 
+However, if you like to also have comment blocks displayed in the output,
+you can use the 'comment' style comment blocks:
+
+[listing]
+....
+[comment]
+/////////////////////////////////////////////////////////
+This is a multi-line comment that is enabled in normal
+output when using the showcomments attribute.
+/////////////////////////////////////////////////////////
+....
+
 
 === Annotation support
-The ODF backend has support for 'annotation' style listing blocks, these
+The ODF backend has support for 'annotation' style comment blocks, these
 special blocks will result in proper ODF annotations, including owner
 and timestamp if provided.
 
@@ -163,11 +175,11 @@ Adding an annotation block is done using the following syntax:
 [listing]
 ....
 [annotation,dag,2011-12-03]
----------------------------------------------------------
+/////////////////////////////////////////////////////////
 FIXME:
 Insert the various features from the Release Notes
 include the information from the presentations
----------------------------------------------------------
+/////////////////////////////////////////////////////////
 ....
 
 [NOTE]
@@ -177,6 +189,26 @@ printed, and might be removed depending on the converted document
 format (e.g. to PDF). If you don't want annotations in your
 ODF output, use the +hideannotations+ attribute.
 ====
+
+
+=== Columns support
+In some cases (e.g. very long lists) one may wish to provide information in
+columns on a page so that page estate is better utilized. The ODF backend
+makes this possible by adding a 'columns' style to the open block. You can
+create a three-columns section, by doing:
+
+[listing]
+....
+[columns,3]
+--
+Continued text flow inside 3 columns.
+
+.Even a list is possible
+ - One
+ - Beta
+ - Charlie
+--
+....
 
 
 === Generating books with covers
