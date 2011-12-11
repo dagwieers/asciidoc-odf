@@ -557,6 +557,25 @@
   <style:text-properties fo:font-size="9pt"/>
  </style:style>
 
+ <style:style style:name="columns-2" style:family="section">
+  <style:section-properties fo:background-color="transparent" text:dont-balance-text-columns="false" style:editable="false">
+   <style:columns fo:column-count="2" fo:column-gap="4.97mm"/>
+   <style:background-image/>
+  </style:section-properties>
+ </style:style>
+
+ <style:style style:name="columns-3" style:family="section">
+  <style:section-properties fo:background-color="transparent" text:dont-balance-text-columns="false" style:editable="false">
+   <style:columns fo:column-count="3" fo:column-gap="4.97mm"/>
+  </style:section-properties>
+ </style:style>
+
+ <style:style style:name="columns-4" style:family="section">
+  <style:section-properties fo:background-color="transparent" text:dont-balance-text-columns="false" style:editable="false">
+   <style:columns fo:column-count="4" fo:column-gap="4.97mm"/>
+  </style:section-properties>
+ </style:style>
+
  <number:date-style style:name="date-format">
   <number:year number:style="long"/>
   <number:text>-</number:text>
