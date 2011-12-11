@@ -137,7 +137,7 @@
  <text:list-style style:name="variablelist">
   <text:list-level-style-number text:level="1" text:style-name="numbering-symbols" style:num-format="">
    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-    <style:list-level-label-alignment text:label-followed-by="listtab" fo:text-indent="-10mm" fo:margin-left="10mm"/>
+    <style:list-level-label-alignment text:label-followed-by="listtab" fo:text-indent="-5mm" fo:margin-left="5mm"/>
    </style:list-level-properties>
   </text:list-level-style-number>
  </text:list-style>
@@ -148,7 +148,7 @@
  </style:style>
 
  <style:style style:name="variablelist-item" style:family="paragraph" style:parent-style-name="list-item">
-  <style:paragraph-properties fo:padding-left="6mm" fo:margin-top="0mm" fo:margin-bottom="0mm"/>
+  <style:paragraph-properties fo:padding-left="1mm" fo:margin-top="0mm" fo:margin-bottom="0mm"/>
  </style:style>
 
  <style:style style:name="strong" style:family="text">
@@ -197,6 +197,25 @@
 
  <style:style style:name="bullet-symbols" style:family="text">
   <style:text-properties fo:color="#aaaaaa" fo:font-weight="bold"/>
+ </style:style>
+
+ <style:style style:name="columns-2" style:family="section">
+  <style:section-properties fo:background-color="transparent" text:dont-balance-text-columns="false" style:editable="false">
+   <style:columns fo:column-count="2" fo:column-gap="4.97mm"/>
+   <style:background-image/>
+  </style:section-properties>
+ </style:style>
+
+ <style:style style:name="columns-3" style:family="section">
+  <style:section-properties fo:background-color="transparent" text:dont-balance-text-columns="false" style:editable="false">
+   <style:columns fo:column-count="3" fo:column-gap="4.97mm"/>
+  </style:section-properties>
+ </style:style>
+
+ <style:style style:name="columns-4" style:family="section">
+  <style:section-properties fo:background-color="transparent" text:dont-balance-text-columns="false" style:editable="false">
+   <style:columns fo:column-count="4" fo:column-gap="4.97mm"/>
+  </style:section-properties>
  </style:style>
 
  <number:date-style style:name="date-format">

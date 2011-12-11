@@ -10,10 +10,12 @@ This document is meant for testing the AsciiDoc ODF backend and highlighting
 known problems to developers. The output of this document, using the default
 ODF stylesheet should match the HTML output as close as possible.
 
+
 == Paragraph
 First paragraph is here.
 
 And this is the second paragraph.
+
 
 == Formatting
 A paragraph can have differently formatted text, like *strong* text,
@@ -21,6 +23,7 @@ _emphasized_ text or +monospaced+ text. But also `quoted', ``double-quoted'',
 ^superscript^ and ~subscript~ are possibilities.
 
 And a anchor:formatting[referenced] paragraph.
+
 
 == Lists
 .Numbered list
@@ -99,6 +102,7 @@ due:: Twee
 tre:: Drie
 
 ====
+
 
 == Blocks
 
@@ -193,6 +197,7 @@ Content inside a comment block is never visible.
 Open Block
 ----
 
+
 == Admonitions
 
 [WARNING]
@@ -217,9 +222,11 @@ Throw away everything you already now and think out of the box.
 * Part of a block
 ====
 
+
 == References
 It is not uncommon to create <<formatting,references>> to other parts of a
 document. Here are some <<tables,tests>>.
+
 
 == Footnotes
 This is a simple footnote
@@ -233,6 +240,7 @@ footnoteref:[footnote,A footnote reference is just like a footnote, but with a r
 // This fails to work
 And then create a reference to an earlier footnote
 footnoteref:[footnote] somewhere else in your text.
+
 
 == Comments and annotations
 // This is a comment
@@ -253,6 +261,7 @@ This is an anonymous annotation.
 This is a block comment.
 ////
 
+
 [[tables]]
 == Tables
 
@@ -271,7 +280,7 @@ This is a block comment.
 
 == Columns
 [columns,4]
-====
+--
 - This
 - Is
 - A
@@ -308,7 +317,7 @@ This is a block comment.
 - Is
 - That
 - ?
-====
+--
 
 
 == Variables
@@ -317,6 +326,7 @@ Author variable: pass:[<text:initial-creator/>]
 Title variable: pass:[<text:title>This is a simple test document</text:title>]
 
 Subject variable: pass:[<text:variable-set text:name="Subject" office:value-type="string">Subject</text:variable-set>]
+
 
 == Definition
 Nested definition lists should work:
@@ -337,6 +347,7 @@ definition description 2
 
 definition term 3::
 definition description 3
+
 
 == Images
 

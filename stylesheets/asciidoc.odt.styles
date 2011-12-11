@@ -131,6 +131,10 @@
   <style:paragraph-properties fo:line-height="0mm" fo:margin="0mm" fo:padding="0mm"/>
  </style:style>
 
+ <style:style style:name="annotationblock" style:family="paragraph">
+  <style:paragraph-properties fo:line-height="0mm" fo:margin="0mm" fo:padding="0mm"/>
+ </style:style>
+
  <style:style style:name="comment" style:family="paragraph">
   <style:text-properties fo:background-color="#ffff00"/>
  </style:style>
