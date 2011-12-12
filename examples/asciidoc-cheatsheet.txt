@@ -177,15 +177,11 @@ Use: multi-paragraph notes.
 Use: hide comments
 ////
 
+// FIXME: Add something ODF specific to show it works !
 ++++
-*Passthrough* Block
-<text:p>
-Use: backend-specific markup like
-</text:p>
+<text:p>*Passthrough* Block</text:p>
 
-//<table border="1">
-//<tr><td>1<td>2
-//</table>
+<text:p>Use: backend-specific markup like</text:p>
 ++++
 
 .Optional Title
