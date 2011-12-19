@@ -33,7 +33,7 @@ feedback is appreciated.
 
  - Incomplete implementation lacks eg. complex table support, ...
 
- - Default stylesheet needs improvements
+ - Default stylesheet needs improvements (especially for presentations)
 
  - Flat ODF files (+.fodt+ and +.fodp+) are supported by LibreOffice 3.3 and newer +
    _(<<a2x,use a2x>> if you need the more common 'packaged' ODF support)_
@@ -194,12 +194,25 @@ ODF output, use the +hideannotations+ attribute.
 === Columns support
 In some cases (e.g. very long lists) one may wish to provide information in
 columns on a page so that page estate is better utilized. The ODF backend
-makes this possible by adding a 'columns' style to the open block. You can
-create a three-columns section, by doing:
+makes this possible by adding a 'cols' attribute for sections. You can
+create a two-columns section, by doing:
 
 [listing]
 ....
-[columns,3]
+[cols=2]
+== Section title
+Text-body will be put in columns.
+
+=== Section subtitle
+Everything, including subsections !
+....
+
+You can also make blocks of text use columns, but this cannot include
+section titles (or subsections):
+
+[listing]
+....
+[cols=3]
 --
 Continued text flow inside 3 columns.
 
@@ -209,6 +222,19 @@ Continued text flow inside 3 columns.
  - Charlie
 --
 ....
+
+And even paragraphs can consist of columns, if you set the cols attribute
+on a paragraph:
+
+[listing]
+....
+[cols=2]
+A very long paragraph that can make use of columns...
+....
+
+[NOTE]
+If you plan to include subsections in your columns, you have to use this first
+construction.
 
 
 === Generating books with covers
@@ -320,9 +346,18 @@ _asciidoc.odt.styles_ so that the output conforms to your desire.
 
 
 == Further Reading
-Apart from the official specifications, little information is available.
+A few documents explain the ODF specification, the file format and the
+syntax:
 
  - http://docs.oasis-open.org/office/v1.2/OpenDocument-v1.2-part1.pdf[Open Document Format v1.2 schema]
+ - http://books.evc-cit.info/oobook/book.html[OpenOffice.org XML Essentials]
+ - http://xml.openoffice.org/general.html[OpenOffice.org XML File Format]
  - http://en.wikipedia.org/wiki/OpenDocument_technical_specification[Wikipedia: OpenDocument technical specification]
+
+And about using Open Source toolchains for publishing:
+
+ - http://www.dmncommunications.com/presentations/Content_with_OSS_notes.pdf[Creating Quality Content with Open Source Tool]
+ - http://www.stevestreeting.com/2010/03/07/building-a-new-technical-documentation-tool-chain/[Building a new technical documentation tool chain]
+ - http://blog.rainwebs.net/2010/02/25/how-to-create-handsome-pdf-documents-without-frustration/[How to Create Handsome PDF Documents Without Frustration]
 
 // vim: set syntax=asciidoc:

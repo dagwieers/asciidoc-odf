@@ -279,7 +279,7 @@ This is a block comment.
 
 
 == Columns
-[columns,4]
+[cols=4]
 --
 - This
 - Is
@@ -351,8 +351,24 @@ definition description 3
 
 == Images
 
-[width="50%",height="50%",align="right",caption="Dag gesticulating"]
+.Dag gesticulating
+[width="50mm",height="50mm",align="right",caption="Picture 1:"]
 image::dag-professional-250.jpg[Photo]
 
-[width="50%",height="50%",align="left"]
+[width="50mm",height="50mm",align="left"]
 image::inkscape.svg[Inkscape logo]
+
+== Filters: aafigure
+
+["aafigure",width="20cm",height="4cm",align="center"]
+-------------------------------------------------------------------------------
+                             /-----------\     yes /----------\
+                          -->| then this |--->*--->| and this |
+                      +  /   \-----------/    |no  \----------/
+     /------------\   +--                     |
+     | First this |-->+                       |
+     \------------/   +--                     |
+                      +  \   /---------\      V        /------\
+                          -->| or that |----->*------->| Done |
+                             \---------/               \------/
+-------------------------------------------------------------------------------

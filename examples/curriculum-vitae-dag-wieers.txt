@@ -33,6 +33,8 @@ to documentation, standardization, procedures and policies.
 
 I am available as a freelancer for contract work inside and outside of
 Europe, but not willing to relocate on a permanent basis.
+
+_References can be provided on request._
 ****************************************************************************
 
 == Personalia
@@ -53,22 +55,24 @@ Email::
 Website::
     http://dag.wieers.com/blog/, http://be.linkedin.com/in/dagwieers
 
-== Work experience
-_References provided on request._
 
+[cols=2]
+== Work experience
 ////
 === Dagit Linux solutions  //  may 2007 -> present
 Independent contractor::
     Available for freelance work.
 ////
 
-=== Hewlett-Packard Belgium  //  may 2010 -> present
+=== Hewlett-Packard Belgium
+[styled,timeframe]
+may 2010 -> present
+
 Linux system engineer::
     Analysis of Linux SAN incompatibilities, and monitoring of SAN equipment
     to troubleshoot. Best practices for Linux multipathing and SAN performance.
-    Design of customer Linux reference architecture (incl. consolidation and
-    migration using RHEL and RHEV).
-//    _Incl. Atos Worldline, Dexia Technology Services, SWIFT_
+    Assessement and design of Linux reference architecture.
+    _Incl. Atos Worldline, Dexia Technology Services, SWIFT_
 
 Linux system developer::
     Implementing disaster recovery solution. Improvements to installation
@@ -76,33 +80,48 @@ Linux system developer::
     scripting. Design and implementation of a samba/anti-virus solution.
     Documentation and troubleshooting, _at Belgian Federal Police_.
 
-=== AXA-Tech Belgium  //  nov 2007 -> mar 2010
+=== AXA-Tech Belgium
+[styled,timeframe]
+2.5 years (nov 2007 -> mar 2010)
+
 Linux system engineer::
     Linux migration of Belgian datacenter to Germany. Design and
     implementation of modular framework and infrastructure for Linux
     and VMware ESX, used for deploying, retrofitting and validating
     Linux servers. 3rd level support, troubleshooting and design work.
 
-=== EMC Belgium Development Group  //  jul 2007 -> dec 2007
+=== EMC Belgium Development Group
+[styled,timeframe]
+6 months (jul 2007 -> dec 2007)
+
 Linux system engineer::
     Implementation of infrastructure for Novell SLES Linux deployment for
     technical development workstations. Integration with Active Directory,
     NIS, Clearcase, VMware Server.
 
-=== Punch Telematix  //  jun 2007 -> sep 2007
+.Punch Telematix
+[styled,timeframe]
+4 months (jun 2007 -> sep 2007)
+
 Linux system engineer::
     Design and implementation of technical documentation system. Design and
     implementation of subversion. Packaging for Novell SLES Linux.
     Troubleshooting. Automation.
 
-=== Euroclear  //  dec 2005 -> may 2007
+=== Euroclear
+[styled,timeframe]
+2.5 years (dec 2005 -> may 2007)
+
 Unix system engineer::
     Deployment of Unix systems and services. Design and implementation of
     management infrastructure (configuration and documentation management,
     change management). Packaging for Solaris, AIX, Linux and VMware. Custom
     software development. Troubleshooting. Automation.
 
-=== Mind Linux Solutions  //  oct 1999 -> apr 2001
+=== Mind Linux Solutions
+[styled,timeframe]
+1.5 year (oct 1999 -> apr 2001)
+
 Founder / Business Unit Manager::
     Taking care of various parts of the organization, including sales
     and marketing. Experience with project-management and presales for
@@ -111,7 +130,10 @@ Consultant::
     Linux and Open Source consultancy and training for several customers
     in on-site projects varying between 1 and 3 weeks.
 
-=== IBM Belgium  //  sep 1999 -> dec 2005
+=== IBM Belgium
+[styled,timeframe]
+5.5 year (sep 1999 -> dec 2005)
+
 Unix system engineer::
     On Unix and Linux systems. (e.g. packaging on Linux/AIX, implementing
     various system and network services, general troubleshooting),
@@ -124,7 +146,10 @@ Consultant::
     and big parallel storage systems for digital media projects,
     _incl. Real Software, VRT, EVS, RVA, Callataÿ and Wouters, KBC_
 
-=== SISA Software/Winsome  // summer job 1996/1997  //  oct 1997 -> sep 1999
+=== SISA Software/Winsome
+[styled,timeframe]
+summer job 1996/1997 and oct 1997 -> sep 1999
+
 Consultant::
     Analysis and design of an off-line website generation program (further
     developed as WebEngine) and web-scripting. Implementation of business
@@ -133,13 +158,17 @@ System administration::
     Installation and operational management of Linux infrastructure and
     routers.
 
-=== Provinciale Bibliotheek Limburg  //  voluntary oct 1996 -> nov 1997
+=== Provinciale Bibliotheek Limburg
+[styled,timeframe]
+voluntary oct 1996 -> nov 1997
+
 Network administration::
     Maintenance of 12 public Internet terminals (based on Windows 95) and
     an ISDN Internet connection.
 Internet training::
     Individual training and training in group regarding computer use,
     the Internet, search-engines and popular websites.
+
 
 == Skills
 === Overall
@@ -185,6 +214,7 @@ Internet training::
     POP3, IMAP, DHCP, IPsec, ...
   - SQL (MySQL, msql, PostgreSQL, DB2 and some Oracle)
 
+[cols=2]
 === Programming languages
 Active::
     Python (since 2002),

@@ -119,6 +119,10 @@
   <style:text-properties fo:font-weight="bold"/>
  </style:style>
 
+ <style:style style:name="columnbreak" style:family="paragraph">
+  <style:paragraph-properties fo:line-height="0mm" fo:break-after="column"/>
+ </style:style>
+
  <style:style style:name="asciidoc-pagebreak" style:family="paragraph">
   <style:paragraph-properties fo:line-height="0mm" fo:break-after="page"/>
  </style:style>
@@ -174,8 +178,9 @@
   <style:paragraph-properties fo:break-after="column"/>
  </style:style>
 
- <style:style style:name="admonitionname" style:family="text">
-  <style:text-properties fo:font-weight="bold"/>
+ <style:style style:name="admonitionname" style:family="paragraph">
+  <style:paragraph-properties fo:break-after="column" fo:text-align="center"/>
+  <style:text-properties fo:font-weight="bold" style:font-name="sans-serif" style:text-rotation-angle="270" fo:font-size="10pt"/>
  </style:style>
 
  <style:style style:name="admonitiontext" style:family="paragraph">
@@ -210,7 +215,9 @@
   <style:graphic-properties style:wrap="none" style:horizontal-pos="center" style:horizontal-rel="char" style:rel-width="80%"/>
  </style:style>
 
- <style:style style:name="asciidoc-hr" style:family="paragraph" style:next-style-name="text-body" style:class="html"/>
+ <style:style style:name="asciidoc-hr" style:family="paragraph" style:next-style-name="text-body" style:class="html">
+  <style:paragraph-properties fo:line-height="0mm" fo:border-bottom="0.35mm solid #c0c0c0"/>
+ </style:style>
 
  <style:style style:name="listingblock" style:family="paragraph">
   <style:paragraph-properties fo:background-color="#f8f8f8" fo:padding-left="2mm" fo:padding-right="2mm" fo:padding-top="3mm" fo:padding-bottom="3mm" fo:border-left="1.5mm solid #f0f0f0" fo:border="0.1mm solid #dddddd" style:shadow="none" style:line-break="normal" fo:keep-together="auto"/>
@@ -222,7 +229,13 @@
   <style:text-properties style:font-name="monospace" fo:font-size="10pt" fo:color="#000080"/>
  </style:style>
 
- <style:style style:name="exampleblock" style:family="paragraph"/>
+ <style:style style:name="exampleblock" style:family="paragraph">
+  <style:paragraph-properties fo:line-height="0mm"/>
+ </style:style>
+
+ <style:style style:name="exampleframe" style:family="graphic">
+  <style:graphic-properties svg:width="0mm" style:rel-width="100%" text:anchor-type="paragraph" style:vertical-pos="top" style:vertical-rel="paragraph" style:horizontal-pos="right" style:horizontal-rel="paragraph" fo:padding="1.8mm" fo:border-left="0.71mm solid #dddddd"/>
+ </style:style>
 
  <style:style style:name="openblock" style:family="paragraph"/>
 
@@ -364,7 +377,58 @@
 
  <style:style style:name="itemizedlist-item" style:family="paragraph" style:parent-style-name="list-item"/>
 
- <text:list-style style:name="orderedlist"/>
+ <text:list-style style:name="orderedlist">
+   <text:list-level-style-number text:level="1" text:style-name="numbering-symbols" style:num-prefix=" " style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="12.7mm" fo:text-indent="-6.35mm" fo:margin-left="12.7mm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="2" text:style-name="numbering-symbols" style:num-suffix="." style:num-format="a">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="19.05mm" fo:text-indent="-6.35mm" fo:margin-left="19.05mm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="3" text:style-name="numbering-symbols" style:num-prefix=" " style:num-suffix=")" style:num-format="i">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="25.4mm" fo:text-indent="-6.35mm" fo:margin-left="25.4mm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="4" text:style-name="numbering-symbols" style:num-suffix="." style:num-format="A">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="31.75mm" fo:text-indent="-6.35mm" fo:margin-left="31.75mm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="5" text:style-name="numbering-symbols" style:num-suffix=")" style:num-format="I">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="38.1mm" fo:text-indent="-6.35mm" fo:margin-left="38.1mm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="6" text:style-name="numbering-symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="44.45mm" fo:text-indent="-6.35mm" fo:margin-left="44.45mm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="7" text:style-name="numbering-symbols" style:num-suffix="." style:num-format="a">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="50.8mm" fo:text-indent="-6.35mm" fo:margin-left="50.8mm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="8" text:style-name="numbering-symbols" style:num-suffix=")" style:num-format="i">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="57.15mm" fo:text-indent="-6.35mm" fo:margin-left="57.15mm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="9" text:style-name="numbering-symbols" style:num-suffix="." style:num-format="A">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="63.5mm" fo:text-indent="-6.35mm" fo:margin-left="63.5mm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="10" text:style-name="numbering-symbols" style:num-suffix=")" style:num-format="I">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="69.85mm" fo:text-indent="-6.35mm" fo:margin-left="69.85mm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+ </text:list-style>
 
  <style:style style:name="orderedlist-item" style:family="paragraph" style:parent-style-name="list-item"/>
 
@@ -446,6 +510,34 @@
   <style:table-row-properties fo:keep-together="auto"/>
  </style:style>
 
+ <style:style style:name="table-cell" style:family="table-cell">
+  <style:table-cell-properties fo:background-color="transparent" fo:padding="1mm" fo:border="0.2mm solid #000000"/>
+ </style:style>
+
+ <style:style style:name="table-header" style:family="paragraph">
+  <style:text-properties fo:font-weight="bold"/>
+ </style:style>
+
+ <style:style style:name="table-cell-strong" style:family="paragraph">
+  <style:text-properties fo:font-weight="bold"/>
+ </style:style>
+
+ <style:style style:name="horizontallist" style:family="table">
+  <style:table-properties style:width="170mm" fo:margin-top="0mm" fo:margin-bottom="0mm" table:align="margins" style:shadow="none" table:border-model="separating"/>
+ </style:style>
+
+ <style:style style:name="horizontallist.A" style:family="table-column">
+  <style:table-column-properties style:rel-column-width="1856*" style:use-optimal-column-width="true"/>
+ </style:style>
+
+ <style:style style:name="horizontallist.B" style:family="table-column">
+  <style:table-column-properties style:rel-column-width="7782*" style:use-optimal-column-width="true"/>
+ </style:style>
+
+ <style:style style:name="horizontallist" style:family="table-row">
+  <style:table-row-properties fo:keep-together="auto"/>
+ </style:style>
+
  <style:style style:name="horizontallist-term" style:family="table-cell">
   <style:table-cell-properties fo:background-color="transparent" fo:padding="0mm" fo:border="none"/>
  </style:style>
@@ -490,6 +582,10 @@
 
  <style:style style:name="subscript" style:family="text">
   <style:text-properties style:text-position="sub 80%"/>
+ </style:style>
+
+ <style:style style:name="big" style:family="text">
+  <style:text-properties fo:font-size="125%"/>
  </style:style>
 
  <style:style style:name="command" style:family="text">
@@ -576,6 +672,77 @@
   <style:text-properties fo:color="#00008b"/>
  </style:style>
 
+ <style:style style:name="green-background" style:family="text">
+  <style:text-properties fo:background-color="#008000"/>
+ </style:style>
+
+ <style:style style:name="red-background" style:family="text">
+  <style:text-properties fo:background-color="#ff0000"/>
+ </style:style>
+
+ <style:style style:name="darkred-background" style:family="text">
+  <style:text-properties fo:background-color="#8b0000"/>
+ </style:style>
+
+ <style:style style:name="blue-background" style:family="text">
+  <style:text-properties fo:background-color="#0000ff"/>
+ </style:style>
+
+ <style:style style:name="brown-background" style:family="text">
+  <style:text-properties fo:background-color="#a52a2a"/>
+ </style:style>
+
+ <style:style style:name="darkbrown-background" style:family="text">
+  <style:text-properties fo:background-color="#000000"/>
+ </style:style>
+
+ <style:style style:name="pink-background" style:family="text">
+  <style:text-properties fo:background-color="#ffc0cb"/>
+ </style:style>
+
+ <style:style style:name="yellow-background" style:family="text">
+  <style:text-properties fo:background-color="#ffff00"/>
+ </style:style>
+
+ <style:style style:name="cyan-background" style:family="text">
+  <style:text-properties fo:background-color="#00ffff"/>
+ </style:style>
+
+ <style:style style:name="purple-background" style:family="text">
+  <style:text-properties fo:background-color="#800080"/>
+ </style:style>
+
+ <style:style style:name="orange-background" style:family="text">
+  <style:text-properties fo:background-color="#ffa500"/>
+ </style:style>
+
+ <style:style style:name="brightorange-background" style:family="text">
+  <style:text-properties fo:background-color="#000000"/>
+ </style:style>
+
+ <style:style style:name="brightgreen-background" style:family="text">
+  <style:text-properties fo:background-color="#00ff00"/>
+ </style:style>
+
+ <style:style style:name="darkgreen-background" style:family="text">
+  <style:text-properties fo:background-color="#006400"/>
+ </style:style>
+
+ <style:style style:name="black-background" style:family="text">
+  <style:text-properties fo:background-color="#000000"/>
+ </style:style>
+
+ <style:style style:name="teal-background" style:family="text">
+  <style:text-properties fo:background-color="#008080"/>
+ </style:style>
+
+ <style:style style:name="gray-background" style:family="text">
+  <style:text-properties fo:background-color="#808080"/>
+ </style:style>
+
+ <style:style style:name="darkblue-background" style:family="text">
+  <style:text-properties fo:background-color="#00008b"/>
+ </style:style>
  <style:style style:name="graphics" style:family="graphic">
   <style:graphic-properties text:anchor-type="paragraph" svg:x="0mm" svg:y="0mm" style:wrap="dynamic" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="top" style:vertical-rel="paragraph" style:horizontal-pos="center" style:horizontal-rel="paragraph"/>
  </style:style>
@@ -629,9 +796,11 @@
   </text:list-level-style-number>
  </text:list-style>
 
+<!--
  <style:style style:name="normal" style:family="text">
   <style:text-properties style:font-name="sans-serif" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal"/>
  </style:style>
+-->
 
  <style:style style:name="Footer" style:family="paragraph" style:class="extra">
   <style:text-properties fo:font-size="8pt"/>

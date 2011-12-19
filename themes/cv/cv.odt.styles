@@ -15,7 +15,7 @@
  </style:default-style>
 
  <style:default-style style:family="paragraph">
-  <style:paragraph-properties fo:text-align="start" fo:margin-top="0.2mm" fo:margin-bottom="0.2mm" style:justify-single-word="false" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:writing-mode="page" fo:keep-together="always"/>
+  <style:paragraph-properties fo:text-align="start" fo:margin-top="0mm" fo:margin-bottom="0.2mm" style:justify-single-word="false" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:writing-mode="page" fo:keep-together="always"/>
   <style:text-properties fo:color="#000000" style:font-name="sans-serif" fo:font-size="9pt"/>
  </style:default-style>
 
@@ -56,8 +56,13 @@
  </style:style>
 
  <style:style style:name="title" style:family="paragraph" style:class="text">
-  <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="0mm" fo:margin-bottom="0.8mm"/>
+  <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="1mm" fo:margin-bottom="0mm"/>
   <style:text-properties style:font-name="sans-serif" fo:color="#666699" fo:font-weight="bold" fo:font-size="110%"/>
+ </style:style>
+
+ <style:style style:name="timeframe" style:family="paragraph" style:class="text">
+  <style:paragraph-properties fo:keep-with-next="always" fo:padding="0mm" fo:margin="0mm" fo:margin-bottom="0mm" fo:text-align="right"/>
+  <style:text-properties fo:font-weight="bold" fo:font-size="8pt"/>
  </style:style>
 
  <style:style style:name="asciidoc-pagebreak" style:family="paragraph">
