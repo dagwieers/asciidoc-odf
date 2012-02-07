@@ -84,7 +84,7 @@
 
  <style:style style:name="title" style:family="paragraph" style:class="text">
   <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="0mm" fo:margin-bottom="0.8mm"/>
-  <style:text-properties fo:color="#666699" fo:font-weight="bold" fo:font-size="110%"/>
+  <style:text-properties fo:color="#0065ff" fo:font-weight="bold"/>
  </style:style>
 
  <style:style style:name="caption" style:family="paragraph" style:class="text">

@@ -31,10 +31,8 @@ implementing system tools, improving hardware support and automating
 operational tasks using python, shell scripting and perl with attention
 to documentation, standardization, procedures and policies.
 
-I am available as a freelancer for contract work inside and outside of
+I am *available as a freelancer for contract work* inside and outside of
 Europe, but not willing to relocate on a permanent basis.
-
-_References can be provided on request._
 ****************************************************************************
 
 == Personalia
@@ -58,22 +56,25 @@ Website::
 
 [cols=2]
 == Work experience
+*_References provided on request._*
+
 ////
-=== Dagit Linux solutions  //  may 2007 -> present
+=== Dagit Linux solutions
+[style="timeframe"]
+may 2007 -> present
 Independent contractor::
     Available for freelance work.
 ////
 
 === Hewlett-Packard Belgium
-[styled,timeframe]
-may 2010 -> present
+[stylename="timeframe"]
+May 2010 -> present (ongoing)
 
 Linux system engineer::
     Analysis of Linux SAN incompatibilities, and monitoring of SAN equipment
     to troubleshoot. Best practices for Linux multipathing and SAN performance.
-    Assessement and design of Linux reference architecture.
+    Assessment and design of Linux reference architecture.
     _Incl. Atos Worldline, Dexia Technology Services, SWIFT_
-
 Linux system developer::
     Implementing disaster recovery solution. Improvements to installation
     scripts and webmin modules. Packaging improvements. Automation and
@@ -81,8 +82,8 @@ Linux system developer::
     Documentation and troubleshooting, _at Belgian Federal Police_.
 
 === AXA-Tech Belgium
-[styled,timeframe]
-2.5 years (nov 2007 -> mar 2010)
+[stylename="timeframe"]
+Nov 2007 -> Mar 2010 (2.5 years)
 
 Linux system engineer::
     Linux migration of Belgian datacenter to Germany. Design and
@@ -91,17 +92,17 @@ Linux system engineer::
     Linux servers. 3rd level support, troubleshooting and design work.
 
 === EMC Belgium Development Group
-[styled,timeframe]
-6 months (jul 2007 -> dec 2007)
+[stylename="timeframe"]
+Jul 2007 -> Dec 2007 (6 months)
 
 Linux system engineer::
     Implementation of infrastructure for Novell SLES Linux deployment for
     technical development workstations. Integration with Active Directory,
     NIS, Clearcase, VMware Server.
 
-.Punch Telematix
-[styled,timeframe]
-4 months (jun 2007 -> sep 2007)
+=== Punch Telematix
+[stylename="timeframe"]
+Jun 2007 -> Sep 2007 (4 months)
 
 Linux system engineer::
     Design and implementation of technical documentation system. Design and
@@ -109,8 +110,8 @@ Linux system engineer::
     Troubleshooting. Automation.
 
 === Euroclear
-[styled,timeframe]
-2.5 years (dec 2005 -> may 2007)
+[stylename="timeframe"]
+Dec 2005 -> May 2007 (2.5 years)
 
 Unix system engineer::
     Deployment of Unix systems and services. Design and implementation of
@@ -119,8 +120,8 @@ Unix system engineer::
     software development. Troubleshooting. Automation.
 
 === Mind Linux Solutions
-[styled,timeframe]
-1.5 year (oct 1999 -> apr 2001)
+[stylename="timeframe"]
+Oct 1999 -> Apr 2001 (1.5 years)
 
 Founder / Business Unit Manager::
     Taking care of various parts of the organization, including sales
@@ -131,15 +132,14 @@ Consultant::
     in on-site projects varying between 1 and 3 weeks.
 
 === IBM Belgium
-[styled,timeframe]
-5.5 year (sep 1999 -> dec 2005)
+[stylename="timeframe"]
+Sep 1999 -> Dec 2005 (5.5 years)
 
 Unix system engineer::
     On Unix and Linux systems. (e.g. packaging on Linux/AIX, implementing
     various system and network services, general troubleshooting),
     implementing hosting infrastructure on Linux. (e.g. resource and
     availability monitoring, capacity planning, firewall framework)
-
 Consultant::
     Designing and implementing solutions for automatic deployment of
     Linux clients, Point-Of-Sale systems, network services, clusters
@@ -147,8 +147,8 @@ Consultant::
     _incl. Real Software, VRT, EVS, RVA, Callataÿ and Wouters, KBC_
 
 === SISA Software/Winsome
-[styled,timeframe]
-summer job 1996/1997 and oct 1997 -> sep 1999
+[stylename="timeframe"]
+summer job 1996/1997 and Oct 1997 -> Sep 1999
 
 Consultant::
     Analysis and design of an off-line website generation program (further
@@ -159,8 +159,8 @@ System administration::
     routers.
 
 === Provinciale Bibliotheek Limburg
-[styled,timeframe]
-voluntary oct 1996 -> nov 1997
+[stylename="timeframe"]
+voluntary Oct 1996 -> Nov 1997
 
 Network administration::
     Maintenance of 12 public Internet terminals (based on Windows 95) and
@@ -246,6 +246,12 @@ Passive::
 I have presented on various topics at various events and get-togethers,
 including the following conferences:
 
+ * Loadays, Antwerp, BE - 2012
+//    Technical documentation workflows for lazy people - 04/2012
+//    Improving hardware support on RHEL and clones - 04/2012
+ * FlossUK, Edinburgh, UK - 2012
+//    10 reasons for choosing Rear as a DR strategy - 03/2012
+//    Abusing LibreOffice for technical documentation - 03/2012
  * LinuxCon Europe, Prague, CZ - 2011
 //    Rear: Disaster Recovery and System Migration tool - 10/2011
  * LibreOffice Conference, Paris, FR - 2011
@@ -293,7 +299,7 @@ IBM Redbook Residency, Austin, TX (11/2002)::
 
 === Certification
 
-*http://www.redhat.com/certification/[Red Hat Certificates]*
+http://www.redhat.com/certification/[Red Hat Certification]
 
   - Red Hat Enterprise Linux Presales Foundations
   - Red Hat Enterprise Virtualization Presales Foundations
@@ -302,7 +308,11 @@ IBM Redbook Residency, Austin, TX (11/2002)::
   - Red Hat Partner Virtualization Certified Salesperson (RHPVCS)
   - Red Hat Partner Middleware Certified Salesperson (RHPMCS)
 
-*http://www.brainbench.com/transcript.jsp?pid=652882[Brainbench Certificates]*
+http://www.lpi.org/[Linux Professional Institute Certification]
+
+  - Level 1 (LPIC-1)
+
+http://www.brainbench.com/transcript.jsp?pid=652882[Brainbench Certification]
 
   - Linux Administration (General):
     4.71/5 (30 March 2005) #1 Belgium [> 99% of all participants]

@@ -18,9 +18,9 @@ install:
 	install -Dp -m0644 stylesheets/asciidoc.odp.styles $(DESTDIR)$(sysconfdir)/asciidoc/stylesheets/asciidoc.odp.styles
 	install -Dp -m0755 filters/line_break.py $(DESTDIR)$(sysconfdir)/asciidoc/filters/line_break.py
 	install -Dp -m0755 filters/code/code-filter.py $(DESTDIR)$(sysconfdir)/asciidoc/filters/code/code-filter.py
-	install -Dp -m0644 filters/source/source-highlight-filter.conf $(DESTDIR)/asciidoc/filters/source/source-highlight-filter.conf
-	echo "Please add \"odf = odf.outlang\" to $(datadir)/source-highlight/outlang.map"
-	install -Dp -m0644 filters/source/odf.outlang $(DESTDIR)$(datadir)/source-highlight/odf.outlang
+#	install -Dp -m0644 filters/source/source-highlight-filter.conf $(DESTDIR)/asciidoc/filters/source/source-highlight-filter.conf
+#	echo "Please add \"odf = odf.outlang\" to $(datadir)/source-highlight/outlang.map"
+#	install -Dp -m0644 filters/source/odf.outlang $(DESTDIR)$(datadir)/source-highlight/odf.outlang
 	install -Dp -m0755 packaged/a2x.py $(DESTDIR)$(bindir)/a2x.py
 	install -Dp -m0644 packaged/a2x.conf $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt/a2x.conf
 

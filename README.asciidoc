@@ -142,6 +142,20 @@ We think this is easier for end-users than extracting the styles
 and putting it into themes, but both methods are available.
 
 
+=== Source code highlighting
+We contributed ODF output support for the GNU source-highlight project,
+as a result you can now have proper syntax highlighting in source output
+in all your documents by using +[source]+ blocks.
+
+[source,ini]
+----
+[source,python]
+#!/usr/bin/python
+import os
+print os.name
+----
+
+
 === Comment support
 AsciiDoc has the functionality to make (inline) comments show in the output,
 the ODF backend also provides this functionality. When you use the
