@@ -200,7 +200,7 @@
  </style:style>
 
  <style:style style:name="imageblock" style:family="graphic">
-  <style:graphic-properties fo:margin-left="2mm" fo:margin-right="2mm" fo:margin-top="0mm" fo:margin-bottom="0mm" style:wrap="none" style:vertical-pos="top" style:vertical-rel="paragraph-content" style:horizontal-rel="char" fo:background-color="transparent" style:background-transparency="100%" fo:padding="0mm" style:shadow="none" fo:border="0.51pt solid #666666"/>
+  <style:graphic-properties fo:margin-left="2mm" fo:margin-right="2mm" fo:margin-top="0mm" fo:margin-bottom="0mm" style:wrap="none" style:vertical-pos="top" style:vertical-rel="paragraph-content" style:horizontal-rel="char" fo:background-color="transparent" style:background-transparency="100%" fo:padding="0mm" style:shadow="none" fo:border="none"/>
  </style:style>
 
  <style:style style:name="imageblock-left" style:family="graphic" style:parent-style-name="imageblock">

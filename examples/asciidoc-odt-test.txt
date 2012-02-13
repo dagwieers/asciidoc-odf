@@ -214,7 +214,7 @@ Do not believe everything that is written in this document.
 
 [TIP]
 ====
-Throw away everything you already now and think out of the box.
+Throw away everything you already know and think out of the box.
 
 .Bulleted lists are possible
 * As you can see
@@ -358,17 +358,211 @@ image::dag-professional-250.jpg[Photo]
 [width="50mm",height="50mm",align="left"]
 image::inkscape.svg[Inkscape logo]
 
+
+<<<
+
+== Filters: graphviz
+
+["graphviz",width="100mm",height="15mm"]
+----
+digraph G { rankdir=LR; Graphviz->AsciiDoc->HTML}
+----
+
+["graphviz", "sample2.png",width="90mm",height="100mm"]
+----
+digraph automata_0 {
+  size ="8.5, 11";
+  node [shape = circle];
+  0 [ style = filled, color=lightgrey ];
+  2 [ shape = doublecircle ];
+  0 -> 2 [ label = "a " ];
+  0 -> 1 [ label = "other " ];
+  1 -> 2 [ label = "a " ];
+  1 -> 1 [ label = "other " ];
+  2 -> 2 [ label = "a " ];
+  2 -> 1 [ label = "other " ];
+  "Machine: a" [ shape = plaintext ];
+}
+----
+
+<<<
+
 == Filters: aafigure
 
-["aafigure",width="20cm",height="4cm",align="center"]
--------------------------------------------------------------------------------
-                             /-----------\     yes /----------\
-                          -->| then this |--->*--->| and this |
-                      +  /   \-----------/    |no  \----------/
-     /------------\   +--                     |
-     | First this |-->+                       |
-     \------------/   +--                     |
-                      +  \   /---------\      V        /------\
-                          -->| or that |----->*------->| Done |
-                             \---------/               \------/
--------------------------------------------------------------------------------
+.Example DocBook toolchain
+["aafigure",width="21cm",height="3cm",align="center",format="svg",options="fixed",aspect="0.7",linewidth="1"]
+----
+                                 /---------\
+                             --->|"DocBook"|---
+/----------\  +----------+  /    \---------/   \   +-----+  /--------\  +---+  /---\
+|Plain Text|--+"AsciiDoc"+-+                    +--+Saxon+->|"XSL-FO"|--+FOP+->|PDF|
+\----------/  +----------+  /----------------\ /   +-----+  \--------/  +---+  \---/
+                            |"XSL Stylesheet"|-
+                            \----------------/
+----
+
+.Example: asciidoc-odf toolchain
+["aafigure",width="20cm",height="6cm",align="center",format="svg",options="fixed",aspect="0.7",linewidth="1"]
+----
+                                                                  /---\
+                                                               +->|ODF|
+                                                              /   \---/
+                                                             /
+                               /--------\                   /     /---\
+                             ->|Flat ODF|--                +----->|PDF|
+/----------\  +----------+  /  \--------/  \   +-------+  /       \---/
+|Plain Text|--+"asciidoc"+-+                +--+unoconv+-+
+\----------/  +----------+  /------------\ /   +---+---+  \       /---\
+                            |ODF template|-        |       +----->|DOC|
+                            \------+-----/  +------+------+ \     \---/
+                                            |"LibreOffice"|  \
+                                            +-------------+   \   /---\
+                                                               +->|RTF|
+                                                                  \---/
+----
+
+.Example: a2x odf toolchain
+["aafigure",width="16cm",height="6cm",align="center",format="svg",options="fixed",aspect="0.7",linewidth="1"]
+----
+                                                    /---\
+                                                 +->|ODF|
+                                                /   \---/
+                                               /
+ /----------\                                 /     /---\
+ |Plain Text|--                              +----->|PDF|
+ \----------/  \   +---+  /---\  +-------+  /       \---/
+                +--+a2x+->|ODF|--+unoconv+-+
+/------------\ /   +---+  \---/  +---+---+  \       /---\
+|ODF template|-                      |       +----->|DOC|
+\------------/                +------+------+ \     \---/
+                              |"LibreOffice"|  \
+                              +-------------+   \   /---\
+                                                 +->|RTF|
+                                                    \---/
+----
+
+<<<
+
+== Filters: ditaa
+
+
+=== DocBook-based toolchains
+.Example: dblatex toolchain
+["ditaa",scaling="4",width="195mm",height="35mm",align="center"]
+----
+                         +----------+
+                      +->|DocBook   |-+
++-------+  +--------+ |  |XML    {d}| | +-------+  +------+  +------+  +-----+
+|Plain  |--+asciidoc+-+  +----------+ +-+dblatex+->|LaTeX |--+pdftex+->|PDF  |
+|Text{d}|  |    c789|    |XSL    {d}| | |   c789|  |   {d}|  |  c789|  |  {d}|
++-------+  +--------+    |Stylesheet|-+ +-------+  +------+  +------+  +-----+
+                         +----------+
+----
+
+.Example: Docbook FOP toolchain
+["ditaa",scaling="4",width="192.5mm",height="35mm",align="center"]
+----
+                         +----------+              +------+
+                      +->|DocBook   |-+         +->|FO XML|-+
++-------+  +--------+ |  |XML    {d}| | +-----+ |  |   {d}| | +----+  +-----+
+|Plain  |--+asciidoc+-+  +----------+ +-+saxon+-+  +------+ +-+FOP +->|PDF  |
+|Text{d}|  |    c789|    |XSL    {d}| | | c789|    |XSL-FO| | |c789|  |  {d}|
++-------+  +--------+    |Stylesheet|-+ +-----+    |   {d}|-+ +----+  +-----+
+                         +----------+              +------+
+----
+
+.Example: Docbook2odf toolchain
+["ditaa",scaling="4",width="210mm",height="50mm",align="center"]
+----
+                                                                            +------+
+                         +----------+                                    +->|ODF{d}|
+                      +->|DocBook   |-+                                  |  +------+
++-------+  +--------+ |  |XML    {d}| | +-----------+  +---+  +-------+  +->|PDF{d}|
+|Plain  |--+asciidoc+-+  +----------+ +-+docbook2odf+->|ODF|--+unoconv+--+  +------+
+|Text{d}|  |    c789|    |XSLT   {d}| | |       c789|  |{d}|  |   c789|  +->|DOC{d}|
++-------+  +--------+    |Stylesheet|-+ +-----------+  +---+  +---*---+  |  +------+
+                         +----------+                             |      +->|PPT{d}|
+                                                            +-----*-----+   +------+
+                                                            |LibreOffice|
+                                                            |       c897|
+                                                            +-----------+
+----
+
+=== ODF-based toolchains
+.Example: AsciiDoc toolchain with unoconv
+["ditaa",scaling="4",width="152.5mm",height="50mm",align="center"]
+----
+                                                     +------+
+                          +--------+              +->|ODF{d}|
+                       +->|Flat ODF|-+            |  +------+
++--------+  +--------+ |  |     {d}| | +-------+  +->|PDF{d}|
+|Plain   |--+asciidoc+-+  +--------+ +-+unoconv+--+  +------+
+|Text {d}|  |    c789|    | ODF{io}| | |   c789|  +->|DOC{d}|
++--------+  +--------+    |Template|-+ +---*---+  |  +------+
+                          +--------+       |      +->|PPT{d}|
+                                     +-----*-----+   +------+
+                                     |libreoffice|
+                                     |       c897|
+                                     +-----------+
+----
+
+.Example: AsciiDoc a2x toolchain with unoconv
+["ditaa",scaling="4",width="125mm",height="50mm",align="center"]
+----
+                                          +------+
++--------+                             +->|ODF{d}|
+|Plain   |-+                           |  +------+
+|Text {d}| | +----+  +---+  +-------+  +->|PDF{d}|
++--------+ +-+a2x +->|ODF|--+unoconv+--+  +------+
+| ODF{io}| | |c789|  |{d}|  |   c789|  +->|DOC{d}|
+|Template|-+ +----+  +---+  +---*---+  |  +------+
++--------+                      |      +->|PPT{d}|
+                          +-----*-----+   +------+
+                          |libreoffice|
+                          |       c897|
+                          +-----------+
+----
+
+.Example: AsciiDoc a2x toolchain with LibreOffice
+["ditaa",scaling="4",width="132.5mm",height="40mm",align="center"]
+----
+                                             +------+
++--------+                                +->|ODF{d}|
+|Plain   |-+                              |  +------+
+|Text {d}| | +----+  +---+  +-----------+ +->|PDF{d}|
++--------+ +-+a2x +->|ODF|--+libreoffice+-+  +------+
+| ODF{io}| | |c789|  |{d}|  |       c789| +->|DOC{d}|
+|Template|-+ +----+  +---+  +-----------+ |  +------+
++--------+                                +->|PPT{d}|
+                                             +------+
+----
+
+.Example: Integrated AsciiDoc a2x toolchain
+["ditaa",scaling="4",width="80mm",height="50mm",align="center"]
+----
+                        +------+
++--------+           +->|ODF{d}|
+|Plain   |-+         |  +------+
+|Text {d}| | +----+  +->|PDF{d}|
++--------+ +-+a2x +--+  +------+
+| ODF{io}| | |c789|  +->|DOC{d}|
+|Template|-+ +--*-+  |  +------+
++--------+      |    +->|PPT{d}|
+          +-----*-----+ +------+
+          |libreoffice|
+          |       c897|
+          +-----------+
+----
+
+<<<
+
+== Filters: plantuml
+
+.Example: Demo example from website
+["plantuml","sample4.svg","svg",width="100mm",height="100mm",align="center"]
+----
+:User: -> (Start)
+:User: --> (Use the application) : Some label
+
+:Main Admin: ---> (Use the application) : This is\nyet another\nlabel
+----

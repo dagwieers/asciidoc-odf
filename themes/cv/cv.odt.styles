@@ -11,12 +11,12 @@
 
  <!-- Default styles -->
  <style:default-style style:family="text">
-  <style:text-properties fo:color="#000000" style:font-name="sans-serif" fo:font-size="9pt"/>
+  <style:text-properties fo:color="#000000" style:font-name="sans-serif" fo:font-size="9pt" fo:language="en" fo:country="US"/>
  </style:default-style>
 
  <style:default-style style:family="paragraph">
   <style:paragraph-properties fo:text-align="start" fo:margin-top="0mm" fo:margin-bottom="0.2mm" style:justify-single-word="false" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:writing-mode="page" fo:keep-together="always"/>
-  <style:text-properties fo:color="#000000" style:font-name="sans-serif" fo:font-size="9pt"/>
+  <style:text-properties fo:color="#000000" style:font-name="sans-serif" fo:font-size="9pt" fo:language="en" fo:country="US"/>
  </style:default-style>
 
  <!-- 
@@ -46,7 +46,7 @@
  </style:style>
 
  <style:style style:name="sect1" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="1" style:class="text">
-  <style:paragraph-properties fo:border-bottom="0.35mm solid #c0c0c0" fo:padding-top="1.8mm" text:number-lines="true" text:line-number="1"/>
+  <style:paragraph-properties fo:border-bottom="0.1mm solid #c0c0c0" fo:padding-top="1.8mm" text:number-lines="true" text:line-number="1"/>
   <style:text-properties fo:font-size="13.1pt"/>
  </style:style>
 
@@ -62,7 +62,7 @@
 
  <style:style style:name="timeframe" style:family="paragraph" style:class="text">
   <style:paragraph-properties fo:keep-with-next="always" fo:padding="0mm" fo:margin="0mm" fo:margin-bottom="0mm" fo:text-align="right"/>
-  <style:text-properties fo:font-style="italic" fo:font-size="8pt"/>
+  <style:text-properties fo:font-style="italic" fo:font-size="7pt" style:text-scale="90%"/>
  </style:style>
 
  <style:style style:name="asciidoc-pagebreak" style:family="paragraph">
@@ -148,7 +148,7 @@
  </text:list-style>
 
  <style:style style:name="variablelist-term" style:family="paragraph" style:parent-style-name="list-item">
-  <style:paragraph-properties fo:margin-top="0.99mm" fo:margin-bottom="0mm" fo:keep-with-next="always"/>
+  <style:paragraph-properties fo:margin-top="0mm" fo:margin-bottom="0mm" fo:keep-with-next="always"/>
   <style:text-properties fo:font-weight="bold"/>
  </style:style>
 
@@ -206,7 +206,9 @@
 
  <style:style style:name="columns-2" style:family="section">
   <style:section-properties fo:background-color="transparent" text:dont-balance-text-columns="false" style:editable="false">
-   <style:columns fo:column-count="2" fo:column-gap="4.97mm"/>
+   <style:columns fo:column-count="2" fo:column-gap="4.97mm">
+    <style:column-sep style:color="#c0c0c0" style:width="0.1mm"/>
+   </style:columns>
    <style:background-image/>
   </style:section-properties>
  </style:style>
