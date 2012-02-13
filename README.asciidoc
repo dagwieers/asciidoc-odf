@@ -25,6 +25,9 @@ The ODF backend provides the following benefits:
  - Support for flat ODF (+.fodt+ and +.fodp+) files to help with experimenting +
    _(flat ODF files are useful for manual styling, debugging or learning ODF)_
 
+ - Integration of the various AsciiDoc plugins +
+   _(enabling the use of ascii-art to generate schemas, diagrams and charts)_
+
 
 == Limitations
 Although the current implementation is already quite useful, it is not
@@ -35,12 +38,37 @@ feedback is appreciated.
 
  - Default stylesheet needs improvements (especially for presentations)
 
- - Flat ODF files (+.fodt+ and +.fodp+) are supported by LibreOffice 3.3 and newer +
+ - Flat ODF files (+.fodt+ and +.fodp+) are supported by LibreOffice/OpenOffice +
+   3 and newer +
    _(<<a2x,use a2x>> if you need the more common 'packaged' ODF support)_
 
 We hope to address each of these limitations in the future, and your help
-and feedback is welcome and appreciated. There is a
+and your feedback is welcome, needed and appreciated. There is a
 https://github.com/dagwieers/asciidoc-odf/issues[list of known issues and requested features].
+
+
+== Installing the ODF backend
+The ODF backend actually consists of two plugins, one for ODT support and
+one for ODP support. You can download these plugins (resp. _odt-backend.zip_
+and _odp-backend.zip_) from: https://github.com/dagwieers/asciidoc-odf/downloads
+
+To install them, us the following command:
+
+    # asciidoc install --backend odt-backend.zip
+    # asciidoc install --backend odp-backend.zip
+
+There are some other plugins available you could use, one is a custom _cv_
+theme, the other an optional _code_ filter that supports bash/python and
+ODF output.
+
+    # asciidoc install --theme cv-theme.zip
+    # asciidoc install --filter code-filter.zip
+
+Once this is finished, you are ready to start using the ODF backend.
+
+[IMPORTANT]
+You need the latest AsciiDoc source code from the AsciiDoc website in order
+to use the ODF backend (AsciiDoc v8.6.7 or newer will do fine, when released).
 
 
 == Using the ODF backend
@@ -62,6 +90,34 @@ AsciiDoc configuration directory _/etc/asciidoc/_. Then use:
 
 This will produce the file _presentation.fodp_ which is a 'flat ODP file',
 a single XML file that can be opened using any recent LibreOffice.
+
+
+[[a2x]]
+=== Generating proper packaged ODF files using a2x
+The latest AsciiDoc release includes a modified +a2x+ program that understands
+plugin-specific actions. This enables to generate a proper packaged ODF file
+(not a flat XML ODF file) when using +a2x+.
+
+If you want to generate a proper (packaged/zipped) ODF file, use
+
+    # a2x -v -b odt your_file.txt
+
+You can also provide an ODF or OTT as a template to use styles from, by doing:
+
+    # a2x -v -b odt --backend_opts="--base_doc=your_template.ott" your_file.txt
+
+Same is true for generating and styling ODP files:
+
+    # a2x -v -b odp --backend_opts="--base_doc=your_template.otp" your_file.txt
+
+Thanks to this, styling becomes very easy. Just open your document in
+LibreOffice, modify any existing styles, save again as an OTT or OTP file
+and use it as part of any future ODF conversions.
+
+[IMPORTANT]
+The +a2x+ and packaged ODF file is not yet ready for prime time. There are some
+unfinished items related to styling and meta-information. We hope to finish
+it soon.
 
 
 == Additional functionality
@@ -157,6 +213,9 @@ print os.name
 
 [IMPORTANT]
 Make sure you have at least GNU source-highlight 3.1.6 installed !
+
+And alternative (more simple) syntax highlighting is provided as part of the
+_code_ filter provided in the download section.
 
 
 === Comment support
@@ -274,35 +333,6 @@ image is placed.
 It is also possible to change the stylesheet to have chapters starting on
 new pages, make it start on even pages, have different headers and footers
 on odd/even pages and more...
-
-
-[[a2x]]
-== Packaged ODT from a2x
-The directory _packaged/_ contains a proof of concept +a2x+ which has been
-modified to take backend extensions in an _a2x.conf_ file in the backend
-directory. This file goes in the normal backend location, eg
-_$HOME/.asciidoc/backends/odt_
-
-The new +--backend+ option specifies a backend plugin name and the
-+--backend_opts+ specifies options for it (like +--xslt_opts+ or
-+--fop_opts+).
-
-There is a proof of concept _a2x.conf_ that performs creation of packaged ODT
-taking styles from ODF templates, which are just normal ODF documents.  This
-allows styling to be defined interactively using LibreOffice or OpenOffice.
-
-Put the modified +a2x+ in a test directory, do not install over the system a2x
-or put it in your path yet.
-
-Usage:
-
-----
-./a2x.py -v --backend=odt --backend_opts="--base_doc=your_template.ott" your_file.txt
-----
-
-[NOTE]
-Later versions will have a default template document so the +base_doc+ is not
-required by default.
 
 
 == Development

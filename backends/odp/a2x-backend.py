@@ -65,16 +65,19 @@ class odp_archive:
 			of = os.path.abspath(out_file)
 			if os.path.exists(of) : os.remove(of)
 			oz = zipfile.ZipFile(of, "w", zipfile.ZIP_DEFLATED)
+			### Make sure we have the mimetype added first, uncompressed
+			oz.write(os.path.join(td, 'mimetype'), 'mimetype', zipfile.ZIP_STORED)
 			try:
 				for path, dirs, files in os.walk(td):
 					for f in files:
+						if f == 'mimetype': continue
 						ff = os.path.normpath(os.path.join(path,f))
 						oz.write(ff,os.path.relpath(ff,td))
 			finally:
 				oz.close()
 
 def to_odp(self):
-	opts = AttrDict(base_doc=None, temp_dir=None) # TODO default base doc?
+	opts = AttrDict(base_doc=os.path.join(os.path.dirname(__file__),'asciidoc.otp'), temp_dir=None) # TODO remove hardcoded dir
 	u = [ o.strip().split('=') for o in self.backend_opts.strip().split('--') if o != '' ]
 	opts.update(u)
 	if opts.base_doc is None:
