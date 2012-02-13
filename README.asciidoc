@@ -38,7 +38,7 @@ feedback is appreciated.
 
  - Default stylesheet needs improvements (especially for presentations)
 
- - Flat ODF files (+.fodt+ and +.fodp+) are supported by LibreOffice/OpenOffice +
+ - Flat ODF files (+.fodt+ and +.fodp+) are supported by LibreOffice/OpenOffice
    3 and newer +
    _(<<a2x,use a2x>> if you need the more common 'packaged' ODF support)_
 
@@ -54,15 +54,15 @@ and _odp-backend.zip_) from: https://github.com/dagwieers/asciidoc-odf/downloads
 
 To install them, us the following command:
 
-    # asciidoc install --backend odt-backend.zip
-    # asciidoc install --backend odp-backend.zip
+    # asciidoc --backend install odt-backend.zip
+    # asciidoc --backend install odp-backend.zip
 
 There are some other plugins available you could use, one is a custom _cv_
 theme, the other an optional _code_ filter that supports bash/python and
 ODF output.
 
-    # asciidoc install --theme cv-theme.zip
-    # asciidoc install --filter code-filter.zip
+    # asciidoc --theme install cv-theme.zip
+    # asciidoc --filter install code-filter.zip
 
 Once this is finished, you are ready to start using the ODF backend.
 

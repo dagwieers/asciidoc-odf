@@ -37,11 +37,11 @@ install:
 	@echo "= Installing odp backend"
 	install -Dp -m0644 backends/odp/odp.conf $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp/odp.conf
 	install -Dp -m0644 backends/odp/asciidoc.odp.styles $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp/asciidoc.odp.styles
-	install -Dp -m0644 backends/odp/a2x-odp.py $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp/a2x-backend.py
+	install -Dp -m0644 backends/odp/a2x-backend.py $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp/a2x-backend.py
 	@echo "= Installing odt backend"
 	install -Dp -m0644 backends/odt/odt.conf $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt/odt.conf
 	install -Dp -m0644 backends/odt/asciidoc.odt.styles $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt/asciidoc.odt.styles
-	install -Dp -m0644 backends/odt/a2x-odt.py $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt/a2x-backend.py
+	install -Dp -m0644 backends/odt/a2x-backend.py $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt/a2x-backend.py
 	@echo "= Installing cv theme"
 	install -Dp -m0644 themes/cv/cv.odt.styles $(DESTDIR)$(sysconfdir)/asciidoc/themes/cv/cv.odt.styles
 	@echo "= Installing hp theme"
