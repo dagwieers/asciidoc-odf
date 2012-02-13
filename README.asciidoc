@@ -203,7 +203,6 @@ We contributed ODF output support for the GNU source-highlight project,
 as a result you can now have proper syntax highlighting in source output
 in all your documents by using +[source]+ blocks.
 
-[source,ini]
 ----
 [source,python]
 #!/usr/bin/python
