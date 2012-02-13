@@ -20,7 +20,7 @@ class tempdir:
 	def __exit__(self, et, ev, tb):
 		if not self.keep and self.dir : shutil.rmtree(self.dir, True)
 
-supported_extensions = { ".jpg" : "jpeg", ".png" : "png" }
+supported_extensions = { ".jpg" : "jpeg", ".png" : "png", ".svg" : "svg" }
 
 class odt_archive:
 	def __init__(self, a2x, temp=None, keep=False):
@@ -79,6 +79,6 @@ def to_odt(self):
 	opts.update(u)
 	if opts.base_doc is None:
 		die("No base document found")
-	odt_file = self.dst_path('.odt')
+	odf_file = self.dst_path('.odt')
 	a = odt_archive(self, opts.temp_dir, self.keep_artifacts)
-	a.make_archive(opts.base_doc, self.asciidoc_file, odt_file)
+	a.make_archive(opts.base_doc, self.asciidoc_file, odf_file)
