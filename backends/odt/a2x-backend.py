@@ -28,7 +28,7 @@ class odt_archive:
 		self.temp = temp
 		self.keep = keep
 
-	def make_archive(self, base_doc, doc, out_file):
+	def make_archive(self, base_doc, doc, out_file, schema):
 		with tempdir(self.temp, self.keep) as td:
 			bz = zipfile.ZipFile(base_doc)
 			bz.extractall(td)
@@ -36,6 +36,10 @@ class odt_archive:
 			if os.path.exists(cx) : os.remove(cx)
 			shell( '%s --backend=odt -a "a2x-format=%s" -a not_flat_odf %s --out-file "%s" %s' %
 				(self.a2x.asciidoc, self.a2x.format, self.a2x.asciidoc_opts, cx, doc))
+			if not self.a2x.no_xmllint and XMLLINT and schema:
+				o,e,r = shell('"%s" --nonet --noout --valid --relaxng "%s" "%s"' % (XMLLINT, schema, cx), false)
+				if r != 0 :
+					print "Warning: xmllint found errors, continuing anyway"
 
 			mfd = os.path.join(td, "META-INF")
 			mfp = os.path.join(mfd, "manifest.xml")
@@ -77,11 +81,12 @@ class odt_archive:
 				oz.close()
 
 def to_odt(self):
-	opts = AttrDict(base_doc=os.path.join('/etc/asciidoc/backends/odt/asciidoc.ott'), temp_dir=None) # TODO remove hardcoded dir
+	opts = AttrDict(base_doc=os.path.join(CONF_DIR, 'backends', 'odt', 'asciidoc.ott'),
+					temp_dir=None, schema=None) # TODO set schema default location
 	u = [ o.strip().split('=') for o in self.backend_opts.strip().split('--') if o != '' ]
 	opts.update(u)
 	if opts.base_doc is None:
 		die("No base document found")
 	odf_file = self.dst_path('.odt')
 	a = odt_archive(self, opts.temp_dir, self.keep_artifacts)
-	a.make_archive(opts.base_doc, self.asciidoc_file, odf_file)
+	a.make_archive(opts.base_doc, self.asciidoc_file, odf_file, opts.schema)
