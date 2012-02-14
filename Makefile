@@ -57,21 +57,20 @@ install:
 
 examples: $(fodttargets) odt.conf
 	asciidoc -b odt -a newline=\\n -a iconsdir=$(datadir)/asciidoc/images/icons -o examples/README.fodt README.asciidoc
-	-xmllint --noout --relaxng relaxng/OpenDocument-v1.2-cs01-schema.rng examples/README.fodt
-#	-jing -i relaxng/OpenDocument-v1.2-cs01-schema.rng examples/README.fodt
+	-xmllint --noout --relaxng relaxng/OpenDocument-v1.2-os-schema.rng examples/README.fodt
+#	-jing -i relaxng/OpenDocument-v1.2-os-schema.rng examples/README.fodt
 	asciidoc -b odt -a theme=cv -a newline=\\n examples/curriculum-vitae-dag-wieers.txt
-	-xmllint --noout --relaxng relaxng/OpenDocument-v1.2-cs01-schema.rng examples/curriculum-vitae-dag-wieers.fodt
-#	-jing -i relaxng/OpenDocument-v1.2-cs01-schema.rng examples/curriculum-vitae-dag-wieers.fodt
+	-xmllint --noout --relaxng relaxng/OpenDocument-v1.2-os-schema.rng examples/curriculum-vitae-dag-wieers.fodt
+#	-jing -i relaxng/OpenDocument-v1.2-os-schema.rng examples/curriculum-vitae-dag-wieers.fodt
 	asciidoc -b odp examples/rear-presentation.txt
-	-xmllint --noout --relaxng relaxng/OpenDocument-v1.2-cs01-schema.rng examples/rear-presentation.fodp
-#	-jing -i relaxng/OpenDocument-v1.2-cs01-schema.rng examples/curriculum-vitae-dag-wieers.fodt
+	-xmllint --noout --relaxng relaxng/OpenDocument-v1.2-os-schema.rng examples/rear-presentation.fodp
+#	-jing -i relaxng/OpenDocument-v1.2-os-schema.rng examples/curriculum-vitae-dag-wieers.fodt
 
 %.fodt: %.txt
 	asciidoc -b xhtml11 -a iconsdir=$(datadir)/asciidoc/images/icons -o $(patsubst %.fodt, %.html, $@) $<
 	asciidoc -b odt -a newline=\\n -a iconsdir=$(datadir)/asciidoc/images/icons -o $@ $<
-	-xmllint --noout --relaxng relaxng/OpenDocument-v1.2-cs01-schema.rng $@
-#	-jing -i relaxng/OpenDocument-v1.2-cs01-schema.rng $@
-
+	-xmllint --noout --relaxng relaxng/OpenDocument-v1.2-os-schema.rng $@
+#	-jing -i relaxng/OpenDocument-v1.2-os-schema.rng $@
 test: examples
 
 templates:

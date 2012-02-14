@@ -2,6 +2,8 @@
 :author: Dag Wieers
 :email: dag@wieers.com
 
+== Introduction
+
 The ODF backend for AsciiDoc enables AsciiDoc users to directly convert
 documents from AsciiDoc to Open Document Format v1.2.
 
@@ -10,7 +12,7 @@ and makes writing (technical) documentation and presentations more
 enjoyable as it removes styling and formatting from the creative process.
 
 
-== Benefits
+=== Benefits
 The ODF backend provides the following benefits:
 
  - Visual styling and formatting using LibreOffice +
@@ -29,7 +31,14 @@ The ODF backend provides the following benefits:
    _(enabling the use of ascii-art to generate schemas, diagrams and charts)_
 
 
-== Limitations
+[TIP]
+Flat ODF files (+.fodt+ and +.fodp+) are supported by LibreOffice/OpenOffice
+3 and newer. For OpenOffice, follow
+http://user.services.openoffice.org/en/forum/viewtopic.php?f=47&t=44216[these instructions].
+You can _(<<a2x,use a2x>> if you need the more common 'packaged' ODF support)_.
+
+
+=== Limitations
 Although the current implementation is already quite useful, it is not
 100% feature complete. We are working on it and your help in testing and
 feedback is appreciated.
@@ -37,10 +46,6 @@ feedback is appreciated.
  - Incomplete implementation lacks eg. complex table support, ...
 
  - Default stylesheet needs improvements (especially for presentations)
-
- - Flat ODF files (+.fodt+ and +.fodp+) are supported by LibreOffice/OpenOffice
-   3 and newer +
-   _(<<a2x,use a2x>> if you need the more common 'packaged' ODF support)_
 
 We hope to address each of these limitations in the future, and your help
 and your feedback is welcome, needed and appreciated. There is a
@@ -52,7 +57,7 @@ The ODF backend actually consists of two plugins, one for ODT support and
 one for ODP support. You can download these plugins (resp. _odt-backend.zip_
 and _odp-backend.zip_) from: https://github.com/dagwieers/asciidoc-odf/downloads
 
-To install them, us the following command:
+To install them, use the following command:
 
     # asciidoc --backend install odt-backend.zip
     # asciidoc --backend install odp-backend.zip
@@ -352,7 +357,7 @@ A list of known issues and requested features are available from:
 https://github.com/dagwieers/asciidoc-odf/issues[]
 
 
-== Debugging generated ODF
+== Debugging
 Things can always be improved, if you are stuck with an issue or you just
 want to help out with this project, *rejoice* because below you will find
 some hints on how to debug and fix your issue !
@@ -371,8 +376,8 @@ the text is part of the file.
 If the ODF file fails to open in LibreOffice, you can perform a syntax-check
 of the generated Flat ODF (+.fodt+) using one of the following command:
 
-    # xmllint --noout --relaxng OpenDocument-v1.2-cs01-schema.rng document.fodt
-    # jing -i OpenDocument-v1.2-cs01-schema.rng document.fodt
+    # jing -i OpenDocument-v1.2-os-schema.rng document.fodt
+    # xmllint --noout --relaxng OpenDocument-v1.2-os-schema.rng document.fodt
 
 If this outputs an error, it means the ODF file does not conform the schema.
 
@@ -400,7 +405,7 @@ syntax:
 
 And about using Open Source toolchains for publishing:
 
- - http://www.dmncommunications.com/presentations/Content_with_OSS_notes.pdf[Creating Quality Content with Open Source Tool]
+ - http://www.dmncommunications.com/presentations/Content_with_OSS_notes.pdf[Creating Quality Content with Open Source Tools]
  - http://www.stevestreeting.com/2010/03/07/building-a-new-technical-documentation-tool-chain/[Building a new technical documentation tool chain]
  - http://blog.rainwebs.net/2010/02/25/how-to-create-handsome-pdf-documents-without-frustration/[How to Create Handsome PDF Documents Without Frustration]
 
