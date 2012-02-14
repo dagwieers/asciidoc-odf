@@ -8,6 +8,7 @@
 
 <!-- styles -->
 <office:styles>
+
  <!-- Default styles -->
  <style:default-style style:family="text">
   <style:text-properties fo:color="#000000" style:font-name="serif" fo:font-size="12pt"/>
@@ -803,7 +804,6 @@
 -->
 
  <style:style style:name="Footer" style:family="paragraph" style:class="extra">
-  <style:text-properties fo:font-size="8pt"/>
   <style:paragraph-properties fo:padding="0mm" fo:border-left="none" fo:border-right="none" fo:border-top="0.25pt solid #000000" fo:border-bottom="none" style:shadow="none" text:number-lines="false" text:line-number="0" fo:text-align="start" style:justify-single-word="false">
    <style:tab-stops>
     <style:tab-stop style:position="0mm" style:type="left"/>
@@ -811,6 +811,7 @@
     <style:tab-stop style:position="170.01mm" style:type="right"/>
    </style:tab-stops>
   </style:paragraph-properties>
+  <style:text-properties fo:font-size="8pt"/>
  </style:style>
 
  <style:style style:name="admonitionblock" style:family="section">
