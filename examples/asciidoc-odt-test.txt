@@ -445,6 +445,14 @@ digraph automata_0 {
 
 == Filters: ditaa
 
+["ditaa",options="round-corners",scaling="4",width="27mm",height="25mm",align="center"]
+----
+    ++
+  ++||++
+<-+|||||+->
+   ++||++
+     ++
+----
 
 === DocBook-based toolchains
 .Example: dblatex toolchain
@@ -472,18 +480,17 @@ digraph automata_0 {
 ----
 
 .Example: Docbook2odf toolchain
-["ditaa",scaling="4",width="210mm",height="50mm",align="center"]
+["ditaa",scaling="4",width="210mm",height="45mm",align="center"]
 ----
-                                                                            +------+
-                         +----------+                                    +->|ODF{d}|
-                      +->|DocBook   |-+                                  |  +------+
-+-------+  +--------+ |  |XML    {d}| | +-----------+  +---+  +-------+  +->|PDF{d}|
-|Plain  |--+asciidoc+-+  +----------+ +-+docbook2odf+->|ODF|--+unoconv+--+  +------+
-|Text{d}|  |    c789|    |XSLT   {d}| | |       c789|  |{d}|  |   c789|  +->|DOC{d}|
-+-------+  +--------+    |Stylesheet|-+ +-----------+  +---+  +---*---+  |  +------+
-                         +----------+                             |      +->|PPT{d}|
-                                                            +-----*-----+   +------+
-                                                            |LibreOffice|
+                         +----------+                                       +------+
+                      +->|DocBook   |-+                                  +->|ODF{d}|
++-------+  +--------+ |  |XML    {d}| | +-----------+  +---+  +-------+  |  +------+
+|Plain  |--+asciidoc+-+  +----------+ +-+docbook2odf+->|ODF|--+unoconv+--+->|PDF{d}|
+|Text{d}|  |    c789|    |XSLT   {d}| | |       c789|  |{d}|  |   c789|  |  +------+
++-------+  +--------+    |Stylesheet|-+ +-----------+  +---+  +---*---+  +->|DOC{d}|
+                         +----------+                             |         +------+
+                                                            +-----*-----+
+                                                            |libreoffice|
                                                             |       c897|
                                                             +-----------+
 ----
@@ -559,7 +566,7 @@ digraph automata_0 {
 == Filters: plantuml
 
 .Example: Demo example from website
-["plantuml","sample4.svg","svg",width="100mm",height="100mm",align="center"]
+["plantuml","sample4.png","png",width="100mm",height="100mm",align="center"]
 ----
 :User: -> (Start)
 :User: --> (Use the application) : Some label
