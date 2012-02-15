@@ -73,13 +73,12 @@ Once this is finished, you are ready to start using the ODF backend.
 
 [IMPORTANT]
 You need the latest AsciiDoc source code from the AsciiDoc website in order
-to use the ODF backend (AsciiDoc v8.6.7 or newer will do fine, when released).
+to use the ODF backend (AsciiDoc v8.6.7 or newer will do fine, once released).
 
 
 == Using the ODF backend
 === Usage for text documents
-To use this backend for text documents, copy the file _odt.conf_ into your
-AsciiDoc configuration directory _/etc/asciidoc/_. Then use:
+Generating an OpenDocument Text file, simply do:
 
     # asciidoc -b odt document.txt
 
@@ -88,13 +87,19 @@ a single XML file that can be opened using any recent LibreOffice.
 
 
 === Usage for presentations
-To use this backend for presentations, copy the file _odp.conf_ into your
-AsciiDoc configuration directory _/etc/asciidoc/_. Then use:
+Generating an OpenDocument Presentation file, simply do:
 
     # asciidoc -b odp presentation.txt
 
 This will produce the file _presentation.fodp_ which is a 'flat ODP file',
 a single XML file that can be opened using any recent LibreOffice.
+
+
+=== Adding a style theme
+You can modify a stylesheet and make it available from your asciidoc _themes/_
+directory. Creating an ODF file using a specific theme is easy:
+
+    # asciidoc -b odt --theme hp document.txt
 
 
 [[a2x]]
@@ -133,12 +138,6 @@ AsciiDoc file:
 
     :data-uri:
 
-[NOTE]
-Embedding SVG images does not work because LibreOffice expects them
-encapsulated inside SVM (StarView Metafile) files. SVM is undocumented
-and not a standard. We hope LibreOffice drops SVM encapsulation soon.
-Most formats however are supported, although ODF recommends PNG and SVG.
-
 When using 'packaged ODF files', images will be added to the ODF file and
 not embedded, regardless of the +data-uri+ attribute.
 
@@ -162,7 +161,7 @@ the command line or add the +numbered+ attribute to your AsciiDoc file:
 The current implementation adds title numbers always. Since numbering
 chapters/sections is part of the stylesheet in ODF, it is complex to make
 this a configurable option. Modify the stylesheet if you like to customize
-it.
+this behaviour.
 
 
 === Table of Contents support
@@ -222,6 +221,34 @@ And alternative (more simple) syntax highlighting is provided as part of the
 _code_ filter provided in the download section.
 
 
+=== Diagram filter support
+One of the advantages of AsciiDoc is the choice of filters available,
+especially for creating diagrams, graphs or charts plenty of options
+are at your disposal: aafigure, ditaa, graphviz, mscgen, plantuml, ...
+
+These plugins take input and create graphics to illustrate your point
+better. We have provided some examples in the source tree, but this
+would be the source block for a +ditaa+ graph describing the ODF
+backend for asciidoc, in pure ascii-art:
+
+.Example ditaa diagram
+["ditaa",scaling="4",width="125mm",height="50mm",align="center"]
+----
+                                                     +------+
+                          +--------+              +->|ODF{d}|
+                       +->|Flat ODF|-+            |  +------+
++--------+  +--------+ |  |     {d}| | +-------+  +->|PDF{d}|
+|Plain   |--+asciidoc+-+  +--------+ +-+unoconv+--+  +------+
+|Text {d}|  |    c789|    | ODF{io}| | |   c789|  +->|DOC{d}|
++--------+  +--------+    |Template|-+ +---*---+  |  +------+
+                          +--------+       |      +->|PPT{d}|
+                                     +-----*-----+   +------+
+                                     |libreoffice|
+                                     |       c897|
+                                     +-----------+
+----
+
+
 === Comment support
 AsciiDoc has the functionality to make (inline) comments show in the output,
 the ODF backend also provides this functionality. When you use the
@@ -270,10 +297,11 @@ ODF output, use the +hideannotations+ attribute.
 
 
 === Columns support
-In some cases (e.g. very long lists) one may wish to provide information in
-columns on a page so that page estate is better utilized. The ODF backend
-makes this possible by adding a 'cols' attribute for sections. You can
-create a two-columns section, by doing:
+In some cases (e.g. very long lists, or booklets) one may wish to
+provide information in columns on a page so that page estate is
+better utilized. The ODF backend makes this possible by adding
+a 'cols' attribute for sections. You can create a two-columns
+section, by doing:
 
 [listing]
 ....
@@ -338,6 +366,10 @@ It is also possible to change the stylesheet to have chapters starting on
 new pages, make it start on even pages, have different headers and footers
 on odd/even pages and more...
 
+We may change this functionality in the future to make more advanced
+cover-pages possible. Development in this area depends on the wishes
+and the abstractions possible.
+
 
 == Development
 You can find the latest version of this AsciiDoc backend at
@@ -392,10 +424,10 @@ http://relaxng.org/#tutorials
 
 
 === Styles look incorrect
-If the output looks different to what you expected, you can modify the styles
+If the output looks different to what you expect, you can modify the styles
 inside LibreOffice, write it out to a Flat ODF file and compare the created
 style with the original. You can then change either the _odt.conf_ or the
-_asciidoc.odt.styles_ so that the output conforms to your desire.
+_asciidoc.odt.styles_ so that the output conforms to what LibreOffice produces.
 
 
 == Further Reading

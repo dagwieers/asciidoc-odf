@@ -405,55 +405,55 @@ aafigure requires the python aafigure tool to be installed. It can generate
 both +png+ as +svg+ output, below are examples of SVG output.
 
 .DocBook toolchain
-["aafigure",width="21cm",height="3cm",align="center",format="svg",options="fixed",aspect="0.7",linewidth="1"]
+["aafigure",width="20cm",height="3cm",align="center",format="svg",options="fixed",aspect="0.7",linewidth="1"]
 ----
-                                 /---------\
-                             --->|"DocBook"|---
-/----------\  +----------+  /    \---------/   \   +-----+  /--------\  +---+  /---\
-|Plain Text|--+"AsciiDoc"+-+                    +--+Saxon+->|"XSL-FO"|--+FOP+->|PDF|
-\----------/  +----------+  /----------------\ /   +-----+  \--------/  +---+  \---/
-                            |"XSL Stylesheet"|-
-                            \----------------/
+                                /---------\
+                            --->|"DocBook"|---
+/----------\ +----------+  /    \---------/   \  +-----+  /--------\ +---+  /---\
+|Plain Text|-+"AsciiDoc"+-+                    +-+Saxon+->|"XSL-FO"|-+FOP+->|PDF|
+\----------/ +----------+  /----------------\ /  +-----+  \--------/ +---+  \---/
+                           |"XSL Stylesheet"|-
+                           \----------------/
 ----
 
 .asciidoc-odf toolchain
-["aafigure",width="20cm",height="6cm",align="center",format="svg",options="fixed",aspect="0.7",linewidth="1"]
+["aafigure",width="17cm",height="6cm",align="center",format="svg",options="fixed",aspect="0.7",linewidth="1"]
 ----
-                                                                  /---\
-                                                               +->|ODF|
-                                                              /   \---/
-                                                             /
-                               /--------\                   /     /---\
-                             ->|Flat ODF|--                +----->|PDF|
-/----------\  +----------+  /  \--------/  \   +-------+  /       \---/
-|Plain Text|--+"asciidoc"+-+                +--+unoconv+-+
-\----------/  +----------+  /------------\ /   +---+---+  \       /---\
-                            |ODF template|-        |       +----->|DOC|
-                            \------+-----/  +------+------+ \     \---/
-                                            |"LibreOffice"|  \
-                                            +-------------+   \   /---\
-                                                               +->|RTF|
-                                                                  \---/
+                                                                /---\
+                                                             +->|ODF|
+                                                            /   \---/
+                                                           /
+                              /--------\                  /     /---\
+                            ->|Flat ODF|--               +----->|PDF|
+/----------\ +----------+  /  \--------/  \  +-------+  /       \---/
+|Plain Text|-+"asciidoc"+-+                +-+unoconv+-+
+\----------/ +----------+  /------------\ /  +---+---+  \       /---\
+                           |ODF template|-       |       +----->|DOC|
+                           \------+-----/ +------+------+ \     \---/
+                                          |"LibreOffice"|  \
+                                          +-------------+   \   /---\
+                                                             +->|RTF|
+                                                                \---/
 ----
 
 .a2x odf toolchain
-["aafigure",width="16cm",height="6cm",align="center",format="svg",options="fixed",aspect="0.7",linewidth="1"]
+["aafigure",width="15cm",height="6cm",align="center",format="svg",options="fixed",aspect="0.7",linewidth="1"]
 ----
-                                                    /---\
-                                                 +->|ODF|
-                                                /   \---/
-                                               /
- /----------\                                 /     /---\
- |Plain Text|--                              +----->|PDF|
- \----------/  \   +---+  /---\  +-------+  /       \---/
-                +--+a2x+->|ODF|--+unoconv+-+
-/------------\ /   +---+  \---/  +---+---+  \       /---\
-|ODF template|-                      |       +----->|DOC|
-\------------/                +------+------+ \     \---/
-                              |"LibreOffice"|  \
-                              +-------------+   \   /---\
-                                                 +->|RTF|
-                                                    \---/
+                                                  /---\
+                                               +->|ODF|
+                                              /   \---/
+                                             /
+ /----------\                               /     /---\
+ |Plain Text|--                            +----->|PDF|
+ \----------/  \  +---+  /---\ +-------+  /       \---/
+                +-+a2x+->|ODF|-+unoconv+-+
+/------------\ /  +---+  \---/ +---+---+  \       /---\
+|ODF template|-                    |       +----->|DOC|
+\------------/              +------+------+ \     \---/
+                            |"LibreOffice"|  \
+                            +-------------+   \   /---\
+                                               +->|RTF|
+                                                  \---/
 ----
 
 <<<
