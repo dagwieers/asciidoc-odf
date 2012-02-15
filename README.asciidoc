@@ -386,6 +386,10 @@ A bug in xmllint that was recently fixed may cause errors not related to ODF
 output. Make sure that your xmllint ships with the following fix:
 https://bugzilla.redhat.com/show_bug.cgi?id=752393[Bug 752393 - Unimplemented block at relaxng.c:8948]
 
+When debugging the generated flat XML ODF file, it can help to look at the schema
+to understand what's wrong. Information about the RelaxNG schema is available from:
+http://relaxng.org/#tutorials
+
 
 === Styles look incorrect
 If the output looks different to what you expected, you can modify the styles
