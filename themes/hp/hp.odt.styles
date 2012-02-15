@@ -90,7 +90,6 @@
 
  <style:style style:name="caption" style:family="paragraph" style:class="text">
   <style:paragraph-properties fo:margin-top="0mm" fo:margin-bottom="2pt" fo:keep-with-next="always"/>
-  <style:text-properties fo:font-weight="bold"/>
  </style:style>
 
  <style:style style:name="asciidoc-pagebreak" style:family="paragraph">

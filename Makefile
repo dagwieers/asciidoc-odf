@@ -1,3 +1,5 @@
+version = 0.1
+
 bindir = /usr/bin
 datadir = /usr/share
 sysconfdir = /etc
@@ -92,9 +94,9 @@ templates:
 	zip -X -r ../backends/odp/asciidoc.otp mimetype *
 
 zip: templates
-	cd backends; for backend in *; do pushd $$backend >/dev/null; zip ../../$$backend-backend *; popd >/dev/null; done
-	cd themes; for theme in *; do pushd $$theme >/dev/null; zip ../../$$theme-theme *; popd >/dev/null; done
-	cd filters; for filter in *; do pushd $$filter >/dev/null; zip ../../$$filter-filter *; popd >/dev/null; done
+	cd backends; for backend in *; do pushd $$backend >/dev/null; rm ../../$$backend-backend-$(version).zip; zip ../../$$backend-backend-$(version).zip *; popd >/dev/null; done
+	cd themes; for theme in *; do pushd $$theme >/dev/null; rm ../../$$theme-theme-$(version).zip; zip ../../$$theme-theme-$(version).zip *; popd >/dev/null; done
+	cd filters; for filter in *; do pushd $$filter >/dev/null; rm ../../$$filter-filter-$(version).zip; zip ../../$$filter-filter-$(version).zip *; popd >/dev/null; done
 
 clean:
 	rm -f examples/*.fodt examples/*.html
