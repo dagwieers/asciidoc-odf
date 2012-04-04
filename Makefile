@@ -14,35 +14,31 @@ all:
 
 link:
 	@echo "= Linking odp backend"
-	mkdir -p $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp/
-	ln -sf $(shell pwd)/backends/odp/odp.conf $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp/odp.conf
-	ln -sf $(shell pwd)/backends/odp/asciidoc.odp.styles $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp/asciidoc.odp.styles
-	ln -sf $(shell pwd)/backends/odp/asciidoc.otp $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp/asciidoc.otp
-	ln -sf $(shell pwd)/backends/odp/a2x-backend.py $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp/a2x-backend.py
+	rm -irf $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp
+	-ln -sf $(shell pwd)/backends/odp/ $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp
 	@echo "= Linking odt backend"
-	mkdir -p $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt/
-	ln -sf $(shell pwd)/backends/odt/odt.conf $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt/odt.conf
-	ln -sf $(shell pwd)/backends/odt/asciidoc.odt.styles $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt/asciidoc.odt.styles
-	ln -sf $(shell pwd)/backends/odt/asciidoc.ott $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt/asciidoc.ott
-	ln -sf $(shell pwd)/backends/odt/a2x-backend.py $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt/a2x-backend.py
+	rm -irf $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp
+	-ln -sf $(shell pwd)/backends/odt/ $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt
 	@echo "= Linking cv theme"
-	mkdir -p $(DESTDIR)$(sysconfdir)/asciidoc/themes/cv/
-	ln -sf $(shell pwd)/themes/cv/cv.odt.styles $(DESTDIR)$(sysconfdir)/asciidoc/themes/cv/cv.odt.styles
+	rm -irf $(DESTDIR)$(sysconfdir)/asciidoc/themes/cv
+	-ln -sf $(shell pwd)/themes/cv/ $(DESTDIR)$(sysconfdir)/asciidoc/themes/cv
 	@echo "= Installing hp theme"
-	mkdir -p $(DESTDIR)$(sysconfdir)/asciidoc/themes/hp/
-	ln -sf $(shell pwd)/themes/hp/hp.odt.styles $(DESTDIR)$(sysconfdir)/asciidoc/themes/hp/hp.odt.styles
+	rm -irf $(DESTDIR)$(sysconfdir)/asciidoc/themes/hp
+	-ln -sf $(shell pwd)/themes/hp/ $(DESTDIR)$(sysconfdir)/asciidoc/themes/hp
 	@echo "= Installing code filter"
-	mkdir -p $(DESTDIR)$(sysconfdir)/asciidoc/filters/code/
-	ln -sf $(shell pwd)/filters/code/code-filter.py $(DESTDIR)$(sysconfdir)/asciidoc/filters/code/code-filter.py
+	rm -irf $(DESTDIR)$(sysconfdir)/asciidoc/filters/code
+	-ln -sf $(shell pwd)/filters/code/ $(DESTDIR)$(sysconfdir)/asciidoc/filters/code
 
 install:
 	@echo "= Installing odp backend"
 	install -Dp -m0644 backends/odp/odp.conf $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp/odp.conf
 	install -Dp -m0644 backends/odp/asciidoc.odp.styles $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp/asciidoc.odp.styles
+	install -Dp -m0644 backends/odp/asciidoc.otp $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp/asciidoc.otp
 	install -Dp -m0644 backends/odp/a2x-backend.py $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp/a2x-backend.py
 	@echo "= Installing odt backend"
 	install -Dp -m0644 backends/odt/odt.conf $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt/odt.conf
 	install -Dp -m0644 backends/odt/asciidoc.odt.styles $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt/asciidoc.odt.styles
+	install -Dp -m0644 backends/odt/asciidoc.ott $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt/asciidoc.ott
 	install -Dp -m0644 backends/odt/a2x-backend.py $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt/a2x-backend.py
 	@echo "= Installing cv theme"
 	install -Dp -m0644 themes/cv/cv.odt.styles $(DESTDIR)$(sysconfdir)/asciidoc/themes/cv/cv.odt.styles
