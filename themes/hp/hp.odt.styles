@@ -85,7 +85,7 @@
 
  <style:style style:name="title" style:family="paragraph" style:class="text">
   <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="0mm" fo:margin-bottom="0.8mm"/>
-  <style:text-properties fo:color="#0065ff" fo:font-weight="bold"/>
+  <style:text-properties fo:color="#0065ff" fo:font-weight="bold" fo:font-size="110%"/>
  </style:style>
 
  <style:style style:name="caption" style:family="paragraph" style:class="text">
@@ -251,7 +251,7 @@
  </style:style>
 
  <style:style style:name="email" style:family="text">
-  <style:text-properties style:font-name="monospace"/>
+  <style:text-properties fo:font-size="10pt"/>
  </style:style>
 
  <text:list-style style:name="list"/>
