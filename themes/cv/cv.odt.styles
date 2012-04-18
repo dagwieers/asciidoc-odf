@@ -89,8 +89,20 @@
   <style:graphic-properties text:anchor-type="paragraph" svg:x="0mm" svg:y="0mm" style:wrap="dynamic" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="top" style:vertical-rel="paragraph" style:horizontal-pos="center" style:horizontal-rel="paragraph"/>
  </style:style>
 
- <style:style style:name="image" style:family="graphic" style:parent-style-name="graphics">
-  <style:graphic-properties style:wrap="left" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="from-top" style:vertical-rel="paragraph" style:horizontal-pos="right" style:horizontal-rel="paragraph" style:mirror="none" fo:clip="rect(0mm, 0mm, 0mm, 0mm)" draw:luminance="0%" draw:contrast="0%" draw:red="0%" draw:green="0%" draw:blue="0%" draw:gamma="100%" draw:color-inversion="false" draw:image-opacity="100%" draw:color-mode="standard"/>
+ <style:style style:name="imageblock" style:family="graphic">
+  <style:graphic-properties fo:margin-left="2mm" fo:margin-right="2mm" fo:margin-top="0mm" fo:margin-bottom="0mm" style:wrap="none" style:vertical-pos="top" style:vertical-rel="paragraph-content" style:horizontal-rel="char" fo:background-color="transparent" style:background-transparency="100%" fo:padding="0mm" style:shadow="none" fo:border="none"/>
+ </style:style>
+
+ <style:style style:name="imageblock-left" style:family="graphic" style:parent-style-name="imageblock">
+  <style:graphic-properties style:wrap="right" style:horizontal-pos="left" style:horizontal-rel="char" style:rel-width="50%"/>
+ </style:style>
+
+ <style:style style:name="imageblock-right" style:family="graphic" style:parent-style-name="imageblock">
+  <style:graphic-properties style:wrap="left" style:horizontal-pos="right" style:horizontal-rel="char" style:rel-width="50%" style:vertical-rel="text-area"/>
+ </style:style>
+
+ <style:style style:name="imageblock-center" style:family="graphic" style:parent-style-name="imageblock">
+  <style:graphic-properties style:wrap="none" style:horizontal-pos="center" style:horizontal-rel="char" style:rel-width="80%"/>
  </style:style>
 
  <style:style style:name="Footer" style:family="paragraph" style:parent-style-name="Standard" style:class="extra">
