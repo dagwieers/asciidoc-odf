@@ -590,3 +590,11 @@ both +png+ as +svg+ output, below are examples of SVG output.
 
 :Main Admin: ---> (Use the application) : This is\nyet another\nlabel
 ----
+
+=== qrencode
+
+.QR Code symbol
+["qrcode",width="55mm",height="55mm",align="center"]
+----
+http://linkedin.com/in/dagwieers
+----
