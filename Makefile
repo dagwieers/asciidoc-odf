@@ -14,19 +14,19 @@ all:
 
 link:
 	@echo "= Linking odp backend"
-	rm -irf $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp
+	rm -ir $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp
 	-ln -sf $(shell pwd)/backends/odp/ $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp
 	@echo "= Linking odt backend"
-	rm -irf $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp
+	rm -ir $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp
 	-ln -sf $(shell pwd)/backends/odt/ $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt
 	@echo "= Linking cv theme"
-	rm -irf $(DESTDIR)$(sysconfdir)/asciidoc/themes/cv
+	rm -ir $(DESTDIR)$(sysconfdir)/asciidoc/themes/cv
 	-ln -sf $(shell pwd)/themes/cv/ $(DESTDIR)$(sysconfdir)/asciidoc/themes/cv
 	@echo "= Installing hp theme"
-	rm -irf $(DESTDIR)$(sysconfdir)/asciidoc/themes/hp
+	rm -ir $(DESTDIR)$(sysconfdir)/asciidoc/themes/hp
 	-ln -sf $(shell pwd)/themes/hp/ $(DESTDIR)$(sysconfdir)/asciidoc/themes/hp
 	@echo "= Installing code filter"
-	rm -irf $(DESTDIR)$(sysconfdir)/asciidoc/filters/code
+	rm -ir $(DESTDIR)$(sysconfdir)/asciidoc/filters/code
 	-ln -sf $(shell pwd)/filters/code/ $(DESTDIR)$(sysconfdir)/asciidoc/filters/code
 
 install:
