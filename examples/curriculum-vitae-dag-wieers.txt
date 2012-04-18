@@ -36,8 +36,16 @@ Europe, but not willing to relocate on a permanent basis.
 ****************************************************************************
 
 == Personalia
-//[width="3cm",height="3cm",align="right"]
-//image::dag-professional-250.jpg[Photo of Dag Wieërs]
+////
+["qrcode",size=25,width="20mm",height="20mm",align="right"]
+----
+http://linkedin.com/in/dagwieers
+----
+////
+////
+[width="25mm",height="25mm",align="right"]
+image::dag-professional-250.jpg[Photo of Dag Wieërs]
+////
 Full name::
     Dag Johan Maarten Wieërs
 
@@ -48,7 +56,7 @@ Phone::
     +32 478 436 299
 
 Email::
-    dag@linux.com, dag@wieers.com
+    dag@linux.com
 
 Website::
     http://dag.wieers.com/blog/, http://be.linkedin.com/in/dagwieers
@@ -56,7 +64,7 @@ Website::
 
 [cols=2]
 == Work experience
-*_References provided on request._*
+=> _References provided on request_
 
 ////
 === Dagit Linux solutions
@@ -68,13 +76,14 @@ Independent contractor::
 
 === Hewlett-Packard Belgium
 [stylename="timeframe"]
-May 2010 -> present (ongoing)
+May 2010 -> now (ongoing)
 
 Linux system engineer::
-    Analysis of Linux SAN incompatibilities, and monitoring of SAN equipment
-    to troubleshoot. Best practices for Linux multipathing and SAN performance.
-    Assessment and design of Linux reference architecture.
-    _Incl. Atos Worldline, Dexia Technology Services, SWIFT_
+    Troubleshooting Linux, SAN/multipathing problem. Best practices for
+    Linux multipathing and SAN performance.  Assessment and design of
+    Linux reference architecture. RHN Satellite design. HP-UX ksh to
+    Linux migration best practices.
+    _Incl. Atos Worldline, Dexia Technology Services, SWIFT, Electrabel_
 Linux system developer::
     Implementing disaster recovery solution. Improvements to installation
     scripts and webmin modules. Packaging improvements. Automation and
@@ -91,23 +100,23 @@ Linux system engineer::
     and VMware ESX, used for deploying, retrofitting and validating
     Linux servers. 3rd level support, troubleshooting and design work.
 
-=== EMC Belgium Development Group
+=== EMC² Belgium
 [stylename="timeframe"]
 Jul 2007 -> Dec 2007 (6 months)
 
 Linux system engineer::
-    Implementation of infrastructure for Novell SLES Linux deployment for
-    technical development workstations. Integration with Active Directory,
-    NIS, Clearcase, VMware Server.
+    _Short assignment_ Implementation of infrastructure for Novell SLES
+    Linux deployment for technical development workstations. Integration
+    with Active Directory, NIS, Clearcase, VMware Server.
 
 === Punch Telematix
 [stylename="timeframe"]
 Jun 2007 -> Sep 2007 (4 months)
 
 Linux system engineer::
-    Design and implementation of technical documentation system. Design and
-    implementation of subversion. Packaging for Novell SLES Linux.
-    Troubleshooting. Automation.
+    _Short assignment_ Design and implementation of technical documentation
+    system. Design and implementation of subversion. Packaging for Novell
+    SLES Linux. Troubleshooting. Automation.
 
 === Euroclear
 [stylename="timeframe"]
@@ -123,7 +132,7 @@ Unix system engineer::
 [stylename="timeframe"]
 Oct 1999 -> Apr 2001 (1.5 years)
 
-Founder / Business Unit Manager::
+Founder / Business unit manager::
     Taking care of various parts of the organization, including sales
     and marketing. Experience with project-management and presales for
     a small (15 headcount) consultancy company.
@@ -168,6 +177,20 @@ Network administration::
 Internet training::
     Individual training and training in group regarding computer use,
     the Internet, search-engines and popular websites.
+
+////
+["ditaa",options="no-shadows",scaling=4,width="180mm",height="15mm"]
+----
+                            +-------\                                                                         +----\
+                            |IBM    |                                                                         |EMC²|
+  +----------+--------------+----+--+------------+---------------------------------------------+------------+-+----+-----------------------+--------------------\
+  |Prov. Bib |SISA/Winsome       |Mind           |IBM Belgium                                  |Euroclear   |Punch |AXA-Tech               |HP Belgium...       |
+--+--*-------+-*---------*-------+-*---------*---+-----*---------*---------*---------*---------*---------*--+------*---------*---------*---+-----*---------*----+-->
+    1997      1998      1999      2000      2001      2002      2003      2004      2005      2006      2007      2008      2009      2010      2011      2012
+----
+////
+
+<<<
 
 
 == Skills
@@ -221,18 +244,17 @@ Active::
     SQL (since 1997),
     PHP (since 1996),
     Javascript (since 1995),
-    Bash, AWK and Unix-shells (since 1994),
+    Bash and Unix shells (since 1994),
     C (since 1994),
-    Perl 4 and 5 (since 1994)
+    Perl (since 1994)
 Passive::
-    C# and Mono (since 2003),
+    C# and Mono (2003 - 2005),
     RPG on AS/400 (1997 - 1998),
     Visual Basic (1997),
-    Java (since 1996),
-    Pascal (1991 - 1999),
-    Tcl/Tk,
+    Java (1996 - 1999),
     x86 Assembler (1992 - 1996),
-    BASIC (1988 - 1990)
+    Pascal (1991 - 1999),
+    Basic (1988 - 1990)
 
 === Languages
   - Dutch: native
@@ -243,15 +265,17 @@ Passive::
 
 == Education
 === Presentations
-I have presented on various topics at various events and get-togethers,
-including the following conferences:
+I have presented on various topics at a multitude of events, including
+the following conferences:
 
+ * ODF Plugfest, Brussels, BE - 2012
+//    ODF backend for AsciiDoc - 04/2012
  * Loadays, Antwerp, BE - 2012
-//    Technical documentation workflows for lazy people - 04/2012
+//    Practical workflow for technical documentation - 04/2012
 //    Improving hardware support on RHEL and clones - 04/2012
  * FlossUK, Edinburgh, UK - 2012
 //    10 reasons for choosing Rear as a DR strategy - 03/2012
-//    Abusing LibreOffice for technical documentation - 03/2012
+//    Practical workflow for technical documentation - 03/2012
  * LinuxCon Europe, Prague, CZ - 2011
 //    Rear: Disaster Recovery and System Migration tool - 10/2011
  * LibreOffice Conference, Paris, FR - 2011
@@ -288,31 +312,31 @@ including the following conferences:
 //    Dstat: pluggable real-time monitoring - 02/2008
 //    RPMforge: Enterprise Linux packaging for RHEL and CentOS - 02/2006
 
-=== Technical writing
-IBM Redbook Residency, Poughkeepsie, NY (05/2005)::
-    Co-written a Redbook about the design and implementation of GPFS
-    (General Parallel File System) in a digital media (broadcasting)
-    environment. [SG246700]
-IBM Redbook Residency, Austin, TX (11/2002)::
-    Co-written a Redbook about the design and implementation of a
-    Linux-based deployment in a branch banking environment. [SG246813]
+<<<
 
 === Certification
 
-http://www.redhat.com/certification/[Red Hat Certification]
+http://www.redhat.com/certification/[Red Hat]
 
-  - Red Hat Enterprise Linux Presales Foundations
-  - Red Hat Enterprise Virtualization Presales Foundations
-  - Red Hat JBoss Presales Foundations
+//  - Red Hat Certified System Administrator (RHCSA) with score: 300/300
+  - Red Hat Certified System Administrator (RHCSA)
+  - Red Hat Certified Engineer (RHCE) 'in progress'
+//  - Red Hat Certified Architect (RHCA)
+//  - Red Hat Enterprise Linux Presales Foundations
+//  - Red Hat Enterprise Virtualization Presales Foundations
+//  - Red Hat JBoss Presales Foundations
   - Red Hat Partner Platform Certified Salesperson (RHPPCS)
   - Red Hat Partner Virtualization Certified Salesperson (RHPVCS)
   - Red Hat Partner Middleware Certified Salesperson (RHPMCS)
 
-http://www.lpi.org/[Linux Professional Institute Certification]
+http://www.lpi.org/[Linux Professional Institute]
 
-  - Level 1 (LPIC-1)
+  - LPI Certification Level 1 - Junior Level (LPIC-1)
+//  - LPI Certification Level 1 (LPIC-1) with score 1420/1600
+  - LPI Certification Level 2 - Advanced Level (LPIC-2)
+//  - LPI Certification Level 3 - Senior Level (LPIC-3)
 
-http://www.brainbench.com/transcript.jsp?pid=652882[Brainbench Certification]
+http://www.brainbench.com/transcript.jsp?pid=652882[Brainbench]
 
   - Linux Administration (General):
     4.71/5 (30 March 2005) #1 Belgium [> 99% of all participants]
@@ -331,6 +355,15 @@ http://www.brainbench.com/transcript.jsp?pid=652882[Brainbench Certification]
   - Linux Administration (Red Hat)::
     Master, 4.25/5 (23 May 2000), top 3 for Belgium [> 98% of all participants]
 ////
+
+=== Technical writing
+IBM Redbook Residency, Poughkeepsie, NY (05/2005)::
+    Co-written a Redbook about the design and implementation of GPFS
+    (General Parallel File System) in a digital media (broadcasting)
+    environment. [SG246700]
+IBM Redbook Residency, Austin, TX (11/2002)::
+    Co-written a Redbook about the design and implementation of a
+    Linux-based deployment in a branch banking environment. [SG246813]
 
 === Formal education
 XIOS Hogeschool Limburg, Diepenbeek (1996 -> 1999)::
