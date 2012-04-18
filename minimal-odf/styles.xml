@@ -9,6 +9,7 @@
 
 <!-- styles -->
 <office:styles>
+
  <!-- Default styles -->
  <style:default-style style:family="text">
   <style:text-properties fo:color="#000000" style:font-name="serif" fo:font-size="12pt"/>
@@ -804,7 +805,6 @@
 -->
 
  <style:style style:name="Footer" style:family="paragraph" style:class="extra">
-  <style:text-properties fo:font-size="8pt"/>
   <style:paragraph-properties fo:padding="0mm" fo:border-left="none" fo:border-right="none" fo:border-top="0.25pt solid #000000" fo:border-bottom="none" style:shadow="none" text:number-lines="false" text:line-number="0" fo:text-align="start" style:justify-single-word="false">
    <style:tab-stops>
     <style:tab-stop style:position="0mm" style:type="left"/>
@@ -812,6 +812,7 @@
     <style:tab-stop style:position="170.01mm" style:type="right"/>
    </style:tab-stops>
   </style:paragraph-properties>
+  <style:text-properties fo:font-size="8pt"/>
  </style:style>
 
  <style:style style:name="admonitionblock" style:family="section">
@@ -930,7 +931,7 @@
   </text:outline-level-style>
  </text:outline-style>
 
- <style:style style:name="sect-default" style:family="paragraph" style:class="text">
+ <style:style style:name="sect-default" style:family="paragraph" style:class="text" style:next-style-name="standard">
   <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="4.4mm" fo:margin-bottom="1.8mm"/>
   <style:text-properties style:font-name="sans-serif" fo:color="#527bbd" fo:font-weight="bold"/>
  </style:style>
@@ -940,14 +941,14 @@
   <style:text-properties fo:font-size="200%"/>
  </style:style>
 
- <style:style style:name="sect1" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="1" style:class="text">
+ <style:style style:name="sect1" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="1">
   <style:paragraph-properties style:page-number="auto" text:number-lines="true" text:line-number="1" fo:border-bottom="0.35mm solid #c0c0c0" fo:padding-top="1.8mm"/>
   <style:text-properties fo:font-size="150%"/>
  </style:style>
 
  <style:style style:name="sect-toc" style:family="paragraph" style:parent-style-name="sect1" style:default-outline-level="" style:class="text"/>
 
- <style:style style:name="sect-appendix" style:family="paragraph" style:parent-style-name="sect1" style:default-outline-level="A" style:class="text"/>
+ <style:style style:name="sect-appendix" style:family="paragraph" style:parent-style-name="sect1" style:default-outline-level="1"/>
 
  <style:style style:name="sect2" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="2">
   <style:paragraph-properties style:page-number="auto" text:number-lines="true" text:line-number="2"/>
@@ -995,15 +996,15 @@
  </style:style>
 
  <style:style style:name="imageblock-left" style:family="graphic" style:parent-style-name="imageblock">
-  <style:graphic-properties style:wrap="right" style:horizontal-pos="left" style:horizontal-rel="char" fo:width="50%"/>
+  <style:graphic-properties style:wrap="right" style:horizontal-pos="left" style:horizontal-rel="char" fo:min-width="50%" fo:max-width="50%"/>
  </style:style>
 
  <style:style style:name="imageblock-right" style:family="graphic" style:parent-style-name="imageblock">
-  <style:graphic-properties style:wrap="left" style:horizontal-pos="right" style:horizontal-rel="char" fo:width="50%"/>
+  <style:graphic-properties style:wrap="left" style:horizontal-pos="right" style:horizontal-rel="char" fo:min-width="50%" fo:max-width="50%"/>
  </style:style>
 
  <style:style style:name="imageblock-center" style:family="graphic" style:parent-style-name="imageblock">
-  <style:graphic-properties style:wrap="none" style:horizontal-pos="center" style:horizontal-rel="char" fo:width="80%"/>
+  <style:graphic-properties style:wrap="none" style:horizontal-pos="center" style:horizontal-rel="char" fo:min-width="80%" fo:max-width="80%"/>
  </style:style>
 
  <style:style style:name="admonitiontext" style:family="paragraph">
@@ -1430,18 +1431,11 @@
   </text:list-level-style-number>
  </text:list-style>
 
- <text:notes-configuration text:note-class="footnote" style:num-format="1" text:start-value="0" text:footnotes-position="page" text:start-numbering-at="document"/>
-
- <text:notes-configuration text:note-class="endnote" style:num-format="i" text:start-value="0"/>
-
- <text:linenumbering-configuration text:number-lines="false" text:offset="4.99mm" style:num-format="1" text:number-position="left" text:increment="5"/>
-
  <style:style style:name="normal" style:family="text">
   <style:text-properties style:font-name="sans-serif" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal"/>
  </style:style>
 
  <style:style style:name="Footer" style:family="paragraph" style:class="extra">
-  <style:text-properties fo:font-size="8pt"/>
   <style:paragraph-properties fo:padding="0mm" fo:border-left="none" fo:border-right="none" fo:border-top="0.25pt solid #000000" fo:border-bottom="none" style:shadow="none" text:number-lines="false" text:line-number="0" fo:text-align="start" style:justify-single-word="false">
    <style:tab-stops>
     <style:tab-stop style:position="0mm" style:type="left"/>
@@ -1449,6 +1443,7 @@
     <style:tab-stop style:position="170.01mm" style:type="right"/>
    </style:tab-stops>
   </style:paragraph-properties>
+  <style:text-properties fo:font-size="8pt"/>
  </style:style>
 
  <style:style style:name="numbering" style:display-name="Numbering Symbols" style:family="text"/>
@@ -1457,10 +1452,10 @@
 <!-- master-styles -->
 <office:master-styles>
  <style:master-page style:name="Standard" style:page-layout-name="Slide">
-  <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
   <style:footer>
    <text:p text:style-name="Footer"><text:title/><text:tab/><text:chapter text:display="number-and-name" text:outline-level="1"/><text:tab/><text:page-number text:select-page="current">3</text:page-number> of <text:page-count>3</text:page-count></text:p>
   </style:footer>
+  <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
  </style:master-page>
 </office:master-styles>
 </office:document-styles>
