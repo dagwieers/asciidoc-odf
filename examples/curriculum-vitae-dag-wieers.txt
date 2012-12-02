@@ -1,4 +1,4 @@
-= Curriculum Vitae - Dag Wieërs
+= Curriculum Vitae - Dag Wieërs - Linux Engineer
 :data-uri:
 :doctype: article
 :encoding: UTF-8
@@ -12,18 +12,18 @@ system architect, focusing on Red Hat Enterprise Linux and CentOS. Dag +
 is also a well known RPM packager due to his efforts in the RPMforge +
 and ELRepo repositories which is used by many Belgian and international +
 organizations using RHEL or CentOS.
-:keywords: Linux System Engineer, Linux System Administrator, Linux System +
-Architect, UNIX System Engineer, RPM Packager, Python developer, Red Hat +
-Enterprise Linux, RHEL, CentOS, Perl developer, Bash, KSH, Shell scripting, +
-UNIX System Engineer
+:keywords: CV, Résumé, Linux System Engineer, Linux System Administrator, +
+Linux System Architect, UNIX System Engineer, RPM Packager, Python developer, +
+Red Hat Enterprise Linux, RHEL, CentOS, Perl developer, Bash, KSH, +
+Shell scripting, UNIX System Engineer, Devops, Ansible
 
 .Availability and work interests
 ****************************************************************************
-My technical experience and interests as a system engineer and system
-architect focus on Linux and Open Source software, preferably Red Hat
-Enterprise Linux (RHEL), CentOS and Scientific Linux. With more than
-{linux-experience} years of experience I am one of the Linux pioneers
-in Belgium and well-known within the specific Red Hat Linux community.
+Dag is a certified Linux system engineer and architect with experience and
+focus on Linux and Open Source software, preferably Red Hat Enterprise Linux
+(RHEL), CentOS or Scientific Linux. With more than {linux-experience} years
+of experience he is one of the Linux pioneers in Belgium and well-known within
+the specific Red Hat Linux community.
 
 Skills include deploying, migrating and managing Linux infrastructure
 (servers and desktops), packaging Unix software, designing and
@@ -31,8 +31,8 @@ implementing system tools, improving hardware support and automating
 operational tasks using python, shell scripting and perl with attention
 to documentation, standardization, procedures and policies.
 
-I am *available as a freelancer for contract work* inside and outside of
-Europe, but not willing to relocate on a permanent basis.
+Dag is *available as a freelancer for contract work* inside and outside of
+Europe, but is not willing to relocate on a permanent basis.
 ****************************************************************************
 
 == Personalia
@@ -58,13 +58,14 @@ Phone::
 Email::
     dag@linux.com
 
-Website::
-    http://dag.wieers.com/blog/, http://be.linkedin.com/in/dagwieers
+Recent Résumé::
+    http://dag.wieers.com/cv/cv.pdf,
+    http://be.linkedin.com/in/dagwieers
 
 
 [cols=2]
 == Work experience
-=> _References provided on request_
+=> _References available on request_
 
 ////
 === Dagit Linux solutions
@@ -76,14 +77,16 @@ Independent contractor::
 
 === Hewlett-Packard Belgium
 [stylename="timeframe"]
-May 2010 -> now (ongoing)
+May 2010 -> December 2012 (2.5 years)
 
-Linux system engineer::
+Linux system engineer/architect::
     Troubleshooting Linux, SAN/multipathing problem. Best practices for
     Linux multipathing and SAN performance.  Assessment and design of
     Linux reference architecture. RHN Satellite design. HP-UX ksh to
-    Linux migration best practices.
-    _Incl. Atos Worldline, Dexia Technology Services, SWIFT, Electrabel_
+    Linux migration best practices. Design, implement and document 
+    a new Linux environment as part of a Solaris to Linux migration.
+    _Incl. Atos Worldline, Dexia Technology Services, SWIFT, Belgacom,
+    BNP Paribas Fortis_
 Linux system developer::
     Implementing disaster recovery solution. Improvements to installation
     scripts and webmin modules. Packaging improvements. Automation and
@@ -120,7 +123,7 @@ Linux system engineer::
 
 === Euroclear
 [stylename="timeframe"]
-Dec 2005 -> May 2007 (2.5 years)
+Dec 2005 -> May 2007 (1.5 years)
 
 Unix system engineer::
     Deployment of Unix systems and services. Design and implementation of
@@ -194,9 +197,12 @@ Internet training::
 
 
 == Skills
+[cols=2]
 === Overall
-  - Ability to learn quickly from self-study
-  - Thorough experience in Unix system administration and automation
+  - Ability to quickly learn and understand from self-study or analysis
+  - Good understanding of project management and change management
+  - Thorough experience in Unix system administration, advanced automation and
+    orchestration
   - Thorough experience in configuring and deploying systems in a scalable and
     coherent manner
   - Owner of various best practices regarding Linux system and application
@@ -204,57 +210,74 @@ Internet training::
     Enterprise Linux in general.
   - Experience in developing and marketing products using the Internet and
     Internet communities
-  - Experience in project-management and leading a technical team
+  - Experience in project management and leading technical teams
 
+
+[cols=2]
+=== Communication
+  - Direct communication skills - does not overpromise or under deliver
+  - Team player - listen, share, cooperate and learn together as a team
+  - Presentation skills -  experience with presenting for large groups
+    in international settings
+
+
+[cols=2]
+=== Systems management
+  - Thorough experience with enterprise automation and orchestration using
+    Ansible and Red Hat Network Satellite and integrating with enterprise
+    CMDB solutions
+  - Thorough experience with Red Hat kickstart and post-installation mechanisms
+    for rapid mass deployment
+  - Thorough experience with building packages and automating enterprise
+    software deployment
+  - Thorough experience in designing and implementing a multi-customer
+    monitoring and reporting infrastructure
+
+
+[cols=2]
 === Operating systems / Software
   - Excellent knowledge of Linux (since 1994) incl. Red Hat Enterprise Linux,
     Scientific Linux, CentOS, Fedora (but also SLES, Ubuntu, Debian, ...)
   - Experience with various Unix systems including AIX, HP/UX and Solaris,
-    mostly wrt. packaging, automation and troubleshooting.
-  - Experience with virtualization solutions incl. OpenVZ, RHEV/KVM and
-    VMware ESX
-  - Thorough experience in designing and implementing a multi-customer
-    monitoring and reporting infrastructure
-  - Experience with Red Hat kickstart, post-installation mechanisms for
-    mass deployment and building Red Hat RPM packages
+    mostly related to packaging, automation and troubleshooting
+  - Experience with managing and integrating with virtualization solutions,
+    incl. OpenVZ, RHEV/KVM and VMware vSphere
   - Experience with clustered web-servers for load-balancing and fail-over,
     firewalling, virtual private networking (VPN), building high-capacity,
     load-balancing and high-available systems (IPVS), disaster recovery
     solutions and network intrusion detection systems (NIDS)
   - Thorough experience in compiling, installing, and configuring of Unix
-    system software, e.g. NFS, Samba, lpd (and LPRng), Postfix, Amavisd,
+    system software, e.g. NFS, Samba, lpd and cups, Postfix, Amavisd,
     Bind, DHCP, XFree86, Apache, ssh, ntpd, Snort, Dante, RRDtool, Nagios,
-    Webmin, rear, KVM, ...
+    Webmin, Relax-and-Recover, KVM, ...
   - Experience with GPFS clustering and SAN environments for large digital
     media environments
-  - Experience with building solutions using SugarCRM and Drupal
-  - Experience automating and integrating with Red Hat Network Satellite
-  - Experience in programming and scripting in various computer languages
-  - Experience with various markup languages (HTML, SGML, DocBook v3 and v4,
-    XML, CSS, AsciiDoc)
-  - CGI Programming (in Perl and C) and PHP3/4
-  - IP (TCP/UDP), ICMP, ARP and protocols like IRC, FTP, SMTP, HTTP, NNTP,
+//  - Experience with building solutions using SugarCRM and Drupal
+  - Experience with various markup languages (HTML, SGML, DocBook, XML,
+    CSS, AsciiDoc, Markdown)
+  - IPv4 (TCP/UDP), ICMP, ARP and protocols like IRC, FTP, SMTP, HTTP, NNTP,
     POP3, IMAP, DHCP, IPsec, ...
   - SQL (MySQL, msql, PostgreSQL, DB2 and some Oracle)
 
 [cols=2]
 === Programming languages
 Active::
-    Python (since 2002),
-    SQL (since 1997),
-    PHP (since 1996),
-    Javascript (since 1995),
-    Bash and Unix shells (since 1994),
-    C (since 1994),
-    Perl (since 1994)
+    Lua ~since 2006~,
+    Python ~since 2002~,
+    SQL ~since 1997~,
+    PHP ~since 1996~,
+    Javascript ~since 1995~,
+    Bash and Unix shells ~since 1994~,
+    C ~since 1994~,
+    Perl ~since 1994~
 Passive::
-    C# and Mono (2003 - 2005),
-    RPG on AS/400 (1997 - 1998),
-    Visual Basic (1997),
-    Java (1996 - 1999),
-    x86 Assembler (1992 - 1996),
-    Pascal (1991 - 1999),
-    Basic (1988 - 1990)
+    C# and Mono ~2003 - 2005~,
+    RPG on AS/400 ~1997 - 1998~,
+    Visual Basic ~1997~,
+    Java ~1996 - 1999~,
+    x86 Assembler ~1992 - 1996~,
+    Pascal ~1991 - 1999~,
+    Basic ~1988 - 1990~
 
 === Languages
   - Dutch: native
@@ -263,91 +286,58 @@ Passive::
 //  - Afrikaans: basic spoken
   - German: notions
 
-== Education
-=== Presentations
-I have presented on various topics at a multitude of events, including
-the following conferences:
-
- * ODF Plugfest, Brussels, BE - 2012
-//    ODF backend for AsciiDoc - 04/2012
- * Loadays, Antwerp, BE - 2012
-//    Practical workflow for technical documentation - 04/2012
-//    Improving hardware support on RHEL and clones - 04/2012
- * FlossUK, Edinburgh, UK - 2012
-//    10 reasons for choosing Rear as a DR strategy - 03/2012
-//    Practical workflow for technical documentation - 03/2012
- * LinuxCon Europe, Prague, CZ - 2011
-//    Rear: Disaster Recovery and System Migration tool - 10/2011
- * LibreOffice Conference, Paris, FR - 2011
-//    Automated conversion and styling using unoconv - 10/2011
- * Japan Linux Symposium, Tokyo, JP - 2009
-//    Dstat: pluggable real-time monitoring - 10/2009
- * Jornadas Regionales de Software Libre, Buenos Aires, AR - 2008
-//    CentOS in an Enterprise environment - 08/2008
-//    Dstat: pluggable real-time monitoring - 08/2008
-//    Introduction to building RPM packages - 08/2008
- * LinuxTag Berlin, DE - 2008
-//    CentOS: Filling the Enterprise community gap - 05/2008
- * LinuxWorld Expo Brussels, BE - 2008
-//    CentOS: Filling the Enterprise community gap - 03/2008
- * LinuxWorld Expo Utrecht, NL - 2007
-//    CentOS: Filling the Enterprise community gap - 11/2007
- * T-DOSE, Eindhoven, NL - 2007, 2008, 2009, 2010, 2011
-//    Technical documentation workflow using LibreOffice - 11/2011
-//    Setting your Wii game console free - 11/2010
-//    Enterprise Linux going mainstream - 11/2010
-//    The year of the Wiimote - 11/2009
-//    mrepo: Managing software repositories - 11/2008
-//    CentOS and Enterprise Linux market overview - 11/2008
-//    Dstat: plugin-based real-time monitoring - 11/2007
- * Linuxconf.eu, Cambridge, UK - 2007
-//    Dstat: plugin-based real-time monitoring - 08/2007
- * FrOSCon, Bonn, DE - 2007, 2008, 2009
-//    Building custom initrd files - 08/2009
-//    Giving presentations with a Wii-remote - 08/2008
-//    Proxytunnel: Punching holes in the corporate firewall - 08/2008
-//    Dstat: plugin-based real-time monitoring - 08/2007
- * FOSDEM, Brussels, BE - 2006, 2008, 2009
-//    Enterprise Linux Competitive Landscape - 02/2008
-//    Dstat: pluggable real-time monitoring - 02/2008
-//    RPMforge: Enterprise Linux packaging for RHEL and CentOS - 02/2006
-
 <<<
 
-=== Certification
 
-http://www.redhat.com/certification/[Red Hat]
+== Education
+=> _While I would like to become a Red Hat Certified Architect (RHCA),
+I cannot justify the cost versus its value just to prove my technical skills._
 
-//  - Red Hat Certified System Administrator (RHCSA) with score: 300/300
-  - Red Hat Certified System Administrator (RHCSA)
-  - Red Hat Certified Engineer (RHCE) 'in progress'
+=== Certifications
+https://www.redhat.com/wapps/training/certification/verify.html?certNumber=120-040-951[Red
+Hat]
+
 //  - Red Hat Certified Architect (RHCA)
-//  - Red Hat Enterprise Linux Presales Foundations
-//  - Red Hat Enterprise Virtualization Presales Foundations
-//  - Red Hat JBoss Presales Foundations
+  - Red Hat Certified Engineer (RHCE)
+  - Red Hat Certified System Administrator (RHCSA)
+
+////
+https://www.partner.redhat.com/[Red Hat Partner Certification]
+
+  - Red Hat Enterprise Linux Presales Foundations
+  - Red Hat Enterprise Virtualization Presales Foundations
+  - Red Hat JBoss Presales Foundations
   - Red Hat Partner Platform Certified Salesperson (RHPPCS)
   - Red Hat Partner Virtualization Certified Salesperson (RHPVCS)
+  - Red Hat Partner Storage Certified Salesperson (RHPSCS)
   - Red Hat Partner Middleware Certified Salesperson (RHPMCS)
+////
 
 http://www.lpi.org/[Linux Professional Institute]
 
-  - LPI Certification Level 1 - Junior Level (LPIC-1)
-//  - LPI Certification Level 1 (LPIC-1) with score 1420/1600
-  - LPI Certification Level 2 - Advanced Level (LPIC-2)
 //  - LPI Certification Level 3 - Senior Level (LPIC-3)
+  - LPI Certification Level 2 - Advanced Level (LPIC-2)
+  - LPI Certification Level 1 - Junior Level (LPIC-1)
+
+////
+*http://www.novell.com/training/certinfo/[Novell]*
+
+  - Novell Data Center Technical Specialist (DCTS)
+  - Novell Certified Linux Administrator (NCLA)
+////
 
 http://www.brainbench.com/transcript.jsp?pid=652882[Brainbench]
 
-  - Linux Administration (General):
-    4.71/5 (30 March 2005) #1 Belgium [> 99% of all participants]
+  - Linux Administration (General)
+    ~4.71/5 (30 March 2005) #1 Belgium [> 99% of all participants]~
   - Linux Administration (Red Hat 9):
-    4.34/5 (30 March 2005) #2 Belgium [> 98% of all participants]
+    ~4.34/5 (30 March 2005) #2 Belgium [> 98% of all participants]~
   - Linux Administration (Red Hat):
-    3.93/5 (30 March 2005) #2 Belgium [> 96% of all participants]
+    ~3.93/5 (30 March 2005) #2 Belgium [> 96% of all participants]~
   - Linux Programming (General):
-    4.21/5 (30 March 2005) #1 Belgium [> 89% of all participants]
+    ~4.21/5 (30 March 2005) #1 Belgium [> 89% of all participants]~
   - Unix Administration (General):
-    4.53/5 (30 March 2005) #3 Belgium [> 94% of all participants]
+    ~4.53/5 (30 March 2005) #3 Belgium [> 94% of all participants]~
 
 ////
   - Linux Administration (General)::
@@ -355,6 +345,60 @@ http://www.brainbench.com/transcript.jsp?pid=652882[Brainbench]
   - Linux Administration (Red Hat)::
     Master, 4.25/5 (23 May 2000), top 3 for Belgium [> 98% of all participants]
 ////
+
+=== Public speaking
+I have presented on various occassions about different Linux and Open Source
+topics, including at the following conferences:
+
+[cols=2]
+--
+ * T-DOSE, Eindhoven, NL ~- 2007-2012~
+//    Converting and manipulating office documents from the command line - 11/2012
+//    A short introduction to Ansible - 11/2012
+//    Technical documentation workflow using LibreOffice - 11/2011
+//    Setting your Wii game console free - 11/2010
+//    Enterprise Linux going mainstream - 11/2010
+//    The year of the Wiimote - 11/2009
+//    mrepo: Managing software repositories - 11/2008
+//    CentOS and Enterprise Linux market overview - 11/2008
+//    Dstat: plugin-based real-time monitoring - 11/2007
+ * LinuxTag, Berlin, DE ~- 2008, 2012~
+//    Practical documentation workflow - 05/2012
+//    CentOS: Filling the Enterprise community gap - 05/2008
+ * ODF Plugfest, Brussels, BE ~- 2012~
+//    ODF backend for AsciiDoc - 04/2012
+ * Loadays, Antwerp, BE ~- 2012~
+//    Practical workflow for technical documentation - 04/2012
+//    Improving hardware support on RHEL and clones - 04/2012
+ * FlossUK, Edinburgh, UK ~- 2012~
+//    10 reasons for choosing Rear as a DR strategy - 03/2012
+//    Practical workflow for technical documentation - 03/2012
+ * LinuxCon Europe, Prague, CZ ~- 2011~
+//    Rear: Disaster Recovery and System Migration tool - 10/2011
+ * LibreOffice Conference, Paris, FR ~- 2011~
+//    Automated conversion and styling using unoconv - 10/2011
+ * Japan Linux Symposium, Tokyo, JP ~- 2009~
+//    Dstat: pluggable real-time monitoring - 10/2009
+ * FrOSCon, Bonn, DE ~- 2007-2009~
+//    Building custom initrd files - 08/2009
+//    Giving presentations with a Wii-remote - 08/2008
+//    Proxytunnel: Punching holes in the corporate firewall - 08/2008
+//    Dstat: plugin-based real-time monitoring - 08/2007
+ * FOSDEM, Brussels, BE ~- 2007-2009~
+//    Enterprise Linux Competitive Landscape - 02/2009
+//    Dstat: pluggable real-time monitoring - 02/2008
+//    RPMforge - Enterprise Linux packaging for CentOS and RHEL - 02/2007
+ * Jornadas Regionales de Software Libre, Buenos Aires, AR ~- 2008~
+//    CentOS in an Enterprise environment - 08/2008
+//    Dstat: pluggable real-time monitoring - 08/2008
+//    Introduction to building RPM packages - 08/2008
+ * LinuxWorld Expo Brussels, BE ~- 2008~
+//    CentOS: Filling the Enterprise community gap - 03/2008
+ * LinuxWorld Expo Utrecht, NL ~- 2007~
+//    CentOS: Filling the Enterprise community gap - 11/2007
+ * Linuxconf.eu, Cambridge, UK ~- 2007~
+//    Dstat: plugin-based real-time monitoring - 08/2007
+--
 
 === Technical writing
 IBM Redbook Residency, Poughkeepsie, NY (05/2005)::
@@ -392,16 +436,16 @@ Heilig Hartcollege, Heusden-Zolder (1988 -> 1994)::
 
 == Additional activities
   - Maintainer of http://repoforge.org/[RPMforge RPM Repository] with
-    more than 5000 Open Source software RPM packages for RHEL, SciLinux and
-    CentOS _used by many international companies and organizations._
-  - Member of the http://elrepo.org/[ELRepo initiative] providing kernel
+    more than 5000 Open Source software RPM packages for RHEL, Scientific
+    Linux and CentOS _used by many international companies and organizations._
+  - Member of the http://elrepo.org/[ELRepo project] providing kernel
     module packages (hardware drivers) _used by many international
-    companies and organizations using RHEL, SciLinux or CentOS._
-  - Author of http://dag.wieers.com/home-made/[various Open Source
-    software projects] _incl. dstat, asciidoc-odf, unoconv, mrepo, dconf,
-    sarah, wiipresent_
-  - Contributor to various Open Source projects _incl. Relax and Recover,
-    asciidoc, docbook2odf, proxytunnel, scannedonly_
+    companies and organizations using RHEL, Scientifix Linux or CentOS._
+  - Author of http://github.com/dagwieers[various Open Source software
+    projects] _incl. dstat, asciidoc-odf, unoconv, mrepo, dconf, sarah,
+    wiipresent_
+  - Contributor to various Open Source projects _incl. Ansible,
+    Relax-and-Recover, asciidoc, docbook2odf, proxytunnel, scannedonly_
   - Ex-member of the http://wiki.centos.org/[CentOS core team]
   - Author of the FrOSCon LiveUSB used for informational displays and
     conference room computers

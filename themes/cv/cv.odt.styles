@@ -2,8 +2,8 @@
 <office:font-face-decls>
 <style:font-face style:name="serif" svg:font-family="'Arial'" style:font-family-generic="roman" style:font-pitch="variable"/>
 <style:font-face style:name="sans-serif" svg:font-family="'Arial'" style:font-family-generic="swiss" style:font-pitch="variable"/>
-<style:font-face style:name="article-title" svg:font-family="'Luxi Sans'" style:font-family-generic="swiss" style:font-pitch="variable"/>
-<style:font-face style:name="monospace" svg:font-family="'Luxi Mono'" style:font-pitch="fixed"/>
+<style:font-face style:name="article-title" svg:font-family="'Arial Black'" style:font-family-generic="swiss" style:font-pitch="variable"/>
+<style:font-face style:name="monospace" svg:font-family="'Liberation Mono'" style:font-pitch="fixed"/>
 </office:font-face-decls>
 
 <!-- styles -->
@@ -42,7 +42,7 @@
 
  <style:style style:name="sect0" style:family="paragraph" style:parent-style-name="sect-default">
   <style:paragraph-properties fo:margin-top="0mm" fo:margin-bottom="0mm" fo:padding="0mm"/>
-  <style:text-properties fo:color="#000000" style:text-outline="true" style:font-name="article-title" fo:font-size="22pt" fo:text-shadow="1pt 1pt"/>
+  <style:text-properties fo:color="#000000" style:text-outline="true" style:font-name="article-title" fo:font-size="18pt" fo:text-shadow="1pt 1pt"/>
  </style:style>
 
  <style:style style:name="sect1" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="1" style:class="text">
@@ -137,9 +137,9 @@
  <style:style style:name="list-item" style:family="paragraph"/>
 
  <text:list-style style:name="itemizedlist">
-  <text:list-level-style-bullet text:level="1" text:style-name="bullet-symbols" text:bullet-char="⚫">
+  <text:list-level-style-bullet text:level="1" text:style-name="bullet-symbols" text:bullet-char="•">
    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-    <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="12.7mm" fo:text-indent="-6.35mm" fo:margin-left="12.7mm"/>
+    <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6mm" fo:text-indent="-3mm" fo:margin-left="6mm"/>
    </style:list-level-properties>
    <style:text-properties fo:font-family="&apos;DejaVu Sans&apos;" style:font-style-name="Book" style:font-family-generic="swiss"/>
   </text:list-level-style-bullet>
@@ -165,7 +165,7 @@
  </style:style>
 
  <style:style style:name="variablelist-item" style:family="paragraph" style:parent-style-name="list-item">
-  <style:paragraph-properties fo:padding-left="1mm" fo:margin-top="0mm" fo:margin-bottom="0mm"/>
+  <style:paragraph-properties fo:padding-left="4mm" fo:margin-top="0mm" fo:margin-bottom="0mm"/>
  </style:style>
 
  <style:style style:name="strong" style:family="text">
