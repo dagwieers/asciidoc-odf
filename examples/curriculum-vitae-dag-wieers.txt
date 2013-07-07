@@ -28,7 +28,7 @@ the specific Red Hat Linux community.
 Skills include deploying, migrating and managing Linux infrastructure
 (servers and desktops), packaging Unix software, designing and
 implementing system tools, improving hardware support and automating
-operational tasks using python, shell scripting and perl with attention
+operational tasks using Python, shell scripting and Perl with attention
 to documentation, standardization, procedures and policies.
 
 Dag is *available as a freelancer for contract work* inside and outside of
@@ -59,7 +59,7 @@ Email::
     dag@linux.com
 
 Recent résumé::
-    http://dag.wieers.com/cv/cv.pdf,
+    http://dag.wieers.com/cv/cv.pdf
     http://be.linkedin.com/in/dagwieers
 
 
@@ -79,9 +79,9 @@ Independent contractor::
 [stylename="timeframe"]
 May 2010 -> now (ongoing)
 
-Linux system engineer/architect::
+Linux system developer/engineer/architect::
     Implementing disaster recovery solution. Improvements to installation
-    scripts and webmin modules. Packaging improvements. Automation and
+    scripts and Webmin modules. Packaging improvements. Automation and
     scripting. Design and implementation of a samba/anti-virus solution.
     Troubleshooting Linux, SAN/multipathing problem. Best practices for
     Linux multipathing and SAN performance.  Assessment and design of
@@ -108,7 +108,7 @@ Jul 2007 -> Dec 2007 (6 months)
 Linux system engineer::
     _Short assignment_ Implementation of infrastructure for Novell SLES
     Linux deployment for technical development workstations. Integration
-    with Active Directory, NIS, Clearcase, VMware Server.
+    with Active Directory, NIS, ClearCase, VMware Server.
 
 === Punch Telematix
 [stylename="timeframe"]
@@ -135,7 +135,7 @@ Oct 1999 -> Apr 2001 (1.5 years)
 
 Founder / Business unit manager::
     Taking care of various parts of the organization, including sales
-    and marketing. Experience with project-management and presales for
+    and marketing. Experience with project-management and pre-sales for
     a small (15 headcount) consultancy company.
 Consultant::
     Linux and Open Source consultancy and training for several customers
@@ -213,7 +213,7 @@ Internet trainer::
 
 [cols=2]
 === Communication
-  - Direct communication skills - does not overpromise or under deliver
+  - Direct communication skills - does not overpromise or underdeliver
   - Team player - listen, share, cooperate and learn together as a team
   - Presentation skills -  experience with presenting for large groups
     in international settings
@@ -264,7 +264,7 @@ Active::
     Python ~since 2002~,
     SQL ~since 1997~,
     PHP ~since 1996~,
-    Javascript ~since 1995~,
+    JavaScript ~since 1995~,
     Bash and Unix shells ~since 1994~,
     C ~since 1994~,
     Perl ~since 1994~
@@ -296,14 +296,14 @@ https://www.redhat.com/wapps/training/certification/verify.html?certNumber=120-0
 Hat]
 
 //  - Red Hat Certified Architect (RHCA)
-  - Red Hat Certified Engineer (RHCE) ~-- Score: 100%~
-  - Red Hat Certified System Administrator (RHCSA) ~-- Score: 100%~
+  - Red Hat Certified Engineer (RHCE) ~- Score: 100%~
+  - Red Hat Certified System Administrator (RHCSA) ~- Score: 100%~
 
 https://www.partner.redhat.com/[Red Hat Partner Certification]
 
-  - Red Hat Enterprise Linux Presales Foundations
-  - Red Hat Enterprise Virtualization Presales Foundations
-  - Red Hat JBoss Presales Foundations
+//  - Red Hat Enterprise Linux Presales Foundations
+//  - Red Hat Enterprise Virtualization Presales Foundations
+//  - Red Hat JBoss Presales Foundations
   - Red Hat Partner Platform Certified Salesperson (RHPPCS)
   - Red Hat Partner Virtualization Certified Salesperson (RHPVCS)
   - Red Hat Partner Storage Certified Salesperson (RHPSCS)
@@ -322,23 +322,18 @@ http://www.lpi.org/[Linux Professional Institute]
   - Novell Certified Linux Administrator (NCLA)
 ////
 
-http://www.brainbench.com/transcript.jsp?pid=652882[Brainbench]
+http://www.brainbench.com/transcript.jsp?pid=652882[Brainbench 30/03/2005]
 
-  - Linux Administration (General)
+  - Linux Administration (General) ~- Score: 94.2%~
 //  4.71/5 (30 March 2005) #1 Belgium [> 99% of all participants]
-    ~-- Score: 94.2% (30 March 2005) #1 Belgium~
-  - Linux Administration (Red Hat 9)
-//  4.34/5 (30 March 2005) #2 Belgium [> 98% of all participants]~
-    ~-- Score: 86.8% (30 March 2005) #2 Belgium~
-  - Linux Administration (Red Hat)
-//  3.93/5 (30 March 2005) #2 Belgium [> 96% of all participants]~
-    ~-- Score: 78.6% (30 March 2005) #2 Belgium~
-  - Linux Programming (General)
-//  4.21/5 (30 March 2005) #1 Belgium [> 89% of all participants]~
-    ~-- Score: 84.2% (30 March 2005) #1 Belgium~
-  - Unix Administration (General)
-//  4.53/5 (30 March 2005) #3 Belgium [> 94% of all participants]~
-    ~-- Score: 90.6% (30 March 2005) #3 Belgium~
+  - Linux Administration (Red Hat 9) ~- Score: 86.8%~
+//  4.34/5 (30 March 2005) #2 Belgium [> 98% of all participants]
+  - Linux Administration (Red Hat) ~- Score: 78.6%~
+//  3.93/5 (30 March 2005) #2 Belgium [> 96% of all participants]
+  - Linux Programming (General) ~- Score: 84.2%~
+//  4.21/5 (30 March 2005) #1 Belgium [> 89% of all participants]
+  - Unix Administration (General) ~- Score: 90.6%~
+//  4.53/5 (30 March 2005) #3 Belgium [> 94% of all participants]
 
 ////
   - Linux Administration (General)::
@@ -364,7 +359,7 @@ topics, including at the following conferences:
 //    Tutorial about provisioning and management using Ansible - 03/2013
 //    Practical workflow for technical documentation - 04/2012
 //    Improving hardware support on RHEL and clones - 04/2012
- * FlossUK, Newcastle-upon-Tyme, UK ~- 2013~
+ * FlossUK, Newcastle-upon-Tyne, UK ~- 2013~
 //    Ansible tutorial - 03/2013
  * T-DOSE, Eindhoven, NL ~- 2007-2012~
 //    Converting and manipulating office documents from the command line - 11/2012
@@ -399,7 +394,8 @@ topics, including at the following conferences:
 //    Enterprise Linux Competitive Landscape - 02/2009
 //    Dstat: pluggable real-time monitoring - 02/2008
 //    RPMforge - Enterprise Linux packaging for CentOS and RHEL - 02/2007
- * Jornadas Regionales de Software Libre, Buenos Aires, AR ~- 2008~
+ * JRSL Argentina, Buenos Aires, AR ~- 2008~
+// * Jornadas Regionales de Software Libre, Buenos Aires, AR ~- 2008~
 //    CentOS in an Enterprise environment - 08/2008
 //    Dstat: pluggable real-time monitoring - 08/2008
 //    Introduction to building RPM packages - 08/2008
@@ -451,12 +447,12 @@ Heilig Hartcollege, Heusden-Zolder (1988 -> 1994)::
     Linux and CentOS _used by many international companies and organizations._
   - Member of the http://elrepo.org/[ELRepo project] providing kernel
     module packages (hardware drivers) _used by many international
-    companies and organizations using RHEL, Scientifix Linux or CentOS._
+    companies and organizations using RHEL, Scientific Linux or CentOS._
   - Author of http://github.com/dagwieers[various Open Source software
-    projects] _incl. dstat, asciidoc-odf, unoconv, mrepo, dconf, sarah,
+    projects] _incl. Dstat, asciidoc-odf, unoconv, mrepo, dconf, sarah,
     wiipresent_
   - Contributor to various Open Source projects _incl. Ansible,
-    Relax-and-Recover, OpenELEC, XBMC, asciidoc, docbook2odf, proxytunnel,
+    Relax-and-Recover, OpenELEC, XBMC, AsciiDoc, docbook2odf, Proxytunnel,
     scannedonly_
   - Ex-member of the http://wiki.centos.org/[CentOS core team]
   - Author of the FrOSCon LiveUSB used for informational displays and
