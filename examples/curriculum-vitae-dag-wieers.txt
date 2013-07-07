@@ -58,7 +58,7 @@ Phone::
 Email::
     dag@linux.com
 
-Recent Résumé::
+Recent résumé::
     http://dag.wieers.com/cv/cv.pdf,
     http://be.linkedin.com/in/dagwieers
 
@@ -77,21 +77,19 @@ Independent contractor::
 
 === Hewlett-Packard Belgium
 [stylename="timeframe"]
-May 2010 -> December 2012 (2.5 years)
+May 2010 -> now (ongoing)
 
 Linux system engineer/architect::
-    Troubleshooting Linux, SAN/multipathing problem. Best practices for
-    Linux multipathing and SAN performance.  Assessment and design of
-    Linux reference architecture. RHN Satellite design. HP-UX ksh to
-    Linux migration best practices. Design, implement and document 
-    a new Linux environment as part of a Solaris to Linux migration.
-    _Incl. Atos Worldline, Dexia Technology Services, SWIFT, Belgacom,
-    BNP Paribas Fortis_
-Linux system developer::
     Implementing disaster recovery solution. Improvements to installation
     scripts and webmin modules. Packaging improvements. Automation and
     scripting. Design and implementation of a samba/anti-virus solution.
-    Documentation and troubleshooting, _at Belgian Federal Police_.
+    Troubleshooting Linux, SAN/multipathing problem. Best practices for
+    Linux multipathing and SAN performance.  Assessment and design of
+    Linux reference architecture. RHN Satellite design. HP-UX ksh to
+    Linux migration best practices. Design, implement and document
+    a new Linux environment as part of a Solaris to Linux migration.
+    _Incl. Belgian Federal Police (19m), Dexia Technology Services (2m),
+    Atos Worldline, SWIFT, BNP Paribas Fortis (7m), Belgacom (7m+)_.
 
 === AXA-Tech Belgium
 [stylename="timeframe"]
@@ -166,7 +164,7 @@ Consultant::
     Analysis and design of an off-line website generation program (further
     developed as WebEngine) and web-scripting. Implementation of business
     projects.
-System administration::
+System administrator::
     Installation and operational management of Linux infrastructure and
     routers.
 
@@ -174,10 +172,10 @@ System administration::
 [stylename="timeframe"]
 voluntary Oct 1996 -> Nov 1997
 
-Network administration::
+System/Network administrator::
     Maintenance of 12 public Internet terminals (based on Windows 95) and
     an ISDN Internet connection.
-Internet training::
+Internet trainer::
     Individual training and training in group regarding computer use,
     the Internet, search-engines and popular websites.
 
@@ -290,18 +288,17 @@ Passive::
 
 
 == Education
-=> _While I would like to become a Red Hat Certified Architect (RHCA),
-I cannot justify the cost versus its value just to prove my technical skills._
+// => _While I would like to become a Red Hat Certified Architect (RHCA),
+// I cannot justify the cost versus its value just to prove my technical skills._
 
 === Certifications
 https://www.redhat.com/wapps/training/certification/verify.html?certNumber=120-040-951[Red
 Hat]
 
 //  - Red Hat Certified Architect (RHCA)
-  - Red Hat Certified Engineer (RHCE)
-  - Red Hat Certified System Administrator (RHCSA)
+  - Red Hat Certified Engineer (RHCE) ~-- Score: 100%~
+  - Red Hat Certified System Administrator (RHCSA) ~-- Score: 100%~
 
-////
 https://www.partner.redhat.com/[Red Hat Partner Certification]
 
   - Red Hat Enterprise Linux Presales Foundations
@@ -311,7 +308,6 @@ https://www.partner.redhat.com/[Red Hat Partner Certification]
   - Red Hat Partner Virtualization Certified Salesperson (RHPVCS)
   - Red Hat Partner Storage Certified Salesperson (RHPSCS)
   - Red Hat Partner Middleware Certified Salesperson (RHPMCS)
-////
 
 http://www.lpi.org/[Linux Professional Institute]
 
@@ -329,15 +325,20 @@ http://www.lpi.org/[Linux Professional Institute]
 http://www.brainbench.com/transcript.jsp?pid=652882[Brainbench]
 
   - Linux Administration (General)
-    ~4.71/5 (30 March 2005) #1 Belgium [> 99% of all participants]~
-  - Linux Administration (Red Hat 9):
-    ~4.34/5 (30 March 2005) #2 Belgium [> 98% of all participants]~
-  - Linux Administration (Red Hat):
-    ~3.93/5 (30 March 2005) #2 Belgium [> 96% of all participants]~
-  - Linux Programming (General):
-    ~4.21/5 (30 March 2005) #1 Belgium [> 89% of all participants]~
-  - Unix Administration (General):
-    ~4.53/5 (30 March 2005) #3 Belgium [> 94% of all participants]~
+//  4.71/5 (30 March 2005) #1 Belgium [> 99% of all participants]
+    ~-- Score: 94.2% (30 March 2005) #1 Belgium~
+  - Linux Administration (Red Hat 9)
+//  4.34/5 (30 March 2005) #2 Belgium [> 98% of all participants]~
+    ~-- Score: 86.8% (30 March 2005) #2 Belgium~
+  - Linux Administration (Red Hat)
+//  3.93/5 (30 March 2005) #2 Belgium [> 96% of all participants]~
+    ~-- Score: 78.6% (30 March 2005) #2 Belgium~
+  - Linux Programming (General)
+//  4.21/5 (30 March 2005) #1 Belgium [> 89% of all participants]~
+    ~-- Score: 84.2% (30 March 2005) #1 Belgium~
+  - Unix Administration (General)
+//  4.53/5 (30 March 2005) #3 Belgium [> 94% of all participants]~
+    ~-- Score: 90.6% (30 March 2005) #3 Belgium~
 
 ////
   - Linux Administration (General)::
@@ -346,12 +347,25 @@ http://www.brainbench.com/transcript.jsp?pid=652882[Brainbench]
     Master, 4.25/5 (23 May 2000), top 3 for Belgium [> 98% of all participants]
 ////
 
+////
+http://www.itil-officialsite.com/[ITIL]
+
+ - ITIL v3 Foundations
+////
+
+
 === Public speaking
-I have presented on various occassions about different Linux and Open Source
+I have presented on various occasions about different Linux and Open Source
 topics, including at the following conferences:
 
 [cols=2]
 --
+ * Loadays, Antwerp, BE ~- 2012, 2013~
+//    Tutorial about provisioning and management using Ansible - 03/2013
+//    Practical workflow for technical documentation - 04/2012
+//    Improving hardware support on RHEL and clones - 04/2012
+ * FlossUK, Newcastle-upon-Tyme, UK ~- 2013~
+//    Ansible tutorial - 03/2013
  * T-DOSE, Eindhoven, NL ~- 2007-2012~
 //    Converting and manipulating office documents from the command line - 11/2012
 //    A short introduction to Ansible - 11/2012
@@ -367,9 +381,6 @@ topics, including at the following conferences:
 //    CentOS: Filling the Enterprise community gap - 05/2008
  * ODF Plugfest, Brussels, BE ~- 2012~
 //    ODF backend for AsciiDoc - 04/2012
- * Loadays, Antwerp, BE ~- 2012~
-//    Practical workflow for technical documentation - 04/2012
-//    Improving hardware support on RHEL and clones - 04/2012
  * FlossUK, Edinburgh, UK ~- 2012~
 //    10 reasons for choosing Rear as a DR strategy - 03/2012
 //    Practical workflow for technical documentation - 03/2012
@@ -445,7 +456,8 @@ Heilig Hartcollege, Heusden-Zolder (1988 -> 1994)::
     projects] _incl. dstat, asciidoc-odf, unoconv, mrepo, dconf, sarah,
     wiipresent_
   - Contributor to various Open Source projects _incl. Ansible,
-    Relax-and-Recover, asciidoc, docbook2odf, proxytunnel, scannedonly_
+    Relax-and-Recover, OpenELEC, XBMC, asciidoc, docbook2odf, proxytunnel,
+    scannedonly_
   - Ex-member of the http://wiki.centos.org/[CentOS core team]
   - Author of the FrOSCon LiveUSB used for informational displays and
     conference room computers
