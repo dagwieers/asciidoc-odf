@@ -20,7 +20,7 @@ And this is the second paragraph.
 == Formatting
 A paragraph can have differently formatted text, like *strong* text,
 _emphasized_ text or +monospaced+ text. But also `quoted', ``double-quoted'',
-^superscript^ and ~subscript~ are possibilities.
+^superscript^ and ~subscript~ are possibilities. And even -strike-through-.
 
 And a anchor:formatting[referenced] paragraph.
 
