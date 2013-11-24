@@ -1,4 +1,5 @@
 = Curriculum Vitae - Dag Wieërs - Linux Engineer
+:author: Dag Wieers
 :data-uri:
 :doctype: article
 :encoding: UTF-8
@@ -7,23 +8,26 @@
 :theme: cv
 :toclevels: 2
 :linux-experience: {sys:echo $(( $(date +%Y) - 1995))}
+:last-job: {sys:echo $(( ( $(date +%s) - $(date --date='2013-01-01' +%s) ) / 30 / 24 / 60 / 60 ))}
+:last-agency: {sys:echo $(( ( $(date +%s) - $(date --date='2010-05-01' +%s) ) / 364 ))}
 :description: Dag Wieërs is an experienced Linux system engineer and +
-system architect, focusing on Red Hat Enterprise Linux and CentOS. Dag +
-is also a well known RPM packager due to his efforts in the RPMforge +
-and ELRepo repositories which is used by many Belgian and international +
-organizations using RHEL or CentOS.
-:keywords: CV, Résumé, Linux System Engineer, Linux System Administrator, +
-Linux System Architect, UNIX System Engineer, RPM Packager, Python developer, +
-Red Hat Enterprise Linux, RHEL, CentOS, Perl developer, Bash, KSH, +
-Shell scripting, UNIX System Engineer, Devops, Ansible
+system architect, focusing on Red Hat Enterprise Linux, CentOS and +
+Scientific Linux. Dag is also a well known RPM packager due to his +
+efforts in the RPMforge and ELRepo repositories which is used by many +
+Belgian and international organizations using RHEL or CentOS.
+:keywords: CV, résumé, Linux System Engineer, Linux System Administrator, +
+Linux System Architect, UNIX System Engineer, freelancer, consultant, +
+RPM packager, Python developer, Red Hat Enterprise Linux, RHEL, CentOS, +
+Perl developer, Bash, KSH, shell scripting, UNIX System Engineer, Devops, +
+Ansible
 
 .Availability and work interests
 ****************************************************************************
-Dag is a certified Linux system engineer and architect with experience and
-focus on Linux and Open Source software, preferably Red Hat Enterprise Linux
-(RHEL), CentOS or Scientific Linux. With more than {linux-experience} years
-of experience he is one of the Linux pioneers in Belgium and well-known within
-the specific Red Hat Linux community.
+Dag is an experienced and certified Linux system engineer and architect
+with experience and focus on Linux and Open Source software, preferably
+Red Hat Enterprise Linux (RHEL), CentOS or Scientific Linux. With *more than
+{linux-experience} years of experience* he is one of the Linux pioneers in
+Belgium and well-known within the specific Red Hat Linux communities.
 
 Skills include deploying, migrating and managing Linux infrastructure
 (servers and desktops), packaging Unix software, designing and
@@ -58,9 +62,9 @@ Phone::
 Email::
     dag@linux.com
 
-Recent résumé::
-    http://dag.wieers.com/cv/cv.pdf
-    http://be.linkedin.com/in/dagwieers
+Most recent résumé::
+    http://dag.wiee.rs/cv/
+    http://linkedin.com/in/dagwieers
 
 
 [cols=2]
@@ -75,109 +79,113 @@ Independent contractor::
     Available for freelance work.
 ////
 
-=== Hewlett-Packard Belgium
+=== Hewlett-Packard
 [stylename="timeframe"]
 May 2010 -> now (ongoing)
 
-Linux system developer/engineer/architect::
-    Implementing disaster recovery solution. Improvements to installation
-    scripts and Webmin modules. Packaging improvements. Automation and
-    scripting. Design and implementation of a samba/anti-virus solution.
-    Troubleshooting Linux, SAN/multipathing problem. Best practices for
-    Linux multipathing and SAN performance.  Assessment and design of
-    Linux reference architecture. RHN Satellite design. HP-UX ksh to
-    Linux migration best practices. Design, implement and document
-    a new Linux environment as part of a Solaris to Linux migration.
-    _Incl. Belgian Federal Police (19m), Dexia Technology Services (2m),
-    Atos Worldline, SWIFT, BNP Paribas Fortis (7m), Belgacom (7m+)_.
+*Linux system developer/engineer/architect*
+Implementing disaster recovery solution. Improvements to installation
+scripts and Webmin modules. Packaging improvements. Automation and
+scripting. Design and implementation of a samba/anti-virus solution.
+Troubleshooting Linux, SAN/multipathing problem. Best practices for
+Linux multipathing and SAN performance.  Assessment and design of
+Linux reference architecture. RHN Satellite design. HP-UX ksh to
+Linux migration best practices. Design, implement and document
+a new Linux environment as part of a Solaris to Linux migration.
+_Incl. Belgian Federal Police (19m), Dexia Technology Services (2m),
+Atos Worldline, SWIFT, BNP Paribas Fortis (7m), Belgacom ({last-job}m+)_.
 
-=== AXA-Tech Belgium
+=== AXA Technology Services
 [stylename="timeframe"]
 Nov 2007 -> Mar 2010 (2.5 years)
 
-Linux system engineer::
-    Linux migration of Belgian datacenter to Germany. Design and
-    implementation of modular framework and infrastructure for Linux
-    and VMware ESX, used for deploying, retrofitting and validating
-    Linux servers. 3rd level support, troubleshooting and design work.
+*Linux system engineer*
+Linux migration of Belgian datacenter to Germany. Design and
+implementation of modular framework and infrastructure for Linux
+and VMware ESX, used for deploying, retrofitting and validating
+Linux servers. 3rd level support, troubleshooting and design work.
 
-=== EMC² Belgium
+=== EMC
 [stylename="timeframe"]
 Jul 2007 -> Dec 2007 (6 months)
 
-Linux system engineer::
-    _Short assignment_ Implementation of infrastructure for Novell SLES
-    Linux deployment for technical development workstations. Integration
-    with Active Directory, NIS, ClearCase, VMware Server.
+*Linux system engineer*
+_(Short assignment)_ Implementation of infrastructure for Novell SLES
+Linux deployment for technical development workstations. Integration
+with Active Directory, NIS, ClearCase, VMware Server.
 
 === Punch Telematix
 [stylename="timeframe"]
 Jun 2007 -> Sep 2007 (4 months)
 
-Linux system engineer::
-    _Short assignment_ Design and implementation of technical documentation
-    system. Design and implementation of subversion. Packaging for Novell
-    SLES Linux. Troubleshooting. Automation.
+*Linux system engineer*
+_(Short assignment)_ Design and implementation of technical documentation
+system. Design and implementation of subversion. Packaging for Novell
+SLES Linux. Troubleshooting. Automation.
 
 === Euroclear
 [stylename="timeframe"]
 Dec 2005 -> May 2007 (1.5 years)
 
-Unix system engineer::
-    Deployment of Unix systems and services. Design and implementation of
-    management infrastructure (configuration and documentation management,
-    change management). Packaging for Solaris, AIX, Linux and VMware. Custom
-    software development. Troubleshooting. Automation.
+*Unix system engineer*
+Deployment of Unix systems and services. Design and implementation of
+management infrastructure (configuration and documentation management,
+change management). Packaging for Solaris, AIX, Linux and VMware. Custom
+software development. Troubleshooting. Automation.
+
+=== IBM
+[stylename="timeframe"]
+internship 1999; Sep 1999 -> Dec 2005 (5.5 years)
+
+*Unix system engineer*
+On Unix and Linux systems. (e.g. packaging on Linux/AIX, implementing
+various system and network services, general troubleshooting),
+implementing hosting infrastructure on Linux. (e.g. resource and
+availability monitoring, capacity planning, firewall framework)
+
+*Consultant*
+Designing and implementing solutions for automatic deployment of
+Linux clients, Point-Of-Sale systems, network services, clusters
+and big parallel storage systems for digital media projects,
+_incl. Real Software, VRT, EVS, RVA, Callataÿ and Wouters, KBC_
 
 === Mind Linux Solutions
 [stylename="timeframe"]
 Oct 1999 -> Apr 2001 (1.5 years)
 
-Founder / Business unit manager::
-    Taking care of various parts of the organization, including sales
-    and marketing. Experience with project-management and pre-sales for
-    a small (15 headcount) consultancy company.
-Consultant::
-    Linux and Open Source consultancy and training for several customers
-    in on-site projects varying between 1 and 3 weeks.
+*Founder / Business unit manager*
+Taking care of various parts of the organization, including sales
+and marketing. Experience with project-management and pre-sales for
+a small (15 headcount) consultancy company.
 
-=== IBM Belgium
+*Consultant*
+Linux and Open Source consultancy and training for several customers
+in on-site projects varying between 1 and 3 weeks.
+
+=== SISA Software / Winsome
 [stylename="timeframe"]
-Sep 1999 -> Dec 2005 (5.5 years)
+summer job 1996/1997; Oct 1997 -> Sep 1999
 
-Unix system engineer::
-    On Unix and Linux systems. (e.g. packaging on Linux/AIX, implementing
-    various system and network services, general troubleshooting),
-    implementing hosting infrastructure on Linux. (e.g. resource and
-    availability monitoring, capacity planning, firewall framework)
-Consultant::
-    Designing and implementing solutions for automatic deployment of
-    Linux clients, Point-Of-Sale systems, network services, clusters
-    and big parallel storage systems for digital media projects,
-    _incl. Real Software, VRT, EVS, RVA, Callataÿ and Wouters, KBC_
+*Consultant*
+Analysis and design of an off-line website generation program (further
+developed as WebEngine) and web-scripting. Implementation of business
+projects.
 
-=== SISA Software/Winsome
-[stylename="timeframe"]
-summer job 1996/1997 and Oct 1997 -> Sep 1999
-
-Consultant::
-    Analysis and design of an off-line website generation program (further
-    developed as WebEngine) and web-scripting. Implementation of business
-    projects.
-System administrator::
-    Installation and operational management of Linux infrastructure and
-    routers.
+*System administrator*
+Installation and operational management of Linux infrastructure and
+routers.
 
 === Provinciale Bibliotheek Limburg
 [stylename="timeframe"]
 voluntary Oct 1996 -> Nov 1997
 
-System/Network administrator::
-    Maintenance of 12 public Internet terminals (based on Windows 95) and
-    an ISDN Internet connection.
-Internet trainer::
-    Individual training and training in group regarding computer use,
-    the Internet, search-engines and popular websites.
+*System/Network administrator*
+Maintenance of 12 public Internet terminals (based on Windows 95) and
+an ISDN Internet connection.
+
+*Internet trainer*
+Individual training and training in group regarding computer use,
+the Internet, search-engines and popular websites.
 
 ////
 ["ditaa",options="no-shadows",scaling=4,width="180mm",height="15mm"]
@@ -220,7 +228,19 @@ Internet trainer::
 
 
 [cols=2]
+=== Systems architecture
+  - Experience with designing Standard Operating Environments (SOE) and
+    automating Unix-to-Linux projects
+  - Experience with designing Linux security standards and processes
+    to harden existing environments
+  - Experience with designing Linux life cycle management and
+    security patch management processes
+
+
+[cols=2]
 === Systems management
+  - Thorough experience with Red Hat Enterprise Linux internals, security
+    best-practices and performance tuning and troubleshooting
   - Thorough experience with enterprise automation and orchestration using
     Ansible and Red Hat Network Satellite and integrating with enterprise
     CMDB solutions
@@ -260,22 +280,23 @@ Internet trainer::
 [cols=2]
 === Programming languages
 Active::
-    Lua ~since 2006~,
-    Python ~since 2002~,
-    SQL ~since 1997~,
-    PHP ~since 1996~,
-    JavaScript ~since 1995~,
-    Bash and Unix shells ~since 1994~,
-    C ~since 1994~,
-    Perl ~since 1994~
+Lua ~since 2006~,
+Python ~since 2002~,
+SQL ~since 1997~,
+PHP ~since 1996~,
+JavaScript ~since 1995~,
+Bash and Unix shells ~since 1994~,
+C ~since 1994~,
+Perl ~since 1994~
+
 Passive::
-    C# and Mono ~2003 - 2005~,
-    RPG on AS/400 ~1997 - 1998~,
-    Visual Basic ~1997~,
-    Java ~1996 - 1999~,
-    x86 Assembler ~1992 - 1996~,
-    Pascal ~1991 - 1999~,
-    Basic ~1988 - 1990~
+C# and Mono ~2003 - 2005~,
+RPG on AS/400 ~1997 - 1998~,
+Visual Basic ~1997~,
+Java ~1996 - 1999~,
+x86 Assembler ~1992 - 1996~,
+Pascal ~1991 - 1999~,
+Basic ~1988 - 1990~
 
 === Languages
   - Dutch: native
@@ -288,32 +309,30 @@ Passive::
 
 
 == Education
-// => _While I would like to become a Red Hat Certified Architect (RHCA),
-// I cannot justify the cost versus its value just to prove my technical skills._
 
-=== Certifications
-https://www.redhat.com/wapps/training/certification/verify.html?certNumber=120-040-951[Red
-Hat]
+=== Certification
+*Red Hat certification* ~https://www.redhat.com/wapps/training/certification/verify.html?certNumber=120-040-951&isSearch=False&verify=Verify[verify]~
 
 //  - Red Hat Certified Architect (RHCA)
+  - Red Hat Certificate of Expertise in Performance Tuning (RH442)
   - Red Hat Certified Engineer (RHCE) ~- Score: 100%~
   - Red Hat Certified System Administrator (RHCSA) ~- Score: 100%~
 
-https://www.partner.redhat.com/[Red Hat Partner Certification]
-
+//*https://www.partner.redhat.com/[Red Hat Partner certification]*
+//
 //  - Red Hat Enterprise Linux Presales Foundations
 //  - Red Hat Enterprise Virtualization Presales Foundations
 //  - Red Hat JBoss Presales Foundations
-  - Red Hat Partner Platform Certified Salesperson (RHPPCS)
-  - Red Hat Partner Virtualization Certified Salesperson (RHPVCS)
-  - Red Hat Partner Storage Certified Salesperson (RHPSCS)
-  - Red Hat Partner Middleware Certified Salesperson (RHPMCS)
+//  - Red Hat Partner Platform Certified Salesperson (RHPPCS)
+//  - Red Hat Partner Virtualization Certified Salesperson (RHPVCS)
+//  - Red Hat Partner Storage Certified Salesperson (RHPSCS)
+//  - Red Hat Partner Middleware Certified Salesperson (RHPMCS)
 
-http://www.lpi.org/[Linux Professional Institute]
+*Linux Professional Institute certification* ~http://cs.lpi.org/caf/Xamman/certification/process_verify?lpi_id=LPI000247772&ver_code=7z98whrvag[verify]~
 
-//  - LPI Certification Level 3 - Senior Level (LPIC-3)
-  - LPI Certification Level 2 - Advanced Level (LPIC-2)
-  - LPI Certification Level 1 - Junior Level (LPIC-1)
+  - LPI Certification Level 3 ~- Senior level~
+  - LPI Certification Level 2 ~- Advanced level~
+  - LPI Certification Level 1 ~- Junior level~
 
 ////
 *http://www.novell.com/training/certinfo/[Novell]*
@@ -322,17 +341,20 @@ http://www.lpi.org/[Linux Professional Institute]
   - Novell Certified Linux Administrator (NCLA)
 ////
 
-http://www.brainbench.com/transcript.jsp?pid=652882[Brainbench 30/03/2005]
+*Brainbench certification* ~http://www.brainbench.com/transcript.jsp?pid=652882[verify]~
 
-  - Linux Administration (General) ~- Score: 94.2%~
+  - Linux Administration (General) ~- Score: 94%~
+//  - Linux Administration (General) ~- 04/11/2013 - Score: 4.69~
+//  4.69/5 (04 November 2013) #1 Belgium [> 99% of all participants]
+//  - Linux Administration (General) ~- 30/03/2005 - Score: 4.71/5~
 //  4.71/5 (30 March 2005) #1 Belgium [> 99% of all participants]
-  - Linux Administration (Red Hat 9) ~- Score: 86.8%~
+//  - Linux Administration (Red Hat 9) ~- 30/03/2005 - Score: 4.34/5~
 //  4.34/5 (30 March 2005) #2 Belgium [> 98% of all participants]
-  - Linux Administration (Red Hat) ~- Score: 78.6%~
+//  - Linux Administration (Red Hat) ~- 30/03/2005 - Score: 3.93/5~
 //  3.93/5 (30 March 2005) #2 Belgium [> 96% of all participants]
-  - Linux Programming (General) ~- Score: 84.2%~
+//  - Linux Programming (General) ~- 30/03/2005 - Score: 4.21/5~
 //  4.21/5 (30 March 2005) #1 Belgium [> 89% of all participants]
-  - Unix Administration (General) ~- Score: 90.6%~
+//  - Unix Administration (General) ~- 30/03/2005 - Score: 4.53/5~
 //  4.53/5 (30 March 2005) #3 Belgium [> 94% of all participants]
 
 ////
@@ -343,7 +365,7 @@ http://www.brainbench.com/transcript.jsp?pid=652882[Brainbench 30/03/2005]
 ////
 
 ////
-http://www.itil-officialsite.com/[ITIL]
+*http://www.itil-officialsite.com/[ITIL]*
 
  - ITIL v3 Foundations
 ////
@@ -409,11 +431,11 @@ topics, including at the following conferences:
 
 === Technical writing
 IBM Redbook Residency, Poughkeepsie, NY (05/2005)::
-    Co-written a Redbook about the design and implementation of GPFS
+    Co-written an IBM  Redbook about the design and implementation of GPFS
     (General Parallel File System) in a digital media (broadcasting)
     environment. [SG246700]
 IBM Redbook Residency, Austin, TX (11/2002)::
-    Co-written a Redbook about the design and implementation of a
+    Co-written an IBM Redbook about the design and implementation of a
     Linux-based deployment in a branch banking environment. [SG246813]
 
 === Formal education
@@ -442,15 +464,20 @@ Heilig Hartcollege, Heusden-Zolder (1988 -> 1994)::
 ////
 
 == Additional activities
-  - Maintainer of http://repoforge.org/[RPMforge RPM Repository] with
+  - Maintainer of http://repoforge.org/[RPMforge RPM repository] with
     more than 5000 Open Source software RPM packages for RHEL, Scientific
     Linux and CentOS _used by many international companies and organizations._
   - Member of the http://elrepo.org/[ELRepo project] providing kernel
     module packages (hardware drivers) _used by many international
     companies and organizations using RHEL, Scientific Linux or CentOS._
   - Author of http://github.com/dagwieers[various Open Source software
-    projects] _incl. Dstat, asciidoc-odf, unoconv, mrepo, dconf, sarah,
-    wiipresent_
+    projects] incl.
+     * *dstat* – _flexible real-time resource monitoring tool_
+     * *asciidoc-odf* – _convert AsciiDoc markup directly into formatted ODF documents_
+     * *unoconv* – _convert office documents from one format to another using OpenOffice/LibreOffice filters_
+     * *mrepo* – _manage repositories and synchronize from various sources_
+     * *dconf* – _make hardware and software configuration snapshots for troubleshooting and comparison_
+     * *wiipresent* – _using Wii remotes as a remote control device_
   - Contributor to various Open Source projects _incl. Ansible,
     Relax-and-Recover, OpenELEC, XBMC, AsciiDoc, docbook2odf, Proxytunnel,
     scannedonly_
