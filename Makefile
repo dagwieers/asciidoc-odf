@@ -16,22 +16,31 @@ all:
 
 link:
 	@echo "= Linking odp backend"
-	-[[ -e $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp ]] && rm -ir $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp
-	-ln -sf $(shell pwd)/backends/odp/ $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp
+	-[[ -d $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp ]] && \
+	rm -ir $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp && \
+	ln -sf $(shell pwd)/backends/odp/ $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp
 	@echo "= Linking odt backend"
-	rm -ir $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp
-	-[[ -e $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt ]] && rm -ir $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt
+	-[[ -d $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt ]] && \
+	rm -ir $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt && \
+	ln -sf $(shell pwd)/backends/odt/ $(DESTDIR)$(sysconfdir)/asciidoc/backends/odt
 	@echo "= Linking cv theme"
-	rm -ir $(DESTDIR)$(sysconfdir)/asciidoc/themes/cv
-	-[[ -e $(DESTDIR)$(sysconfdir)/asciidoc/themes/cv ]] && rm -ir $(DESTDIR)$(sysconfdir)/asciidoc/themes/cv
+	-[[ -d $(DESTDIR)$(sysconfdir)/asciidoc/themes/cv ]] && \
+	rm -ir $(DESTDIR)$(sysconfdir)/asciidoc/themes/cv && \
+	ln -sf $(shell pwd)/themes/cv/ $(DESTDIR)$(sysconfdir)/asciidoc/themes/cv
 	@echo "= Installing hp theme"
-	-[[ -e $(DESTDIR)$(sysconfdir)/asciidoc/themes/hp ]] && rm -ir $(DESTDIR)$(sysconfdir)/asciidoc/themes/hp
-	-ln -sf $(shell pwd)/themes/hp/ $(DESTDIR)$(sysconfdir)/asciidoc/themes/hp
+	-[[ -d $(DESTDIR)$(sysconfdir)/asciidoc/themes/hp ]] && \
+	rm -ir $(DESTDIR)$(sysconfdir)/asciidoc/themes/hp && \
+	ln -sf $(shell pwd)/themes/hp/ $(DESTDIR)$(sysconfdir)/asciidoc/themes/hp
+	@echo "= Installing bnpp theme"
+	-[[ -d $(DESTDIR)$(sysconfdir)/asciidoc/themes/bnpp ]] && \
+	rm -ir $(DESTDIR)$(sysconfdir)/asciidoc/themes/bnpp && \
+	ln -sf $(shell pwd)/themes/bnpp/ $(DESTDIR)$(sysconfdir)/asciidoc/themes/bnpp
 	@echo "= Installing code filter"
-	-[[ -e $(DESTDIR)$(sysconfdir)/asciidoc/filters/code ]] && rm -ir $(DESTDIR)$(sysconfdir)/asciidoc/filters/code
-	-ln -sf $(shell pwd)/filters/code/ $(DESTDIR)$(sysconfdir)/asciidoc/filters/code
+	-[[ -d $(DESTDIR)$(sysconfdir)/asciidoc/filters/code ]] && \
+	rm -ir $(DESTDIR)$(sysconfdir)/asciidoc/filters/code && \
+	ln -sf $(shell pwd)/filters/code/ $(DESTDIR)$(sysconfdir)/asciidoc/filters/code
 
-install:
+install: templates
 	@echo "= Installing odp backend"
 	install -Dp -m0644 backends/odp/odp.conf $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp/odp.conf
 	install -Dp -m0644 backends/odp/asciidoc.odp.styles $(DESTDIR)$(sysconfdir)/asciidoc/backends/odp/asciidoc.odp.styles
@@ -46,6 +55,8 @@ install:
 	install -Dp -m0644 themes/cv/cv.odt.styles $(DESTDIR)$(sysconfdir)/asciidoc/themes/cv/cv.odt.styles
 	@echo "= Installing hp theme"
 	install -Dp -m0644 themes/hp/hp.odt.styles $(DESTDIR)$(sysconfdir)/asciidoc/themes/hp/hp.odt.styles
+	@echo "=Installing bnpp filter"
+	install -Dp -m0644 themes/bnpp/bnp.odt.styles $(DESTDIR)$(sysconfdir)/asciidoc/themes/bnpp/bnpp.odt.styles
 	@echo "=Installing code filter"
 	install -Dp -m0755 filters/code/code-filter.py $(DESTDIR)$(sysconfdir)/asciidoc/filters/code/code-filter.py
 ### Old cruft
