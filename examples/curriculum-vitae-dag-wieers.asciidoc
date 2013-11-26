@@ -1,5 +1,4 @@
 = Curriculum Vitae - Dag Wieërs - Linux Engineer
-:author: Dag Wieers
 :data-uri:
 :doctype: article
 :encoding: UTF-8
@@ -330,9 +329,9 @@ Basic ~1988 - 1990~
 
 *Linux Professional Institute certification* ~http://cs.lpi.org/caf/Xamman/certification/process_verify?lpi_id=LPI000247772&ver_code=7z98whrvag[verify]~
 
-  - LPI Certification Level 3 ~- Senior level~
-  - LPI Certification Level 2 ~- Advanced level~
-  - LPI Certification Level 1 ~- Junior level~
+  - LPI Certification Level 3 (LPIC-3) ~- Senior level~
+  - LPI Certification Level 2 (LPIC-2) ~- Advanced level~
+  - LPI Certification Level 1 (LPIC-1) ~- Junior level~
 
 ////
 *http://www.novell.com/training/certinfo/[Novell]*
@@ -478,9 +477,8 @@ Heilig Hartcollege, Heusden-Zolder (1988 -> 1994)::
      * *mrepo* – _manage repositories and synchronize from various sources_
      * *dconf* – _make hardware and software configuration snapshots for troubleshooting and comparison_
      * *wiipresent* – _using Wii remotes as a remote control device_
-  - Contributor to various Open Source projects _incl. Ansible,
-    Relax-and-Recover, OpenELEC, XBMC, AsciiDoc, docbook2odf, Proxytunnel,
-    scannedonly_
+  - Contributor to various Open Source projects incl.
+     * Ansible, Relax-and-Recover, OpenELEC, XBMC, AsciiDoc, docbook2odf, Proxytunnel, scannedonly
   - Ex-member of the http://wiki.centos.org/[CentOS core team]
   - Author of the FrOSCon LiveUSB used for informational displays and
     conference room computers
