@@ -2,10 +2,10 @@
 <office:font-face-decls>
 <style:font-face style:name="serif" svg:font-family="Calibri" style:font-family-generic="swiss" style:font-pitch="variable"/>
 <style:font-face style:name="sans-serif" svg:font-family="Calibri" style:font-family-generic="swiss" style:font-pitch="variable"/>
-<style:font-face style:name="article-title" svg:font-family="Arial Black" style:font-family-generic="swiss" style:font-pitch="variable"/>
-<style:font-face style:name="article-sect1" svg:font-family="Eras Bold ITC" style:font-family-generic="swiss" style:font-pitch="variable"/>
-<style:font-face style:name="article-sect2" svg:font-family="Eras Bold ITC" style:font-family-generic="swiss" style:font-pitch="variable"/>
-<style:font-face style:name="title" svg:font-family="Eras Bold ITC" style:font-family-generic="swiss" style:font-pitch="variable"/>
+<style:font-face style:name="article-title" svg:font-family="Helvetica Neue Ultra Light" style:font-family-generic="swiss" style:font-pitch="variable"/>
+<style:font-face style:name="article-sect1" svg:font-family="Helvetica Neue Light" style:font-family-generic="swiss" style:font-pitch="variable"/>
+<style:font-face style:name="article-sect2" svg:font-family="Helvetica Neue" style:font-family-generic="swiss" style:font-pitch="variable"/>
+<style:font-face style:name="title" svg:font-family="Helvetica Neue" style:font-family-generic="swiss" style:font-pitch="variable"/>
 <style:font-face style:name="monospace" svg:font-family="Liberation Mono" style:font-pitch="fixed"/>
 </office:font-face-decls>
 
@@ -46,12 +46,12 @@
 
  <style:style style:name="sect0" style:family="paragraph" style:parent-style-name="sect-default">
   <style:paragraph-properties fo:margin-top="0mm" fo:margin-bottom="0mm" fo:padding="0mm"/>
-  <style:text-properties fo:color="#000000" style:text-outline="true" style:font-name="article-title" fo:font-size="19.5pt" fo:text-shadow="1pt 1pt"/>
+  <style:text-properties fo:color="#000000" style:text-outline="true" style:font-name="article-title" fo:font-size="27pt" fo:text-shadow="1pt 1pt"/>
  </style:style>
 
  <style:style style:name="sect1" style:family="paragraph" style:parent-style-name="sect-default" style:default-outline-level="1" style:class="text">
   <!-- style:paragraph-properties fo:border-bottom="0.20mm solid #666666" fo:padding-top="1.8mm" text:number-lines="true" text:line-number="1"/ -->
-  <style:paragraph-properties fo:border-bottom="0.35mm dashed #666666" fo:margin-top="3.0mm" fo:padding-top="-0.2mm" fo:border-top="0.35mm dashed #666666" text:number-lines="true" text:line-number="1"/>
+  <style:paragraph-properties fo:border-bottom="0.35mm dashed #666666" fo:margin-top="3.2mm" fo:padding-bottom="0.6mm" fo:padding-top="0mm" fo:border-top="0.45mm dashed #666666" text:number-lines="true" text:line-number="1"/>
   <style:text-properties fo:font-size="16pt" style:font-name="article-sect1"/>
  </style:style>
 
@@ -67,7 +67,7 @@
  </style:style>
 
  <style:style style:name="timeframe" style:family="paragraph" style:class="text">
-  <style:paragraph-properties fo:keep-with-next="always" fo:padding="0mm" fo:margin="0mm" fo:margin-bottom="0mm" fo:text-align="right"/>
+  <style:paragraph-properties fo:keep-with-next="always" fo:padding="0mm" fo:margin="0mm" fo:text-align="right"/>
   <style:text-properties fo:font-style="italic" fo:font-size="7pt" style:text-scale="90%"/>
  </style:style>
 
@@ -84,7 +84,7 @@
  </style:style>
 
  <style:style style:name="sidebarframe" style:family="graphic">
-  <style:graphic-properties fo:margin-left="2mm" fo:margin-right="2mm" fo:margin-top="2mm" fo:margin-bottom="2mm" style:wrap="parallel" style:number-wrapped-paragraphs="no-limit" style:vertical-pos="top" style:vertical-rel="paragraph-content" style:horizontal-pos="right" style:horizontal-rel="paragraph" fo:background-color="#f0f0f0" style:background-transparency="0%" fo:padding="1.99mm" fo:border="0.26pt solid #aaaa77" svg:width="57%" style:rel-width="57%"/>
+  <style:graphic-properties fo:margin="2mm" style:wrap="parallel" style:number-wrapped-paragraphs="no-limit" style:vertical-pos="top" style:vertical-rel="paragraph-content" style:horizontal-pos="right" style:horizontal-rel="paragraph" fo:background-color="#f0f0f0" style:background-transparency="0%" fo:padding="1.99mm" fo:border="0.26pt solid #aaaa77" svg:width="56%" style:rel-width="56%"/>
  </style:style>
 
  <style:style style:name="preamble" style:family="paragraph">
