@@ -82,9 +82,15 @@ Generating an OpenDocument Text file, simply do:
 
     # asciidoc -b odt document.txt
 
-This will produce the file _document.fodt_ which is a 'flat ODT file',
+This will produce the file `document.fodt` which is a 'flat ODT file',
 a single XML file that can be opened using any recent LibreOffice.
 
+==== Converting to MS Word
+
+After that, if you want to convert the document to docx you can use 
+libreoffice like this:
+
+    # soffice --headless --invisible --convert-to docx document.fodt
 
 === Usage for presentations
 Generating an OpenDocument Presentation file, simply do:
