@@ -66,18 +66,18 @@ install: templates
 #	install -Dp -m0644 filters/source/odf.outlang $(DESTDIR)$(datadir)/source-highlight/odf.outlang
 #	install -Dp -m0755 packaged/a2x.py $(DESTDIR)$(bindir)/a2x.py
 
-examples: $(fodttargets) odt.conf
+examples: $(fodttargets) backends/odt/odt.conf
 	asciidoc -b odt -a newline=\\n -a iconsdir=$(datadir)/asciidoc/images/icons -o examples/README.fodt README.asciidoc
 	-xmllint --noout --relaxng relaxng/OpenDocument-v1.2-os-schema.rng examples/README.fodt
 #	-jing -i relaxng/OpenDocument-v1.2-os-schema.rng examples/README.fodt
-	asciidoc -b odt -a theme=cv -a newline=\\n examples/curriculum-vitae-dag-wieers.txt
+	asciidoc -b odt -a theme=cv -a newline=\\n examples/curriculum-vitae-dag-wieers.asciidoc
 	-xmllint --noout --relaxng relaxng/OpenDocument-v1.2-os-schema.rng examples/curriculum-vitae-dag-wieers.fodt
 #	-jing -i relaxng/OpenDocument-v1.2-os-schema.rng examples/curriculum-vitae-dag-wieers.fodt
-	asciidoc -b odp examples/rear-presentation.txt
+	asciidoc -b odp examples/rear-presentation.asciidoc
 	-xmllint --noout --relaxng relaxng/OpenDocument-v1.2-os-schema.rng examples/rear-presentation.fodp
 #	-jing -i relaxng/OpenDocument-v1.2-os-schema.rng examples/curriculum-vitae-dag-wieers.fodt
 
-%.fodt: %.txt
+%.fodt: %.asciidoc
 	asciidoc -b xhtml11 -a iconsdir=$(datadir)/asciidoc/images/icons -o $(patsubst %.fodt, %.html, $@) $<
 	asciidoc -b odt -a newline=\\n -a iconsdir=$(datadir)/asciidoc/images/icons -o $@ $<
 	-xmllint --noout --relaxng relaxng/OpenDocument-v1.2-os-schema.rng $@
