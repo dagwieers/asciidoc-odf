@@ -1,6 +1,6 @@
 = ODF backend for AsciiDoc
 :author: Dag Wieers
-:email: dag@wieers.com
+:data-uri:
 :lang: en
 
 == Introduction
