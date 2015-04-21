@@ -1,4 +1,5 @@
 = Curriculum Vitae - Dag Wieërs - Linux Engineer
+:author: Dag Wieërs
 :data-uri:
 :doctype: article
 :encoding: UTF-8
@@ -6,36 +7,39 @@
 :quirks:
 :theme: cv
 :toclevels: 2
-:linux-experience: {sys:echo $(( $(date +%Y) - 1995))}
-:last-job: {sys:echo $(( ( $(date +%s) - $(date --date='2013-01-01' +%s) ) / 30 / 24 / 60 / 60 ))}
-:last-agency: {sys:echo $(( ( $(date +%s) - $(date --date='2010-05-01' +%s) ) / 364 ))}
+:linux-experience: {sys:echo $(( $(date +%Y) - 1995 ))}
+:hp-job: +{sys:echo "scale=1; ( $(date +%s) - $(date --date='2010-05-01' +%s) ) / 12 / 30 / 24 / 60 / 60" | bc}
+:curr-job: +{sys:echo "scale=1; ( $(date +%s) - $(date --date='2013-01-01' +%s) ) / 12 / 30 / 24 / 60 / 60" | bc}
 :description: Dag Wieërs is an experienced Linux system engineer and +
 system architect, focusing on Red Hat Enterprise Linux, CentOS and +
 Scientific Linux. Dag is also a well known RPM packager due to his +
 efforts in the RPMforge and ELRepo repositories which is used by many +
-Belgian and international organizations using RHEL or CentOS.
+international organizations using RHEL and CentOS.
 :keywords: CV, résumé, Linux System Engineer, Linux System Administrator, +
-Linux System Architect, UNIX System Engineer, freelancer, consultant, +
+sysadmin, Linux System Architect, Ansible, freelancer, consultant, +
 RPM packager, Python developer, Red Hat Enterprise Linux, RHEL, CentOS, +
-Perl developer, Bash, KSH, shell scripting, UNIX System Engineer, Devops, +
-Ansible
+Bash, KSH, shell scripting, Devops
+//:linux-experience: {sys:echo $(( $(date +%Y) - 1995))}
+//:hp-job: {sys:echo "scale=1;( $(date +%s) - $(date --date='2010-05-01' +%s) ) / 12 / 30 / 24 / 60 / 60" | bc}
+//:curr-job: {sys:echo "scale=1;( $(date +%s) - $(date --date='2013-01-01' +%s) ) / 12 / 30 / 24 / 60 / 60" | bc}
 
-.Availability and work interests
+
+.Availability and expertise
 ****************************************************************************
-Dag is an experienced and certified Linux system engineer and architect
-with experience and focus on Linux and Open Source software, preferably
-Red Hat Enterprise Linux (RHEL), CentOS or Scientific Linux. With *more than
-{linux-experience} years of experience* he is one of the Linux pioneers in
-Belgium and well-known within the specific Red Hat Linux communities.
+Dag is an experienced and certified Linux system engineer 
+with a focus on Linux and Open Source software, preferably Red Hat
+Enterprise Linux (RHEL), CentOS or Scientific Linux.  With
+*{linux-experience} years of Linux experience* he is one of the Linux
+pioneers in Belgium and well-known within the Red Hat Linux communities.
 
-Skills include deploying, migrating and managing Linux infrastructure
-(servers and desktops), packaging Unix software, designing and
-implementing system tools, improving hardware support and automating
-operational tasks using Python, shell scripting and Perl with attention
-to documentation, standardization, procedures and policies.
+Skills include: deploying, migrating and managing Linux-based infrastructure,
+packaging Unix software, designing and implementing system tools, improving
+hardware support, troubleshooting and performance tuning, automating
+operational tasks using Ansible, Python or shell scripting with attention
+to detail, documentation, standardization, procedures and policies.
 
-Dag is *available as a freelancer for contract work* inside and outside of
-Europe, but is not willing to relocate on a permanent basis.
+Dag is *available as a freelancer for contract work* inside and outside
+of Europe, but is not willing to relocate on a permanent basis.
 ****************************************************************************
 
 == Personalia
@@ -68,7 +72,7 @@ Most recent résumé::
 
 [cols=2]
 == Work experience
-=> _References available on request_
+=>  _References available on request_
 
 ////
 === Dagit Linux solutions
@@ -78,113 +82,133 @@ Independent contractor::
     Available for freelance work.
 ////
 
-=== Hewlett-Packard
-[stylename="timeframe"]
-May 2010 -> now (ongoing)
+=== Hewlett-Packard ~May 2010 -> now ({hp-job} years)~
+//[stylename="timeframe"]
+//May 2010 -> now (+{hp-job} years)
 
-*Linux system developer/engineer/architect*
-Implementing disaster recovery solution. Improvements to installation
-scripts and Webmin modules. Packaging improvements. Automation and
-scripting. Design and implementation of a samba/anti-virus solution.
-Troubleshooting Linux, SAN/multipathing problem. Best practices for
-Linux multipathing and SAN performance.  Assessment and design of
-Linux reference architecture. RHN Satellite design. HP-UX ksh to
-Linux migration best practices. Design, implement and document
-a new Linux environment as part of a Solaris to Linux migration.
-_Incl. Belgian Federal Police (19m), Dexia Technology Services (2m),
-Atos Worldline, SWIFT, BNP Paribas Fortis (7m), Belgacom ({last-job}m+)_.
+*Linux System Developer/Engineer/Architect*
+Troubleshoot Linux, SAN/multipathing problem. Best practices for
+Linux multipathing and SAN performance. Assessment and design of
+Linux reference architecture. Red Hat Satellite design.
+HP-UX ksh to Linux migration best practices.
+[darkblue]_Incl. Belgian Federal Police, Dexia Technology Services,
+Atos Worldline, SWIFT, BNP Paribas Fortis, Belgacom / Proximus_
 
-=== AXA Technology Services
-[stylename="timeframe"]
-Nov 2007 -> Mar 2010 (2.5 years)
+=== Proximus / Belgacom ~Jan 2013 -> now ({curr-job} years)~
+*Linux System Engineer*
+Design and implement a monthly patching cycle for thousands of systems.
+Auto-process core-dumps and panics. Red Hat Satellite integration.
+Validate and improve security practices.
 
-*Linux system engineer*
-Linux migration of Belgian datacenter to Germany. Design and
-implementation of modular framework and infrastructure for Linux
+=== BNP Paribas Fortis ~May 2012 -> Dec 2012 (7 months)~
+*Linux System Architect*
+Designed, implemented, automated and documented a new Linux
+environment as part of a Solaris-to-Linux migration using
+PXE, kickstart, Ansible provisioning, VMware, KVM, Veritas
+Clustering, etc.
+
+=== Belgian Federal Police ~May 2010 -> Jun 2011 (1.6 years)~
+*Linux System Developer*
+Implemented disaster recovery solution. Improvements to installation
+scripts, packaging and Webmin modules. Automation and integration.
+Designed and implemented a samba/anti-virus solution.
+
+=== AXA Technology Services ~Nov 2007 -> Mar 2010 (2.5 years)~
+//[stylename="timeframe"]
+//Nov 2007 -> Mar 2010 (2.5 years)
+
+*Linux System Engineer*
+Linux migration of Belgian data center to Germany. Designed and
+implemented of modular framework and infrastructure for Linux
 and VMware ESX, used for deploying, retrofitting and validating
 Linux servers. 3rd level support, troubleshooting and design work.
+Implementation of various business projects.
 
-=== EMC
-[stylename="timeframe"]
-Jul 2007 -> Dec 2007 (6 months)
+=== EMC ~Jul 2007 -> Dec 2007 (6 months)~
+//[stylename="timeframe"]
+//Jul 2007 -> Dec 2007 (6 months)
 
-*Linux system engineer*
-_(Short assignment)_ Implementation of infrastructure for Novell SLES
-Linux deployment for technical development workstations. Integration
-with Active Directory, NIS, ClearCase, VMware Server.
+*Linux System Engineer*
+[darkblue]_(Short part-time assignment)_ Implementated infrastructure
+for Novell SLES Linux deployment for technical development workstations.
+Integration with Active Directory, NIS, ClearCase and VMware.
 
-=== Punch Telematix
-[stylename="timeframe"]
-Jun 2007 -> Sep 2007 (4 months)
+=== Punch Telematix ~Jun 2007 -> Sep 2007 (4 months)~
+//[stylename="timeframe"]
+//Jun 2007 -> Sep 2007 (4 months)
 
-*Linux system engineer*
-_(Short assignment)_ Design and implementation of technical documentation
-system. Design and implementation of subversion. Packaging for Novell
-SLES Linux. Troubleshooting. Automation.
+*Linux System Engineer*
+[darkblue]_(Short part-time assignment)_ Designed and implemented
+a technical documentation system and versioning system.
+Packaging for Novell SLES Linux. General troubleshooting and automation.
 
-=== Euroclear
-[stylename="timeframe"]
-Dec 2005 -> May 2007 (1.5 years)
+=== Euroclear ~Dec 2005 -> May 2007 (1.5 years)~
+//[stylename="timeframe"]
+//Dec 2005 -> May 2007 (1.5 years)
 
-*Unix system engineer*
+*Unix System Engineer*
 Deployment of Unix systems and services. Design and implementation of
-management infrastructure (configuration and documentation management,
-change management). Packaging for Solaris, AIX, Linux and VMware. Custom
+management infrastructure (configuration, documentation and change
+management). Packaging for Solaris, AIX, Linux and VMware. Custom
 software development. Troubleshooting. Automation.
 
-=== IBM
-[stylename="timeframe"]
-internship 1999; Sep 1999 -> Dec 2005 (5.5 years)
+=== IBM ~internship 1999; Sep 1999 -> Dec 2005 (5.5 years)~
+//[stylename="timeframe"]
+//internship 1999; Sep 1999 -> Dec 2005 (5.5 years)
 
-*Unix system engineer*
+*Unix System Engineer*
 On Unix and Linux systems. (e.g. packaging on Linux/AIX, implementing
 various system and network services, general troubleshooting),
 implementing hosting infrastructure on Linux. (e.g. resource and
 availability monitoring, capacity planning, firewall framework)
 
 *Consultant*
-Designing and implementing solutions for automatic deployment of
+Designed and implemented solutions for automatic deployment of
 Linux clients, Point-Of-Sale systems, network services, clusters
 and big parallel storage systems for digital media projects,
-_incl. Real Software, VRT, EVS, RVA, Callataÿ and Wouters, KBC_
+[darkblue]_incl. Real Software, VRT, EVS, RVA, Callataÿ & Wouters,
+KBC_
 
-=== Mind Linux Solutions
-[stylename="timeframe"]
-Oct 1999 -> Apr 2001 (1.5 years)
+=== Mind Linux Solutions ~Oct 1999 -> Apr 2001 (1.6 years)~
+//[stylename="timeframe"]
+//Oct 1999 -> Apr 2001 (1.5 years)
 
-*Founder / Business unit manager*
+*Founder / Business Unit Manager*
 Taking care of various parts of the organization, including sales
 and marketing. Experience with project-management and pre-sales for
 a small (15 headcount) consultancy company.
 
 *Consultant*
-Linux and Open Source consultancy and training for several customers
+Linux and Open Source consulting and training for several customers
 in on-site projects varying between 1 and 3 weeks.
 
-=== SISA Software / Winsome
-[stylename="timeframe"]
-summer job 1996/1997; Oct 1997 -> Sep 1999
+=== SISA Software / Winsome ~summer job 1996-1997~
+//[stylename="timeframe"]
+//summer job 1996/1997; Oct 1997 -> Sep 1999
 
 *Consultant*
 Analysis and design of an off-line website generation program (further
 developed as WebEngine) and web-scripting. Implementation of business
 projects.
 
-*System administrator*
+*System Administrator*
 Installation and operational management of Linux infrastructure and
 routers.
 
-=== Provinciale Bibliotheek Limburg
-[stylename="timeframe"]
-voluntary Oct 1996 -> Nov 1997
+////
+=== Provinciale Bibliotheek Limburg ~voluntary 1996-1997~
+//[stylename="timeframe"]
+//voluntary Oct 1996 -> Nov 1997
 
-*System/Network administrator*
+*System/Network Administrator*
 Maintenance of 12 public Internet terminals (based on Windows 95) and
 an ISDN Internet connection.
 
-*Internet trainer*
+*Internet Trainer*
 Individual training and training in group regarding computer use,
 the Internet, search-engines and popular websites.
+////
+
 
 ////
 ["ditaa",options="no-shadows",scaling=4,width="180mm",height="15mm"]
@@ -200,81 +224,91 @@ the Internet, search-engines and popular websites.
 
 <<<
 
-
 == Skills
 [cols=2]
 === Overall
-  - Ability to quickly learn and understand from self-study or analysis
-  - Good understanding of project management and change management
+  - Analytical - ability to quickly learn and understand from self-study
+    or analysis.
+  - Structured - good understanding of project management and change management.
   - Thorough experience in Unix system administration, advanced automation and
-    orchestration
+    orchestration.
   - Thorough experience in configuring and deploying systems in a scalable and
-    coherent manner
+    coherent manner.
   - Owner of various best practices regarding Linux system and application
     deployments, system maintenance and documentation, system security and
     Enterprise Linux in general.
   - Experience in developing and marketing products using the Internet and
-    Internet communities
-  - Experience in project management and leading technical teams
+    Internet communities.
+  - Experience in project management and leading technical teams.
 
 
 [cols=2]
 === Communication
-  - Direct communication skills - does not overpromise or underdeliver
-  - Team player - listen, share, cooperate and learn together as a team
-  - Presentation skills -  experience with presenting for large groups
-    in international settings
+  - Direct communication skills - does not overpromise or underdeliver.
+  - Team player - listen, share, cooperate and learn together as a team.
+  - Presentation skills - experience with presenting for large groups
+    in international settings.
 
 
 [cols=2]
 === Systems architecture
   - Experience with designing Standard Operating Environments (SOE) and
-    automating Unix-to-Linux projects
+    automating Unix-to-Linux projects.
   - Experience with designing Linux security standards and processes
-    to harden existing environments
+    to harden existing environments.
   - Experience with designing Linux life cycle management and
-    security patch management processes
+    security patch management processes.
+  - Experience with designing infrastructure for systems management,
+    troubleshooting, monitoring and automating environments.
 
 
 [cols=2]
-=== Systems management
-  - Thorough experience with Red Hat Enterprise Linux internals, security
-    best-practices and performance tuning and troubleshooting
+=== Systems engineering
+  - Excellent knowledge of Red Hat Enterprise Linux internals, security
+    best-practices, performance tuning and troubleshooting.
   - Thorough experience with enterprise automation and orchestration using
     Ansible and Red Hat Network Satellite and integrating with enterprise
-    CMDB solutions
+    CMDB solutions.
   - Thorough experience with Red Hat kickstart and post-installation mechanisms
-    for rapid mass deployment
+    for rapid mass deployment.
   - Thorough experience with building packages and automating enterprise
-    software deployment
+    software deployment.
   - Thorough experience in designing and implementing a multi-customer
-    monitoring and reporting infrastructure
+    monitoring and reporting infrastructure.
+  - Yearly attendance of various specialty conferences on Systems Architecture
+    and Systems Engineering to discuss designs, implementations and tools in detail.
+  - Years of operational experience in Unix environments.
 
 
 [cols=2]
 === Operating systems / Software
-  - Excellent knowledge of Linux (since 1994) incl. Red Hat Enterprise Linux,
-    Scientific Linux, CentOS, Fedora (but also SLES, Ubuntu, Debian, ...)
+  - Excellent knowledge of Linux (since 1994) including Red Hat Enterprise Linux,
+    Scientific Linux, CentOS, Fedora (but also SLES, Ubuntu, Debian, ...).
   - Experience with various Unix systems including AIX, HP/UX and Solaris,
-    mostly related to packaging, automation and troubleshooting
+    mostly related to packaging, automation and troubleshooting. Limited
+    hardware knowledge.
+  - Thorough experience with configuration management tools (Ansible and
+    Puppet) and inventory management.
   - Experience with managing and integrating with virtualization solutions,
-    incl. OpenVZ, RHEV/KVM and VMware vSphere
-  - Experience with clustered web-servers for load-balancing and fail-over,
-    firewalling, virtual private networking (VPN), building high-capacity,
-    load-balancing and high-available systems (IPVS), disaster recovery
-    solutions and network intrusion detection systems (NIDS)
+    including OpenVZ, RHEV/KVM and VMware vSphere.
+  - Experience with clustering, load-balancing, fail-over and disaster recovery
+    techniques.
+  - Experience with firewalling, virtual private networking and network
+    intrusion detection (NIDS).
   - Thorough experience in compiling, installing, and configuring of Unix
     system software, e.g. NFS, Samba, lpd and cups, Postfix, Amavisd,
     Bind, DHCP, XFree86, Apache, ssh, ntpd, Snort, Dante, RRDtool, Nagios,
     Webmin, Relax-and-Recover, KVM, ...
-  - Experience with GPFS clustering and SAN environments for large digital
-    media environments
-//  - Experience with building solutions using SugarCRM and Drupal
+  - Experience with GPFS clustering and SAN environments (eg. for large
+    digital media environments).
+//  - Experience with building solutions using SugarCRM and Drupal.
   - Experience with various markup languages (HTML, SGML, DocBook, XML,
-    CSS, AsciiDoc, Markdown)
-  - IPv4 (TCP/UDP), ICMP, ARP and protocols like IRC, FTP, SMTP, HTTP, NNTP,
-    POP3, IMAP, DHCP, IPsec, ...
-  - SQL (MySQL, msql, PostgreSQL, DB2 and some Oracle)
+    CSS, AsciiDoc, Markdown).
+  - Experience with filtering, troubleshooting and programming TCP/IP network
+    protocols.
+  - Experience with managing and troubleshooting SQL servers (MySQL,
+    PostgreSQL, DB2 and some Oracle) and applications using SQL.
+
 
 [cols=2]
 === Programming languages
@@ -298,16 +332,90 @@ Pascal ~1991 - 1999~,
 Basic ~1988 - 1990~
 
 === Languages
-  - Dutch: native
-  - English: fluently spoken and written
-  - French: basic spoken and limited written
-//  - Afrikaans: basic spoken
-  - German: notions
+  - *Dutch*: native
+  - *English*: fluently spoken and written
+  - *French*: basic spoken and limited written
+//  - *Afrikaans*: basic spoken
+  - *German*: notions
 
 <<<
 
-
 == Education
+
+=== International conferences
+Since 1997 I frequently attend international conferences related to
+Linux, Open Source, system and network security, systems architecture,
+automation, programming, configuration management, monitoring, DevOps, etc.
+
+=== Public speaking
+On various occasions I have presented about different Linux and Open Source
+topics, including at the following conferences:
+
+[cols=3]
+--
+  - *NLUUG*, Utrecht, NL ~2014, 2015~
+//    * Ansible workshop - Utrecht - 05/2015
+//    * Ansible and integration in a large enterprise - 11/2014
+  - *Ansible Meetup*, Utrecht, NL ~2015~
+//    * Ansible workshop - Utrecht - 02/2015
+  - *LinuxTag*, Berlin, DE ~2008, 2012, 2014~
+//    * Dstat: Pluggable real-time resource monitoring - 05/2014
+//    * Practical documentation workflow - 05/2012
+//    * CentOS: Filling the Enterprise community gap - 05/2008
+  - *FlossUK*, UK ~2012 - 2014~
+//    * Ansible workshop - Brighton - 03/2014
+//    * Ansible tutorial - Newcastle-upon-Tyne - 03/2013
+//    * 10 reasons for choosing Rear as a DR strategy - Edinburgh - 03/2012
+//    * Practical workflow for technical documentation - Edinburgh - 03/2012
+  - *CfgMgmtCamp*, Ghent, BE ~2014~
+//    * Ansible workshop - 01/2014
+  - *LOADays*, Antwerp, BE ~2012, 2013~
+//    * Tutorial about provisioning and management using Ansible - 03/2013
+//    * Practical workflow for technical documentation - 04/2012
+//    * Improving hardware support on RHEL and clones - 04/2012
+  - *T-DOSE*, Eindhoven, NL ~2007 - 2012~
+//    * Converting and manipulating office documents from the command line - 11/2012
+//    * A short introduction to Ansible - 11/2012
+//    * Technical documentation workflow using LibreOffice - 11/2011
+//    * Setting your Wii game console free - 11/2010
+//    * Enterprise Linux going mainstream - 11/2010
+//    * The year of the Wiimote - 11/2009
+//    * mrepo: Managing software repositories - 11/2008
+//    * CentOS and Enterprise Linux market overview - 11/2008
+//    * Dstat: plugin-based real-time monitoring - 11/2007
+  - *ODF Plugfest*, Brussels, BE ~2012~
+//    * ODF backend for AsciiDoc - 04/2012
+  - *LinuxCon Europe*, Prague, CZ ~2011~
+//    * Rear: Disaster Recovery and System Migration tool - 10/2011
+  - *LibreOffice Conference*, Paris, FR ~2011~
+//    * Automated conversion and styling using unoconv - 10/2011
+  - *Linux Symposium*, Tokyo, JP ~2009~
+//  - *Japan Linux Symposium*, Tokyo, JP ~2009~
+//    * Dstat: pluggable real-time monitoring - 10/2009
+  - *FrOSCon*, Bonn, DE ~2007 - 2009~
+//    * Building custom initrd files - 08/2009
+//    * Giving presentations with a Wii-remote - 08/2008
+//    * Proxytunnel: Punching holes in the corporate firewall - 08/2008
+//    * Dstat: plugin-based real-time monitoring - 08/2007
+  - *FOSDEM*, Brussels, BE ~2007 - 2009~
+//    * Enterprise Linux Competitive Landscape - 02/2009
+//    * Dstat: pluggable real-time monitoring - 02/2008
+//    * RPMforge - Enterprise Linux packaging for CentOS and RHEL - 02/2007
+  - *JRSL*, Buenos Aires, AR ~2008~
+//  - Jornadas Regionales de Software Libre, Buenos Aires, AR ~- 2008~
+//    * CentOS in an Enterprise environment - 08/2008
+//    * Dstat: pluggable real-time monitoring - 08/2008
+//    * Introduction to building RPM packages - 08/2008
+  - *NLLGG*, Utrecht, BE ~2008~
+//    * CentOS and the Enterprise Linux market - 06/2008
+//    * CentOS on the desktop - 06/2008
+  - *LinuxWorld Expo*, Brussels, BE ~2008~
+//    * CentOS: Filling the Enterprise community gap - 03/2008
+  - *LinuxWorld Expo*, Utrecht, NL ~2007~
+//    * CentOS: Filling the Enterprise community gap - 11/2007
+  - *Linuxconf.eu*, Cambridge, UK ~2007~
+//    * Dstat: plugin-based real-time monitoring - 08/2007
+--
 
 === Certification
 *Red Hat certification* ~https://www.redhat.com/wapps/training/certification/verify.html?certNumber=120-040-951&isSearch=False&verify=Verify[verify]~
@@ -329,9 +437,9 @@ Basic ~1988 - 1990~
 
 *Linux Professional Institute certification* ~http://cs.lpi.org/caf/Xamman/certification/process_verify?lpi_id=LPI000247772&ver_code=7z98whrvag[verify]~
 
-  - LPI Certification Level 3 (LPIC-3) ~- Senior level~
-  - LPI Certification Level 2 (LPIC-2) ~- Advanced level~
-  - LPI Certification Level 1 (LPIC-1) ~- Junior level~
+  - LPI Certification level 3 (LPIC-3) ~- Senior level~
+  - LPI Certification level 2 (LPIC-2) ~- Advanced level~
+  - LPI Certification level 1 (LPIC-1) ~- Junior level~
 
 ////
 *http://www.novell.com/training/certinfo/[Novell]*
@@ -369,80 +477,22 @@ Basic ~1988 - 1990~
  - ITIL v3 Foundations
 ////
 
-
-=== Public speaking
-I have presented on various occasions about different Linux and Open Source
-topics, including at the following conferences:
-
 [cols=2]
---
- * Loadays, Antwerp, BE ~- 2012, 2013~
-//    Tutorial about provisioning and management using Ansible - 03/2013
-//    Practical workflow for technical documentation - 04/2012
-//    Improving hardware support on RHEL and clones - 04/2012
- * FlossUK, Newcastle-upon-Tyne, UK ~- 2013~
-//    Ansible tutorial - 03/2013
- * T-DOSE, Eindhoven, NL ~- 2007-2012~
-//    Converting and manipulating office documents from the command line - 11/2012
-//    A short introduction to Ansible - 11/2012
-//    Technical documentation workflow using LibreOffice - 11/2011
-//    Setting your Wii game console free - 11/2010
-//    Enterprise Linux going mainstream - 11/2010
-//    The year of the Wiimote - 11/2009
-//    mrepo: Managing software repositories - 11/2008
-//    CentOS and Enterprise Linux market overview - 11/2008
-//    Dstat: plugin-based real-time monitoring - 11/2007
- * LinuxTag, Berlin, DE ~- 2008, 2012~
-//    Practical documentation workflow - 05/2012
-//    CentOS: Filling the Enterprise community gap - 05/2008
- * ODF Plugfest, Brussels, BE ~- 2012~
-//    ODF backend for AsciiDoc - 04/2012
- * FlossUK, Edinburgh, UK ~- 2012~
-//    10 reasons for choosing Rear as a DR strategy - 03/2012
-//    Practical workflow for technical documentation - 03/2012
- * LinuxCon Europe, Prague, CZ ~- 2011~
-//    Rear: Disaster Recovery and System Migration tool - 10/2011
- * LibreOffice Conference, Paris, FR ~- 2011~
-//    Automated conversion and styling using unoconv - 10/2011
- * Japan Linux Symposium, Tokyo, JP ~- 2009~
-//    Dstat: pluggable real-time monitoring - 10/2009
- * FrOSCon, Bonn, DE ~- 2007-2009~
-//    Building custom initrd files - 08/2009
-//    Giving presentations with a Wii-remote - 08/2008
-//    Proxytunnel: Punching holes in the corporate firewall - 08/2008
-//    Dstat: plugin-based real-time monitoring - 08/2007
- * FOSDEM, Brussels, BE ~- 2007-2009~
-//    Enterprise Linux Competitive Landscape - 02/2009
-//    Dstat: pluggable real-time monitoring - 02/2008
-//    RPMforge - Enterprise Linux packaging for CentOS and RHEL - 02/2007
- * JRSL Argentina, Buenos Aires, AR ~- 2008~
-// * Jornadas Regionales de Software Libre, Buenos Aires, AR ~- 2008~
-//    CentOS in an Enterprise environment - 08/2008
-//    Dstat: pluggable real-time monitoring - 08/2008
-//    Introduction to building RPM packages - 08/2008
- * LinuxWorld Expo Brussels, BE ~- 2008~
-//    CentOS: Filling the Enterprise community gap - 03/2008
- * LinuxWorld Expo Utrecht, NL ~- 2007~
-//    CentOS: Filling the Enterprise community gap - 11/2007
- * Linuxconf.eu, Cambridge, UK ~- 2007~
-//    Dstat: plugin-based real-time monitoring - 08/2007
---
-
 === Technical writing
-IBM Redbook Residency, Poughkeepsie, NY (05/2005)::
+IBM Redbook Residency, Poughkeepsie, NY ~May 2005~::
     Co-written an IBM  Redbook about the design and implementation of GPFS
     (General Parallel File System) in a digital media (broadcasting)
-    environment. [SG246700]
-IBM Redbook Residency, Austin, TX (11/2002)::
+    environment. ~[http://www.redbooks.ibm.com/redbooks.nsf/RedbookAbstracts/SG246700.html[SG246700]]~
+IBM Redbook Residency, Austin, TX ~Nov 2002~::
     Co-written an IBM Redbook about the design and implementation of a
-    Linux-based deployment in a branch banking environment. [SG246813]
+    Linux-based deployment in a branch banking environment. ~[SG246813]~
 
 === Formal education
-XIOS Hogeschool Limburg, Diepenbeek (1996 -> 1999)::
+Hogeschool PXL, Hasselt ~1996 -> 1999~::
     Applied Computer Science (~ Bachelor degree)
-Universiteit Hasselt, Diepenbeek (1994 -> 1996)::
+Universiteit Hasselt, Diepenbeek ~1994 -> 1996~::
     Computer Science, 1st year
-Heilig Hartcollege, Heusden-Zolder (1988 -> 1994)::
+Heilig Hartcollege, Heusden-Zolder ~1988 -> 1994~::
     Latin-Greek, Latin-Mathematics and Science-Mathematics
 
 ////
@@ -469,17 +519,19 @@ Heilig Hartcollege, Heusden-Zolder (1988 -> 1994)::
   - Member of the http://elrepo.org/[ELRepo project] providing kernel
     module packages (hardware drivers) _used by many international
     companies and organizations using RHEL, Scientific Linux or CentOS._
-  - Author of http://github.com/dagwieers[various Open Source software
-    projects] incl.
-     * *dstat* – _flexible real-time resource monitoring tool_
-     * *asciidoc-odf* – _convert AsciiDoc markup directly into formatted ODF documents_
-     * *unoconv* – _convert office documents from one format to another using OpenOffice/LibreOffice filters_
-     * *mrepo* – _manage repositories and synchronize from various sources_
-     * *dconf* – _make hardware and software configuration snapshots for troubleshooting and comparison_
-     * *wiipresent* – _using Wii remotes as a remote control device_
-  - Contributor to various Open Source projects incl.
-     * Ansible, Relax-and-Recover, OpenELEC, XBMC, AsciiDoc, docbook2odf, Proxytunnel, scannedonly
+  - Author of http://github.com/dagwieers[various Open Source software projects] including:
+     * *ansible-provisioning*: _set of modules and methodology to do provisioning using Ansible_
+     * *dstat*: _flexible real-time system resource monitoring tool_
+     * *vmguestlib*: _python library to access performance counters from within VMware guests_
+     * *mrepo*: _manage repositories and synchronize from various sources_
+     * *dconf*: _make hardware and software configuration snapshots for troubleshooting and comparison_
+     * *asciidoc-odf*: _convert AsciiDoc markup directly into formatted ODF documents ~(used for this CV)~_
+     * *unoconv*: _convert office documents from one format to another using OpenOffice/LibreOffice filters  ~(used for this CV)~_
+     * *wiipresent*: _using Wii remotes as a remote control device_
+  - Contributor to various Open Source projects including:
+     * Ansible, Relax-and-Recover, OpenELEC, XBMC, AsciiDoc, docbook2odf, Proxytunnel, scannedonly, ...
   - Ex-member of the http://wiki.centos.org/[CentOS core team]
+  - http://www.coderdojobelgium.be/[CoderDojo mentor] fostering children's enthusiasm for Scratch programming and Arduino engineering
   - Author of the FrOSCon LiveUSB used for informational displays and
     conference room computers
 //  - Author of http://dag.wieers.com/howto/[various pieces of documentation]
