@@ -28,6 +28,9 @@
  <style:default-style style:family="text">
   <style:text-properties fo:color="#000000" style:font-name="text-font" fo:font-size="10pt" fo:language="en" fo:country="US"/>
  </style:default-style>
+ <style:style style:name="invisible" style:family="paragraph" style:class="text">
+  <style:paragraph-properties fo:keep-with-next="always" fo:margin="0mm" fo:padding="0mm" fo:line-height="0mm"/>
+ </style:style>
  <style:style style:name="sect-default" style:family="paragraph" style:class="text">
   <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="2.5mm" fo:margin-bottom="0mm" fo:text-align="left"/>
   <style:text-properties style:font-name="text-font" fo:color="#7c0000"/>
@@ -53,11 +56,18 @@
   <style:paragraph-properties fo:keep-with-next="always" fo:padding="0mm" fo:margin="0mm" fo:text-align="right"/>
   <style:text-properties fo:font-style="italic" fo:font-size="7pt" style:text-scale="90%"/>
  </style:style>
- <style:style style:name="asciidoc-pagebreak" style:family="paragraph">
-  <style:paragraph-properties fo:line-height="0mm" fo:break-after="page"/>
+ <style:style style:name="Frame_20_Contents" style:family="paragraph" style:class="text">
+  <style:paragraph-properties fo:keep-with-next="always" fo:padding="0mm" fo:margin="0mm" fo:text-align="right"/>
+  <style:text-properties fo:font-style="italic" fo:font-size="7pt" style:text-scale="90%"/>
+ </style:style>
+ <style:style style:name="asciidoc-columnbreak" style:parent-style-name="invisible" style:family="paragraph">
+  <style:paragraph-properties fo:break-after="column"/>
+ </style:style>
+ <style:style style:name="asciidoc-pagebreak" style:parent-style-name="invisible" style:family="paragraph">
+  <style:paragraph-properties fo:break-after="page"/>
  </style:style>
  <style:style style:name="sidebarblock" style:family="paragraph">
-  <style:paragraph-properties fo:line-height="0mm" fo:margin-top="0mm" fo:margin-bottom="10pt"/>
+  <style:paragraph-properties fo:line-height="0mm" fo:margin-top="0mm" fo:margin-bottom="20pt"/>
  </style:style>
  <style:style style:name="sidebarframe" style:family="graphic">
   <style:graphic-properties fo:margin="2mm" style:wrap="parallel" style:number-wrapped-paragraphs="no-limit" style:vertical-pos="top" style:vertical-rel="paragraph-content" style:horizontal-pos="right" style:horizontal-rel="paragraph" fo:background-color="#f0f0f0" draw:fill="solid" draw:fill-color="#f0f0f0" style:background-transparency="0%" fo:padding="2.3mm" fo:border="0.26pt solid #000000" style:rel-width="56%" style:shadow="#c0c0c0 0.5mm 0.5mm" draw:shadow-opacity="80%"/>

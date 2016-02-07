@@ -80,6 +80,10 @@
   </text:outline-level-style>
  </text:outline-style>
 
+ <style:style style:name="invisible" style:family="paragraph" style:class="text" style:next-style-name="standard">
+  <style:paragraph-properties fo:margin-top="0mm" fo:margin-bottom="0mm" fo:line-height="0mm"/>
+ </style:style>
+
  <style:style style:name="sect-default" style:family="paragraph" style:class="text" style:next-style-name="standard">
   <style:paragraph-properties fo:keep-with-next="always" fo:margin-top="1.8mm" fo:margin-bottom="0.5mm"/>
   <style:text-properties style:font-name="sans-serif" fo:color="#527bbd" fo:font-weight="bold"/>
@@ -120,12 +124,12 @@
   <style:text-properties fo:font-weight="bold"/>
  </style:style>
 
- <style:style style:name="columnbreak" style:family="paragraph">
-  <style:paragraph-properties fo:line-height="0mm" fo:break-after="column"/>
+ <style:style style:name="asciidoc-columnbreak" style:parent-style-name="invisible" style:family="paragraph">
+  <style:paragraph-properties fo:break-after="column"/>
  </style:style>
 
- <style:style style:name="asciidoc-pagebreak" style:family="paragraph">
-  <style:paragraph-properties fo:line-height="0mm" fo:break-after="page"/>
+ <style:style style:name="asciidoc-pagebreak" style:parent-style-name="invisible" style:family="paragraph">
+  <style:paragraph-properties fo:break-after="page"/>
  </style:style>
 
  <style:style style:name="paragraph" style:family="paragraph">
@@ -192,13 +196,9 @@
   <style:paragraph-properties fo:line-height="0mm"/>
  </style:style>
 
- <style:style style:name="sidebarframe" style:family="graphic">
-  <style:graphic-properties svg:width="0mm" style:rel-width="100%" text:anchor-type="paragraph" style:vertical-pos="top" style:vertical-rel="paragraph" style:horizontal-pos="right" style:horizontal-rel="paragraph" fo:background-color="#ffffee" fo:padding="1.8mm" fo:border="0.1mm solid #dddddd" fo:border-left="4.25pt solid #f0f0f0"/>
- </style:style>
-
- <style:style style:name="list-item" style:family="paragraph">
+ <!-- style:style style:name="list-item" style:family="paragraph">
   <style:paragraph-properties fo:margin-top="1.01mm" fo:margin-bottom="1.01mm"/>
- </style:style>
+ </style:style -->
 
  <style:style style:name="imageblock" style:family="graphic">
   <style:graphic-properties fo:margin-left="2mm" fo:margin-right="2mm" fo:margin-top="0mm" fo:margin-bottom="0mm" style:wrap="none" style:vertical-pos="top" style:vertical-rel="paragraph-content" style:horizontal-rel="char" fo:background-color="transparent" style:background-transparency="100%" fo:padding="0mm" style:shadow="none" fo:border="none"/>
@@ -287,6 +287,10 @@
   <style:footer-style/>
  </style:page-layout>
 
+ <style:style style:name="sidebarframe" style:family="graphic">
+  <style:graphic-properties svg:width="0mm" style:rel-width="100%" text:anchor-type="paragraph" style:vertical-pos="top" style:vertical-rel="paragraph" style:horizontal-pos="right" style:horizontal-rel="paragraph" fo:background-color="#ffffee" style:background-transparency="0%" draw:fill="solid" draw:fill-color="#ffffee" fo:padding="1.8mm" fo:border="0.1mm solid #dddddd" fo:border-left="4.25pt solid #f0f0f0"/>
+ </style:style>
+
  <style:style style:name="a-element" style:family="text">
   <style:text-properties fo:color="#0000ff" style:text-underline-style="solid"/>
  </style:style>
@@ -299,11 +303,13 @@
   <style:text-properties style:font-name="monospace"/>
  </style:style>
 
- <style:style style:name="bullet-symbols" style:family="text">
+ <!-- style:style style:name="bullet-symbols" style:family="text">
   <style:text-properties style:font-name="OpenSymbol"/>
- </style:style>
+ </style:style -->
 
  <text:list-style style:name="list"/>
+
+ <style:style style:name="list-item" style:family="paragraph"/>
 
  <text:list-style style:name="stublist">
   <text:list-level-style-number text:level="1" style:num-format="">
@@ -316,13 +322,13 @@
  <text:list-style style:name="itemizedlist">
   <text:list-level-style-bullet text:level="1" text:style-name="bullet-symbols" text:bullet-char="⚫">
    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-    <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="12.7mm" fo:text-indent="-6.35mm" fo:margin-left="12.7mm"/>
+    <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6mm" fo:text-indent="-3mm" fo:margin-left="6mm"/>
    </style:list-level-properties>
    <style:text-properties fo:font-family="&apos;DejaVu Sans&apos;" style:font-style-name="Book" style:font-family-generic="swiss"/>
   </text:list-level-style-bullet>
-  <text:list-level-style-bullet text:level="2" text:style-name="bullet-symbols" text:bullet-char="⚪">
+  <text:list-level-style-bullet text:level="2" text:style-name="bullet-symbols" text:bullet-char="-">
    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-    <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="19.05mm" fo:text-indent="-6.35mm" fo:margin-left="19.05mm"/>
+    <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="9mm" fo:text-indent="0mm" fo:margin-left="9mm"/>
    </style:list-level-properties>
    <style:text-properties fo:font-family="&apos;DejaVu Sans&apos;" style:font-style-name="Book" style:font-family-generic="swiss"/>
   </text:list-level-style-bullet>
@@ -565,7 +571,7 @@
   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="#000000" style:text-underline-mode="continuous" style:text-overline-mode="continuous" style:text-line-through-mode="continuous"/>
  </style:style>
 
- <style:style style:name="strikethrough" style:family="text">
+ <style:style style:name="line-through" style:family="text">
   <style:text-properties style:text-line-through-style="solid"/>
  </style:style>
 
