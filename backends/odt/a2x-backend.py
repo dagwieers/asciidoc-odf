@@ -58,6 +58,9 @@ class odt_archive:
 					for cl in cxf:
 						mc = ire.match(cl)
 						if mc is not None:
+							dstdir = os.path.dirname(os.path.join(td, mc.group(2)))
+							if not os.path.exists(dstdir):
+								os.makedirs(dstdir)
 							shutil.copyfile(mc.group(1), os.path.join(td, mc.group(2)))
 							nmf.write('\n <manifest:file-entry manifest:media-type="image/%s" manifest:full-path="%s"/>' %
 								(supported_extensions[os.path.splitext(mc.group(2))[1]],
